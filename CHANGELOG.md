@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3 (2025-04-19)
+
+fix Flutter version requirements
+
+
 ## 0.1.2 (2025-04-19)
 
 Updated documentation

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4 (2025-04-19)
+
+Get rid of webHost in JanusConfiguration
+
+
 ## 0.1.3 (2025-04-19)
 
 fix Flutter version requirements

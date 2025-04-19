@@ -90,8 +90,7 @@ class _MyAppState extends State<MyApp> {
         propertyId: 'FDS-A0B1C2',
         ipLocation: true,
         region: 'US-CA',
-        fidesEvents: true,
-        webHost: 'https://yourhost.com',
+        fidesEvents: true
       );
       
       // Initialize the SDK
@@ -154,8 +153,7 @@ final config = JanusConfiguration(
   propertyId: 'FDS-A0B1C2',                        // 🏢 Property identifier for this app
   ipLocation: true,                                // 📍 Use IP-based geolocation
   region: 'US-CA',                                 // 🌎 Provide if geolocation is false or fails
-  fidesEvents: true,                               // 🔄 Map JanusEvents to FidesJS events in WebViews
-  webHost: 'https://yourhost.com',                 // 🇪🇺 Required for TCF (optional for non-TCF)
+  fidesEvents: true                                // 🔄 Map JanusEvents to FidesJS events in WebViews
 );
 
 // Initialize the SDK

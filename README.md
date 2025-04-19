@@ -91,7 +91,6 @@ The main entry point for integrating consent management capabilities is the Janu
 - `ipLocation`: 📍 Use IP-based location detection - defaults to true
 - `region`: ISO-3166-2 region code (overrides location detection if set) - defaults to empty
 - `fidesEvents`: Whether or not to map JanusEvents to FidesJS events in managed Consent WebViews - defaults to true
-- `webHost`: Optional host URL for TCF WebView - required for TCF experiences to work properly
 
 ### Integrations Support
 

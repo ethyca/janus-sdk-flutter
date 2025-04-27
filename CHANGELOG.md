@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.5 (2025-04-27)
+
+WebView support using webview_flutter
+region/getLocationByIPAddress calls in Flutter
+Full Flutter Example app
+ConsentMethod/ConsentMetadata Android bug
+Events from Native SDKs->Flutter working on both iOS and Android
+
+
 ## 0.1.4 (2025-04-19)
 
 Get rid of webHost in JanusConfiguration

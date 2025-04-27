@@ -1,4 +1,4 @@
-# Janus SDK 
+# Janus SDK
 ## Flutter Implementation Guide
 
 ### Installation
@@ -92,10 +92,10 @@ class _MyAppState extends State<MyApp> {
         region: 'US-CA',
         fidesEvents: true
       );
-      
+
       // Initialize the SDK
       final success = await _janusSdk.initialize(config);
-      
+
       if (success) {
         setState(() {
           _sdkInitialized = true;
@@ -185,9 +185,9 @@ FutureBuilder<bool>(
     if (snapshot.connectionState == ConnectionState.waiting) {
       return const CircularProgressIndicator();
     }
-    
+
     final hasExperience = snapshot.data ?? false;
-    
+
     return hasExperience
         ? ElevatedButton(
             onPressed: () {
@@ -224,29 +224,118 @@ final createdAt = metadata['createdAt']; // ISO 8601 formatted date string
 final updatedAt = metadata['updatedAt']; // ISO 8601 formatted date string
 final consentMethod = metadata['consentMethod']; // How consent was provided (e.g., "explicit", "implied")
 
-// Get the Fides string 
+// Get the Fides string
 // (List of IAB strings like CPzHq4APzHq4AAMABBENAUEAALAAAEOAAAAAAEAEACACAAAA,1~61.70)
 final fidesString = await _janusSdk.fidesString;
 ```
 
-### WebView Integration
+### Region and Geolocation
 
 ```dart
-// Create a WebView with consent integration
-// Note: The Flutter SDK does not provide a direct WebView widget
-// Instead, it configures a native WebView underneath
-await _janusSdk.createConsentWebView(autoSyncOnStart: true);
+// Get the current region being used by the SDK
+// This could be from configuration, IP geolocation, or a fallback
+final region = await _janusSdk.region;
+print('Current region: $region');
 
-// Load a URL in the WebView (implementation may vary by platform)
-// Example of handling a platform-specific WebView via platform channels
+// Perform IP-based geolocation to determine the user's region
+final locationInfo = await _janusSdk.getLocationByIPAddress();
+print('Detected region: ${locationInfo['region']}');
+print('Detected country: ${locationInfo['country']}');
 
-// IMPORTANT: Release the WebView when you're done with it to prevent memory leaks
-// This is typically done in dispose() or when the widget is being destroyed
-@override
-void dispose() {
-  _janusSdk.releaseConsentWebView();
-  super.dispose();
+// Example of using geolocation in a UI
+FutureBuilder<Map<String, dynamic>>(
+  future: _janusSdk.getLocationByIPAddress(),
+  builder: (context, snapshot) {
+    if (snapshot.connectionState == ConnectionState.waiting) {
+      return const CircularProgressIndicator();
+    }
+
+    if (snapshot.hasError) {
+      return Text('Error detecting location: ${snapshot.error}');
+    }
+
+    final locationInfo = snapshot.data ?? {};
+    final region = locationInfo['region'] ?? 'Unknown';
+    final country = locationInfo['country'] ?? 'Unknown';
+
+    return Text('You appear to be in $region, $country');
+  },
+)
+```
+
+### WebView Integration
+
+The Janus SDK provides a WebView controller that integrates with consent management. This allows you to create WebViews that automatically sync consent preferences with websites.
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:janus_sdk_flutter/janus_sdk_flutter.dart';
+
+class ConsentWebViewPage extends StatefulWidget {
+  @override
+  _ConsentWebViewPageState createState() => _ConsentWebViewPageState();
 }
+
+class _ConsentWebViewPageState extends State<ConsentWebViewPage> {
+  final _janusSdk = Janus();
+  JanusWebViewController? _webViewController;
+
+  @override
+  void initState() {
+    super.initState();
+    _initWebView();
+  }
+
+  Future<void> _initWebView() async {
+    // Create a WebView controller with consent integration
+    final controller = await _janusSdk.createConsentWebView(autoSyncOnStart: true);
+    setState(() {
+      _webViewController = controller;
+    });
+
+    // Load a URL in the WebView
+    await controller.loadUrl('https://example.com');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Consent WebView')),
+      body: _webViewController == null
+          ? const Center(child: CircularProgressIndicator())
+          : _webViewController!.buildWidget(),
+    );
+  }
+
+  @override
+  void dispose() {
+    // IMPORTANT: Release the WebView when you're done with it
+    if (_webViewController != null) {
+      _janusSdk.releaseConsentWebView(_webViewController!);
+    }
+    super.dispose();
+  }
+}
+```
+
+#### Advanced WebView Usage
+
+The `JanusWebViewController` provides access to the underlying Flutter `WebViewController` for more advanced operations:
+
+```dart
+// Access the underlying WebViewController for advanced operations
+final flutterController = _webViewController!.controller;
+
+// Execute JavaScript
+await flutterController.runJavaScript('document.getElementById("consent").click()');
+
+// Add JavaScript channels for communication between JavaScript and Dart
+flutterController.addJavaScriptChannel(
+  'ConsentChannel',
+  onMessageReceived: (JavaScriptMessage message) {
+    print('Message from JavaScript: ${message.message}');
+  },
+);
 ```
 
 ⚠️ **Important:** Always call `releaseConsentWebView()` when you're done with a WebView to prevent memory leaks. WebView JavaScript interfaces require explicit cleanup, and failing to release the WebView properly can lead to resource issues.
@@ -290,28 +379,28 @@ class _HomePageState extends State<HomePage> {
   bool _initialized = false;
   String? _error;
   Map<String, bool> _consent = {};
-  
+
   @override
   void initState() {
     super.initState();
     _initializeJanus();
   }
-  
+
   Future<void> _initializeJanus() async {
     final config = JanusConfiguration(
       apiHost: 'https://privacy-center.yourhost.com',
       propertyId: 'FDS-A0B1C2',
       ipLocation: true,
     );
-    
+
     try {
       final success = await _janusSdk.initialize(config);
-      
+
       setState(() {
         _initialized = success;
         _error = success ? null : 'Failed to initialize';
       });
-      
+
       if (success) {
         // Add listener for consent changes
         _janusSdk.addConsentEventListener((event) {
@@ -319,7 +408,7 @@ class _HomePageState extends State<HomePage> {
             _updateConsent();
           }
         });
-        
+
         // Load initial consent values
         _updateConsent();
       }
@@ -330,14 +419,14 @@ class _HomePageState extends State<HomePage> {
       });
     }
   }
-  
+
   Future<void> _updateConsent() async {
     final consent = await _janusSdk.getConsent();
     setState(() {
       _consent = consent;
     });
   }
-  
+
   @override
   Widget build(BuildContext context) {
     if (!_initialized) {
@@ -359,7 +448,7 @@ class _HomePageState extends State<HomePage> {
         ),
       );
     }
-    
+
     return Scaffold(
       appBar: AppBar(title: const Text('Privacy App')),
       body: ListView(
@@ -369,10 +458,10 @@ class _HomePageState extends State<HomePage> {
             onPressed: () => _janusSdk.showExperience(),
             child: const Text('Privacy Settings'),
           ),
-          
+
           const SizedBox(height: 20),
           const Text('Current Consent Status:', style: TextStyle(fontWeight: FontWeight.bold)),
-          
+
           ..._consent.entries.map((entry) => ListTile(
             title: Text(entry.key),
             trailing: Icon(
@@ -384,11 +473,28 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-  
+
+  // Example of creating a WebView
+  Future<void> _openWebView() async {
+    final webViewController = await _janusSdk.createConsentWebView();
+
+    // Navigate to a new screen with the WebView
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => Scaffold(
+          appBar: AppBar(title: const Text('Consent WebView')),
+          body: webViewController.buildWidget(),
+        ),
+      ),
+    ).then((_) {
+      // Release the WebView when the screen is popped
+      _janusSdk.releaseConsentWebView(webViewController);
+    });
+  }
+
   @override
   void dispose() {
     // Clean up resources
-    _janusSdk.releaseConsentWebView();
     super.dispose();
   }
-} 
+}

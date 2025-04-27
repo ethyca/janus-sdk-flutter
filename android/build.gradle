@@ -18,9 +18,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url = uri("https://ethyca.github.io/janus-sdk-android")
-        }
+        mavenLocal()
     }
 }
 
@@ -31,8 +29,8 @@ android {
     namespace = "com.ethyca.janussdk.flutter.android"
 
     compileSdk = 35
-    
-    ndkVersion = "26.3.11579264"
+
+    ndkVersion = "27.0.12077973" // Required by webview_flutter_android
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -40,7 +38,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11
+        jvmTarget = "11"
     }
 
     sourceSets {
@@ -65,13 +63,13 @@ android {
     }
 
     dependencies {
-        implementation("com.ethyca.janussdk:android:1.0.+")
-        
+        implementation("com.ethyca.janussdk:android:1.0.8")
+
         implementation("androidx.appcompat:appcompat:1.6.1")
         implementation("androidx.core:core-ktx:1.12.0")
         implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
-        
+
         testImplementation("org.jetbrains.kotlin:kotlin-test")
         testImplementation("org.mockito:mockito-core:5.0.0")
     }

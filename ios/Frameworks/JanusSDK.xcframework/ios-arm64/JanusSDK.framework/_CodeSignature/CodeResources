@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		N8KQRj6xp8DVaApVtDk8x73HB9Y=
+		4HjkNEYBStmMVj7NX7iHboOgaxY=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		aYpNuJsq4RdGLtozOGiDQ6ehQT8=
+		bkUX0bdXQoQWCX4m91LbmXJakas=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		IiBhZ8PaDEwHZqENwMFq8MStjjU=
+		w2M2gQ4+BywJ6PUvQhzj8BIdQhg=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		abuDBUynOPDi0oA78qndCeyzwpo=
+		PT68rNG7Rs4o+dg2A+uGUrrP4DE=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		IiBhZ8PaDEwHZqENwMFq8MStjjU=
+		w2M2gQ4+BywJ6PUvQhzj8BIdQhg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,7 +63,7 @@
 		</data>
 		<key>tcfWebView.js</key>
 		<data>
-		0uOqsS4XTu2w1k0GqRRDFeBJ1Ps=
+		4WRZlRlLveLv0QQebQo3ZvqZpFc=
 		</data>
 		<key>utils.js</key>
 		<data>
@@ -90,28 +90,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1SHWUzrQ5mZEEeAjn8UJfIR9ID6f40jk8Fm9fne/P3A=
+			ZeprVjo7Ixh06/47jZ7hx171SGVYJO4jyWaS4AUM49Q=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GMRTGPhxjgN0S5BaJr8PDy3ZPmVKEowvC7U9L3rhSqk=
+			XuNV1NGOhXak2jCdL4UgB/+wMUwlL0Eoc9GOkByDRDE=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5wyRtGmXbOtwXXg94Pk+u+hW8Vh+pYqydkGYGXD9+E4=
+			EMYEK8ntlwABUrlw4BVhNFTepqGb9vy2y74Xk7Ag3EM=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GMRTGPhxjgN0S5BaJr8PDy3ZPmVKEowvC7U9L3rhSqk=
+			XuNV1NGOhXak2jCdL4UgB/+wMUwlL0Eoc9GOkByDRDE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -162,7 +162,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pAPVMrdxCT8qxqIu1TqhHJDb2p5UfS/tgRwUCbkwakA=
+			1FKuVzBX7Q2nH5Ky5cPFPLZ+lk77LWpDLikmnqNtDlY=
 			</data>
 		</dict>
 		<key>utils.js</key>

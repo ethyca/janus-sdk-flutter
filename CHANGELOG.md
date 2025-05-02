@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.7 (2025-05-02)
+
+- fix issue with Flutter SDK building example app
+
+
 ## 0.1.6 (2025-05-02)
 
 - fix for fidesString not being written on Janus in certain configurations

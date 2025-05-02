@@ -19,6 +19,9 @@ allprojects {
         google()
         mavenCentral()
         mavenLocal()
+        maven {
+            url 'https://ethyca.github.io/janus-sdk-android'
+        }
     }
 }
 

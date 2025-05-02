@@ -214,7 +214,6 @@ class JanusManager extends ChangeNotifier {
         }
         if (locationData.containsKey('region')) {
           updatedDetails['Region'] = locationData['region'];
-          // Don't update currentRegion here - it should only be updated through updateRegion()
         }
         if (locationData.containsKey('location')) {
           updatedDetails['Location'] = locationData['location'];

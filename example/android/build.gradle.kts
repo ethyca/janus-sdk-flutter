@@ -2,9 +2,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url = uri("https://ethyca.github.io/janus-sdk-android")
-        }
+        mavenLocal()
     }
 }
 

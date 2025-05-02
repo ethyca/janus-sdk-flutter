@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.6 (2025-05-02)
+
+- fix for fidesString not being written on Janus in certain configurations
+- fix JSON decoding init preventing initialization in certain configurations
+- fix for shouldShowExperience and automatically showing the experience on TCF experiences
+
+
 ## 0.1.5 (2025-04-27)
 
 WebView support using webview_flutter

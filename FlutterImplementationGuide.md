@@ -223,6 +223,7 @@ final metadata = await _janusSdk.consentMetadata;
 final createdAt = metadata['createdAt']; // ISO 8601 formatted date string
 final updatedAt = metadata['updatedAt']; // ISO 8601 formatted date string
 final consentMethod = metadata['consentMethod']; // How consent was provided (e.g., "explicit", "implied")
+final versionHash = metadata['versionHash']; // Version hash of the privacy experience used to set consent
 
 // Get the Fides string
 // (List of IAB strings like CPzHq4APzHq4AAMABBENAUEAALAAAEOAAAAAAEAEACACAAAA,1~61.70)

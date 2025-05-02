@@ -11,16 +11,16 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
   final methodChannel = const MethodChannel('janus_sdk_flutter');
-  
+
   /// The event channel for receiving consent events
   final eventChannel = const EventChannel('janus_sdk_flutter/events');
-  
+
   /// Stream subscription for event channel
   StreamSubscription? _eventSubscription;
-  
+
   /// Map of event listeners by ID
   final Map<String, void Function(JanusEvent)> _eventListeners = {};
-  
+
   /// Counter for generating listener IDs
   int _listenerIdCounter = 0;
 
@@ -37,7 +37,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       return false;
     }
   }
-  
+
   @override
   Future<void> showExperience() async {
     try {
@@ -47,31 +47,31 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       rethrow;
     }
   }
-  
+
   @override
   String addConsentEventListener(void Function(JanusEvent) listener) {
     // Set up the event channel if this is the first listener
     if (_eventListeners.isEmpty) {
       _setupEventChannel();
     }
-    
+
     // Generate a unique ID for this listener
     final id = 'listener_${_listenerIdCounter++}';
     _eventListeners[id] = listener;
-    
+
     return id;
   }
-  
+
   @override
   void removeConsentEventListener(String listenerId) {
     _eventListeners.remove(listenerId);
-    
+
     // Clean up the event channel if there are no more listeners
     if (_eventListeners.isEmpty) {
       _tearDownEventChannel();
     }
   }
-  
+
   @override
   Future<Map<String, bool>> get consent async {
     try {
@@ -82,7 +82,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       return {};
     }
   }
-  
+
   @override
   Future<Map<String, dynamic>> get consentMetadata async {
     try {
@@ -93,7 +93,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       return {};
     }
   }
-  
+
   @override
   Future<String> get fidesString async {
     try {
@@ -104,7 +104,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       return '';
     }
   }
-  
+
   @override
   Future<bool> get hasExperience async {
     try {
@@ -115,7 +115,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       return false;
     }
   }
-  
+
   @override
   Future<bool> get shouldShowExperience async {
     try {
@@ -126,7 +126,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       return false;
     }
   }
-  
+
   @override
   Future<void> clearConsent({bool clearMetadata = false}) async {
     try {
@@ -139,47 +139,73 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       rethrow;
     }
   }
-  
+
   @override
-  Future<void> createConsentWebView({bool autoSyncOnStart = true}) async {
+  Future<String> createConsentWebView({bool autoSyncOnStart = true}) async {
     try {
-      await methodChannel.invokeMethod<void>(
+      final result = await methodChannel.invokeMethod<String>(
         'createConsentWebView',
         {'autoSyncOnStart': autoSyncOnStart},
       );
+      return result ?? '';
     } on PlatformException catch (e) {
       debugPrint('Failed to create consent WebView: ${e.message}');
       rethrow;
     }
   }
-  
+
   @override
-  Future<void> releaseConsentWebView() async {
+  Future<void> releaseConsentWebView(String webViewId) async {
     try {
-      await methodChannel.invokeMethod<void>('releaseConsentWebView');
+      await methodChannel.invokeMethod<void>(
+        'releaseConsentWebView',
+        {'webViewId': webViewId},
+      );
     } on PlatformException catch (e) {
       debugPrint('Failed to release consent WebView: ${e.message}');
       rethrow;
     }
   }
-  
+
+  @override
+  Future<Map<String, dynamic>> getLocationByIPAddress() async {
+    try {
+      final result = await methodChannel.invokeMapMethod<String, dynamic>('getLocationByIPAddress');
+      return result ?? {};
+    } on PlatformException catch (e) {
+      debugPrint('Failed to get location by IP address: ${e.message}');
+      return {};
+    }
+  }
+
+  @override
+  Future<String> get region async {
+    try {
+      final result = await methodChannel.invokeMethod<String>('getRegion');
+      return result ?? '';
+    } on PlatformException catch (e) {
+      debugPrint('Failed to get region: ${e.message}');
+      return '';
+    }
+  }
+
   /// Set up the event channel for receiving consent events
   void _setupEventChannel() {
     _eventSubscription = eventChannel.receiveBroadcastStream().listen(
       (dynamic event) {
-        if (event is Map<Object?, Object?>) {
-          // Convert to proper Map<String, dynamic>
-          final Map<String, dynamic> eventMap = {};
-          event.forEach((key, value) {
-            if (key is String) {
-              eventMap[key] = value;
+        if (event is Map) {
+          try {
+            // Pass the event map directly to JanusEvent.fromMap
+            // which now handles dynamic maps properly
+            final janusEvent = JanusEvent.fromMap(event);
+
+            // Notify all listeners
+            for (final listener in _eventListeners.values) {
+              listener(janusEvent);
             }
-          });
-          
-          final janusEvent = JanusEvent.fromMap(eventMap);
-          // Notify all listeners
-          for (final listener in _eventListeners.values) {
-            listener(janusEvent);
+          } catch (e) {
+            debugPrint('Error processing event: $e');
+            debugPrint('Event data: $event');
           }
         }
       },
@@ -188,7 +214,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       },
     );
   }
-  
+
   /// Tear down the event channel
   void _tearDownEventChannel() {
     _eventSubscription?.cancel();

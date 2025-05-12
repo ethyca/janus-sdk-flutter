@@ -116,12 +116,14 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
       }
 
       let propertyId = args["propertyId"] as? String ?? ""
+      let privacyCenterHost = args["privacyCenterHost"] as? String ?? ""
       let ipLocation = args["ipLocation"] as? Bool ?? true
-      let region = args["region"] as? String
+      let region = args["region"] as? String ?? ""
       let fidesEvents = args["fidesEvents"] as? Bool ?? true
 
       let config = JanusConfiguration(
         apiHost: apiHost,
+        privacyCenterHost: privacyCenterHost,
         propertyId: propertyId,
         ipLocation: ipLocation,
         region: region,

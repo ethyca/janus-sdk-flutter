@@ -156,23 +156,27 @@ class JanusConfiguration {
   /// The base URL of the Fides API.
   final String apiHost;
 
+  /// The privacy center host endpoint
+  final String privacyCenterHost;
+
   /// The property identifier for this app.
-  final String? propertyId;
+  final String propertyId;
 
   /// Whether to use IP-based geolocation.
   final bool ipLocation;
 
   /// The region code to use if geolocation is false or fails.
-  final String? region;
+  final String region;
 
   /// Whether to map Janus events to FidesJS events in WebViews.
   final bool fidesEvents;
 
   JanusConfiguration({
     required this.apiHost,
-    this.propertyId,
+    this.privacyCenterHost = "",
+    this.propertyId = "",
     this.ipLocation = true,
-    this.region,
+    this.region = "",
     this.fidesEvents = true
   });
 
@@ -180,6 +184,7 @@ class JanusConfiguration {
   Map<String, dynamic> toMap() {
     return {
       'apiHost': apiHost,
+      'privacyCenterHost': privacyCenterHost,
       'propertyId': propertyId,
       'ipLocation': ipLocation,
       'region': region,

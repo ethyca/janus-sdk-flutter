@@ -1,20 +1,74 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:janus_sdk_flutter/janus_sdk_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 // Configuration class for Janus
 class JanusConfig {
   final String apiHost;
+  final String? privacyCenterHost;
   final String? propertyId;
   final String? region;
   final String? website;
 
   JanusConfig({
     required this.apiHost,
+    this.privacyCenterHost,
     this.propertyId,
     this.region,
     this.website,
   });
+
+  // Convert config to a map for storage
+  Map<String, String> toMap() {
+    return {
+      'apiHost': apiHost,
+      'privacyCenterHost': privacyCenterHost ?? '',
+      'propertyId': propertyId ?? '',
+      'region': region ?? '',
+      'website': website ?? '',
+    };
+  }
+
+  // Create config from a map (for loading from storage)
+  static JanusConfig fromMap(Map<String, String> map) {
+    return JanusConfig(
+      apiHost: map['apiHost'] ?? 'https://privacy.ethyca.com',
+      privacyCenterHost: map['privacyCenterHost']?.isNotEmpty == true ? map['privacyCenterHost'] : null,
+      propertyId: map['propertyId']?.isNotEmpty == true ? map['propertyId'] : null,
+      region: map['region']?.isNotEmpty == true ? map['region'] : null,
+      website: map['website']?.isNotEmpty == true ? map['website'] : 'https://ethyca.com',
+    );
+  }
+
+  // Save config to SharedPreferences
+  Future<void> saveToPrefs() async {
+    final prefs = await SharedPreferences.getInstance();
+    final map = toMap();
+    for (var entry in map.entries) {
+      await prefs.setString('custom_${entry.key}', entry.value);
+    }
+  }
+
+  // Load config from SharedPreferences
+  static Future<JanusConfig> loadFromPrefs() async {
+    final prefs = await SharedPreferences.getInstance();
+    return JanusConfig(
+      apiHost: prefs.getString('custom_apiHost') ?? 'https://privacy.ethyca.com',
+      privacyCenterHost: prefs.getString('custom_privacyCenterHost')?.isNotEmpty == true 
+          ? prefs.getString('custom_privacyCenterHost') 
+          : null,
+      propertyId: prefs.getString('custom_propertyId')?.isNotEmpty == true 
+          ? prefs.getString('custom_propertyId') 
+          : null,
+      region: prefs.getString('custom_region')?.isNotEmpty == true 
+          ? prefs.getString('custom_region') 
+          : null,
+      website: prefs.getString('custom_website')?.isNotEmpty == true 
+          ? prefs.getString('custom_website') 
+          : 'https://ethyca.com',
+    );
+  }
 }
 
 // Class to track WebView events
@@ -146,9 +200,10 @@ class JanusManager extends ChangeNotifier {
 
     final janusConfig = JanusConfiguration(
       apiHost: config!.apiHost,
-      propertyId: config!.propertyId ?? '',
+      privacyCenterHost: config!.privacyCenterHost ?? "",
+      propertyId: config!.propertyId ?? "",
       ipLocation: config!.region == null, // Only use IP location if no region is provided
-      region: config!.region,
+      region: config!.region ?? "",
     );
 
     try {
@@ -516,6 +571,7 @@ class JanusManager extends ChangeNotifier {
     // Update the region
     config = JanusConfig(
       apiHost: config!.apiHost,
+      privacyCenterHost: config!.privacyCenterHost,
       propertyId: config!.propertyId,
       region: newRegion.isEmpty ? null : newRegion,
       website: config!.website,

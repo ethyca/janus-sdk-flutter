@@ -51,20 +51,20 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
           try {
             val args = call.arguments as Map<String, Any>
             val apiHost = args["apiHost"] as String
-            val propertyId = args["propertyId"] as String
+            val propertyId = args["propertyId"] as? String ?: ""
+            val privacyCenterHost = args["privacyCenterHost"] as? String ?: ""
             val ipLocation = args["ipLocation"] as Boolean
-            val region = args["region"] as? String
+            val region = args["region"] as? String ?: ""
             val fidesEvents = args["fidesEvents"] as? Boolean ?: true
 
             // Create configuration using Builder pattern
             val configBuilder = JanusConfiguration.Builder()
               .apiHost(apiHost)
               .propertyId(propertyId)
+              .privacyCenterHost(privacyCenterHost)
               .ipLocation(ipLocation)
-
-            // Add optional parameters if they exist
-            region?.let { configBuilder.region(it) }
-            configBuilder.fidesEvents(fidesEvents)
+              .region(region)
+              .fidesEvents(fidesEvents)
 
             val config = configBuilder.build()
 
@@ -129,10 +129,12 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
         }
 
         "clearConsent" -> {
-          val args = call.arguments as? Map<String, Any>
-          val clearMetadata = args?.get("clearMetadata") as? Boolean ?: false
-          Janus.clearConsent(clearMetadata)
-          result.success(null)
+          activity?.let {
+            val args = call.arguments as? Map<String, Any>
+            val clearMetadata = args?.get("clearMetadata") as? Boolean ?: false
+            Janus.clearConsent(it, clearMetadata)
+            result.success(null)
+          } ?: result.error("NO_ACTIVITY", "Activity is not available", null)
         }
 
         "createConsentWebView" -> {

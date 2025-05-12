@@ -86,7 +86,8 @@ class _MyAppState extends State<MyApp> {
     try {
       // Configure Janus
       final config = JanusConfiguration(
-        apiHost: 'https://privacy-center.yourhost.com',
+        apiHost: 'https://privacy-plus.yourhost.com',
+        privacyCenterHost: 'https://privacy-center.yourhost.com',
         propertyId: 'FDS-A0B1C2',
         ipLocation: true,
         region: 'US-CA',
@@ -149,11 +150,12 @@ class _MyAppState extends State<MyApp> {
 ```dart
 // Configure Janus with required credentials and settings
 final config = JanusConfiguration(
-  apiHost: 'https://privacy-center.yourhost.com',  // 🌎 Fides base URL
-  propertyId: 'FDS-A0B1C2',                        // 🏢 Property identifier for this app
-  ipLocation: true,                                // 📍 Use IP-based geolocation
-  region: 'US-CA',                                 // 🌎 Provide if geolocation is false or fails
-  fidesEvents: true                                // 🔄 Map JanusEvents to FidesJS events in WebViews
+  apiHost: 'https://privacy-plus.yourhost.com',             // 🌎 FidesPlus API server base URL (REQUIRED)
+  privacyCenterHost: 'https://privacy-center.yourhost.com', // 🏢 Privacy Center host URL - if not provided, Janus will use the apiHost
+  propertyId: 'FDS-A0B1C2',                                 // 🏢 Property identifier for this app
+  ipLocation: true,                                         // 📍 Use IP-based geolocation
+  region: 'US-CA',                                          // 🌎 Provide if geolocation is false or fails
+  fidesEvents: true                                         // 🔄 Map JanusEvents to FidesJS events in WebViews
 );
 
 // Initialize the SDK
@@ -389,7 +391,8 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> _initializeJanus() async {
     final config = JanusConfiguration(
-      apiHost: 'https://privacy-center.yourhost.com',
+      apiHost: 'https://privacy-plus.yourhost.com',
+      privacyCenterHost: 'https://privacy-center.yourhost.com',
       propertyId: 'FDS-A0B1C2',
       ipLocation: true,
     );

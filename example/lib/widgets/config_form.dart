@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import '../models/config_set.dart';
+import '../janus_manager.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ConfigForm extends StatefulWidget {
   final GlobalKey<FormState> formKey;
   final TextEditingController apiHostController;
+  final TextEditingController privacyCenterHostController;
   final TextEditingController propertyIdController;
   final TextEditingController regionController;
   final TextEditingController websiteController;
@@ -12,6 +15,7 @@ class ConfigForm extends StatefulWidget {
     super.key,
     required this.formKey,
     required this.apiHostController,
+    required this.privacyCenterHostController,
     required this.propertyIdController,
     required this.regionController,
     required this.websiteController,
@@ -23,23 +27,84 @@ class ConfigForm extends StatefulWidget {
 
 class _ConfigFormState extends State<ConfigForm> {
   String _selectedConfigSet = 'Custom';
+  bool _isInitialized = false;
+
+  @override
+  void initState() {
+    super.initState();
+    // Load custom config on initialization
+    _loadCustomConfig();
+  }
+
+  Future<void> _loadCustomConfig() async {
+    // Load the custom config from SharedPreferences
+    await ConfigSets.loadCustomConfig();
+    
+    // If this is the first initialization, apply the last used config
+    if (!_isInitialized) {
+      // Try to get the last selected config type from SharedPreferences
+      final prefs = await SharedPreferences.getInstance();
+      final lastSelectedConfig = prefs.getString('last_selected_config') ?? 'Custom';
+      
+      setState(() {
+        _selectedConfigSet = lastSelectedConfig;
+        _isInitialized = true;
+      });
+      
+      // Apply the configuration
+      _applyConfigSet(lastSelectedConfig);
+    }
+  }
+
+  Future<void> _saveLastSelectedConfig(String configName) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('last_selected_config', configName);
+  }
 
   void _applyConfigSet(String configSetName) {
     // Find the selected config set
-    final configSet = ConfigSets.sets.firstWhere(
-      (set) => set.name == configSetName,
-      orElse: () => ConfigSets.sets.last, // Default to Custom
-    );
+    final configSet = ConfigSets.getByName(configSetName);
 
     // Update the text controllers
     widget.apiHostController.text = configSet.config.apiHost;
+    widget.privacyCenterHostController.text = configSet.config.privacyCenterHost ?? '';
     widget.propertyIdController.text = configSet.config.propertyId ?? '';
     widget.regionController.text = configSet.config.region ?? '';
     widget.websiteController.text = configSet.config.website ?? 'https://ethyca.com';
 
+    // Save the selected config name
+    _saveLastSelectedConfig(configSetName);
+
     setState(() {
       _selectedConfigSet = configSetName;
     });
+  }
+
+  // Save the custom configuration
+  Future<void> _saveCustomConfig() async {
+    if (_selectedConfigSet == 'Custom') {
+      final config = JanusConfig(
+        apiHost: widget.apiHostController.text,
+        privacyCenterHost: widget.privacyCenterHostController.text.isEmpty 
+            ? null 
+            : widget.privacyCenterHostController.text,
+        propertyId: widget.propertyIdController.text.isEmpty 
+            ? null 
+            : widget.propertyIdController.text,
+        region: widget.regionController.text.isEmpty 
+            ? null 
+            : widget.regionController.text,
+        website: widget.websiteController.text.isEmpty 
+            ? 'https://ethyca.com' 
+            : widget.websiteController.text,
+      );
+      
+      // Save to SharedPreferences
+      await config.saveToPrefs();
+      
+      // Reload the custom config in ConfigSets
+      await ConfigSets.loadCustomConfig();
+    }
   }
 
   @override
@@ -64,6 +129,28 @@ class _ConfigFormState extends State<ConfigForm> {
               }
               return null;
             },
+            onChanged: (value) {
+              if (_selectedConfigSet == 'Custom') {
+                _saveCustomConfig();
+              }
+            },
+          ),
+          const SizedBox(height: 16),
+          _buildTextField(
+            controller: widget.privacyCenterHostController,
+            label: 'Privacy Center Host',
+            hint: 'https://privacy.ethyca.com',
+            validator: (value) {
+              if (value != null && value.isNotEmpty && !value.startsWith('http')) {
+                return 'Privacy Center Host must start with http:// or https://';
+              }
+              return null;
+            },
+            onChanged: (value) {
+              if (_selectedConfigSet == 'Custom') {
+                _saveCustomConfig();
+              }
+            },
           ),
           const SizedBox(height: 16),
           _buildTextField(
@@ -71,6 +158,11 @@ class _ConfigFormState extends State<ConfigForm> {
             label: 'Property ID (Optional)',
             hint: 'Your Janus property ID',
             validator: null, // Property ID is optional
+            onChanged: (value) {
+              if (_selectedConfigSet == 'Custom') {
+                _saveCustomConfig();
+              }
+            },
           ),
           const SizedBox(height: 16),
           _buildTextField(
@@ -78,6 +170,11 @@ class _ConfigFormState extends State<ConfigForm> {
             label: 'Region (Optional)',
             hint: 'e.g., US-CA',
             validator: null,
+            onChanged: (value) {
+              if (_selectedConfigSet == 'Custom') {
+                _saveCustomConfig();
+              }
+            },
           ),
           const SizedBox(height: 8),
           const Text(
@@ -98,6 +195,11 @@ class _ConfigFormState extends State<ConfigForm> {
                 return 'Website URL must start with http:// or https://';
               }
               return null;
+            },
+            onChanged: (value) {
+              if (_selectedConfigSet == 'Custom') {
+                _saveCustomConfig();
+              }
             },
           ),
           const SizedBox(height: 8),
@@ -136,10 +238,10 @@ class _ConfigFormState extends State<ConfigForm> {
               value: _selectedConfigSet,
               isExpanded: true,
               hint: const Text('Select a configuration'),
-              items: ConfigSets.sets.map((configSet) {
+              items: ConfigSets.names.map((name) {
                 return DropdownMenuItem<String>(
-                  value: configSet.name,
-                  child: Text(configSet.name),
+                  value: name,
+                  child: Text(name),
                 );
               }).toList(),
               onChanged: (value) {
@@ -159,6 +261,7 @@ class _ConfigFormState extends State<ConfigForm> {
     required String label,
     required String hint,
     required String? Function(String?)? validator,
+    Function(String)? onChanged,
   }) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -181,6 +284,7 @@ class _ConfigFormState extends State<ConfigForm> {
             ),
           ),
           validator: validator,
+          onChanged: onChanged,
         ),
       ],
     );

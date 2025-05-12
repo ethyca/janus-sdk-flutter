@@ -137,6 +137,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                   if (janusManager.config != null) {
                                     final newConfig = JanusConfig(
                                       apiHost: janusManager.config!.apiHost,
+                                      privacyCenterHost: janusManager.config!.privacyCenterHost,
                                       propertyId: janusManager.config!.propertyId,
                                       region: janusManager.config!.region,
                                       website: _websiteController.text.trim(),

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.8 (2025-05-12)
+
+- add privacy center host configuration option for TCF presentation
+
+
 ## 0.1.7 (2025-05-02)
 
 - fix issue with Flutter SDK building example app

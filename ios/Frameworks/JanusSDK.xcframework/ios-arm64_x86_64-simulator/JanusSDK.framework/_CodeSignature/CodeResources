@@ -18,43 +18,43 @@
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		jA03Xvy4MT53kByD/WKo97XO5oA=
+		PT3DWks9a+5omkRQ4uM6rliYoVc=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		nP+2f6xVTFkJl45L/ZSvls9+H54=
+		AHZxsod0sBwlu41Sj3SWe265/Ws=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		TNB3ws+71b9T5lsl/944u94IKgc=
+		eGQT10PqjRTVFmBIyUTfROuugnA=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		nP+2f6xVTFkJl45L/ZSvls9+H54=
+		AHZxsod0sBwlu41Sj3SWe265/Ws=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0DGiLFSvLST8Z37wYhfZ1684U3o=
+		z1A3cwDL19oxwq23UVqI6vZ/PKw=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		jA03Xvy4MT53kByD/WKo97XO5oA=
+		PT3DWks9a+5omkRQ4uM6rliYoVc=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		80Qjb2M3BUsbNDb9Y9OhS92/hhc=
+		jeTCK9N4Sfy59CIeVS62UjoqzXs=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		I/lL3wdOqD6sHavhAMCVobHLMfc=
+		EROmdGRsg5N/SHL7+vBbCWKLWmk=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		80Qjb2M3BUsbNDb9Y9OhS92/hhc=
+		jeTCK9N4Sfy59CIeVS62UjoqzXs=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		cn4y3Pa4nOK2z2rYGdtaNSPjyFs=
+		sLOJCm4YbKzOamPcDjjm+ZTC1KY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -114,70 +114,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hCemvo3HEZivcjj7VVxMmAM0PSvG7loGyxPRmqFwxPk=
+			jWeUb7WpD03vQX96H8ERjb/RmzKMJBFefrFXFMtJPzQ=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5ibl+ITyMQU2wUyPrOTWQ/hMt0y9z4J+od71ut18/NY=
+			l+gCbgl61g+LOSFagGyGIDKDU3yvYue3AvmoL9v0SS0=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c9xGIQ24PA2/h249FQD7iyb+TjXlIywu2hSGoq8BLpE=
+			B93Qa1ZUKddCoMLPHa3gsdr0ULVjJDjHK/1MWnxC5FE=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5ibl+ITyMQU2wUyPrOTWQ/hMt0y9z4J+od71ut18/NY=
+			l+gCbgl61g+LOSFagGyGIDKDU3yvYue3AvmoL9v0SS0=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cRtNb7PjmOgBLvxoMseEvEEHQhES/+pG/HuGkGSSpzA=
+			o9uPDrkWzjtEnDZjRKDukQ/OyG24tX+UalDe/VfiIBY=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hCemvo3HEZivcjj7VVxMmAM0PSvG7loGyxPRmqFwxPk=
+			jWeUb7WpD03vQX96H8ERjb/RmzKMJBFefrFXFMtJPzQ=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uy4n+C8oZN9YDpMCjZD7ZTtHSJkYEUJ3iGGBl1Q5uFM=
+			0l+wgYS7rl8lYfvFe7JrgQqv98BvpGanJ44bd/RzGv0=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MZjyoj7PnUXTRkBj2ASIR1JyukwpIijTj9pUqyEX4BQ=
+			SEODXaAgt41L+gX+HiqdahXpEOavHGTU0adylLQrbk0=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uy4n+C8oZN9YDpMCjZD7ZTtHSJkYEUJ3iGGBl1Q5uFM=
+			0l+wgYS7rl8lYfvFe7JrgQqv98BvpGanJ44bd/RzGv0=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3D6MEQQy2OL/sarH4ADhNJTrPRwhruVcB8kGm8DBZ/4=
+			4YMJW2FX7gRufqZ7Ck3kY2ut2VyqLE2XrV5C6Y3F/OE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

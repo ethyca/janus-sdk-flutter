@@ -120,6 +120,7 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
       let ipLocation = args["ipLocation"] as? Bool ?? true
       let region = args["region"] as? String ?? ""
       let fidesEvents = args["fidesEvents"] as? Bool ?? true
+      let autoShowExperience = args["autoShowExperience"] as? Bool ?? true
 
       let config = JanusConfiguration(
         apiHost: apiHost,
@@ -127,7 +128,8 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
         propertyId: propertyId,
         ipLocation: ipLocation,
         region: region,
-        fidesEvents: fidesEvents
+        fidesEvents: fidesEvents,
+        autoShowExperience: autoShowExperience
       )
 
       Janus.initialize(config: config) { success, error in

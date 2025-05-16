@@ -21,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final _regionController = TextEditingController();
   final _websiteController = TextEditingController(text: 'https://ethyca.com');
   bool _isLoading = true;
+  bool _autoShowExperience = true;
 
   @override
   void initState() {
@@ -44,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _propertyIdController.text = customConfig.propertyId ?? '';
       _regionController.text = customConfig.region ?? '';
       _websiteController.text = customConfig.website ?? 'https://ethyca.com';
+      _autoShowExperience = customConfig.autoShowExperience;
     }
     
     setState(() {
@@ -82,6 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
         website: _websiteController.text.isEmpty 
             ? null 
             : _websiteController.text.trim(),
+        autoShowExperience: _autoShowExperience,
       );
 
       // Save custom configuration before initialization
@@ -143,6 +146,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     propertyIdController: _propertyIdController,
                     regionController: _regionController,
                     websiteController: _websiteController,
+                    initialAutoShowExperience: _autoShowExperience,
+                    onAutoShowExperienceChanged: (value) {
+                      setState(() {
+                        _autoShowExperience = value;
+                      });
+                    },
                   ),
                 ),
               ),

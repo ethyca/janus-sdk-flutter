@@ -10,6 +10,7 @@ class JanusConfig {
   final String? propertyId;
   final String? region;
   final String? website;
+  final bool autoShowExperience;
 
   JanusConfig({
     required this.apiHost,
@@ -17,27 +18,30 @@ class JanusConfig {
     this.propertyId,
     this.region,
     this.website,
+    this.autoShowExperience = true,
   });
 
   // Convert config to a map for storage
-  Map<String, String> toMap() {
+  Map<String, dynamic> toMap() {
     return {
       'apiHost': apiHost,
       'privacyCenterHost': privacyCenterHost ?? '',
       'propertyId': propertyId ?? '',
       'region': region ?? '',
       'website': website ?? '',
+      'autoShowExperience': autoShowExperience,
     };
   }
 
   // Create config from a map (for loading from storage)
-  static JanusConfig fromMap(Map<String, String> map) {
+  static JanusConfig fromMap(Map<String, dynamic> map) {
     return JanusConfig(
       apiHost: map['apiHost'] ?? 'https://privacy.ethyca.com',
       privacyCenterHost: map['privacyCenterHost']?.isNotEmpty == true ? map['privacyCenterHost'] : null,
       propertyId: map['propertyId']?.isNotEmpty == true ? map['propertyId'] : null,
       region: map['region']?.isNotEmpty == true ? map['region'] : null,
       website: map['website']?.isNotEmpty == true ? map['website'] : 'https://ethyca.com',
+      autoShowExperience: map['autoShowExperience'] ?? true,
     );
   }
 
@@ -46,7 +50,11 @@ class JanusConfig {
     final prefs = await SharedPreferences.getInstance();
     final map = toMap();
     for (var entry in map.entries) {
-      await prefs.setString('custom_${entry.key}', entry.value);
+      if (entry.value is bool) {
+        await prefs.setBool('custom_${entry.key}', entry.value);
+      } else if (entry.value is String) {
+        await prefs.setString('custom_${entry.key}', entry.value);
+      }
     }
   }
 
@@ -67,6 +75,7 @@ class JanusConfig {
       website: prefs.getString('custom_website')?.isNotEmpty == true 
           ? prefs.getString('custom_website') 
           : 'https://ethyca.com',
+      autoShowExperience: prefs.getBool('custom_autoShowExperience') ?? true,
     );
   }
 }
@@ -204,6 +213,8 @@ class JanusManager extends ChangeNotifier {
       propertyId: config!.propertyId ?? "",
       ipLocation: config!.region == null, // Only use IP location if no region is provided
       region: config!.region ?? "",
+      fidesEvents: true,
+      autoShowExperience: config!.autoShowExperience
     );
 
     try {
@@ -575,6 +586,7 @@ class JanusManager extends ChangeNotifier {
       propertyId: config!.propertyId,
       region: newRegion.isEmpty ? null : newRegion,
       website: config!.website,
+      autoShowExperience: config!.autoShowExperience,
     );
 
     // Clear all states immediately before reinitializing

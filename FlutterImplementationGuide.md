@@ -153,9 +153,10 @@ final config = JanusConfiguration(
   apiHost: 'https://privacy-plus.yourhost.com',             // 🌎 FidesPlus API server base URL (REQUIRED)
   privacyCenterHost: 'https://privacy-center.yourhost.com', // 🏢 Privacy Center host URL - if not provided, Janus will use the apiHost
   propertyId: 'FDS-A0B1C2',                                 // 🏢 Property identifier for this app
-  ipLocation: true,                                         // 📍 Use IP-based geolocation
+  ipLocation: true,                                         // 📍 Use IP-based geolocation (default true)
   region: 'US-CA',                                          // 🌎 Provide if geolocation is false or fails
-  fidesEvents: true                                         // 🔄 Map JanusEvents to FidesJS events in WebViews
+  fidesEvents: true,                                        // 🔄 Map JanusEvents to FidesJS events in WebViews (default true)
+  autoShowExperience: true                                  // 🚀 Automatically show privacy experience after initialization (default true)
 );
 
 // Initialize the SDK
@@ -502,3 +503,47 @@ class _HomePageState extends State<HomePage> {
     super.dispose();
   }
 }
+```
+
+### Controlling Privacy Experience Display
+
+By default, Janus will automatically show the privacy experience after successful initialization if `shouldShowExperience` returns true. You can control this behavior with the `autoShowExperience` configuration parameter.
+
+#### Option 1: Automatic display (default)
+
+```dart
+// With autoShowExperience set to true (default), Janus will automatically
+// show the privacy experience after initialization if shouldShowExperience is true
+final config = JanusConfiguration(
+  apiHost: 'https://privacy-plus.yourhost.com',
+  // Other parameters...
+  autoShowExperience: true // Default behavior
+);
+```
+
+#### Option 2: Manual control
+
+```dart
+// Disable automatic display by setting autoShowExperience to false
+final config = JanusConfiguration(
+  apiHost: 'https://privacy-plus.yourhost.com',
+  // Other parameters...
+  autoShowExperience: false // Prevent automatic display
+);
+
+// Initialize Janus without showing the privacy experience immediately
+final success = await _janusSdk.initialize(config);
+
+if (success) {
+  // You can now decide when to show the experience
+  
+  // Check if the experience should be shown (based on consent status, etc.)
+  final shouldShow = await _janusSdk.shouldShowExperience;
+  if (shouldShow) {
+    // Show at the appropriate time in your app flow
+    Future.delayed(const Duration(seconds: 2), () {
+      _janusSdk.showExperience();
+    });
+  }
+}
+```

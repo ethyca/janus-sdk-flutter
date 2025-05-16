@@ -170,6 +170,9 @@ class JanusConfiguration {
 
   /// Whether to map Janus events to FidesJS events in WebViews.
   final bool fidesEvents;
+  
+  /// Whether to automatically show the privacy experience after initialization.
+  final bool autoShowExperience;
 
   JanusConfiguration({
     required this.apiHost,
@@ -177,7 +180,8 @@ class JanusConfiguration {
     this.propertyId = "",
     this.ipLocation = true,
     this.region = "",
-    this.fidesEvents = true
+    this.fidesEvents = true,
+    this.autoShowExperience = true
   });
 
   /// Convert to a map for serialization.
@@ -188,7 +192,8 @@ class JanusConfiguration {
       'propertyId': propertyId,
       'ipLocation': ipLocation,
       'region': region,
-      'fidesEvents': fidesEvents
+      'fidesEvents': fidesEvents,
+      'autoShowExperience': autoShowExperience
     };
   }
 }

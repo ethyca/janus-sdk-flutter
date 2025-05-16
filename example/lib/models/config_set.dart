@@ -22,6 +22,7 @@ class ConfigSets {
         propertyId: 'FDS-KSB4MF',
         region: null,
         website: 'https://ethyca.com',
+        autoShowExperience: true,
       ),
     ),
     // Ethyca Empty
@@ -33,6 +34,7 @@ class ConfigSets {
         propertyId: null,
         region: null,
         website: 'https://ethyca.com',
+        autoShowExperience: true,
       ),
     ),
     // Cookie House (RC)
@@ -44,6 +46,7 @@ class ConfigSets {
         propertyId: null,
         region: null,
         website: 'https://cookiehouse-plus-rc.fides-staging.ethyca.com',
+        autoShowExperience: true,
       ),
     ),
     // Cookie House (Nightly)
@@ -55,6 +58,7 @@ class ConfigSets {
         propertyId: null,
         region: null,
         website: 'https://cookiehouse-plus-nightly.fides-staging.ethyca.com',
+        autoShowExperience: true,
       ),
     ),
   ];
@@ -78,6 +82,7 @@ class ConfigSets {
             propertyId: '',
             region: null,
             website: 'https://ethyca.com',
+            autoShowExperience: true,
           ),
         ),
       );
@@ -106,6 +111,7 @@ class ConfigSets {
           propertyId: '',
           region: null,
           website: 'https://ethyca.com',
+          autoShowExperience: true,
         ),
       );
     }

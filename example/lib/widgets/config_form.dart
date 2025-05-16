@@ -10,6 +10,8 @@ class ConfigForm extends StatefulWidget {
   final TextEditingController propertyIdController;
   final TextEditingController regionController;
   final TextEditingController websiteController;
+  final Function(bool)? onAutoShowExperienceChanged;
+  final bool initialAutoShowExperience;
 
   const ConfigForm({
     super.key,
@@ -19,6 +21,8 @@ class ConfigForm extends StatefulWidget {
     required this.propertyIdController,
     required this.regionController,
     required this.websiteController,
+    this.onAutoShowExperienceChanged,
+    this.initialAutoShowExperience = true,
   });
 
   @override
@@ -28,10 +32,13 @@ class ConfigForm extends StatefulWidget {
 class _ConfigFormState extends State<ConfigForm> {
   String _selectedConfigSet = 'Custom';
   bool _isInitialized = false;
+  bool _autoShowExperience = true;
 
   @override
   void initState() {
     super.initState();
+    // Initialize with the prop value
+    _autoShowExperience = widget.initialAutoShowExperience;
     // Load custom config on initialization
     _loadCustomConfig();
   }
@@ -71,6 +78,11 @@ class _ConfigFormState extends State<ConfigForm> {
     widget.propertyIdController.text = configSet.config.propertyId ?? '';
     widget.regionController.text = configSet.config.region ?? '';
     widget.websiteController.text = configSet.config.website ?? 'https://ethyca.com';
+    
+    // Update the autoShowExperience value
+    setState(() {
+      _autoShowExperience = configSet.config.autoShowExperience;
+    });
 
     // Save the selected config name
     _saveLastSelectedConfig(configSetName);
@@ -97,6 +109,7 @@ class _ConfigFormState extends State<ConfigForm> {
         website: widget.websiteController.text.isEmpty 
             ? 'https://ethyca.com' 
             : widget.websiteController.text,
+        autoShowExperience: _autoShowExperience,
       );
       
       // Save to SharedPreferences
@@ -210,6 +223,25 @@ class _ConfigFormState extends State<ConfigForm> {
               fontStyle: FontStyle.italic,
               color: Colors.grey,
             ),
+          ),
+          const SizedBox(height: 24),
+          // Direct SwitchListTile without header
+          SwitchListTile(
+            title: const Text('Auto-Show Experience'),
+            value: _autoShowExperience,
+            onChanged: (value) {
+              setState(() {
+                _autoShowExperience = value;
+              });
+              if (_selectedConfigSet == 'Custom') {
+                _saveCustomConfig();
+              }
+              if (widget.onAutoShowExperienceChanged != null) {
+                widget.onAutoShowExperienceChanged!(value);
+              }
+            },
+            contentPadding: EdgeInsets.zero,
+            dense: true,
           ),
         ],
       ),

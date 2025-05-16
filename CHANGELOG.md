@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.9 (2025-05-16)
+
+- add autoShowExperience configuration to Janus
+- fix layout issue on iPad when
+- fix for older iOS versions
+
+
 ## 0.1.8 (2025-05-12)
 
 - add privacy center host configuration option for TCF presentation

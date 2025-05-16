@@ -56,6 +56,7 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
             val ipLocation = args["ipLocation"] as Boolean
             val region = args["region"] as? String ?: ""
             val fidesEvents = args["fidesEvents"] as? Boolean ?: true
+            val autoShowExperience = args["autoShowExperience"] as? Boolean ?: true
 
             // Create configuration using Builder pattern
             val configBuilder = JanusConfiguration.Builder()
@@ -65,6 +66,7 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
               .ipLocation(ipLocation)
               .region(region)
               .fidesEvents(fidesEvents)
+              .autoShowExperience(autoShowExperience)
 
             val config = configBuilder.build()
 

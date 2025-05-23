@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.10 (2025-05-23)
+
+
 ## 0.1.9 (2025-05-16)
 
 - add autoShowExperience configuration to Janus

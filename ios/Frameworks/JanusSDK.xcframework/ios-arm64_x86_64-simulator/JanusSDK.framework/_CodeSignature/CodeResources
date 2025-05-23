@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JSFA9yw0NywoCBdpMPbflFhIEm0=
+		ZFRfGXD7WhLkOBV33Bd+3DYp+ng=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		hGH9FZtqcVVy8nImArlruL+ILsI=
+		Rq66SiNRxnpzpTnJvSHgTVL8W70=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		dduY+A9PAB+/P0g9SAgIA3+plzc=
+		9DxZ/YxtBCHAnMZaKrr0vgZgaW4=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		IqSM5uoZX7GXfF6sP2iOXvCBsiY=
+		m6kmVmBPFvVl/q3HSSxoJHC3Puk=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		dduY+A9PAB+/P0g9SAgIA3+plzc=
+		9DxZ/YxtBCHAnMZaKrr0vgZgaW4=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		UKCqP4WW3hx2PRyHvsM+WuLBJNE=
+		b4GGnQsoC3LI1T2rvRqC6EU5ng8=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		hGH9FZtqcVVy8nImArlruL+ILsI=
+		Rq66SiNRxnpzpTnJvSHgTVL8W70=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		FA0HupuV5gPfQo1lIdJ/MUaY26Q=
+		RW8MfHWOY14RHoIdjgd2C8siakk=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		fde6aNWWCofuJLhw+Zlvd+znWNs=
+		EusxFhLzdCS1ACrq0PQvcqHCgis=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		FA0HupuV5gPfQo1lIdJ/MUaY26Q=
+		RW8MfHWOY14RHoIdjgd2C8siakk=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1Wfxbff4+IVIywNvAaZap1st95s=
+		6ZUMF2wpQXs52Z2Ja7Hxp6aX42o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -114,70 +114,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HYlsLCFra2n9pYTUJ5N8/t3YbQIehO3N+zRVOh4NN74=
+			Jo0j1GRH2h4yu1HsQya8WSin6SeWWjxSrQhfQFMI3e8=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W/lqrKVYXwjnBrjAY27Rz4e6UuQTpNhamaLfmabJIqU=
+			ovsfUytHHQ5lnT8YB3DUqkKoaM8CKhnSJlKGOuR6Y84=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+enbps7Nzd6EDJWqhoDZmxG6RCEMUGEGyqPEcZRh7tA=
+			PUaxdEq+e7neJaeguw2R8M5RBpZ4cUA7TvEj4EpsnDs=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W/lqrKVYXwjnBrjAY27Rz4e6UuQTpNhamaLfmabJIqU=
+			ovsfUytHHQ5lnT8YB3DUqkKoaM8CKhnSJlKGOuR6Y84=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xHs4pqa6MuI4wDh8SIyPlLaoRJ2uZDVg0Y0PHVht7vQ=
+			DTGbsmGSVDo+50z8PdMDD0QHeetwcXEXpfBqpTDDR/0=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HYlsLCFra2n9pYTUJ5N8/t3YbQIehO3N+zRVOh4NN74=
+			Jo0j1GRH2h4yu1HsQya8WSin6SeWWjxSrQhfQFMI3e8=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T5JvMG+g1ax18vO8Ii8KzrPUZ6n6JPiSIUeGEaMt4yU=
+			ljjPnIghqqkCcpU3RqSmO4QyVuVp4OB9+kLZTq4IDas=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AZpANMIpDT3iUVyuMtFpY+PGa7iVQoSTEPTZSAYh2OM=
+			jpIUGlQwciui//HjFRDN5kv4/cmfGq71JLg9jGvHRhc=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T5JvMG+g1ax18vO8Ii8KzrPUZ6n6JPiSIUeGEaMt4yU=
+			ljjPnIghqqkCcpU3RqSmO4QyVuVp4OB9+kLZTq4IDas=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dUhNLDVWj7BsntO2u8lu9mLc7fMnWSYFrqXyK9xpsso=
+			PcfVC2gO3Ba62p94JyACH2wxdL9dO5AnDOoIgrBsUe0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

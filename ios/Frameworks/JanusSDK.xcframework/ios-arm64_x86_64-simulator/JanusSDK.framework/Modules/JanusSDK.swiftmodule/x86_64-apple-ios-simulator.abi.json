@@ -9,567 +9,6 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "JanusProvider",
-        "printedName": "JanusProvider",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "shared",
-            "printedName": "shared",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "JanusProtocol",
-                "printedName": "any JanusSDK.JanusProtocol",
-                "usr": "s:8JanusSDK0A8ProtocolP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK0A8ProviderC6sharedAA0A8Protocol_pvpZ",
-            "mangledName": "$s8JanusSDK0A8ProviderC6sharedAA0A8Protocol_pvpZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "JanusProtocol",
-                    "printedName": "any JanusSDK.JanusProtocol",
-                    "usr": "s:8JanusSDK0A8ProtocolP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A8ProviderC6sharedAA0A8Protocol_pvgZ",
-                "mangledName": "$s8JanusSDK0A8ProviderC6sharedAA0A8Protocol_pvgZ",
-                "moduleName": "JanusSDK",
-                "static": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "resetToDefault",
-            "printedName": "resetToDefault()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK0A8ProviderC14resetToDefaultyyFZ",
-            "mangledName": "$s8JanusSDK0A8ProviderC14resetToDefaultyyFZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setupForTesting",
-            "printedName": "setupForTesting(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "JanusProtocol",
-                "printedName": "any JanusSDK.JanusProtocol",
-                "usr": "s:8JanusSDK0A8ProtocolP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK0A8ProviderC15setupForTestingyyAA0A8Protocol_pFZ",
-            "mangledName": "$s8JanusSDK0A8ProviderC15setupForTestingyyAA0A8Protocol_pFZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:8JanusSDK0A8ProviderC",
-        "mangledName": "$s8JanusSDK0A8ProviderC",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "APIError",
-        "printedName": "APIError",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "invalidURL",
-            "printedName": "invalidURL",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(JanusSDK.APIError.Type) -> JanusSDK.APIError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "APIError",
-                    "printedName": "JanusSDK.APIError",
-                    "usr": "s:8JanusSDK8APIErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "JanusSDK.APIError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8JanusSDK8APIErrorO10invalidURLyA2CmF",
-            "mangledName": "$s8JanusSDK8APIErrorO10invalidURLyA2CmF",
-            "moduleName": "JanusSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "networkError",
-            "printedName": "networkError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(JanusSDK.APIError.Type) -> (any Swift.Error) -> JanusSDK.APIError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(any Swift.Error) -> JanusSDK.APIError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Error",
-                        "printedName": "any Swift.Error",
-                        "usr": "s:s5ErrorP"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "JanusSDK.APIError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8JanusSDK8APIErrorO12networkErroryACs0E0_pcACmF",
-            "mangledName": "$s8JanusSDK8APIErrorO12networkErroryACs0E0_pcACmF",
-            "moduleName": "JanusSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "invalidResponse",
-            "printedName": "invalidResponse",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(JanusSDK.APIError.Type) -> JanusSDK.APIError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "APIError",
-                    "printedName": "JanusSDK.APIError",
-                    "usr": "s:8JanusSDK8APIErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "JanusSDK.APIError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8JanusSDK8APIErrorO15invalidResponseyA2CmF",
-            "mangledName": "$s8JanusSDK8APIErrorO15invalidResponseyA2CmF",
-            "moduleName": "JanusSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "decodingError",
-            "printedName": "decodingError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(JanusSDK.APIError.Type) -> (any Swift.Error) -> JanusSDK.APIError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(any Swift.Error) -> JanusSDK.APIError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Error",
-                        "printedName": "any Swift.Error",
-                        "usr": "s:s5ErrorP"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "JanusSDK.APIError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8JanusSDK8APIErrorO13decodingErroryACs0E0_pcACmF",
-            "mangledName": "$s8JanusSDK8APIErrorO13decodingErroryACs0E0_pcACmF",
-            "moduleName": "JanusSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "serverError",
-            "printedName": "serverError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(JanusSDK.APIError.Type) -> (Swift.Int, Swift.String) -> JanusSDK.APIError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Int, Swift.String) -> JanusSDK.APIError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Swift.Int, Swift.String)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Int",
-                            "printedName": "Swift.Int",
-                            "usr": "s:Si"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "JanusSDK.APIError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8JanusSDK8APIErrorO11serverErroryACSi_SStcACmF",
-            "mangledName": "$s8JanusSDK8APIErrorO11serverErroryACSi_SStcACmF",
-            "moduleName": "JanusSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "unknownError",
-            "printedName": "unknownError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(JanusSDK.APIError.Type) -> JanusSDK.APIError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "APIError",
-                    "printedName": "JanusSDK.APIError",
-                    "usr": "s:8JanusSDK8APIErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "JanusSDK.APIError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8JanusSDK8APIErrorO12unknownErroryA2CmF",
-            "mangledName": "$s8JanusSDK8APIErrorO12unknownErroryA2CmF",
-            "moduleName": "JanusSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "noData",
-            "printedName": "noData",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(JanusSDK.APIError.Type) -> JanusSDK.APIError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "APIError",
-                    "printedName": "JanusSDK.APIError",
-                    "usr": "s:8JanusSDK8APIErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "JanusSDK.APIError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8JanusSDK8APIErrorO6noDatayA2CmF",
-            "mangledName": "$s8JanusSDK8APIErrorO6noDatayA2CmF",
-            "moduleName": "JanusSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "badResponse",
-            "printedName": "badResponse",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(JanusSDK.APIError.Type) -> (Swift.Int) -> JanusSDK.APIError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Int) -> JanusSDK.APIError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(statusCode: Swift.Int)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Int",
-                            "printedName": "Swift.Int",
-                            "usr": "s:Si"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "JanusSDK.APIError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8JanusSDK8APIErrorO11badResponseyACSi_tcACmF",
-            "mangledName": "$s8JanusSDK8APIErrorO11badResponseyACSi_tcACmF",
-            "moduleName": "JanusSDK"
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:8JanusSDK8APIErrorO",
-        "mangledName": "$s8JanusSDK8APIErrorO",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Error",
-            "printedName": "Error",
-            "usr": "s:s5ErrorP",
-            "mangledName": "$ss5ErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
         "moduleName": "JanusSDK",
         "declAttributes": [
           "RawDocComment"
@@ -1401,266 +840,6 @@
         "printedName": "WebKit",
         "declKind": "Import",
         "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ConsentManagerProtocol",
-        "printedName": "ConsentManagerProtocol",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "getConsent",
-            "printedName": "getConsent()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Swift.Bool]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK22ConsentManagerProtocolP03getC0SDySSSbGyF",
-            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP03getC0SDySSSbGyF",
-            "moduleName": "JanusSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
-            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getMetadata",
-            "printedName": "getMetadata()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ConsentMetadata",
-                "printedName": "JanusSDK.ConsentMetadata",
-                "usr": "s:8JanusSDK15ConsentMetadataV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK22ConsentManagerProtocolP11getMetadataAA0cG0VyF",
-            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP11getMetadataAA0cG0VyF",
-            "moduleName": "JanusSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
-            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getFidesString",
-            "printedName": "getFidesString()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK22ConsentManagerProtocolP14getFidesStringSSyF",
-            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP14getFidesStringSSyF",
-            "moduleName": "JanusSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
-            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getConsentMethod",
-            "printedName": "getConsentMethod()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK22ConsentManagerProtocolP03getC6MethodSSyF",
-            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP03getC6MethodSSyF",
-            "moduleName": "JanusSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
-            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setConsent",
-            "printedName": "setConsent(values:versionHash:fidesString:consentMethod:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Swift.Bool]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "usr": "s:SD"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK22ConsentManagerProtocolP03setC06values11versionHash11fidesString13consentMethodySDySSSbG_S2SSgAJtF",
-            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP03setC06values11versionHash11fidesString13consentMethodySDySSSbG_S2SSgAJtF",
-            "moduleName": "JanusSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
-            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "clearConsent",
-            "printedName": "clearConsent(clearMetadata:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK22ConsentManagerProtocolP05clearC00F8MetadataySb_tF",
-            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP05clearC00F8MetadataySb_tF",
-            "moduleName": "JanusSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
-            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:8JanusSDK22ConsentManagerProtocolP",
-        "mangledName": "$s8JanusSDK22ConsentManagerProtocolP",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
       },
       {
         "kind": "Import",
@@ -3891,317 +3070,388 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "PrivacyExperienceAPIProtocol",
-        "printedName": "PrivacyExperienceAPIProtocol",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "fetchPrivacyExperiences",
-            "printedName": "fetchPrivacyExperiences(region:propertyId:page:size:minimalTcf:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Bool?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Result<JanusSDK.PrivacyExperienceResponse, JanusSDK.APIError>) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "Swift.Result<JanusSDK.PrivacyExperienceResponse, JanusSDK.APIError>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PrivacyExperienceResponse",
-                        "printedName": "JanusSDK.PrivacyExperienceResponse",
-                        "usr": "s:8JanusSDK25PrivacyExperienceResponseV"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "APIError",
-                        "printedName": "JanusSDK.APIError",
-                        "usr": "s:8JanusSDK8APIErrorO"
-                      }
-                    ],
-                    "usr": "s:s6ResultO"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK28PrivacyExperienceAPIProtocolP05fetchC11Experiences6region10propertyId4page4size10minimalTcf10completionySS_SSSgSiSgALSbSgys6ResultOyAA0cD8ResponseVAA8APIErrorOGctF",
-            "mangledName": "$s8JanusSDK28PrivacyExperienceAPIProtocolP05fetchC11Experiences6region10propertyId4page4size10minimalTcf10completionySS_SSSgSiSgALSbSgys6ResultOyAA0cD8ResponseVAA8APIErrorOGctF",
-            "moduleName": "JanusSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.PrivacyExperienceAPIProtocol>",
-            "sugared_genericSig": "<Self where Self : JanusSDK.PrivacyExperienceAPIProtocol>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:8JanusSDK28PrivacyExperienceAPIProtocolP",
-        "mangledName": "$s8JanusSDK28PrivacyExperienceAPIProtocolP",
         "moduleName": "JanusSDK",
         "declAttributes": [
-          "AccessControl",
           "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
         ]
       },
       {
         "kind": "TypeDecl",
-        "name": "PrivacyExperienceAPI",
-        "printedName": "PrivacyExperienceAPI",
+        "name": "APIError",
+        "printedName": "APIError",
         "children": [
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(apiHost:urlSession:)",
+            "kind": "Var",
+            "name": "invalidURL",
+            "printedName": "invalidURL",
             "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PrivacyExperienceAPI",
-                "printedName": "JanusSDK.PrivacyExperienceAPI",
-                "usr": "s:8JanusSDK20PrivacyExperienceAPIC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSession",
-                "printedName": "Foundation.URLSession",
-                "hasDefaultArg": true,
-                "usr": "c:objc(cs)NSURLSession"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:8JanusSDK20PrivacyExperienceAPIC7apiHost10urlSessionACSS_So12NSURLSessionCtcfc",
-            "mangledName": "$s8JanusSDK20PrivacyExperienceAPIC7apiHost10urlSessionACSS_So12NSURLSessionCtcfc",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "fetchPrivacyExperiences",
-            "printedName": "fetchPrivacyExperiences(region:propertyId:page:size:minimalTcf:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Bool?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Result<JanusSDK.PrivacyExperienceResponse, JanusSDK.APIError>) -> ()",
+                "printedName": "(JanusSDK.APIError.Type) -> JanusSDK.APIError",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
+                    "name": "APIError",
+                    "printedName": "JanusSDK.APIError",
+                    "usr": "s:8JanusSDK8APIErrorO"
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "Swift.Result<JanusSDK.PrivacyExperienceResponse, JanusSDK.APIError>",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.APIError.Type",
                     "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PrivacyExperienceResponse",
-                        "printedName": "JanusSDK.PrivacyExperienceResponse",
-                        "usr": "s:8JanusSDK25PrivacyExperienceResponseV"
-                      },
                       {
                         "kind": "TypeNominal",
                         "name": "APIError",
                         "printedName": "JanusSDK.APIError",
                         "usr": "s:8JanusSDK8APIErrorO"
                       }
-                    ],
-                    "usr": "s:s6ResultO"
+                    ]
                   }
                 ]
               }
             ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK20PrivacyExperienceAPIC05fetchC11Experiences6region10propertyId4page4size10minimalTcf10completionySS_SSSgSiSgALSbSgys6ResultOyAA0cD8ResponseVAA8APIErrorOGctF",
-            "mangledName": "$s8JanusSDK20PrivacyExperienceAPIC05fetchC11Experiences6region10propertyId4page4size10minimalTcf10completionySS_SSSgSiSgALSbSgys6ResultOyAA0cD8ResponseVAA8APIErrorOGctF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK8APIErrorO10invalidURLyA2CmF",
+            "mangledName": "$s8JanusSDK8APIErrorO10invalidURLyA2CmF",
+            "moduleName": "JanusSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "networkError",
+            "printedName": "networkError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.APIError.Type) -> (any Swift.Error) -> JanusSDK.APIError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> JanusSDK.APIError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.APIError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
             ],
-            "funcSelfKind": "NonMutating"
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK8APIErrorO12networkErroryACs0E0_pcACmF",
+            "mangledName": "$s8JanusSDK8APIErrorO12networkErroryACs0E0_pcACmF",
+            "moduleName": "JanusSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidResponse",
+            "printedName": "invalidResponse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.APIError.Type) -> JanusSDK.APIError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIError",
+                    "printedName": "JanusSDK.APIError",
+                    "usr": "s:8JanusSDK8APIErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.APIError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK8APIErrorO15invalidResponseyA2CmF",
+            "mangledName": "$s8JanusSDK8APIErrorO15invalidResponseyA2CmF",
+            "moduleName": "JanusSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "decodingError",
+            "printedName": "decodingError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.APIError.Type) -> (any Swift.Error) -> JanusSDK.APIError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> JanusSDK.APIError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.APIError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK8APIErrorO13decodingErroryACs0E0_pcACmF",
+            "mangledName": "$s8JanusSDK8APIErrorO13decodingErroryACs0E0_pcACmF",
+            "moduleName": "JanusSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "serverError",
+            "printedName": "serverError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.APIError.Type) -> (Swift.Int, Swift.String) -> JanusSDK.APIError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int, Swift.String) -> JanusSDK.APIError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Int, Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.APIError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK8APIErrorO11serverErroryACSi_SStcACmF",
+            "mangledName": "$s8JanusSDK8APIErrorO11serverErroryACSi_SStcACmF",
+            "moduleName": "JanusSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "unknownError",
+            "printedName": "unknownError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.APIError.Type) -> JanusSDK.APIError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIError",
+                    "printedName": "JanusSDK.APIError",
+                    "usr": "s:8JanusSDK8APIErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.APIError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK8APIErrorO12unknownErroryA2CmF",
+            "mangledName": "$s8JanusSDK8APIErrorO12unknownErroryA2CmF",
+            "moduleName": "JanusSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "noData",
+            "printedName": "noData",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.APIError.Type) -> JanusSDK.APIError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIError",
+                    "printedName": "JanusSDK.APIError",
+                    "usr": "s:8JanusSDK8APIErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.APIError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK8APIErrorO6noDatayA2CmF",
+            "mangledName": "$s8JanusSDK8APIErrorO6noDatayA2CmF",
+            "moduleName": "JanusSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "badResponse",
+            "printedName": "badResponse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.APIError.Type) -> (Swift.Int) -> JanusSDK.APIError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> JanusSDK.APIError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(statusCode: Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.APIError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK8APIErrorO11badResponseyACSi_tcACmF",
+            "mangledName": "$s8JanusSDK8APIErrorO11badResponseyACSi_tcACmF",
+            "moduleName": "JanusSDK"
           }
         ],
-        "declKind": "Class",
-        "usr": "s:8JanusSDK20PrivacyExperienceAPIC",
-        "mangledName": "$s8JanusSDK20PrivacyExperienceAPIC",
+        "declKind": "Enum",
+        "usr": "s:8JanusSDK8APIErrorO",
+        "mangledName": "$s8JanusSDK8APIErrorO",
         "moduleName": "JanusSDK",
         "declAttributes": [
           "AccessControl",
@@ -4224,10 +3474,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "PrivacyExperienceAPIProtocol",
-            "printedName": "PrivacyExperienceAPIProtocol",
-            "usr": "s:8JanusSDK28PrivacyExperienceAPIProtocolP",
-            "mangledName": "$s8JanusSDK28PrivacyExperienceAPIProtocolP"
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -23361,611 +22618,13 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "JanusSDK"
       },
       {
         "kind": "TypeDecl",
-        "name": "ConsentMetadata",
-        "printedName": "ConsentMetadata",
+        "name": "ConsentManagerProtocol",
+        "printedName": "ConsentManagerProtocol",
         "children": [
-          {
-            "kind": "Var",
-            "name": "createdAt",
-            "printedName": "createdAt",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.Date?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Date",
-                    "printedName": "Foundation.Date",
-                    "usr": "s:10Foundation4DateV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvp",
-            "mangledName": "$s8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Date?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Date",
-                        "printedName": "Foundation.Date",
-                        "usr": "s:10Foundation4DateV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvg",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvg",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Date?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Date",
-                        "printedName": "Foundation.Date",
-                        "usr": "s:10Foundation4DateV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvs",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvs",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvM",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvM",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "updatedAt",
-            "printedName": "updatedAt",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.Date?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Date",
-                    "printedName": "Foundation.Date",
-                    "usr": "s:10Foundation4DateV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvp",
-            "mangledName": "$s8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Date?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Date",
-                        "printedName": "Foundation.Date",
-                        "usr": "s:10Foundation4DateV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvg",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvg",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Date?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Date",
-                        "printedName": "Foundation.Date",
-                        "usr": "s:10Foundation4DateV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvs",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvs",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvM",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvM",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "consentMethod",
-            "printedName": "consentMethod",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK15ConsentMetadataV13consentMethodSSvp",
-            "mangledName": "$s8JanusSDK15ConsentMetadataV13consentMethodSSvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV13consentMethodSSvg",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV13consentMethodSSvg",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV13consentMethodSSvs",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV13consentMethodSSvs",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV13consentMethodSSvM",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV13consentMethodSSvM",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "versionHash",
-            "printedName": "versionHash",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK15ConsentMetadataV11versionHashSSvp",
-            "mangledName": "$s8JanusSDK15ConsentMetadataV11versionHashSSvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV11versionHashSSvg",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV11versionHashSSvg",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV11versionHashSSvs",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV11versionHashSSvs",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK15ConsentMetadataV11versionHashSSvM",
-                "mangledName": "$s8JanusSDK15ConsentMetadataV11versionHashSSvM",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(createdAt:updatedAt:consentMethod:versionHash:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ConsentMetadata",
-                "printedName": "JanusSDK.ConsentMetadata",
-                "usr": "s:8JanusSDK15ConsentMetadataV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.Date?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Date",
-                    "printedName": "Foundation.Date",
-                    "usr": "s:10Foundation4DateV"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.Date?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Date",
-                    "printedName": "Foundation.Date",
-                    "usr": "s:10Foundation4DateV"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:8JanusSDK15ConsentMetadataV9createdAt07updatedF013consentMethod11versionHashAC10Foundation4DateVSg_AKS2Stcfc",
-            "mangledName": "$s8JanusSDK15ConsentMetadataV9createdAt07updatedF013consentMethod11versionHashAC10Foundation4DateVSg_AKS2Stcfc",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ConsentMetadata",
-                "printedName": "JanusSDK.ConsentMetadata",
-                "usr": "s:8JanusSDK15ConsentMetadataV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:8JanusSDK15ConsentMetadataV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s8JanusSDK15ConsentMetadataV4fromACs7Decoder_p_tKcfc",
-            "moduleName": "JanusSDK",
-            "implicit": true,
-            "throwing": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "encode",
-            "printedName": "encode(to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Encoder",
-                "printedName": "any Swift.Encoder",
-                "usr": "s:s7EncoderP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK15ConsentMetadataV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s8JanusSDK15ConsentMetadataV6encode2toys7Encoder_p_tKF",
-            "moduleName": "JanusSDK",
-            "implicit": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:8JanusSDK15ConsentMetadataV",
-        "mangledName": "$s8JanusSDK15ConsentMetadataV",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ConsentManager",
-        "printedName": "ConsentManager",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(userDefaults:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ConsentManager",
-                "printedName": "JanusSDK.ConsentManager",
-                "usr": "s:8JanusSDK14ConsentManagerC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UserDefaults",
-                "printedName": "Foundation.UserDefaults",
-                "hasDefaultArg": true,
-                "usr": "c:objc(cs)NSUserDefaults"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:8JanusSDK14ConsentManagerC12userDefaultsACSo06NSUserF0C_tcfc",
-            "mangledName": "$s8JanusSDK14ConsentManagerC12userDefaultsACSo06NSUserF0C_tcfc",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
           {
             "kind": "Function",
             "name": "getConsent",
@@ -23993,35 +22652,16 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8JanusSDK14ConsentManagerC03getC0SDySSSbGyF",
-            "mangledName": "$s8JanusSDK14ConsentManagerC03getC0SDySSSbGyF",
+            "usr": "s:8JanusSDK22ConsentManagerProtocolP03getC0SDySSSbGyF",
+            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP03getC0SDySSSbGyF",
             "moduleName": "JanusSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
+            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
+            "protocolReq": true,
             "declAttributes": [
-              "AccessControl",
               "RawDocComment"
             ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getFidesString",
-            "printedName": "getFidesString()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK14ConsentManagerC14getFidesStringSSyF",
-            "mangledName": "$s8JanusSDK14ConsentManagerC14getFidesStringSSyF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
+            "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -24037,13 +22677,41 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8JanusSDK14ConsentManagerC11getMetadataAA0cF0VyF",
-            "mangledName": "$s8JanusSDK14ConsentManagerC11getMetadataAA0cF0VyF",
+            "usr": "s:8JanusSDK22ConsentManagerProtocolP11getMetadataAA0cG0VyF",
+            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP11getMetadataAA0cG0VyF",
             "moduleName": "JanusSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
+            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
+            "protocolReq": true,
             "declAttributes": [
-              "AccessControl",
               "RawDocComment"
             ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getFidesString",
+            "printedName": "getFidesString()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK22ConsentManagerProtocolP14getFidesStringSSyF",
+            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP14getFidesStringSSyF",
+            "moduleName": "JanusSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
+            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -24059,13 +22727,16 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8JanusSDK14ConsentManagerC03getC6MethodSSyF",
-            "mangledName": "$s8JanusSDK14ConsentManagerC03getC6MethodSSyF",
+            "usr": "s:8JanusSDK22ConsentManagerProtocolP03getC6MethodSSyF",
+            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP03getC6MethodSSyF",
             "moduleName": "JanusSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
+            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
+            "protocolReq": true,
             "declAttributes": [
-              "AccessControl",
               "RawDocComment"
             ],
+            "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -24116,7 +22787,6 @@
                     "usr": "s:SS"
                   }
                 ],
-                "hasDefaultArg": true,
                 "usr": "s:Sq"
               },
               {
@@ -24131,18 +22801,20 @@
                     "usr": "s:SS"
                   }
                 ],
-                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8JanusSDK14ConsentManagerC03setC06values11versionHash11fidesString13consentMethodySDySSSbG_S2SSgAJtF",
-            "mangledName": "$s8JanusSDK14ConsentManagerC03setC06values11versionHash11fidesString13consentMethodySDySSSbG_S2SSgAJtF",
+            "usr": "s:8JanusSDK22ConsentManagerProtocolP03setC06values11versionHash11fidesString13consentMethodySDySSSbG_S2SSgAJtF",
+            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP03setC06values11versionHash11fidesString13consentMethodySDySSSbG_S2SSgAJtF",
             "moduleName": "JanusSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
+            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
+            "protocolReq": true,
             "declAttributes": [
-              "AccessControl",
               "RawDocComment"
             ],
+            "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -24159,37 +22831,32 @@
                 "kind": "TypeNominal",
                 "name": "Bool",
                 "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
                 "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8JanusSDK14ConsentManagerC05clearC00E8MetadataySb_tF",
-            "mangledName": "$s8JanusSDK14ConsentManagerC05clearC00E8MetadataySb_tF",
+            "usr": "s:8JanusSDK22ConsentManagerProtocolP05clearC00F8MetadataySb_tF",
+            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP05clearC00F8MetadataySb_tF",
             "moduleName": "JanusSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
+            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
+            "protocolReq": true,
             "declAttributes": [
-              "AccessControl",
               "RawDocComment"
             ],
+            "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Class",
-        "usr": "s:8JanusSDK14ConsentManagerC",
-        "mangledName": "$s8JanusSDK14ConsentManagerC",
+        "declKind": "Protocol",
+        "usr": "s:8JanusSDK22ConsentManagerProtocolP",
+        "mangledName": "$s8JanusSDK22ConsentManagerProtocolP",
         "moduleName": "JanusSDK",
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
         ],
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
           {
             "kind": "Conformance",
             "name": "Escapable",
@@ -24199,10 +22866,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "ConsentManagerProtocol",
-            "printedName": "ConsentManagerProtocol",
-            "usr": "s:8JanusSDK22ConsentManagerProtocolP",
-            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           }
         ]
       },
@@ -24217,14 +22884,21 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
         "kind": "TypeDecl",
-        "name": "IPLocationAPIProtocol",
-        "printedName": "IPLocationAPIProtocol",
+        "name": "PrivacyExperienceAPIProtocol",
+        "printedName": "PrivacyExperienceAPIProtocol",
         "children": [
           {
             "kind": "Function",
-            "name": "fetchLocation",
-            "printedName": "fetchLocation(completion:)",
+            "name": "fetchPrivacyExperiences",
+            "printedName": "fetchPrivacyExperiences(region:propertyId:page:size:minimalTcf:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -24232,9 +22906,71 @@
                 "printedName": "()"
               },
               {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Result<JanusSDK.IPLocationResponse, JanusSDK.APIError>) -> ()",
+                "printedName": "(Swift.Result<JanusSDK.PrivacyExperienceResponse, JanusSDK.APIError>) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -24244,13 +22980,13 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Result",
-                    "printedName": "Swift.Result<JanusSDK.IPLocationResponse, JanusSDK.APIError>",
+                    "printedName": "Swift.Result<JanusSDK.PrivacyExperienceResponse, JanusSDK.APIError>",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "IPLocationResponse",
-                        "printedName": "JanusSDK.IPLocationResponse",
-                        "usr": "s:8JanusSDK18IPLocationResponseV"
+                        "name": "PrivacyExperienceResponse",
+                        "printedName": "JanusSDK.PrivacyExperienceResponse",
+                        "usr": "s:8JanusSDK25PrivacyExperienceResponseV"
                       },
                       {
                         "kind": "TypeNominal",
@@ -24265,11 +23001,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8JanusSDK21IPLocationAPIProtocolP13fetchLocation10completionyys6ResultOyAA0C8ResponseVAA8APIErrorOGc_tF",
-            "mangledName": "$s8JanusSDK21IPLocationAPIProtocolP13fetchLocation10completionyys6ResultOyAA0C8ResponseVAA8APIErrorOGc_tF",
+            "usr": "s:8JanusSDK28PrivacyExperienceAPIProtocolP05fetchC11Experiences6region10propertyId4page4size10minimalTcf10completionySS_SSSgSiSgALSbSgys6ResultOyAA0cD8ResponseVAA8APIErrorOGctF",
+            "mangledName": "$s8JanusSDK28PrivacyExperienceAPIProtocolP05fetchC11Experiences6region10propertyId4page4size10minimalTcf10completionySS_SSSgSiSgALSbSgys6ResultOyAA0cD8ResponseVAA8APIErrorOGctF",
             "moduleName": "JanusSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.IPLocationAPIProtocol>",
-            "sugared_genericSig": "<Self where Self : JanusSDK.IPLocationAPIProtocol>",
+            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.PrivacyExperienceAPIProtocol>",
+            "sugared_genericSig": "<Self where Self : JanusSDK.PrivacyExperienceAPIProtocol>",
             "protocolReq": true,
             "declAttributes": [
               "RawDocComment"
@@ -24279,8 +23015,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:8JanusSDK21IPLocationAPIProtocolP",
-        "mangledName": "$s8JanusSDK21IPLocationAPIProtocolP",
+        "usr": "s:8JanusSDK28PrivacyExperienceAPIProtocolP",
+        "mangledName": "$s8JanusSDK28PrivacyExperienceAPIProtocolP",
         "moduleName": "JanusSDK",
         "declAttributes": [
           "AccessControl",
@@ -24305,120 +23041,25 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "IPLocationAPI",
-        "printedName": "IPLocationAPI",
+        "name": "PrivacyExperienceAPI",
+        "printedName": "PrivacyExperienceAPI",
         "children": [
-          {
-            "kind": "Var",
-            "name": "shared",
-            "printedName": "shared",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "IPLocationAPIProtocol",
-                "printedName": "any JanusSDK.IPLocationAPIProtocol",
-                "usr": "s:8JanusSDK21IPLocationAPIProtocolP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvpZ",
-            "mangledName": "$s8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvpZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "IPLocationAPIProtocol",
-                    "printedName": "any JanusSDK.IPLocationAPIProtocol",
-                    "usr": "s:8JanusSDK21IPLocationAPIProtocolP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvgZ",
-                "mangledName": "$s8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvgZ",
-                "moduleName": "JanusSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "IPLocationAPIProtocol",
-                    "printedName": "any JanusSDK.IPLocationAPIProtocol",
-                    "usr": "s:8JanusSDK21IPLocationAPIProtocolP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvsZ",
-                "mangledName": "$s8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvsZ",
-                "moduleName": "JanusSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvMZ",
-                "mangledName": "$s8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvMZ",
-                "moduleName": "JanusSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(session:)",
+            "printedName": "init(apiHost:urlSession:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "IPLocationAPI",
-                "printedName": "JanusSDK.IPLocationAPI",
-                "usr": "s:8JanusSDK13IPLocationAPIC"
+                "name": "PrivacyExperienceAPI",
+                "printedName": "JanusSDK.PrivacyExperienceAPI",
+                "usr": "s:8JanusSDK20PrivacyExperienceAPIC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -24429,8 +23070,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8JanusSDK13IPLocationAPIC7sessionACSo12NSURLSessionC_tcfc",
-            "mangledName": "$s8JanusSDK13IPLocationAPIC7sessionACSo12NSURLSessionC_tcfc",
+            "usr": "s:8JanusSDK20PrivacyExperienceAPIC7apiHost10urlSessionACSS_So12NSURLSessionCtcfc",
+            "mangledName": "$s8JanusSDK20PrivacyExperienceAPIC7apiHost10urlSessionACSS_So12NSURLSessionCtcfc",
             "moduleName": "JanusSDK",
             "declAttributes": [
               "AccessControl",
@@ -24440,8 +23081,8 @@
           },
           {
             "kind": "Function",
-            "name": "fetchLocation",
-            "printedName": "fetchLocation(completion:)",
+            "name": "fetchPrivacyExperiences",
+            "printedName": "fetchPrivacyExperiences(region:propertyId:page:size:minimalTcf:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -24449,9 +23090,72 @@
                 "printedName": "()"
               },
               {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Result<JanusSDK.IPLocationResponse, JanusSDK.APIError>) -> ()",
+                "printedName": "(Swift.Result<JanusSDK.PrivacyExperienceResponse, JanusSDK.APIError>) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -24461,13 +23165,13 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Result",
-                    "printedName": "Swift.Result<JanusSDK.IPLocationResponse, JanusSDK.APIError>",
+                    "printedName": "Swift.Result<JanusSDK.PrivacyExperienceResponse, JanusSDK.APIError>",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "IPLocationResponse",
-                        "printedName": "JanusSDK.IPLocationResponse",
-                        "usr": "s:8JanusSDK18IPLocationResponseV"
+                        "name": "PrivacyExperienceResponse",
+                        "printedName": "JanusSDK.PrivacyExperienceResponse",
+                        "usr": "s:8JanusSDK25PrivacyExperienceResponseV"
                       },
                       {
                         "kind": "TypeNominal",
@@ -24482,8 +23186,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8JanusSDK13IPLocationAPIC13fetchLocation10completionyys6ResultOyAA0C8ResponseVAA8APIErrorOGc_tF",
-            "mangledName": "$s8JanusSDK13IPLocationAPIC13fetchLocation10completionyys6ResultOyAA0C8ResponseVAA8APIErrorOGc_tF",
+            "usr": "s:8JanusSDK20PrivacyExperienceAPIC05fetchC11Experiences6region10propertyId4page4size10minimalTcf10completionySS_SSSgSiSgALSbSgys6ResultOyAA0cD8ResponseVAA8APIErrorOGctF",
+            "mangledName": "$s8JanusSDK20PrivacyExperienceAPIC05fetchC11Experiences6region10propertyId4page4size10minimalTcf10completionySS_SSSgSiSgALSbSgys6ResultOyAA0cD8ResponseVAA8APIErrorOGctF",
             "moduleName": "JanusSDK",
             "declAttributes": [
               "AccessControl",
@@ -24493,8 +23197,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:8JanusSDK13IPLocationAPIC",
-        "mangledName": "$s8JanusSDK13IPLocationAPIC",
+        "usr": "s:8JanusSDK20PrivacyExperienceAPIC",
+        "mangledName": "$s8JanusSDK20PrivacyExperienceAPIC",
         "moduleName": "JanusSDK",
         "declAttributes": [
           "AccessControl",
@@ -24517,10 +23221,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "IPLocationAPIProtocol",
-            "printedName": "IPLocationAPIProtocol",
-            "usr": "s:8JanusSDK21IPLocationAPIProtocolP",
-            "mangledName": "$s8JanusSDK21IPLocationAPIProtocolP"
+            "name": "PrivacyExperienceAPIProtocol",
+            "printedName": "PrivacyExperienceAPIProtocol",
+            "usr": "s:8JanusSDK28PrivacyExperienceAPIProtocolP",
+            "mangledName": "$s8JanusSDK28PrivacyExperienceAPIProtocolP"
           }
         ]
       },
@@ -28438,6 +27142,846 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConsentMetadata",
+        "printedName": "ConsentMetadata",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "createdAt",
+            "printedName": "createdAt",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvp",
+            "mangledName": "$s8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvg",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvg",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvs",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvs",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvM",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV9createdAt10Foundation4DateVSgvM",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "updatedAt",
+            "printedName": "updatedAt",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvp",
+            "mangledName": "$s8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvg",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvg",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvs",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvs",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvM",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV9updatedAt10Foundation4DateVSgvM",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "consentMethod",
+            "printedName": "consentMethod",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK15ConsentMetadataV13consentMethodSSvp",
+            "mangledName": "$s8JanusSDK15ConsentMetadataV13consentMethodSSvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV13consentMethodSSvg",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV13consentMethodSSvg",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV13consentMethodSSvs",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV13consentMethodSSvs",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV13consentMethodSSvM",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV13consentMethodSSvM",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "versionHash",
+            "printedName": "versionHash",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK15ConsentMetadataV11versionHashSSvp",
+            "mangledName": "$s8JanusSDK15ConsentMetadataV11versionHashSSvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV11versionHashSSvg",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV11versionHashSSvg",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV11versionHashSSvs",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV11versionHashSSvs",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15ConsentMetadataV11versionHashSSvM",
+                "mangledName": "$s8JanusSDK15ConsentMetadataV11versionHashSSvM",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(createdAt:updatedAt:consentMethod:versionHash:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConsentMetadata",
+                "printedName": "JanusSDK.ConsentMetadata",
+                "usr": "s:8JanusSDK15ConsentMetadataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8JanusSDK15ConsentMetadataV9createdAt07updatedF013consentMethod11versionHashAC10Foundation4DateVSg_AKS2Stcfc",
+            "mangledName": "$s8JanusSDK15ConsentMetadataV9createdAt07updatedF013consentMethod11versionHashAC10Foundation4DateVSg_AKS2Stcfc",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConsentMetadata",
+                "printedName": "JanusSDK.ConsentMetadata",
+                "usr": "s:8JanusSDK15ConsentMetadataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8JanusSDK15ConsentMetadataV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s8JanusSDK15ConsentMetadataV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "JanusSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK15ConsentMetadataV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s8JanusSDK15ConsentMetadataV6encode2toys7Encoder_p_tKF",
+            "moduleName": "JanusSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8JanusSDK15ConsentMetadataV",
+        "mangledName": "$s8JanusSDK15ConsentMetadataV",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConsentManager",
+        "printedName": "ConsentManager",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(userDefaults:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConsentManager",
+                "printedName": "JanusSDK.ConsentManager",
+                "usr": "s:8JanusSDK14ConsentManagerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaults",
+                "printedName": "Foundation.UserDefaults",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSUserDefaults"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8JanusSDK14ConsentManagerC12userDefaultsACSo06NSUserF0C_tcfc",
+            "mangledName": "$s8JanusSDK14ConsentManagerC12userDefaultsACSo06NSUserF0C_tcfc",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getConsent",
+            "printedName": "getConsent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.Bool]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14ConsentManagerC03getC0SDySSSbGyF",
+            "mangledName": "$s8JanusSDK14ConsentManagerC03getC0SDySSSbGyF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getFidesString",
+            "printedName": "getFidesString()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14ConsentManagerC14getFidesStringSSyF",
+            "mangledName": "$s8JanusSDK14ConsentManagerC14getFidesStringSSyF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getMetadata",
+            "printedName": "getMetadata()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConsentMetadata",
+                "printedName": "JanusSDK.ConsentMetadata",
+                "usr": "s:8JanusSDK15ConsentMetadataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14ConsentManagerC11getMetadataAA0cF0VyF",
+            "mangledName": "$s8JanusSDK14ConsentManagerC11getMetadataAA0cF0VyF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getConsentMethod",
+            "printedName": "getConsentMethod()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14ConsentManagerC03getC6MethodSSyF",
+            "mangledName": "$s8JanusSDK14ConsentManagerC03getC6MethodSSyF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setConsent",
+            "printedName": "setConsent(values:versionHash:fidesString:consentMethod:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.Bool]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14ConsentManagerC03setC06values11versionHash11fidesString13consentMethodySDySSSbG_S2SSgAJtF",
+            "mangledName": "$s8JanusSDK14ConsentManagerC03setC06values11versionHash11fidesString13consentMethodySDySSSbG_S2SSgAJtF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearConsent",
+            "printedName": "clearConsent(clearMetadata:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14ConsentManagerC05clearC00E8MetadataySb_tF",
+            "mangledName": "$s8JanusSDK14ConsentManagerC05clearC00E8MetadataySb_tF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8JanusSDK14ConsentManagerC",
+        "mangledName": "$s8JanusSDK14ConsentManagerC",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConsentManagerProtocol",
+            "printedName": "ConsentManagerProtocol",
+            "usr": "s:8JanusSDK22ConsentManagerProtocolP",
+            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -29143,6 +28687,462 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IPLocationAPIProtocol",
+        "printedName": "IPLocationAPIProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "fetchLocation",
+            "printedName": "fetchLocation(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<JanusSDK.IPLocationResponse, JanusSDK.APIError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<JanusSDK.IPLocationResponse, JanusSDK.APIError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IPLocationResponse",
+                        "printedName": "JanusSDK.IPLocationResponse",
+                        "usr": "s:8JanusSDK18IPLocationResponseV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK21IPLocationAPIProtocolP13fetchLocation10completionyys6ResultOyAA0C8ResponseVAA8APIErrorOGc_tF",
+            "mangledName": "$s8JanusSDK21IPLocationAPIProtocolP13fetchLocation10completionyys6ResultOyAA0C8ResponseVAA8APIErrorOGc_tF",
+            "moduleName": "JanusSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.IPLocationAPIProtocol>",
+            "sugared_genericSig": "<Self where Self : JanusSDK.IPLocationAPIProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:8JanusSDK21IPLocationAPIProtocolP",
+        "mangledName": "$s8JanusSDK21IPLocationAPIProtocolP",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IPLocationAPI",
+        "printedName": "IPLocationAPI",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IPLocationAPIProtocol",
+                "printedName": "any JanusSDK.IPLocationAPIProtocol",
+                "usr": "s:8JanusSDK21IPLocationAPIProtocolP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvpZ",
+            "mangledName": "$s8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IPLocationAPIProtocol",
+                    "printedName": "any JanusSDK.IPLocationAPIProtocol",
+                    "usr": "s:8JanusSDK21IPLocationAPIProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvgZ",
+                "mangledName": "$s8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IPLocationAPIProtocol",
+                    "printedName": "any JanusSDK.IPLocationAPIProtocol",
+                    "usr": "s:8JanusSDK21IPLocationAPIProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvsZ",
+                "mangledName": "$s8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvsZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvMZ",
+                "mangledName": "$s8JanusSDK13IPLocationAPIC6sharedAA0C11APIProtocol_pvMZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(session:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IPLocationAPI",
+                "printedName": "JanusSDK.IPLocationAPI",
+                "usr": "s:8JanusSDK13IPLocationAPIC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLSession",
+                "printedName": "Foundation.URLSession",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSURLSession"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8JanusSDK13IPLocationAPIC7sessionACSo12NSURLSessionC_tcfc",
+            "mangledName": "$s8JanusSDK13IPLocationAPIC7sessionACSo12NSURLSessionC_tcfc",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "fetchLocation",
+            "printedName": "fetchLocation(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<JanusSDK.IPLocationResponse, JanusSDK.APIError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<JanusSDK.IPLocationResponse, JanusSDK.APIError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IPLocationResponse",
+                        "printedName": "JanusSDK.IPLocationResponse",
+                        "usr": "s:8JanusSDK18IPLocationResponseV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIError",
+                        "printedName": "JanusSDK.APIError",
+                        "usr": "s:8JanusSDK8APIErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK13IPLocationAPIC13fetchLocation10completionyys6ResultOyAA0C8ResponseVAA8APIErrorOGc_tF",
+            "mangledName": "$s8JanusSDK13IPLocationAPIC13fetchLocation10completionyys6ResultOyAA0C8ResponseVAA8APIErrorOGc_tF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8JanusSDK13IPLocationAPIC",
+        "mangledName": "$s8JanusSDK13IPLocationAPIC",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "IPLocationAPIProtocol",
+            "printedName": "IPLocationAPIProtocol",
+            "usr": "s:8JanusSDK21IPLocationAPIProtocolP",
+            "mangledName": "$s8JanusSDK21IPLocationAPIProtocolP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JanusProvider",
+        "printedName": "JanusProvider",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "JanusProtocol",
+                "printedName": "any JanusSDK.JanusProtocol",
+                "usr": "s:8JanusSDK0A8ProtocolP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A8ProviderC6sharedAA0A8Protocol_pvpZ",
+            "mangledName": "$s8JanusSDK0A8ProviderC6sharedAA0A8Protocol_pvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "JanusProtocol",
+                    "printedName": "any JanusSDK.JanusProtocol",
+                    "usr": "s:8JanusSDK0A8ProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A8ProviderC6sharedAA0A8Protocol_pvgZ",
+                "mangledName": "$s8JanusSDK0A8ProviderC6sharedAA0A8Protocol_pvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "resetToDefault",
+            "printedName": "resetToDefault()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A8ProviderC14resetToDefaultyyFZ",
+            "mangledName": "$s8JanusSDK0A8ProviderC14resetToDefaultyyFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setupForTesting",
+            "printedName": "setupForTesting(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JanusProtocol",
+                "printedName": "any JanusSDK.JanusProtocol",
+                "usr": "s:8JanusSDK0A8ProtocolP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A8ProviderC15setupForTestingyyAA0A8Protocol_pFZ",
+            "mangledName": "$s8JanusSDK0A8ProviderC15setupForTestingyyAA0A8Protocol_pFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8JanusSDK0A8ProviderC",
+        "mangledName": "$s8JanusSDK0A8ProviderC",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "JanusSDK"
       },
       {
@@ -29467,13 +29467,6 @@
       "offset": 1275,
       "length": 14,
       "value": "\"FidesUpdated\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/API\/PrivacyExperienceAPI.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2024,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
@@ -30225,109 +30218,11 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 759,
-      "length": 9,
-      "value": "\"unknown\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 792,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1161,
-      "length": 26,
-      "value": "\"com.ethyca.janus.consent\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1225,
-      "length": 35,
-      "value": "\"com.ethyca.janus.consent.metadata\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1294,
-      "length": 31,
-      "value": "\"com.ethyca.janus.fides_string\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1361,
-      "length": 33,
-      "value": "\"com.ethyca.janus.consent_method\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1483,
-      "length": 29,
-      "value": "\"com.fidesplus.janus.consent\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1556,
-      "length": 38,
-      "value": "\"com.fidesplus.janus.consent.metadata\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "Dictionary",
-      "offset": 1787,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1990,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2123,
-      "length": 9,
-      "value": "\"unknown\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/API\/PrivacyExperienceAPI.swift",
       "kind": "BooleanLiteral",
-      "offset": 4718,
+      "offset": 2024,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 6403,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
-      "kind": "StringLiteral",
-      "offset": 7101,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/API\/IPLocationAPI.swift",
-      "kind": "StringLiteral",
-      "offset": 721,
-      "length": 37,
-      "value": "\"https:\/\/cdn-api.ethyca.com\/location\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
@@ -30512,6 +30407,104 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 759,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 792,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1161,
+      "length": 26,
+      "value": "\"com.ethyca.janus.consent\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1225,
+      "length": 35,
+      "value": "\"com.ethyca.janus.consent.metadata\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1294,
+      "length": 31,
+      "value": "\"com.ethyca.janus.fides_string\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1361,
+      "length": 33,
+      "value": "\"com.ethyca.janus.consent_method\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1483,
+      "length": 29,
+      "value": "\"com.fidesplus.janus.consent\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1556,
+      "length": 38,
+      "value": "\"com.fidesplus.janus.consent.metadata\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "Dictionary",
+      "offset": 1787,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1990,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2123,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4718,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 6403,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 7101,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 709,
@@ -30611,10 +30604,24 @@
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1007,
+      "length": 22,
+      "value": "\"fides_disable_banner\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3544,
+      "offset": 3765,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/API\/IPLocationAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 721,
+      "length": 37,
+      "value": "\"https:\/\/cdn-api.ethyca.com\/location\""
     },
     {
       "filePath": "\/Users\/thabo\/Library\/Developer\/Xcode\/DerivedData\/JanusSDK-ennlatuovwuenxghnxkhcjzqchtz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JanusSDK\/IntermediateBuildFilesPath\/JanusSDK.build\/Release-iphonesimulator\/JanusSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",

@@ -96,17 +96,72 @@ window.Janus.setupTCFCompletionListeners = function() {
 
 // Self-executing function to fire modal ready when document is loaded
 (function() {
+  function waitForModalLoad() {
+    const selector = '#fides-button-group';
+    window.JanusSDK.log('Starting to wait for element: ' + selector);
+    
+    let observer;
+    let pollInterval;
+    let elementFound = false;
+    
+    // Centralized cleanup function
+    function cleanup() {
+      if (observer) {
+        observer.disconnect();
+        observer = null;
+      }
+      if (pollInterval) {
+        clearInterval(pollInterval);
+        pollInterval = null;
+      }
+    }
+    
+    // Check if element already exists
+    function checkElement(source) {
+      if (elementFound) return true; // Prevent multiple calls
+      
+      const element = document.querySelector(selector);
+      if (element) {
+        elementFound = true;
+        window.JanusSDK.log('Element found via ' + source + ': ' + selector);
+        cleanup();
+        fireModalReady();
+        return true;
+      }
+      return false;
+    }
+    
+    // Immediate check
+    if (checkElement('immediate')) return;
+    
+    // Set up MutationObserver for efficient DOM watching
+    observer = new MutationObserver(() => {
+      checkElement('mutation observer');
+    });
+    
+    // Start observing
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+    
+    // Polling fallback - check every 200ms
+    pollInterval = setInterval(() => {
+      checkElement('poll');
+    }, 200);
+  }
+  
   function fireModalReady() {
-    window.JanusSDK.log('Document ready - firing onFidesModalReady');
+    window.JanusSDK.log('Fides embedded consent fully loaded - firing onFidesModalReady');
     window.Janus.onFidesModalReady();
   }
   
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    // Document already loaded, fire immediately
-    fireModalReady();
+    // Document already loaded, start waiting for element
+    waitForModalLoad();
   } else {
-    // Document not loaded yet, set up event handler
-    document.addEventListener('DOMContentLoaded', fireModalReady);
+    // Document not loaded yet, wait for DOM then start waiting for element
+    document.addEventListener('DOMContentLoaded', waitForModalLoad);
   }
 })();
 

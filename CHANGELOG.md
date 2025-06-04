@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.11 (2025-06-04)
+
+Loading of TCF consent screen in the background
+
+
 ## 0.1.10 (2025-05-23)
 
 

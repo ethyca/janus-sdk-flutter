@@ -26217,6 +26217,13 @@
       },
       {
         "kind": "Import",
+        "name": "SafariServices",
+        "printedName": "SafariServices",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -30435,49 +30442,49 @@
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 557,
+      "offset": 579,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 919,
+      "offset": 941,
       "length": 24,
       "value": "\"\/embedded-consent.html\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 993,
+      "offset": 1015,
       "length": 13,
       "value": "\"geolocation\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1056,
+      "offset": 1078,
       "length": 13,
       "value": "\"property_id\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1114,
+      "offset": 1136,
       "length": 14,
       "value": "\"fides_locale\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1181,
+      "offset": 1203,
       "length": 22,
       "value": "\"fides_disable_banner\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3820,
+      "offset": 3842,
       "length": 4,
       "value": "true"
     },

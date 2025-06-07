@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.12 (2025-06-06)
+
+- Privacy experience API call updates to increase cacheability and consistency
+- Better support for links (Privacy Policy, etc) in TCF experiences
+
+
 ## 0.1.11 (2025-06-04)
 
 Loading of TCF consent screen in the background

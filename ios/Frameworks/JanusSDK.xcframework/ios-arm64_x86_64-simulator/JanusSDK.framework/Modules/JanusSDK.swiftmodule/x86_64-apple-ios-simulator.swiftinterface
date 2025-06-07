@@ -6,6 +6,7 @@ import Combine
 import DeveloperToolsSupport
 import Foundation
 @_exported import JanusSDK
+import SafariServices
 import Swift
 import SwiftUI
 import UIKit

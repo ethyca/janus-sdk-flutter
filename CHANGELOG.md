@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.13 (2025-06-16)
+
+- fix iOS rotation bug in TCF experience
+- prevent experience from being shown multiple times concurrently
+
+
 ## 0.1.12 (2025-06-06)
 
 - Privacy experience API call updates to increase cacheability and consistency

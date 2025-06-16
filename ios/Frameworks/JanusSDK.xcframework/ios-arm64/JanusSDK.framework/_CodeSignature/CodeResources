@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		unYq7WrLtFDkDTaIG6zbgN+GeHA=
+		xDEyIt2PBYhqNvMSjSyjqLw5Tmc=
 		</data>
 		<key>Headers/JanusSDK.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gT/foXwsLJS+xmZWOMroUam09/I=
+		PxLuPf5EZIpO2Lz0gMoUoo7WXAI=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		jgSZKsBLuQW8VktZokJ7UM9MRPI=
+		lxKQcmTs6lBQXtVmZ5+2EHRWDXo=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		oGAH99VIlNx8NSG6d5cpWm+MmI4=
+		RoGZamNIpK2iYoVoqKoWvJLeIpU=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		vsPNXsGwF9x2b/K/Sj/NZatVY8M=
+		R1j1dcVuZjm6RwJ69yarX1uXxJg=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		oGAH99VIlNx8NSG6d5cpWm+MmI4=
+		RoGZamNIpK2iYoVoqKoWvJLeIpU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -76,7 +76,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			izkFzraXa1Z/hvKdxnGiCg7welQ3q9Zjw4PLeUT00v4=
+			Bu2dToojM5V1yT+sIkab+ahSGsn2YJ2ujWEY7KkomEg=
 			</data>
 		</dict>
 		<key>Headers/JanusSDK.h</key>
@@ -90,28 +90,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NvHuke/75Fd/Hzo6PtlnMe+aVyFtZwi1m0u6fMVLMrQ=
+			k1kKD7nhmzzfd5WHlooGydGBzYXl9W2X9Jp+7J0TGuk=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+SVk+YseMm1QsfY6Vz4yy608JdzG5JgxxGk+cQvgy84=
+			GK0mA5uTKIwD3+ic34L67uQLZ2lYiBUAV/Soweb+ifk=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Rq26+Czlt0nn5vxIFx1qn5bbqlbAGkzUNmzHBGTh6lo=
+			HwJPzMJDIJ2pkV7x64NWZ0pnTKGVw1puKUGVcQB4yxs=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+SVk+YseMm1QsfY6Vz4yy608JdzG5JgxxGk+cQvgy84=
+			GK0mA5uTKIwD3+ic34L67uQLZ2lYiBUAV/Soweb+ifk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

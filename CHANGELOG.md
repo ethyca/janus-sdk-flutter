@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.14 (2025-06-24)
+
+- Custom logging support (JanusLogger interface and Janus.setLogger method)
+- UI improvements and dark mode fixes
+
+
 ## 0.1.13 (2025-06-16)
 
 - fix iOS rotation bug in TCF experience

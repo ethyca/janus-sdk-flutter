@@ -3,6 +3,53 @@ import UIKit
 import WebKit
 import JanusSDK
 
+/// Proxy logger that forwards iOS log calls back to Flutter
+class FlutterProxyLogger: JanusLogger {
+    private weak var channel: FlutterMethodChannel?
+    
+    init(channel: FlutterMethodChannel) {
+        self.channel = channel
+    }
+    
+    func log(_ message: String, level: LogLevel = .info, metadata: [String: String]? = nil, error: Error? = nil) {
+        // Convert LogLevel to string
+        let levelString: String
+        switch level {
+        case .verbose:
+            levelString = "verbose"
+        case .debug:
+            levelString = "debug"
+        case .info:
+            levelString = "info"
+        case .warning:
+            levelString = "warning"
+        case .error:
+            levelString = "error"
+        }
+        
+        // Call back to Flutter via method channel
+        var arguments: [String: Any] = [
+            "message": message,
+            "level": levelString,
+            "metadata": metadata as Any
+        ]
+        
+        // Add error information if present
+        if let error = error {
+            arguments["error"] = [
+                "message": error.localizedDescription,
+                "domain": (error as NSError).domain,
+                "code": (error as NSError).code
+            ]
+        }
+        
+        // Ensure we're on the main thread for Flutter method calls
+        DispatchQueue.main.async {
+            self.channel?.invokeMethod("log", arguments: arguments)
+        }
+    }
+}
+
 public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
   // Map to store WebView instances by ID
   private var webViews = [String: WKWebView]()
@@ -15,6 +62,9 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
 
   // Event channel sink for sending events to Flutter
   private var eventSink: FlutterEventSink?
+  
+  // Method channel for calling back to Flutter
+  private var methodChannel: FlutterMethodChannel?
 
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "janus_sdk_flutter", binaryMessenger: registrar.messenger())
@@ -23,6 +73,7 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
     let eventChannel = FlutterEventChannel(name: "janus_sdk_flutter/events", binaryMessenger: registrar.messenger())
 
     let instance = JanusSdkFlutterPlugin()
+    instance.methodChannel = channel // Store reference for proxy logger
     registrar.addMethodCallDelegate(instance, channel: channel)
     eventChannel.setStreamHandler(instance)
   }
@@ -256,6 +307,24 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
 
     case "getRegion":
       result(Janus.region ?? "")
+      
+    case "setLogger":
+      guard let args = call.arguments as? [String: Any],
+            let useProxy = args["useProxy"] as? Bool else {
+        result(FlutterError(code: "INVALID_ARGS", message: "useProxy is required", details: nil))
+        return
+      }
+      
+      if useProxy, let channel = methodChannel {
+        // Set proxy logger that calls back to Flutter
+        let proxyLogger = FlutterProxyLogger(channel: channel)
+        Janus.setLogger(proxyLogger)
+      } else {
+        // Reset to default logger
+        Janus.setLogger(nil)
+      }
+      
+      result(nil)
 
     default:
       result(FlutterMethodNotImplemented)

@@ -14,8 +14,48 @@ import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.EventChannel
 import com.ethyca.janussdk.android.Janus
 import com.ethyca.janussdk.android.JanusConfiguration
+import com.ethyca.janussdk.android.JanusLogger
+import com.ethyca.janussdk.android.LogLevel
 import com.ethyca.janussdk.android.events.JanusEvent
 import java.util.Date
+import com.ethyca.janussdk.android.events.*
+import com.ethyca.janussdk.android.models.PrivacyExperienceItem
+
+/**
+ * Proxy logger that forwards Android log calls back to Flutter
+ */
+class FlutterProxyLogger(private val methodChannel: MethodChannel) : JanusLogger {
+    override fun log(message: String, level: LogLevel, metadata: Map<String, String>?, error: Throwable?) {
+        // Convert LogLevel to string
+        val levelString = when (level) {
+            LogLevel.VERBOSE -> "verbose"
+            LogLevel.DEBUG -> "debug"
+            LogLevel.INFO -> "info"
+            LogLevel.WARNING -> "warning"
+            LogLevel.ERROR -> "error"
+        }
+        
+        // Call back to Flutter via method channel
+        val arguments = mutableMapOf<String, Any?>(
+            "message" to message,
+            "level" to levelString,
+            "metadata" to metadata
+        )
+        
+        // Add error information if present
+        if (error != null) {
+            arguments["error"] = mapOf(
+                "message" to (error.message ?: error.javaClass.simpleName),
+                "type" to error.javaClass.simpleName
+            )
+        }
+        
+        // Ensure we're on the main thread for Flutter method calls
+        android.os.Handler(android.os.Looper.getMainLooper()).post {
+            methodChannel.invokeMethod("log", arguments)
+        }
+    }
+}
 
 /** JanusSdkFlutterPlugin */
 class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, EventChannel.StreamHandler {
@@ -33,6 +73,9 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
 
   // Map to store WebView instances by ID
   private val webViews = HashMap<String, android.webkit.WebView>()
+  
+  // Private logger for plugin-specific logging that flows through unified system
+  private lateinit var pluginLogger: JanusLogger
 
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "janus_sdk_flutter")
@@ -42,6 +85,9 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
     eventChannel.setStreamHandler(this)
 
     context = flutterPluginBinding.applicationContext
+    
+    // Initialize plugin logger to use proxy so errors flow through unified logging
+    pluginLogger = FlutterProxyLogger(channel)
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
@@ -76,12 +122,17 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
                 if (success) {
                   result.success(true)
                 } else {
+                  pluginLogger.log("Janus SDK initialization failed", LogLevel.ERROR, null, error)
                   result.error("INIT_ERROR", error?.message ?: "Unknown error", null)
                 }
               }
-            } ?: result.error("NO_ACTIVITY", "Activity is not available", null)
+            } ?: run {
+              pluginLogger.log("No activity available for initialization", LogLevel.ERROR, null, null)
+              result.error("NO_ACTIVITY", "Activity is not available", null)
+            }
           } catch (e: Exception) {
-            result.error("INVALID_ARGS", e.message, null)
+            pluginLogger.log("Failed to initialize Janus SDK", LogLevel.ERROR, null, e)
+            result.error("INVALID_ARGS", e.message ?: "Unknown error", null)
           }
         }
 
@@ -91,9 +142,13 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
               Janus.showExperience(it)
               result.success(null)
             } catch (e: Exception) {
-              result.error("SHOW_EXP_ERROR", e.message, null)
+              pluginLogger.log("Failed to show privacy experience", LogLevel.ERROR, null, e)
+              result.error("SHOW_EXP_ERROR", e.message ?: "Unknown error", null)
             }
-          } ?: result.error("NO_ACTIVITY", "Activity is not available", null)
+          } ?: run {
+            pluginLogger.log("No activity available for showExperience", LogLevel.ERROR, null, null)
+            result.error("NO_ACTIVITY", "Activity is not available", null)
+          }
         }
 
         "getConsent" -> {
@@ -113,8 +168,8 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
 
             result.success(resultMap)
           } catch (e: Exception) {
-            Log.e("JanusSdkFlutterPlugin", "Error getting consent metadata: ${e.message}")
-            result.error("METADATA_ERROR", e.message, null)
+            pluginLogger.log("Failed to get consent metadata", LogLevel.ERROR, null, e)
+            result.error("METADATA_ERROR", e.message ?: "Unknown error", null)
           }
         }
 
@@ -136,7 +191,10 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
             val clearMetadata = args?.get("clearMetadata") as? Boolean ?: false
             Janus.clearConsent(it, clearMetadata)
             result.success(null)
-          } ?: result.error("NO_ACTIVITY", "Activity is not available", null)
+          } ?: run {
+            pluginLogger.log("No activity available for clearConsent", LogLevel.ERROR, null, null)
+            result.error("NO_ACTIVITY", "Activity is not available", null)
+          }
         }
 
         "createConsentWebView" -> {
@@ -157,9 +215,13 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
               // Return the ID to Flutter
               result.success(webViewId)
             } catch (e: Exception) {
-              result.error("WEBVIEW_ERROR", e.message, null)
+              pluginLogger.log("Failed to create consent WebView", LogLevel.ERROR, null, e)
+              result.error("WEBVIEW_ERROR", e.message ?: "Unknown error", null)
             }
-          } ?: result.error("NO_ACTIVITY", "Activity is not available", null)
+          } ?: run {
+            pluginLogger.log("No activity available for createConsentWebView", LogLevel.ERROR, null, null)
+            result.error("NO_ACTIVITY", "Activity is not available", null)
+          }
         }
 
         "releaseConsentWebView" -> {
@@ -179,10 +241,12 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
 
               result.success(null)
             } else {
+              pluginLogger.log("Invalid WebView ID provided for release", LogLevel.ERROR, mapOf("webViewId" to (webViewId ?: "null")), null)
               result.error("INVALID_WEBVIEW_ID", "WebView ID not found", null)
             }
           } catch (e: Exception) {
-            result.error("WEBVIEW_ERROR", e.message, null)
+            pluginLogger.log("Failed to release consent WebView", LogLevel.ERROR, null, e)
+            result.error("WEBVIEW_ERROR", e.message ?: "Unknown error", null)
           }
         }
 
@@ -196,6 +260,7 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
               resultMap["ip"] = response.ip
               result.success(resultMap)
             } else {
+              pluginLogger.log("Failed to get location by IP address", LogLevel.ERROR, null, error)
               result.error("LOCATION_ERROR", error?.message ?: "Unknown error", null)
             }
           }
@@ -205,12 +270,33 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
           result.success(Janus.region)
         }
 
+        "setLogger" -> {
+          try {
+            val args = call.arguments as? Map<String, Any>
+            val useProxy = args?.get("useProxy") as? Boolean ?: false
+            
+            if (useProxy) {
+              // Set proxy logger that calls back to Flutter
+              Janus.setLogger(FlutterProxyLogger(channel))
+            } else {
+              // Reset to default logger
+              Janus.setLogger(null)
+            }
+            
+            result.success(null)
+          } catch (e: Exception) {
+            pluginLogger.log("Failed to set logger", LogLevel.ERROR, null, e)
+            result.error("LOGGER_ERROR", e.message ?: "Unknown error", null)
+          }
+        }
+
         else -> {
           result.notImplemented()
         }
       }
     } catch (e: Exception) {
-      result.error("UNEXPECTED_ERROR", e.message, null)
+      pluginLogger.log("Unexpected error in method call", LogLevel.ERROR, null, e)
+      result.error("UNEXPECTED_ERROR", e.message ?: "Unknown error", null)
     }
   }
 
@@ -255,8 +341,6 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
       try {
         val eventMap = HashMap<String, Any?>()
 
-        Log.d("JanusSdkFlutterPlugin", "eventType runtime type: ${event.eventType::class.java.name}")
-
         // Get the string value directly from the enum's toString() method
         // The JanusEventType enum has been updated to override toString() to return the stringValue
         val eventTypeName = event.eventType.toString()
@@ -281,7 +365,7 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
         }
       } catch (e: Exception) {
         // Log the error but don't crash
-        Log.e("JanusSdkFlutterPlugin", "Error sending event: ${e.message}")
+        pluginLogger.log("Failed to send event to Flutter", LogLevel.ERROR, null, e)
         e.printStackTrace()
       }
     }

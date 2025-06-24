@@ -40,6 +40,49 @@ allprojects {
 }
 ```
 
+### Custom Logging
+
+The Janus SDK supports custom logging implementations through the `JanusLogger` interface. This is useful for debugging, monitoring, and integrating with your app's existing logging infrastructure.
+
+#### JanusLogger Interface
+
+```dart
+abstract class JanusLogger {
+  void log(
+    String message, {
+    LogLevel level = LogLevel.info,
+    Map<String, String>? metadata,
+    Exception? error,
+  });
+}
+
+enum LogLevel {
+  verbose,
+  debug,
+  info,
+  warning,
+  error,
+}
+```
+
+#### Setting a Custom Logger
+
+If you have implemented your own custom logger implementation, be sure to call setLogger() prior to initialize() in order to receive logs that occur during the initialization of the SDK.
+
+```dart
+// Set custom logger BEFORE initializing Janus
+final myCustomLogger = MyCustomJanusLogger();
+janusSdk.setLogger(myCustomLogger);
+
+// Now initialize Janus - logs during initialization will use your custom logger
+final config = JanusConfiguration(
+  apiHost: 'https://privacy-plus.yourhost.com',
+  propertyId: 'FDS-A0B1C2',
+);
+
+final success = await janusSdk.initialize(config);
+```
+
 ### Initialization
 
 📌 Initialize the SDK in your app's startup code

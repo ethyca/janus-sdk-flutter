@@ -3,17 +3,80 @@ import 'dart:async';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'janus_sdk_flutter_platform_interface.dart';
+import 'janus_sdk_flutter_method_channel.dart';
 import 'janus_web_view_controller.dart';
 import 'janus_event_type.dart';
+import 'janus_logger.dart';
 
 // Export public types
 export 'janus_event_type.dart';
+export 'janus_logger.dart';
 
 /// The main class for the Janus SDK Flutter plugin.
 ///
 /// This class provides privacy consent management functionality by wrapping
 /// the native Android and iOS SDKs.
 class Janus {
+  /// Private logger instance
+  static JanusLogger _logger = DefaultJanusLogger();
+  
+  /// Static initializer to register log handler
+  static bool _logHandlerRegistered = false;
+  
+  /// Set the logger implementation for the SDK
+  ///
+  /// [logger] - The logger implementation to use. Pass null to reset to default.
+  static void setLogger(JanusLogger? logger) {
+    _logger = logger ?? DefaultJanusLogger();
+    
+    // Register log handler if not already done
+    if (!_logHandlerRegistered) {
+      MethodChannelJanusSdkFlutter.setLogHandler(_handleNativeLog);
+      _logHandlerRegistered = true;
+    }
+    
+    // Tell native sides to use proxy loggers that call back to Flutter
+    _setNativeProxyLoggers();
+  }
+  
+  /// Tell native platforms to use proxy loggers that route back to Flutter
+  static void _setNativeProxyLoggers() {
+    try {
+      log('Setting native proxy loggers', level: LogLevel.debug);
+      JanusSdkFlutterPlatform.instance.setLogger(useProxy: true);
+    } catch (e) {
+      // If platform interface doesn't support logging yet, continue
+      // This allows gradual rollout
+      log('Failed to set native proxy loggers: $e', level: LogLevel.warning);
+    }
+  }
+  
+  /// Log a message with optional level and metadata
+  /// Internal use only - not part of the public SDK API
+  static void _log(String message, {LogLevel level = LogLevel.info, Map<String, String>? metadata, Exception? error}) {
+    _logger.log(message, level: level, metadata: metadata, error: error);
+  }
+  
+  /// Package-internal logging method for use by other SDK components
+  /// This is NOT part of the public API and should only be used internally
+  static void log(String message, {LogLevel level = LogLevel.info, Map<String, String>? metadata, Exception? error}) {
+    _log(message, level: level, metadata: metadata, error: error);
+  }
+  
+  /// Handle log calls from native platforms (iOS/Android proxy loggers)
+  /// This is called via method channel when native code logs
+  static void _handleNativeLog(String message, String levelString, Map<String, String>? metadata) {
+    // Convert string level to enum with fallback to info
+    LogLevel level;
+    try {
+      level = LogLevel.values.byName(levelString.toLowerCase());
+    } on Object catch (_) {
+      level = LogLevel.info; // fallback for unknown levels
+    }
+    
+    _logger.log(message, level: level, metadata: metadata);
+  }
+
   /// Initialize the Janus SDK with the provided [config].
   ///
   /// This must be called before any other methods. The future completes with:
@@ -222,7 +285,7 @@ class JanusEvent {
     // Convert the detail map to a Map<String, dynamic>
     Map<String, dynamic>? detailMap;
     if (map['detail'] != null) {
-      detailMap = {};
+      detailMap = <String, dynamic>{};
       final detail = map['detail'];
       if (detail is Map) {
         detail.forEach((key, value) {

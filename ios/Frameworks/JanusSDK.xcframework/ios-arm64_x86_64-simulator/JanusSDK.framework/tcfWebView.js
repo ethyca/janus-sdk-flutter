@@ -47,7 +47,7 @@ window.Janus.injectTCFStyles = function() {
   
   // Inject style into document
   document.head.appendChild(style);
-  window.JanusSDK.log('TCF styles injected');
+  window.Janus.log('TCF styles injected');
 };
 
 // Create a global callback function for modal ready notification
@@ -58,19 +58,19 @@ window.Janus.onFidesModalReady = function() {
   
   // Send ready event to native side
   window.JanusSDK.event("TCFWebViewReady");
-  window.JanusSDK.log('Fides modal fully loaded and ready');
+  window.Janus.log('Fides modal fully loaded and ready');
 };
 
 // Create a global callback function for TCF flow completion
 window.Janus.onFidesModalCompleted = function() {
   // Send hide event to native side
   window.JanusSDK.event("TCFWebViewClose");
-  window.JanusSDK.log('TCF flow completed - WebView hidden');
+  window.Janus.log('TCF flow completed - WebView hidden');
 };
 
 // Setup event listeners for TCF flow completion
 window.Janus.setupTCFCompletionListeners = function() {
-  window.JanusSDK.log('Setting up TCF completion listeners');
+  window.Janus.log('Setting up TCF completion listeners');
   
   // Add a global document click handler for all button interactions
   if (!document.body._janusGlobalListenerAdded) {
@@ -83,22 +83,22 @@ window.Janus.setupTCFCompletionListeners = function() {
            e.target.classList.contains('fides-reject-all-button') ||
            e.target.classList.contains('fides-accept-all-button'))) {
         
-        window.JanusSDK.log('Button click detected via global handler: ' + e.target.outerHTML);
+        window.Janus.log('Button click detected via global handler: ' + e.target.outerHTML);
         window.Janus.onFidesModalCompleted();
       }
     }, true); // true for useCapture
     
-    window.JanusSDK.log('Attached global document click listener with capture');
+    window.Janus.log('Attached global document click listener with capture');
   }
   
-  window.JanusSDK.log('TCF completion listeners set up with capture phase');
+  window.Janus.log('TCF completion listeners set up with capture phase');
 };
 
 // Self-executing function to fire modal ready when document is loaded
 (function() {
   function waitForModalLoad() {
     const selector = '#fides-button-group';
-    window.JanusSDK.log('Starting to wait for element: ' + selector);
+    window.Janus.log('Starting to wait for element: ' + selector);
     
     let observer;
     let pollInterval;
@@ -123,7 +123,7 @@ window.Janus.setupTCFCompletionListeners = function() {
       const element = document.querySelector(selector);
       if (element) {
         elementFound = true;
-        window.JanusSDK.log('Element found via ' + source + ': ' + selector);
+        window.Janus.log('Element found via ' + source + ': ' + selector);
         cleanup();
         fireModalReady();
         return true;
@@ -152,7 +152,7 @@ window.Janus.setupTCFCompletionListeners = function() {
   }
   
   function fireModalReady() {
-    window.JanusSDK.log('Fides embedded consent fully loaded - firing onFidesModalReady');
+    window.Janus.log('Fides embedded consent fully loaded - firing onFidesModalReady');
     window.Janus.onFidesModalReady();
   }
   

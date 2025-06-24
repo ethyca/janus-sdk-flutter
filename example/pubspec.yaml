@@ -36,6 +36,9 @@ dependencies:
   
   # Local storage
   shared_preferences: ^2.2.2
+  
+  # HTTP requests for HTTPLogger
+  http: ^1.1.0
 
 dev_dependencies:
   integration_test:

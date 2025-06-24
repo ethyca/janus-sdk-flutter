@@ -23,6 +23,52 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
 
   /// Counter for generating listener IDs
   int _listenerIdCounter = 0;
+  
+  /// Callback for handling native log calls
+  static void Function(String, String, Map<String, String>?)? _logHandler;
+  
+  /// Set the log handler callback
+  static void setLogHandler(void Function(String, String, Map<String, String>?) handler) {
+    _logHandler = handler;
+  }
+  
+  /// Constructor sets up method call handler for incoming log calls
+  MethodChannelJanusSdkFlutter() {
+    methodChannel.setMethodCallHandler(_handleMethodCall);
+  }
+  
+  /// Handle method calls from native platforms (including log calls)
+  Future<dynamic> _handleMethodCall(MethodCall call) async {
+    switch (call.method) {
+      case 'log':
+        final arguments = call.arguments as Map<dynamic, dynamic>;
+        final message = arguments['message'] as String;
+        final level = arguments['level'] as String;
+        final metadataRaw = arguments['metadata'];
+        
+        // Convert metadata to Map<String, String>? if present
+        Map<String, String>? metadata;
+        if (metadataRaw != null && metadataRaw is Map) {
+          metadata = <String, String>{};
+          metadataRaw.forEach((key, value) {
+            if (key != null && value != null) {
+              metadata![key.toString()] = value.toString();
+            }
+          });
+        }
+        
+        // Forward to registered log handler
+        if (_logHandler != null) {
+          _logHandler!(message, level, metadata);
+        }
+        break;
+      default:
+        throw PlatformException(
+          code: 'Unimplemented',
+          details: 'Method ${call.method} not implemented',
+        );
+    }
+  }
 
   @override
   Future<bool> initialize(JanusConfiguration config) async {
@@ -33,7 +79,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       );
       return result ?? false;
     } on PlatformException catch (e) {
-      debugPrint('Failed to initialize Janus SDK: ${e.message}');
+      Janus.log('Failed to initialize Janus SDK: ${e.message}', level: LogLevel.error, metadata: {'code': e.code});
       return false;
     }
   }
@@ -43,7 +89,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
     try {
       await methodChannel.invokeMethod<void>('showExperience');
     } on PlatformException catch (e) {
-      debugPrint('Failed to show privacy experience: ${e.message}');
+      Janus.log('Failed to show privacy experience', level: LogLevel.error, error: e);
       rethrow;
     }
   }
@@ -78,7 +124,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       final result = await methodChannel.invokeMapMethod<String, bool>('getConsent');
       return result ?? {};
     } on PlatformException catch (e) {
-      debugPrint('Failed to get consent: ${e.message}');
+      Janus.log('Failed to get consent', level: LogLevel.error, error: e);
       return {};
     }
   }
@@ -89,7 +135,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       final result = await methodChannel.invokeMapMethod<String, dynamic>('getConsentMetadata');
       return result ?? {};
     } on PlatformException catch (e) {
-      debugPrint('Failed to get consent metadata: ${e.message}');
+      Janus.log('Failed to get consent metadata', level: LogLevel.error, error: e);
       return {};
     }
   }
@@ -100,7 +146,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       final result = await methodChannel.invokeMethod<String>('getFidesString');
       return result ?? '';
     } on PlatformException catch (e) {
-      debugPrint('Failed to get Fides string: ${e.message}');
+      Janus.log('Failed to get Fides string', level: LogLevel.error, error: e);
       return '';
     }
   }
@@ -111,7 +157,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       final result = await methodChannel.invokeMethod<bool>('hasExperience');
       return result ?? false;
     } on PlatformException catch (e) {
-      debugPrint('Failed to check if has experience: ${e.message}');
+      Janus.log('Failed to check if has experience', level: LogLevel.error, error: e);
       return false;
     }
   }
@@ -122,7 +168,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       final result = await methodChannel.invokeMethod<bool>('shouldShowExperience');
       return result ?? false;
     } on PlatformException catch (e) {
-      debugPrint('Failed to check if should show experience: ${e.message}');
+      Janus.log('Failed to check if should show experience', level: LogLevel.error, error: e);
       return false;
     }
   }
@@ -135,7 +181,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
         {'clearMetadata': clearMetadata},
       );
     } on PlatformException catch (e) {
-      debugPrint('Failed to clear consent: ${e.message}');
+      Janus.log('Failed to clear consent', level: LogLevel.error, error: e);
       rethrow;
     }
   }
@@ -149,7 +195,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       );
       return result ?? '';
     } on PlatformException catch (e) {
-      debugPrint('Failed to create consent WebView: ${e.message}');
+      Janus.log('Failed to create consent WebView', level: LogLevel.error, error: e);
       rethrow;
     }
   }
@@ -162,7 +208,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
         {'webViewId': webViewId},
       );
     } on PlatformException catch (e) {
-      debugPrint('Failed to release consent WebView: ${e.message}');
+      Janus.log('Failed to release consent WebView', level: LogLevel.error, metadata: {'webViewId': webViewId}, error: e);
       rethrow;
     }
   }
@@ -173,7 +219,7 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       final result = await methodChannel.invokeMapMethod<String, dynamic>('getLocationByIPAddress');
       return result ?? {};
     } on PlatformException catch (e) {
-      debugPrint('Failed to get location by IP address: ${e.message}');
+      Janus.log('Failed to get location by IP address', level: LogLevel.error, error: e);
       return {};
     }
   }
@@ -184,8 +230,21 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       final result = await methodChannel.invokeMethod<String>('getRegion');
       return result ?? '';
     } on PlatformException catch (e) {
-      debugPrint('Failed to get region: ${e.message}');
+      Janus.log('Failed to get region', level: LogLevel.error, error: e);
       return '';
+    }
+  }
+
+  @override
+  Future<void> setLogger({required bool useProxy}) async {
+    try {
+      await methodChannel.invokeMethod<void>(
+        'setLogger',
+        {'useProxy': useProxy},
+      );
+    } on PlatformException catch (e) {
+      Janus.log('Failed to set logger', level: LogLevel.warning, error: e);
+      // Don't rethrow - logging setup is optional
     }
   }
 
@@ -204,13 +263,13 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
               listener(janusEvent);
             }
           } catch (e) {
-            debugPrint('Error processing event: $e');
-            debugPrint('Event data: $event');
+            final exception = e is Exception ? e : Exception('Error processing event: $e');
+            Janus.log('Error processing event: $e', level: LogLevel.error, error: exception);
           }
         }
       },
       onError: (dynamic error) {
-        debugPrint('Error from event channel: $error');
+        Janus.log('Error from event channel: $error', level: LogLevel.error);
       },
     );
   }

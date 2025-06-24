@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:janus_sdk_flutter/janus_sdk_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'http_logger.dart';
 
 // Configuration class for Janus
 class JanusConfig {
@@ -172,6 +174,7 @@ class JanusManager extends ChangeNotifier {
   String consentMethod = '';
   List<String> events = [];
   bool hasExperience = false;
+  bool shouldShowExperience = false;
   String currentRegion = '';
   Map<String, String> ipLocationDetails = {};
 
@@ -198,11 +201,26 @@ class JanusManager extends ChangeNotifier {
 
   Future<void> setupJanus() async {
     if (config == null) return;
+    
+    // Initialize HTTPLogger and set it before Janus initialization
+    // SAMPLE implementation/usage of a custom HTTP logger
+    // can be used in conjunction with logdy for local logging
+    // logdy --no-analytics -p 8181 --api-key foobar
+    final endpoint = Platform.isAndroid 
+        ? 'http://10.0.2.2:8181/api/log'  // Android emulator
+        : 'http://localhost:8181/api/log'; // iOS simulator and real devices
+    final httpLogger = HTTPLogger(
+      endpoint: endpoint,
+      authToken: 'foobar',
+      source: 'FlutterExampleApp',
+    );
+    Janus.setLogger(httpLogger);
 
     isInitializing = true;
     isInitialized = false;
     initializationError = null;
     hasExperience = false;
+    shouldShowExperience = false;
     currentRegion = '';
     ipLocationDetails.clear();
     notifyListeners();
@@ -226,6 +244,7 @@ class JanusManager extends ChangeNotifier {
         await refreshConsentValues();
         addEventListeners();
         hasExperience = await Janus().hasExperience;
+        shouldShowExperience = await Janus().shouldShowExperience;
         currentRegion = await Janus().region;
       }
     } catch (error) {
@@ -314,6 +333,7 @@ class JanusManager extends ChangeNotifier {
     consentValues = await Janus().consent;
     consentMetadata = await Janus().consentMetadata;
     hasExperience = await Janus().hasExperience;
+    shouldShowExperience = await Janus().shouldShowExperience;
     fidesString = await Janus().fidesString;
     consentMethod = consentMetadata['consentMethod'] ?? '';
     notifyListeners();
@@ -395,6 +415,8 @@ class JanusManager extends ChangeNotifier {
     // Reset consent values
     consentValues.clear();
     fidesString = '';
+    hasExperience = false;
+    shouldShowExperience = false;
 
     // Clear events
     events.clear();

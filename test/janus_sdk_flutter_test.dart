@@ -59,9 +59,14 @@ class MockJanusSdkFlutterPlatform
 
   @override
   Future<String> get region => Future.value('US-NY');
+
+  @override
+  Future<void> setLogger({required bool useProxy}) => Future.value();
 }
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+  
   final JanusSdkFlutterPlatform initialPlatform = JanusSdkFlutterPlatform.instance;
 
   test('$MethodChannelJanusSdkFlutter is the default instance', () {

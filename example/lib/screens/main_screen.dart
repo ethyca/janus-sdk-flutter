@@ -129,7 +129,18 @@ class StatusScreen extends StatelessWidget {
                   const SizedBox(height: 16),
                   StatusCard(
                     title: 'Has Experience',
-                    content: janusManager.hasExperience ? 'Yes' : 'No',
+                    content: janusManager.isInitializing
+                        ? 'Loading...'
+                        : janusManager.hasExperience ? 'Yes ✅' : 'No ❌',
+                    isLoading: janusManager.isInitializing,
+                  ),
+                  const SizedBox(height: 16),
+                  StatusCard(
+                    title: 'Should Show Experience',
+                    content: janusManager.isInitializing
+                        ? 'Loading...'
+                        : janusManager.shouldShowExperience ? 'Yes ✅' : 'No ❌',
+                    isLoading: janusManager.isInitializing,
                   ),
                   const SizedBox(height: 16),
                   StatusCard(

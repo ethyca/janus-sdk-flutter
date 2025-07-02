@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.15 (2025-07-02)
+
+- fix crash on Android when creating TCF view (occurred when webview was garbage collected during open)
+- fix powered by footer on iOS not opening on non TCF view
+
+
 ## 0.1.14 (2025-06-24)
 
 - Custom logging support (JanusLogger interface and Janus.setLogger method)

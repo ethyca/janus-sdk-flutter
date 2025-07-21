@@ -237,6 +237,12 @@ class JanusConfiguration {
   /// Whether to automatically show the privacy experience after initialization.
   final bool autoShowExperience;
 
+  /// Whether to save user preferences to Fides via privacy-preferences API.
+  final bool saveUserPreferencesToFides;
+  
+  /// Whether to save notices served to Fides via notices-served API.
+  final bool saveNoticesServedToFides;
+
   JanusConfiguration({
     required this.apiHost,
     this.privacyCenterHost = "",
@@ -244,7 +250,9 @@ class JanusConfiguration {
     this.ipLocation = true,
     this.region = "",
     this.fidesEvents = true,
-    this.autoShowExperience = true
+    this.autoShowExperience = true,
+    this.saveUserPreferencesToFides = true,
+    this.saveNoticesServedToFides = true
   });
 
   /// Convert to a map for serialization.
@@ -256,7 +264,9 @@ class JanusConfiguration {
       'ipLocation': ipLocation,
       'region': region,
       'fidesEvents': fidesEvents,
-      'autoShowExperience': autoShowExperience
+      'autoShowExperience': autoShowExperience,
+      'saveUserPreferencesToFides': saveUserPreferencesToFides,
+      'saveNoticesServedToFides': saveNoticesServedToFides
     };
   }
 }

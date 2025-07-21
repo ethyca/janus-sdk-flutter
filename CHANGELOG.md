@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.16 (2025-07-21)
+
+Full support for PATCH calls to notices-served and privacy-preferences APIs
+
+
 ## 0.1.15 (2025-07-02)
 
 - fix crash on Android when creating TCF view (occurred when webview was garbage collected during open)

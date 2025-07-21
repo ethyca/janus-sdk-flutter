@@ -199,7 +199,9 @@ final config = JanusConfiguration(
   ipLocation: true,                                         // 📍 Use IP-based geolocation (default true)
   region: 'US-CA',                                          // 🌎 Provide if geolocation is false or fails
   fidesEvents: true,                                        // 🔄 Map JanusEvents to FidesJS events in WebViews (default true)
-  autoShowExperience: true                                  // 🚀 Automatically show privacy experience after initialization (default true)
+  autoShowExperience: true,                                 // 🚀 Automatically show privacy experience after initialization (default true)
+  saveUserPreferencesToFides: true                          // 💾 Save user preferences to Fides via privacy-preferences API (default true)
+  saveNoticesServedToFides: true                            // 💾 Save notices served to Fides via notices-served API (default true)
 );
 
 // Initialize the SDK

@@ -110,4 +110,48 @@ void main() {
 
     expect(region, 'US-NY');
   });
+
+  test('JanusConfiguration toMap includes all configuration options', () {
+    final config = JanusConfiguration(
+      apiHost: 'https://api.example.com',
+      privacyCenterHost: 'https://privacy.example.com',
+      propertyId: 'test-property',
+      ipLocation: false,
+      region: 'US-CA',
+      fidesEvents: false,
+      autoShowExperience: false,
+      saveUserPreferencesToFides: false,
+      saveNoticesServedToFides: false
+    );
+
+    final map = config.toMap();
+
+    expect(map['apiHost'], 'https://api.example.com');
+    expect(map['privacyCenterHost'], 'https://privacy.example.com');
+    expect(map['propertyId'], 'test-property');
+    expect(map['ipLocation'], false);
+    expect(map['region'], 'US-CA');
+    expect(map['fidesEvents'], false);
+    expect(map['autoShowExperience'], false);
+    expect(map['saveUserPreferencesToFides'], false);
+    expect(map['saveNoticesServedToFides'], false);
+  });
+
+  test('JanusConfiguration defaults', () {
+    final config = JanusConfiguration(
+      apiHost: 'https://api.example.com'
+    );
+
+    final map = config.toMap();
+
+    expect(map['apiHost'], 'https://api.example.com');
+    expect(map['privacyCenterHost'], '');
+    expect(map['propertyId'], '');
+    expect(map['ipLocation'], true);
+    expect(map['region'], '');
+    expect(map['fidesEvents'], true);
+    expect(map['autoShowExperience'], true);
+    expect(map['saveUserPreferencesToFides'], true);
+    expect(map['saveNoticesServedToFides'], true);
+  });
 }

@@ -103,6 +103,8 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
             val region = args["region"] as? String ?: ""
             val fidesEvents = args["fidesEvents"] as? Boolean ?: true
             val autoShowExperience = args["autoShowExperience"] as? Boolean ?: true
+            val saveUserPreferencesToFides = args["saveUserPreferencesToFides"] as? Boolean ?: true
+            val saveNoticesServedToFides = args["saveNoticesServedToFides"] as? Boolean ?: true
 
             // Create configuration using Builder pattern
             val configBuilder = JanusConfiguration.Builder()
@@ -113,6 +115,8 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
               .region(region)
               .fidesEvents(fidesEvents)
               .autoShowExperience(autoShowExperience)
+              .saveUserPreferencesToFides(saveUserPreferencesToFides)
+              .saveNoticesServedToFides(saveNoticesServedToFides)
 
             val config = configBuilder.build()
 
@@ -163,7 +167,7 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
             // Convert Date objects to timestamps
             metadata.createdAt?.let { resultMap["createdAt"] = it.time }
             metadata.updatedAt?.let { resultMap["updatedAt"] = it.time }
-            resultMap["consentMethod"] = metadata.consentMethod
+            resultMap["consentMethod"] = metadata.consentMethod.value
             resultMap["versionHash"] = metadata.versionHash
 
             result.success(resultMap)

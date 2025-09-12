@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.17 (2025-09-12)
+
+- Added ConsentFlagType and ConsentNonApplicableFlagMode
+
+
 ## 0.1.16 (2025-07-21)
 
 Full support for PATCH calls to notices-served and privacy-preferences APIs

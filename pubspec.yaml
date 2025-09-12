@@ -1,13 +1,13 @@
 name: janus_sdk_flutter
 description: "Privacy consent management SDK for Flutter applications, wrapping the native Janus SDKs for Android and iOS."
-version: 0.1.16+17
+version: 0.1.17+18
 homepage: https://github.com/ethyca/janus-sdk-flutter
 repository: https://github.com/ethyca/janus-sdk-flutter
 issue_tracker: https://github.com/ethyca/janus-sdk-flutter/issues
 
 environment:
   sdk: ^3.7.2
-  flutter: '>=3.3.0'
+  flutter: ">=3.3.0"
 
 dependencies:
   flutter:

@@ -19,7 +19,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
     super.initState();
     final janusManager = Provider.of<JanusManager>(context, listen: false);
     _regionController = TextEditingController(text: janusManager.currentRegion);
-    _websiteController = TextEditingController(text: janusManager.config?.website ?? 'https://ethyca.com');
+    _websiteController = TextEditingController(
+      text: janusManager.config?.website ?? 'https://ethyca.com',
+    );
   }
 
   @override
@@ -81,8 +83,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               const SizedBox(width: 16),
                               ElevatedButton(
                                 onPressed: () {
-                                  final newRegion = _regionController.text.trim();
-                                  janusManager.updateRegion(newRegion: newRegion);
+                                  final newRegion =
+                                      _regionController.text.trim();
+                                  janusManager.updateRegion(
+                                    newRegion: newRegion,
+                                  );
                                 },
                                 child: const Text('Update'),
                               ),
@@ -137,10 +142,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                   if (janusManager.config != null) {
                                     final newConfig = JanusConfig(
                                       apiHost: janusManager.config!.apiHost,
-                                      privacyCenterHost: janusManager.config!.privacyCenterHost,
-                                      propertyId: janusManager.config!.propertyId,
+                                      privacyCenterHost:
+                                          janusManager
+                                              .config!
+                                              .privacyCenterHost,
+                                      propertyId:
+                                          janusManager.config!.propertyId,
                                       region: janusManager.config!.region,
                                       website: _websiteController.text.trim(),
+                                      autoShowExperience:
+                                          janusManager
+                                              .config!
+                                              .autoShowExperience,
+                                      consentFlagType:
+                                          janusManager.config!.consentFlagType,
                                     );
                                     janusManager.config = newConfig;
                                     ScaffoldMessenger.of(context).showSnackBar(
@@ -190,7 +205,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 child: const Text('Clear Event Log'),
                               ),
                               ElevatedButton(
-                                onPressed: () => _showClearStorageDialog(context, janusManager),
+                                onPressed:
+                                    () => _showClearStorageDialog(
+                                      context,
+                                      janusManager,
+                                    ),
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.red.shade100,
                                   foregroundColor: Colors.red.shade900,
@@ -221,7 +240,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ElevatedButton(
                             onPressed: () {
                               Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(builder: (context) => const HomeScreen()),
+                                MaterialPageRoute(
+                                  builder: (context) => const HomeScreen(),
+                                ),
                               );
                             },
                             child: const Text('Change Configuration'),
@@ -239,33 +260,35 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  void _showClearStorageDialog(BuildContext context, JanusManager janusManager) {
+  void _showClearStorageDialog(
+    BuildContext context,
+    JanusManager janusManager,
+  ) {
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Clear All Storage'),
-        content: const Text(
-          'This will clear all consent values, metadata, and local storage. This action cannot be undone.',
-        ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            child: const Text('Cancel'),
-          ),
-          TextButton(
-            onPressed: () {
-              janusManager.clearLocalStorage();
-              Navigator.of(context).pop();
-            },
-            style: TextButton.styleFrom(
-              foregroundColor: Colors.red,
+      builder:
+          (context) => AlertDialog(
+            title: const Text('Clear All Storage'),
+            content: const Text(
+              'This will clear all consent values, metadata, and local storage. This action cannot be undone.',
             ),
-            child: const Text('Clear All'),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: const Text('Cancel'),
+              ),
+              TextButton(
+                onPressed: () {
+                  janusManager.clearLocalStorage();
+                  Navigator.of(context).pop();
+                },
+                style: TextButton.styleFrom(foregroundColor: Colors.red),
+                child: const Text('Clear All'),
+              ),
+            ],
           ),
-        ],
-      ),
     );
   }
 }

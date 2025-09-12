@@ -36,22 +36,39 @@ abstract class JanusSdkFlutterPlatform extends PlatformInterface {
 
   /// Add a listener for consent events.
   String addConsentEventListener(void Function(JanusEvent) listener) {
-    throw UnimplementedError('addConsentEventListener() has not been implemented.');
+    throw UnimplementedError(
+      'addConsentEventListener() has not been implemented.',
+    );
   }
 
   /// Remove a consent event listener.
   void removeConsentEventListener(String listenerId) {
-    throw UnimplementedError('removeConsentEventListener() has not been implemented.');
+    throw UnimplementedError(
+      'removeConsentEventListener() has not been implemented.',
+    );
   }
 
-  /// Get the current consent values.
-  Future<Map<String, bool>> get consent {
+  /// Get the current consent values in external format.
+  ///
+  /// The format of values depends on the consentFlagType configuration.
+  Future<Map<String, dynamic>> get consent {
     throw UnimplementedError('consent getter has not been implemented.');
+  }
+
+  /// Get the current consent values in internal boolean format.
+  ///
+  /// This always returns boolean values regardless of the consentFlagType configuration.
+  Future<Map<String, bool>> get internalConsent {
+    throw UnimplementedError(
+      'internalConsent getter has not been implemented.',
+    );
   }
 
   /// Get metadata about the consent, including creation and update timestamps.
   Future<Map<String, dynamic>> get consentMetadata {
-    throw UnimplementedError('consentMetadata getter has not been implemented.');
+    throw UnimplementedError(
+      'consentMetadata getter has not been implemented.',
+    );
   }
 
   /// Get the Fides string representation of consent.
@@ -74,14 +91,18 @@ abstract class JanusSdkFlutterPlatform extends PlatformInterface {
   /// Returns a unique identifier for the WebView that can be used to reference
   /// it in subsequent calls.
   Future<String> createConsentWebView({bool autoSyncOnStart = true}) {
-    throw UnimplementedError('createConsentWebView() has not been implemented.');
+    throw UnimplementedError(
+      'createConsentWebView() has not been implemented.',
+    );
   }
 
   /// Release a WebView from Janus management.
   ///
   /// [webViewId] is the identifier returned by [createConsentWebView].
   Future<void> releaseConsentWebView(String webViewId) {
-    throw UnimplementedError('releaseConsentWebView() has not been implemented.');
+    throw UnimplementedError(
+      'releaseConsentWebView() has not been implemented.',
+    );
   }
 
   /// Get the user's region by IP address lookup.
@@ -90,7 +111,9 @@ abstract class JanusSdkFlutterPlatform extends PlatformInterface {
   /// - `region`: The ISO-3166-2 region code (e.g., "US-CA")
   /// - `country`: The ISO-3166-1 country code (e.g., "US")
   Future<Map<String, dynamic>> getLocationByIPAddress() {
-    throw UnimplementedError('getLocationByIPAddress() has not been implemented.');
+    throw UnimplementedError(
+      'getLocationByIPAddress() has not been implemented.',
+    );
   }
 
   /// Get the region currently being used by the SDK.
@@ -109,7 +132,7 @@ abstract class JanusSdkFlutterPlatform extends PlatformInterface {
   }
 
   /// Set logger configuration for native platforms
-  /// 
+  ///
   /// [useProxy] - Whether native platforms should use proxy loggers that call back to Flutter
   Future<void> setLogger({required bool useProxy}) {
     throw UnimplementedError('setLogger() has not been implemented.');

@@ -174,6 +174,30 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
       let autoShowExperience = args["autoShowExperience"] as? Bool ?? true
       let saveUserPreferencesToFides = args["saveUserPreferencesToFides"] as? Bool ?? true
       let saveNoticesServedToFides = args["saveNoticesServedToFides"] as? Bool ?? true
+      let consentFlagTypeString = args["consentFlagType"] as? String ?? "boolean"
+      let consentNonApplicableFlagModeString = args["consentNonApplicableFlagMode"] as? String ?? "omit"
+      
+      // Convert string to ConsentFlagType enum
+      let consentFlagType: ConsentFlagType
+      switch consentFlagTypeString.lowercased() {
+      case "boolean":
+        consentFlagType = .boolean
+      case "consentmechanism":
+        consentFlagType = .consentMechanism
+      default:
+        consentFlagType = .boolean
+      }
+      
+      // Convert string to ConsentNonApplicableFlagMode enum
+      let consentNonApplicableFlagMode: ConsentNonApplicableFlagMode
+      switch consentNonApplicableFlagModeString.lowercased() {
+      case "omit":
+        consentNonApplicableFlagMode = .omit
+      case "include":
+        consentNonApplicableFlagMode = .include
+      default:
+        consentNonApplicableFlagMode = .omit
+      }
 
       let config = JanusConfiguration(
         apiHost: apiHost,
@@ -184,7 +208,9 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
         fidesEvents: fidesEvents,
         autoShowExperience: autoShowExperience,
         saveUserPreferencesToFides: saveUserPreferencesToFides,
-        saveNoticesServedToFides: saveNoticesServedToFides
+        saveNoticesServedToFides: saveNoticesServedToFides,
+        consentFlagType: consentFlagType,
+        consentNonApplicableFlagMode: consentNonApplicableFlagMode
       )
 
       Janus.initialize(config: config) { success, error in
@@ -209,6 +235,11 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
       }
 
     case "getConsent":
+      result(Janus.consent)
+
+    case "getInternalConsent":
+      // internalConsent is not accessible in iOS SDK, fall back to consent
+      // In default boolean mode, both should return the same values anyway
       result(Janus.consent)
 
     case "getConsentMetadata":

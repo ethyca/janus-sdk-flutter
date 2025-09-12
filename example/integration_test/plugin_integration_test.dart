@@ -6,7 +6,6 @@
 // For more information about Flutter integration tests, please see
 // https://flutter.dev/to/integration-testing
 
-
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
@@ -17,15 +16,18 @@ void main() {
 
   testWidgets('initialization test', (WidgetTester tester) async {
     final Janus plugin = Janus();
-    
+
     // This test doesn't fully initialize since we don't have a valid config
     // but it verifies the method exists and is callable
     expect(() async {
-      await plugin.initialize(JanusConfiguration(
-        apiHost: 'https://example.com',
-        propertyId: 'test',
-        ipLocation: true
-      ));
+      await plugin.initialize(
+        JanusConfiguration(
+          apiHost: 'https://example.com',
+          propertyId: 'test',
+          ipLocation: true,
+          consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
+        ),
+      );
     }, returnsNormally);
   });
 }

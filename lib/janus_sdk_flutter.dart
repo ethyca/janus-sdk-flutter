@@ -7,10 +7,14 @@ import 'janus_sdk_flutter_method_channel.dart';
 import 'janus_web_view_controller.dart';
 import 'janus_event_type.dart';
 import 'janus_logger.dart';
+import 'consent_flag_type.dart';
+import 'consent_non_applicable_flag_mode.dart';
 
 // Export public types
 export 'janus_event_type.dart';
 export 'janus_logger.dart';
+export 'consent_flag_type.dart';
+export 'consent_non_applicable_flag_mode.dart';
 
 /// The main class for the Janus SDK Flutter plugin.
 ///
@@ -19,26 +23,26 @@ export 'janus_logger.dart';
 class Janus {
   /// Private logger instance
   static JanusLogger _logger = DefaultJanusLogger();
-  
+
   /// Static initializer to register log handler
   static bool _logHandlerRegistered = false;
-  
+
   /// Set the logger implementation for the SDK
   ///
   /// [logger] - The logger implementation to use. Pass null to reset to default.
   static void setLogger(JanusLogger? logger) {
     _logger = logger ?? DefaultJanusLogger();
-    
+
     // Register log handler if not already done
     if (!_logHandlerRegistered) {
       MethodChannelJanusSdkFlutter.setLogHandler(_handleNativeLog);
       _logHandlerRegistered = true;
     }
-    
+
     // Tell native sides to use proxy loggers that call back to Flutter
     _setNativeProxyLoggers();
   }
-  
+
   /// Tell native platforms to use proxy loggers that route back to Flutter
   static void _setNativeProxyLoggers() {
     try {
@@ -50,22 +54,36 @@ class Janus {
       log('Failed to set native proxy loggers: $e', level: LogLevel.warning);
     }
   }
-  
+
   /// Log a message with optional level and metadata
   /// Internal use only - not part of the public SDK API
-  static void _log(String message, {LogLevel level = LogLevel.info, Map<String, String>? metadata, Exception? error}) {
+  static void _log(
+    String message, {
+    LogLevel level = LogLevel.info,
+    Map<String, String>? metadata,
+    Exception? error,
+  }) {
     _logger.log(message, level: level, metadata: metadata, error: error);
   }
-  
+
   /// Package-internal logging method for use by other SDK components
   /// This is NOT part of the public API and should only be used internally
-  static void log(String message, {LogLevel level = LogLevel.info, Map<String, String>? metadata, Exception? error}) {
+  static void log(
+    String message, {
+    LogLevel level = LogLevel.info,
+    Map<String, String>? metadata,
+    Exception? error,
+  }) {
     _log(message, level: level, metadata: metadata, error: error);
   }
-  
+
   /// Handle log calls from native platforms (iOS/Android proxy loggers)
   /// This is called via method channel when native code logs
-  static void _handleNativeLog(String message, String levelString, Map<String, String>? metadata) {
+  static void _handleNativeLog(
+    String message,
+    String levelString,
+    Map<String, String>? metadata,
+  ) {
     // Convert string level to enum with fallback to info
     LogLevel level;
     try {
@@ -73,7 +91,7 @@ class Janus {
     } on Object catch (_) {
       level = LogLevel.info; // fallback for unknown levels
     }
-    
+
     _logger.log(message, level: level, metadata: metadata);
   }
 
@@ -109,9 +127,21 @@ class Janus {
     JanusSdkFlutterPlatform.instance.removeConsentEventListener(listenerId);
   }
 
-  /// Get the current consent values.
-  Future<Map<String, bool>> get consent {
+  /// Get the current consent values in external format.
+  ///
+  /// The format of values depends on the consentFlagType configuration:
+  /// - boolean: Returns `Map<String, bool>`
+  /// - consentMechanism: Returns `Map<String, String>`
+  Future<Map<String, dynamic>> get consent {
     return JanusSdkFlutterPlatform.instance.consent;
+  }
+
+  /// Get the current consent values in internal boolean format.
+  ///
+  /// This always returns boolean values regardless of the consentFlagType configuration.
+  /// This method is intended for internal SDK use only.
+  Future<Map<String, bool>> get internalConsent {
+    return JanusSdkFlutterPlatform.instance.internalConsent;
   }
 
   /// Get metadata about the consent, including creation and update timestamps.
@@ -142,7 +172,9 @@ class Janus {
   ///
   /// [clearMetadata] - Whether to also clear consent metadata (defaults to false).
   Future<void> clearConsent({bool clearMetadata = false}) {
-    return JanusSdkFlutterPlatform.instance.clearConsent(clearMetadata: clearMetadata);
+    return JanusSdkFlutterPlatform.instance.clearConsent(
+      clearMetadata: clearMetadata,
+    );
   }
 
   /// Creates a WebView controller for consent management.
@@ -161,22 +193,24 @@ class Janus {
   ///   body: webViewController.buildWidget(),
   /// );
   /// ```
-  Future<JanusWebViewController> createConsentWebView({bool autoSyncOnStart = true}) async {
-    final webViewId = await JanusSdkFlutterPlatform.instance.createConsentWebView(
-      autoSyncOnStart: autoSyncOnStart
-    );
+  Future<JanusWebViewController> createConsentWebView({
+    bool autoSyncOnStart = true,
+  }) async {
+    final webViewId = await JanusSdkFlutterPlatform.instance
+        .createConsentWebView(autoSyncOnStart: autoSyncOnStart);
 
     // Create and configure the Flutter WebViewController
-    final controller = WebViewController()
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setNavigationDelegate(
-        NavigationDelegate(
-          onNavigationRequest: (NavigationRequest request) {
-            // Allow all navigation requests
-            return NavigationDecision.navigate;
-          },
-        ),
-      );
+    final controller =
+        WebViewController()
+          ..setJavaScriptMode(JavaScriptMode.unrestricted)
+          ..setNavigationDelegate(
+            NavigationDelegate(
+              onNavigationRequest: (NavigationRequest request) {
+                // Allow all navigation requests
+                return NavigationDecision.navigate;
+              },
+            ),
+          );
 
     return JanusWebViewController(controller, webViewId);
   }
@@ -188,7 +222,9 @@ class Janus {
   ///
   /// [webViewController] is the controller returned by [createConsentWebView].
   Future<void> releaseConsentWebView(JanusWebViewController webViewController) {
-    return JanusSdkFlutterPlatform.instance.releaseConsentWebView(webViewController.id);
+    return JanusSdkFlutterPlatform.instance.releaseConsentWebView(
+      webViewController.id,
+    );
   }
 
   /// Get the user's region by IP address lookup.
@@ -233,15 +269,23 @@ class JanusConfiguration {
 
   /// Whether to map Janus events to FidesJS events in WebViews.
   final bool fidesEvents;
-  
+
   /// Whether to automatically show the privacy experience after initialization.
   final bool autoShowExperience;
 
   /// Whether to save user preferences to Fides via privacy-preferences API.
   final bool saveUserPreferencesToFides;
-  
+
   /// Whether to save notices served to Fides via notices-served API.
   final bool saveNoticesServedToFides;
+
+  /// The format for consent values returned by external interfaces.
+  /// Defaults to boolean.
+  final ConsentFlagType consentFlagType;
+
+  /// Controls how non-applicable privacy notices are handled in consent objects.
+  /// Defaults to omit.
+  final ConsentNonApplicableFlagMode consentNonApplicableFlagMode;
 
   JanusConfiguration({
     required this.apiHost,
@@ -252,7 +296,9 @@ class JanusConfiguration {
     this.fidesEvents = true,
     this.autoShowExperience = true,
     this.saveUserPreferencesToFides = true,
-    this.saveNoticesServedToFides = true
+    this.saveNoticesServedToFides = true,
+    this.consentFlagType = ConsentFlagType.boolean,
+    this.consentNonApplicableFlagMode = ConsentNonApplicableFlagMode.omit,
   });
 
   /// Convert to a map for serialization.
@@ -266,7 +312,9 @@ class JanusConfiguration {
       'fidesEvents': fidesEvents,
       'autoShowExperience': autoShowExperience,
       'saveUserPreferencesToFides': saveUserPreferencesToFides,
-      'saveNoticesServedToFides': saveNoticesServedToFides
+      'saveNoticesServedToFides': saveNoticesServedToFides,
+      'consentFlagType': consentFlagType.value,
+      'consentNonApplicableFlagMode': consentNonApplicableFlagMode.value,
     };
   }
 }
@@ -279,10 +327,7 @@ class JanusEvent {
   /// Optional additional details about the event.
   final Map<String, dynamic>? detail;
 
-  JanusEvent({
-    required this.eventType,
-    this.detail,
-  });
+  JanusEvent({required this.eventType, this.detail});
 
   /// Create an event from a map.
   factory JanusEvent.fromMap(Map<dynamic, dynamic> map) {

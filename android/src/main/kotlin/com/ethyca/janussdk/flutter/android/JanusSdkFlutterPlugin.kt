@@ -17,6 +17,8 @@ import com.ethyca.janussdk.android.JanusConfiguration
 import com.ethyca.janussdk.android.JanusLogger
 import com.ethyca.janussdk.android.LogLevel
 import com.ethyca.janussdk.android.events.JanusEvent
+import com.ethyca.janussdk.android.models.ConsentFlagType
+import com.ethyca.janussdk.android.models.ConsentNonApplicableFlagMode
 import java.util.Date
 import com.ethyca.janussdk.android.events.*
 import com.ethyca.janussdk.android.models.PrivacyExperienceItem
@@ -105,6 +107,22 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
             val autoShowExperience = args["autoShowExperience"] as? Boolean ?: true
             val saveUserPreferencesToFides = args["saveUserPreferencesToFides"] as? Boolean ?: true
             val saveNoticesServedToFides = args["saveNoticesServedToFides"] as? Boolean ?: true
+            val consentFlagTypeString = args["consentFlagType"] as? String ?: "boolean"
+            val consentNonApplicableFlagModeString = args["consentNonApplicableFlagMode"] as? String ?: "omit"
+            
+            // Convert string to ConsentFlagType enum
+            val consentFlagType = when (consentFlagTypeString.lowercase()) {
+              "boolean" -> ConsentFlagType.BOOLEAN
+              "consentmechanism" -> ConsentFlagType.CONSENT_MECHANISM
+              else -> ConsentFlagType.BOOLEAN
+            }
+            
+            // Convert string to ConsentNonApplicableFlagMode enum
+            val consentNonApplicableFlagMode = when (consentNonApplicableFlagModeString.lowercase()) {
+              "omit" -> ConsentNonApplicableFlagMode.OMIT
+              "include" -> ConsentNonApplicableFlagMode.INCLUDE
+              else -> ConsentNonApplicableFlagMode.OMIT
+            }
 
             // Create configuration using Builder pattern
             val configBuilder = JanusConfiguration.Builder()
@@ -117,6 +135,8 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
               .autoShowExperience(autoShowExperience)
               .saveUserPreferencesToFides(saveUserPreferencesToFides)
               .saveNoticesServedToFides(saveNoticesServedToFides)
+              .consentFlagType(consentFlagType)
+              .consentNonApplicableFlagMode(consentNonApplicableFlagMode)
 
             val config = configBuilder.build()
 
@@ -156,6 +176,12 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
         }
 
         "getConsent" -> {
+          result.success(Janus.consent)
+        }
+
+        "getInternalConsent" -> {
+          // internalConsent is marked as internal in Android SDK, so we can't access it
+          // For now, return the same as consent since both should be boolean in default mode
           result.success(Janus.consent)
         }
 

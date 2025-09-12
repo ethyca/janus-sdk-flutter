@@ -134,7 +134,9 @@ class _MyAppState extends State<MyApp> {
         propertyId: 'FDS-A0B1C2',
         ipLocation: true,
         region: 'US-CA',
-        fidesEvents: true
+        fidesEvents: true,
+        consentFlagType: ConsentFlagType.boolean,
+        consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit
       );
 
       // Initialize the SDK
@@ -200,8 +202,10 @@ final config = JanusConfiguration(
   region: 'US-CA',                                          // 🌎 Provide if geolocation is false or fails
   fidesEvents: true,                                        // 🔄 Map JanusEvents to FidesJS events in WebViews (default true)
   autoShowExperience: true,                                 // 🚀 Automatically show privacy experience after initialization (default true)
-  saveUserPreferencesToFides: true                          // 💾 Save user preferences to Fides via privacy-preferences API (default true)
-  saveNoticesServedToFides: true                            // 💾 Save notices served to Fides via notices-served API (default true)
+  saveUserPreferencesToFides: true,                         // 💾 Save user preferences to Fides via privacy-preferences API (default true)
+  saveNoticesServedToFides: true,                           // 💾 Save notices served to Fides via notices-served API (default true)
+  consentFlagType: ConsentFlagType.boolean,                 // 🎯 Format for consent values (default boolean)
+  consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit  // 🔄 Handle non-applicable notices (default omit)
 );
 
 // Initialize the SDK
@@ -441,6 +445,8 @@ class _HomePageState extends State<HomePage> {
       privacyCenterHost: 'https://privacy-center.yourhost.com',
       propertyId: 'FDS-A0B1C2',
       ipLocation: true,
+      consentFlagType: ConsentFlagType.boolean,
+      consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
     );
 
     try {
@@ -573,7 +579,9 @@ final config = JanusConfiguration(
 final config = JanusConfiguration(
   apiHost: 'https://privacy-plus.yourhost.com',
   // Other parameters...
-  autoShowExperience: false // Prevent automatic display
+  autoShowExperience: false, // Prevent automatic display
+  consentFlagType: ConsentFlagType.boolean,
+  consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit
 );
 
 // Initialize Janus without showing the privacy experience immediately

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:janus_sdk_flutter/janus_sdk_flutter.dart';
 import '../janus_manager.dart';
 import '../widgets/config_form.dart';
 import '../models/config_set.dart';
@@ -15,13 +16,18 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final _formKey = GlobalKey<FormState>();
-  final _apiHostController = TextEditingController(text: 'https://privacy.ethyca.com');
+  final _apiHostController = TextEditingController(
+    text: 'https://privacy.ethyca.com',
+  );
   final _privacyCenterHostController = TextEditingController();
   final _propertyIdController = TextEditingController();
   final _regionController = TextEditingController();
   final _websiteController = TextEditingController(text: 'https://ethyca.com');
   bool _isLoading = true;
   bool _autoShowExperience = true;
+  ConsentFlagType _consentFlagType = ConsentFlagType.boolean;
+  ConsentNonApplicableFlagMode _consentNonApplicableFlagMode =
+      ConsentNonApplicableFlagMode.omit;
 
   @override
   void initState() {
@@ -32,11 +38,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _initControllers() async {
     // Load custom config settings
     await ConfigSets.loadCustomConfig();
-    
+
     // Try to get the last selected config type
     final prefs = await SharedPreferences.getInstance();
-    final lastSelectedConfig = prefs.getString('last_selected_config') ?? 'Custom';
-    
+    final lastSelectedConfig =
+        prefs.getString('last_selected_config') ?? 'Custom';
+
     // Apply the config values to controllers if it was 'Custom'
     if (lastSelectedConfig == 'Custom') {
       final customConfig = await JanusConfig.loadFromPrefs();
@@ -46,8 +53,10 @@ class _HomeScreenState extends State<HomeScreen> {
       _regionController.text = customConfig.region ?? '';
       _websiteController.text = customConfig.website ?? 'https://ethyca.com';
       _autoShowExperience = customConfig.autoShowExperience;
+      _consentFlagType = customConfig.consentFlagType;
+      _consentNonApplicableFlagMode = customConfig.consentNonApplicableFlagMode;
     }
-    
+
     setState(() {
       _isLoading = false;
     });
@@ -72,26 +81,33 @@ class _HomeScreenState extends State<HomeScreen> {
       // Create the configuration from form values
       final config = JanusConfig(
         apiHost: _apiHostController.text.trim(),
-        privacyCenterHost: _privacyCenterHostController.text.isEmpty 
-            ? null 
-            : _privacyCenterHostController.text.trim(),
-        propertyId: _propertyIdController.text.isEmpty 
-            ? null 
-            : _propertyIdController.text.trim(),
-        region: _regionController.text.isEmpty 
-            ? null 
-            : _regionController.text.trim(),
-        website: _websiteController.text.isEmpty 
-            ? null 
-            : _websiteController.text.trim(),
+        privacyCenterHost:
+            _privacyCenterHostController.text.isEmpty
+                ? null
+                : _privacyCenterHostController.text.trim(),
+        propertyId:
+            _propertyIdController.text.isEmpty
+                ? null
+                : _propertyIdController.text.trim(),
+        region:
+            _regionController.text.isEmpty
+                ? null
+                : _regionController.text.trim(),
+        website:
+            _websiteController.text.isEmpty
+                ? null
+                : _websiteController.text.trim(),
         autoShowExperience: _autoShowExperience,
+        consentFlagType: _consentFlagType,
+        consentNonApplicableFlagMode: _consentNonApplicableFlagMode,
       );
 
       // Save custom configuration before initialization
       // Get the last selected config type
       final prefs = await SharedPreferences.getInstance();
-      final lastSelectedConfig = prefs.getString('last_selected_config') ?? 'Custom';
-      
+      final lastSelectedConfig =
+          prefs.getString('last_selected_config') ?? 'Custom';
+
       if (lastSelectedConfig == 'Custom') {
         // Save to preferences before initializing
         await config.saveToPrefs();
@@ -112,60 +128,73 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Janus SDK Flutter Example'),
-      ),
-      body: _isLoading 
-        ? const Center(child: CircularProgressIndicator())
-        : Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const Text(
-                'Janus SDK Configuration',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 8),
-              const Text(
-                'Select a predefined configuration or customize your own',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey,
+      appBar: AppBar(title: const Text('Janus SDK Flutter Example')),
+      body:
+          _isLoading
+              ? const Center(child: CircularProgressIndicator())
+              : Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    const Text(
+                      'Janus SDK Configuration',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      'Select a predefined configuration or customize your own',
+                      style: TextStyle(fontSize: 14, color: Colors.grey),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 24),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: ConfigForm(
+                          formKey: _formKey,
+                          apiHostController: _apiHostController,
+                          privacyCenterHostController:
+                              _privacyCenterHostController,
+                          propertyIdController: _propertyIdController,
+                          regionController: _regionController,
+                          websiteController: _websiteController,
+                          initialAutoShowExperience: _autoShowExperience,
+                          initialConsentFlagType: _consentFlagType,
+                          initialConsentNonApplicableFlagMode:
+                              _consentNonApplicableFlagMode,
+                          onAutoShowExperienceChanged: (value) {
+                            setState(() {
+                              _autoShowExperience = value;
+                            });
+                          },
+                          onConsentFlagTypeChanged: (value) {
+                            setState(() {
+                              _consentFlagType = value;
+                            });
+                          },
+                          onConsentNonApplicableFlagModeChanged: (value) {
+                            setState(() {
+                              _consentNonApplicableFlagMode = value;
+                            });
+                          },
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    ElevatedButton(
+                      onPressed: _initializeJanus,
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                      ),
+                      child: const Text('Initialize Janus SDK'),
+                    ),
+                  ],
                 ),
-                textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 24),
-              Expanded(
-                child: SingleChildScrollView(
-                  child: ConfigForm(
-                    formKey: _formKey,
-                    apiHostController: _apiHostController,
-                    privacyCenterHostController: _privacyCenterHostController,
-                    propertyIdController: _propertyIdController,
-                    regionController: _regionController,
-                    websiteController: _websiteController,
-                    initialAutoShowExperience: _autoShowExperience,
-                    onAutoShowExperienceChanged: (value) {
-                      setState(() {
-                        _autoShowExperience = value;
-                      });
-                    },
-                  ),
-                ),
-              ),
-              const SizedBox(height: 16),
-              ElevatedButton(
-                onPressed: _initializeJanus,
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                ),
-                child: const Text('Initialize Janus SDK'),
-              ),
-            ],
-          ),
-        ),
     );
   }
 }

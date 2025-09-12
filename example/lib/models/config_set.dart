@@ -1,14 +1,12 @@
 import '../janus_manager.dart';
+import 'package:janus_sdk_flutter/janus_sdk_flutter.dart';
 import 'dart:io' show Platform;
 
 class ConfigSet {
   final String name;
   final JanusConfig config;
 
-  const ConfigSet({
-    required this.name,
-    required this.config,
-  });
+  const ConfigSet({required this.name, required this.config});
 }
 
 // Helper function to get the correct localhost URL based on platform
@@ -36,6 +34,8 @@ class ConfigSets {
         region: null,
         website: 'https://ethyca.com',
         autoShowExperience: true,
+        consentFlagType: ConsentFlagType.boolean,
+        consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
       ),
     ),
     // Ethyca Empty
@@ -48,6 +48,8 @@ class ConfigSets {
         region: null,
         website: 'https://ethyca.com',
         autoShowExperience: true,
+        consentFlagType: ConsentFlagType.boolean,
+        consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
       ),
     ),
     // Local Slim
@@ -60,6 +62,8 @@ class ConfigSets {
         region: null,
         website: _getLocalHostUrl(3001),
         autoShowExperience: true,
+        consentFlagType: ConsentFlagType.boolean,
+        consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
       ),
     ),
     // Local Demo
@@ -72,6 +76,8 @@ class ConfigSets {
         region: null,
         website: _getLocalHostUrl(3000),
         autoShowExperience: true,
+        consentFlagType: ConsentFlagType.boolean,
+        consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
       ),
     ),
     // Cookie House (RC)
@@ -84,6 +90,8 @@ class ConfigSets {
         region: null,
         website: 'https://cookiehouse-plus-rc.fides-staging.ethyca.com',
         autoShowExperience: true,
+        consentFlagType: ConsentFlagType.boolean,
+        consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
       ),
     ),
     // Cookie House (Nightly)
@@ -96,6 +104,8 @@ class ConfigSets {
         region: null,
         website: 'https://cookiehouse-plus-nightly.fides-staging.ethyca.com',
         autoShowExperience: true,
+        consentFlagType: ConsentFlagType.boolean,
+        consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
       ),
     ),
   ];
@@ -120,6 +130,8 @@ class ConfigSets {
             region: null,
             website: 'https://ethyca.com',
             autoShowExperience: true,
+            consentFlagType: ConsentFlagType.boolean,
+            consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
           ),
         ),
       );
@@ -134,10 +146,7 @@ class ConfigSets {
   static Future<void> loadCustomConfig() async {
     try {
       final config = await JanusConfig.loadFromPrefs();
-      _customConfigSet = ConfigSet(
-        name: 'Custom',
-        config: config,
-      );
+      _customConfigSet = ConfigSet(name: 'Custom', config: config);
     } catch (e) {
       // Use a default custom config on error
       _customConfigSet = ConfigSet(
@@ -149,6 +158,8 @@ class ConfigSets {
           region: null,
           website: 'https://ethyca.com',
           autoShowExperience: true,
+          consentFlagType: ConsentFlagType.boolean,
+          consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
         ),
       );
     }

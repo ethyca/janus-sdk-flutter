@@ -13,6 +13,8 @@ class JanusConfig {
   final String? region;
   final String? website;
   final bool autoShowExperience;
+  final ConsentFlagType consentFlagType;
+  final ConsentNonApplicableFlagMode consentNonApplicableFlagMode;
 
   JanusConfig({
     required this.apiHost,
@@ -21,6 +23,8 @@ class JanusConfig {
     this.region,
     this.website,
     this.autoShowExperience = true,
+    this.consentFlagType = ConsentFlagType.boolean,
+    this.consentNonApplicableFlagMode = ConsentNonApplicableFlagMode.omit,
   });
 
   // Convert config to a map for storage
@@ -32,6 +36,8 @@ class JanusConfig {
       'region': region ?? '',
       'website': website ?? '',
       'autoShowExperience': autoShowExperience,
+      'consentFlagType': consentFlagType.value,
+      'consentNonApplicableFlagMode': consentNonApplicableFlagMode.value,
     };
   }
 
@@ -39,11 +45,24 @@ class JanusConfig {
   static JanusConfig fromMap(Map<String, dynamic> map) {
     return JanusConfig(
       apiHost: map['apiHost'] ?? 'https://privacy.ethyca.com',
-      privacyCenterHost: map['privacyCenterHost']?.isNotEmpty == true ? map['privacyCenterHost'] : null,
-      propertyId: map['propertyId']?.isNotEmpty == true ? map['propertyId'] : null,
+      privacyCenterHost:
+          map['privacyCenterHost']?.isNotEmpty == true
+              ? map['privacyCenterHost']
+              : null,
+      propertyId:
+          map['propertyId']?.isNotEmpty == true ? map['propertyId'] : null,
       region: map['region']?.isNotEmpty == true ? map['region'] : null,
-      website: map['website']?.isNotEmpty == true ? map['website'] : 'https://ethyca.com',
+      website:
+          map['website']?.isNotEmpty == true
+              ? map['website']
+              : 'https://ethyca.com',
       autoShowExperience: map['autoShowExperience'] ?? true,
+      consentFlagType: ConsentFlagType.fromString(
+        map['consentFlagType'] ?? 'boolean',
+      ),
+      consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.fromString(
+        map['consentNonApplicableFlagMode'] ?? 'omit',
+      ),
     );
   }
 
@@ -64,20 +83,31 @@ class JanusConfig {
   static Future<JanusConfig> loadFromPrefs() async {
     final prefs = await SharedPreferences.getInstance();
     return JanusConfig(
-      apiHost: prefs.getString('custom_apiHost') ?? 'https://privacy.ethyca.com',
-      privacyCenterHost: prefs.getString('custom_privacyCenterHost')?.isNotEmpty == true 
-          ? prefs.getString('custom_privacyCenterHost') 
-          : null,
-      propertyId: prefs.getString('custom_propertyId')?.isNotEmpty == true 
-          ? prefs.getString('custom_propertyId') 
-          : null,
-      region: prefs.getString('custom_region')?.isNotEmpty == true 
-          ? prefs.getString('custom_region') 
-          : null,
-      website: prefs.getString('custom_website')?.isNotEmpty == true 
-          ? prefs.getString('custom_website') 
-          : 'https://ethyca.com',
+      apiHost:
+          prefs.getString('custom_apiHost') ?? 'https://privacy.ethyca.com',
+      privacyCenterHost:
+          prefs.getString('custom_privacyCenterHost')?.isNotEmpty == true
+              ? prefs.getString('custom_privacyCenterHost')
+              : null,
+      propertyId:
+          prefs.getString('custom_propertyId')?.isNotEmpty == true
+              ? prefs.getString('custom_propertyId')
+              : null,
+      region:
+          prefs.getString('custom_region')?.isNotEmpty == true
+              ? prefs.getString('custom_region')
+              : null,
+      website:
+          prefs.getString('custom_website')?.isNotEmpty == true
+              ? prefs.getString('custom_website')
+              : 'https://ethyca.com',
       autoShowExperience: prefs.getBool('custom_autoShowExperience') ?? true,
+      consentFlagType: ConsentFlagType.fromString(
+        prefs.getString('custom_consentFlagType') ?? 'boolean',
+      ),
+      consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.fromString(
+        prefs.getString('custom_consentNonApplicableFlagMode') ?? 'omit',
+      ),
     );
   }
 }
@@ -143,8 +173,15 @@ class WebViewEventTracker {
       // This is a simplified approach - in a real implementation,
       // you would need to communicate with the WebView to get its specific consent values
       final consent = await Janus().consent;
-      consentValues = consent;
-      onConsentValuesChanged?.call(webViewId, consentValues);
+      // For WebView tracking, we still need boolean values for compatibility
+      final boolConsentValues = consent.map<String, bool>((key, value) {
+        if (value is bool) return MapEntry(key, value);
+        if (value is String) {
+          return MapEntry(key, value.toLowerCase() == 'true');
+        }
+        return MapEntry(key, value == true);
+      });
+      onConsentValuesChanged?.call(webViewId, boolConsentValues);
 
       final fidesStr = await Janus().fidesString;
       fidesString = fidesStr;
@@ -168,7 +205,8 @@ class JanusManager extends ChangeNotifier {
   String? initializationError;
   bool isListening = false;
   String? listenerId;
-  Map<String, bool> consentValues = {};
+  Map<String, dynamic> consentValues =
+      {}; // Changed to dynamic to support both bool and string
   Map<String, dynamic> consentMetadata = {};
   String fidesString = '';
   String consentMethod = '';
@@ -201,14 +239,15 @@ class JanusManager extends ChangeNotifier {
 
   Future<void> setupJanus() async {
     if (config == null) return;
-    
+
     // Initialize HTTPLogger and set it before Janus initialization
     // SAMPLE implementation/usage of a custom HTTP logger
     // can be used in conjunction with logdy for local logging
     // logdy --no-analytics -p 8181 --api-key foobar
-    final endpoint = Platform.isAndroid 
-        ? 'http://10.0.2.2:8181/api/log'  // Android emulator
-        : 'http://localhost:8181/api/log'; // iOS simulator and real devices
+    final endpoint =
+        Platform.isAndroid
+            ? 'http://10.0.2.2:8181/api/log' // Android emulator
+            : 'http://localhost:8181/api/log'; // iOS simulator and real devices
     final httpLogger = HTTPLogger(
       endpoint: endpoint,
       authToken: 'foobar',
@@ -229,10 +268,14 @@ class JanusManager extends ChangeNotifier {
       apiHost: config!.apiHost,
       privacyCenterHost: config!.privacyCenterHost ?? "",
       propertyId: config!.propertyId ?? "",
-      ipLocation: config!.region == null, // Only use IP location if no region is provided
+      ipLocation:
+          config!.region ==
+          null, // Only use IP location if no region is provided
       region: config!.region ?? "",
       fidesEvents: true,
-      autoShowExperience: config!.autoShowExperience
+      autoShowExperience: config!.autoShowExperience,
+      consentFlagType: config!.consentFlagType,
+      consentNonApplicableFlagMode: config!.consentNonApplicableFlagMode,
     );
 
     try {
@@ -330,6 +373,7 @@ class JanusManager extends ChangeNotifier {
   }
 
   Future<void> refreshConsentValues() async {
+    // Get the raw consent values without conversion - this preserves the original format
     consentValues = await Janus().consent;
     consentMetadata = await Janus().consentMetadata;
     hasExperience = await Janus().hasExperience;
@@ -433,7 +477,7 @@ class JanusManager extends ChangeNotifier {
   // Add a background WebView to the manager
   Future<void> addBackgroundWebView({bool autoSyncOnStart = true}) async {
     final webViewController = await Janus().createConsentWebView(
-      autoSyncOnStart: autoSyncOnStart
+      autoSyncOnStart: autoSyncOnStart,
     );
 
     // Create webview entry with unique ID
@@ -444,7 +488,7 @@ class JanusManager extends ChangeNotifier {
     final webViewEntry = (
       id: webViewId,
       controller: webViewController,
-      eventCount: 0
+      eventCount: 0,
     );
     backgroundWebViews.add(webViewEntry);
 
@@ -541,7 +585,7 @@ class JanusManager extends ChangeNotifier {
       backgroundWebViews[index] = (
         id: webView.id,
         controller: webView.controller,
-        eventCount: count
+        eventCount: count,
       );
       notifyListeners();
     }
@@ -609,6 +653,8 @@ class JanusManager extends ChangeNotifier {
       region: newRegion.isEmpty ? null : newRegion,
       website: config!.website,
       autoShowExperience: config!.autoShowExperience,
+      consentFlagType: config!.consentFlagType,
+      consentNonApplicableFlagMode: config!.consentNonApplicableFlagMode,
     );
 
     // Clear all states immediately before reinitializing

@@ -11,11 +11,13 @@ class HTTPLogger implements JanusLogger {
   final String authToken;
   final String source;
   final http.Client _client;
+  final bool enableConsoleErrors;
 
   HTTPLogger({
     required this.endpoint,
     required this.authToken,
     this.source = 'FlutterExampleApp',
+    this.enableConsoleErrors = false,
   }) : _client = http.Client();
 
   @override
@@ -86,16 +88,22 @@ class HTTPLogger implements JanusLogger {
       );
 
       if (response.statusCode < 200 || response.statusCode >= 300) {
-        debugPrint('HTTPLogger: HTTP error - Status code: ${response.statusCode}');
-        if (response.body.isNotEmpty) {
-          debugPrint('HTTPLogger: Response body - ${response.body}');
+        if (enableConsoleErrors) {
+          debugPrint('HTTPLogger: HTTP error - Status code: ${response.statusCode}');
+          if (response.body.isNotEmpty) {
+            debugPrint('HTTPLogger: Response body - ${response.body}');
+          }
         }
       }
     } on SocketException catch (e) {
-      debugPrint('HTTPLogger: Network error - ${e.message}');
+      if (enableConsoleErrors) {
+        debugPrint('HTTPLogger: Network error - ${e.message}');
+      }
     } catch (e) {
-      debugPrint('HTTPLogger: Failed to serialize log data - ${e.toString()}');
-      debugPrint('HTTPLogger: Log data that failed: $logData');
+      if (enableConsoleErrors) {
+        debugPrint('HTTPLogger: Failed to serialize log data - ${e.toString()}');
+        debugPrint('HTTPLogger: Log data that failed: $logData');
+      }
     }
   }
 

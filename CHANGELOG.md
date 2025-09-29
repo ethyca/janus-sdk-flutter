@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.18 (2025-09-29)
+
+- fix for notice only privacy rows default value when nonApplicableFieldMode=include
+
+
 ## 0.1.17 (2025-09-12)
 
 - Added ConsentFlagType and ConsentNonApplicableFlagMode

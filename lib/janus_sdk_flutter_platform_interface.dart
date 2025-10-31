@@ -86,6 +86,16 @@ abstract class JanusSdkFlutterPlatform extends PlatformInterface {
     throw UnimplementedError('shouldShowExperience has not been implemented.');
   }
 
+  /// Get the current privacy experience item, if available.
+  Future<Map<String, dynamic>?> get currentExperience {
+    throw UnimplementedError('currentExperience has not been implemented.');
+  }
+
+  /// Whether the current privacy experience is a TCF experience.
+  Future<bool> get isTCFExperience {
+    throw UnimplementedError('isTCFExperience has not been implemented.');
+  }
+
   /// Create a WebView with consent functionality.
   ///
   /// Returns a unique identifier for the WebView that can be used to reference

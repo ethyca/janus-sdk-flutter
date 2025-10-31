@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:janus_sdk_flutter/janus_sdk_flutter.dart';
 import '../janus_manager.dart';
 import '../widgets/status_card.dart';
 import 'consent_screen.dart';
@@ -141,6 +142,21 @@ class StatusScreen extends StatelessWidget {
                         ? 'Loading...'
                         : janusManager.shouldShowExperience ? 'Yes ✅' : 'No ❌',
                     isLoading: janusManager.isInitializing,
+                  ),
+                  const SizedBox(height: 16),
+                  FutureBuilder<bool>(
+                    future: Janus().isTCFExperience,
+                    builder: (context, snapshot) {
+                      return StatusCard(
+                        title: 'Is TCF Experience',
+                        content: janusManager.isInitializing
+                            ? 'Loading...'
+                            : snapshot.hasData
+                                ? (snapshot.data! ? 'Yes ✅' : 'No ❌')
+                                : 'Unknown',
+                        isLoading: janusManager.isInitializing,
+                      );
+                    },
                   ),
                   const SizedBox(height: 16),
                   StatusCard(

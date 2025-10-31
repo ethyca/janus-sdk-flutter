@@ -219,6 +219,40 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
   }
 
   @override
+  Future<Map<String, dynamic>?> get currentExperience async {
+    try {
+      final result = await methodChannel.invokeMethod<Map<String, dynamic>?>(
+        'getCurrentExperience',
+      );
+      return result;
+    } on PlatformException catch (e) {
+      Janus.log(
+        'Failed to get current experience',
+        level: LogLevel.error,
+        error: e,
+      );
+      return null;
+    }
+  }
+
+  @override
+  Future<bool> get isTCFExperience async {
+    try {
+      final result = await methodChannel.invokeMethod<bool>(
+        'getIsTCFExperience',
+      );
+      return result ?? false;
+    } on PlatformException catch (e) {
+      Janus.log(
+        'Failed to check if is TCF experience',
+        level: LogLevel.error,
+        error: e,
+      );
+      return false;
+    }
+  }
+
+  @override
   Future<void> clearConsent({bool clearMetadata = false}) async {
     try {
       await methodChannel.invokeMethod<void>('clearConsent', {

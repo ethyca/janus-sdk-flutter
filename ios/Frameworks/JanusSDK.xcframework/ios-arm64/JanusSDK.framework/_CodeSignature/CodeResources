@@ -18,19 +18,19 @@
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		Jj578MMc+sqEjK0GbJaJondwLQk=
+		7Zi7tj6Jix5ssird0XZOVfqmzqA=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		D72pi1b9Z3VCv2zdj+6qp0gkA+M=
+		Tab49/kVXZYMEqxkJDsvYSnHKQ8=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		L1G2j1Yi5mUE/YE9qDL8owoRdd8=
+		Ukc2X++TakIJfRmCPiB0MSQEVto=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		D72pi1b9Z3VCv2zdj+6qp0gkA+M=
+		Tab49/kVXZYMEqxkJDsvYSnHKQ8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -90,28 +90,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+RBwII6qp2BIPQyCKa0fiy4uHPiVcZEYbwKiTpBxIY8=
+			rea4+a2kV6mAF8NxH7VoTOttXHmOgkO9WQ5w9iQSA38=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8PjZJ/vwqsVvjMIkQ63+8VgHI0tWUbPeaNkfb2LP0e8=
+			9t53OfHCFfRLNi40RvBvfbssw2cMokAm26H3iUHIVZY=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D4wKgOSflReCtvFt7w6JRPc9s42exqnYHDD7cvBeaFk=
+			8DAiQHZJq1Hyl2srHPLHFXWJD9mKJKWRd0HVn4T5jxk=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8PjZJ/vwqsVvjMIkQ63+8VgHI0tWUbPeaNkfb2LP0e8=
+			9t53OfHCFfRLNi40RvBvfbssw2cMokAm26H3iUHIVZY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

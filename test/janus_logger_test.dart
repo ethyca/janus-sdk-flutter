@@ -67,6 +67,18 @@ class MockJanusSdkFlutterPlatform
   Future<String> get region => Future.value('US-NY');
 
   @override
+  Future<Map<String, dynamic>?> get currentExperience => Future.value({
+    'id': 'test-exp-id',
+    'createdAt': '2023-01-01T00:00:00Z',
+    'updatedAt': '2023-01-01T00:00:00Z',
+    'region': 'US-CA',
+    'isTCFExperience': true,
+  });
+
+  @override
+  Future<bool> get isTCFExperience => Future.value(true);
+
+  @override
   Future<void> setLogger({required bool useProxy}) => Future.value();
 }
 

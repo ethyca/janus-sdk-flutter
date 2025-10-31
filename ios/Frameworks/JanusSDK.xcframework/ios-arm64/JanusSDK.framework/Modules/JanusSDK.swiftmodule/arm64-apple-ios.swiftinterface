@@ -14,8 +14,52 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public enum ComponentType {
+}
+public class JanusImplementation : JanusSDK.JanusProtocol {
+  public var fidesEvents: Swift.Bool
+  public init(privacyExperienceAPI: any JanusSDK.PrivacyExperienceAPIProtocol = PrivacyExperienceAPI(apiHost: ""), ipLocationAPI: any JanusSDK.IPLocationAPIProtocol = IPLocationAPI(), consentManager: any JanusSDK.ConsentManagerProtocol = ConsentManager())
+  public var currentExperience: JanusSDK.PrivacyExperienceItem? {
+    get
+  }
+  public var hasExperience: Swift.Bool {
+    get
+  }
+  public var shouldShowExperience: Swift.Bool {
+    get
+  }
+  public var consent: [Swift.String : Any] {
+    get
+  }
+  public var internalConsent: [Swift.String : Swift.Bool] {
+    get
+  }
+  public var consentMetadata: JanusSDK.ConsentMetadata {
+    get
+  }
+  public var fides_string: Swift.String {
+    get
+  }
+  public var region: Swift.String {
+    get
+  }
+  public func initialize(config: JanusSDK.JanusConfiguration, completion: @escaping (Swift.Bool, (any Swift.Error)?) -> Swift.Void)
+  @available(iOS 13.0, *)
+  public func showExperience(from viewController: UIKit.UIViewController)
+  public func addConsentEventListener(listener: @escaping (JanusSDK.JanusEvent) -> Swift.Void) -> Swift.String
+  public func removeConsentEventListener(listenerId: Swift.String)
+  public func createConsentWebView(autoSyncOnStart: Swift.Bool = true) -> WebKit.WKWebView
+  public func releaseConsentWebView(_ webView: WebKit.WKWebView)
+  public func clearConsent(clearMetadata: Swift.Bool = false)
+  public func getLocationByIPAddress(completion: @escaping (Swift.Bool, JanusSDK.IPLocationResponse?, (any Swift.Error)?) -> Swift.Void)
+  public func notifyEventListeners(event: JanusSDK.JanusEvent)
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class Janus {
   public static var currentExperience: JanusSDK.PrivacyExperienceItem? {
+    get
+  }
+  public static var isTCFExperience: Swift.Bool {
     get
   }
   public static var hasExperience: Swift.Bool {
@@ -113,15 +157,6 @@ public struct TranslatedPrivacyNotice {
   }
   @available(iOS 13.0, *)
   public typealias Body = @_opaqueReturnTypeOf("$s8JanusSDK21PrivacyExperienceViewV4bodyQrvp", 0) __
-}
-@_hasMissingDesignatedInitializers public class WebViewSynchronizer {
-  public init()
-  public func enable(webView: WebKit.WKWebView)
-  public func checkFides(webView: WebKit.WKWebView, completion: @escaping ([Swift.String : Swift.Bool]) -> Swift.Void)
-  public func getConsentMetadataFromJS(webView: WebKit.WKWebView, completion: @escaping (Foundation.Date?, Foundation.Date?) -> Swift.Void)
-  public func checkDocumentReadyState(webView: WebKit.WKWebView, completion: @escaping (Swift.String?) -> Swift.Void)
-  public func waitForJavaScriptInit(webView: WebKit.WKWebView, completion: @escaping () -> Swift.Void)
-  @objc deinit
 }
 public struct ConsentMetadata : Swift.Codable {
   public var createdAt: Foundation.Date?
@@ -256,13 +291,6 @@ public struct IPLocationResponse : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@_hasMissingDesignatedInitializers public class JSResourceLoader {
-  public static func getJavaScriptContent(filename: Swift.String) -> Swift.String?
-  public static func injectAllScripts(into webView: WebKit.WKWebView, injectionTime: WebKit.WKUserScriptInjectionTime = .atDocumentEnd, forMainFrameOnly: Swift.Bool = true)
-  public static func injectScript(filename: Swift.String, into webView: WebKit.WKWebView, injectionTime: WebKit.WKUserScriptInjectionTime = .atDocumentEnd, forMainFrameOnly: Swift.Bool = true)
-  public static func getAllJavaScriptContent() -> Swift.String
-  @objc deinit
-}
 public protocol PrivacyExperienceAPIProtocol {
   func fetchPrivacyExperiences(region: Swift.String, propertyId: Swift.String?, page: Swift.Int?, size: Swift.Int?, minimalTcf: Swift.Bool?, completion: @escaping (Swift.Result<JanusSDK.PrivacyExperienceResponse, JanusSDK.APIError>) -> Swift.Void)
 }
@@ -332,6 +360,15 @@ public enum JanusError : Swift.Error {
   public var localizedDescription: Swift.String {
     get
   }
+}
+@_hasMissingDesignatedInitializers public class WebViewSynchronizer {
+  public init()
+  public func enable(webView: WebKit.WKWebView)
+  public func checkFides(webView: WebKit.WKWebView, completion: @escaping ([Swift.String : Swift.Bool]) -> Swift.Void)
+  public func getConsentMetadataFromJS(webView: WebKit.WKWebView, completion: @escaping (Foundation.Date?, Foundation.Date?) -> Swift.Void)
+  public func checkDocumentReadyState(webView: WebKit.WKWebView, completion: @escaping (Swift.String?) -> Swift.Void)
+  public func waitForJavaScriptInit(webView: WebKit.WKWebView, completion: @escaping () -> Swift.Void)
+  @objc deinit
 }
 public enum ApiRoutes : Swift.String, Swift.CaseIterable {
   case noticesServed
@@ -647,6 +684,13 @@ public struct TCFSpecialPurpose : Swift.Codable, Swift.Equatable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+@_hasMissingDesignatedInitializers public class JSResourceLoader {
+  public static func getJavaScriptContent(filename: Swift.String) -> Swift.String?
+  public static func injectAllScripts(into webView: WebKit.WKWebView, injectionTime: WebKit.WKUserScriptInjectionTime = .atDocumentEnd, forMainFrameOnly: Swift.Bool = true)
+  public static func injectScript(filename: Swift.String, into webView: WebKit.WKWebView, injectionTime: WebKit.WKUserScriptInjectionTime = .atDocumentEnd, forMainFrameOnly: Swift.Bool = true)
+  public static func getAllJavaScriptContent() -> Swift.String
+  @objc deinit
+}
 @available(iOS 15.0, *)
 @_Concurrency.MainActor @preconcurrency public struct AttributedTextSwift : SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public init(_ nsAttributedString: Foundation.NSAttributedString, textColor: SwiftUICore.Color = .primary)
@@ -657,13 +701,6 @@ public struct TCFSpecialPurpose : Swift.Codable, Swift.Equatable {
   }
   @available(iOS 15.0, *)
   public typealias Body = @_opaqueReturnTypeOf("$s8JanusSDK19AttributedTextSwiftV4bodyQrvp", 0) __
-}
-@_hasMissingDesignatedInitializers public class WebViewManager {
-  @objc deinit
-  public static func createConsentWebView(autoSyncOnStart: Swift.Bool = true, tcfWebView: Swift.Bool = false) -> WebKit.WKWebView
-  @objc public static func propagateConsentToWebViews(consentValues: [Swift.String : Swift.Bool], consentMethod: Swift.String? = nil)
-  public static func propagateConsentToOtherWebViews(consentValues: [Swift.String : Swift.Bool], sourceWebView: WebKit.WKWebView, consentMethod: Swift.String? = nil)
-  public static func releaseConsentWebView(_ webView: WebKit.WKWebView)
 }
 public struct DetailOnlyResponse : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -770,6 +807,11 @@ public protocol JanusLogger {
   public func log(_ message: Swift.String, level: JanusSDK.LogLevel = .info, metadata: [Swift.String : Swift.String]? = nil, error: (any Swift.Error)? = nil)
   @objc deinit
 }
+extension JanusSDK.PrivacyExperienceItem {
+  public var isTCFExperience: Swift.Bool {
+    get
+  }
+}
 public struct JanusTheme {
   public var primaryColor: SwiftUICore.Color
   public var secondaryColor: SwiftUICore.Color
@@ -825,6 +867,13 @@ public struct JanusConfiguration {
   public static func apply(to label: UIKit.UILabel, htmlContent: Swift.String, textColor: UIKit.UIColor? = nil, linkColor: UIKit.UIColor? = nil)
   public static func apply(to textView: UIKit.UITextView, htmlContent: Swift.String, textColor: UIKit.UIColor? = nil, linkColor: UIKit.UIColor? = nil)
   @objc deinit
+}
+@_hasMissingDesignatedInitializers public class WebViewManager {
+  @objc deinit
+  public static func createConsentWebView(autoSyncOnStart: Swift.Bool = true, tcfWebView: Swift.Bool = false) -> WebKit.WKWebView
+  @objc public static func propagateConsentToWebViews(consentValues: [Swift.String : Swift.Bool], consentMethod: Swift.String? = nil)
+  public static func propagateConsentToOtherWebViews(consentValues: [Swift.String : Swift.Bool], sourceWebView: WebKit.WKWebView, consentMethod: Swift.String? = nil)
+  public static func releaseConsentWebView(_ webView: WebKit.WKWebView)
 }
 public protocol ConsentManagerProtocol {
   func getConsent() -> [Swift.String : Swift.Bool]
@@ -967,47 +1016,6 @@ public class IPLocationAPI : JanusSDK.IPLocationAPIProtocol {
   public static var shared: any JanusSDK.IPLocationAPIProtocol
   public init(session: Foundation.URLSession = .shared)
   public func fetchLocation(completion: @escaping (Swift.Result<JanusSDK.IPLocationResponse, JanusSDK.APIError>) -> Swift.Void)
-  @objc deinit
-}
-public enum ComponentType {
-}
-public class JanusImplementation : JanusSDK.JanusProtocol {
-  public var fidesEvents: Swift.Bool
-  public init(privacyExperienceAPI: any JanusSDK.PrivacyExperienceAPIProtocol = PrivacyExperienceAPI(apiHost: ""), ipLocationAPI: any JanusSDK.IPLocationAPIProtocol = IPLocationAPI(), consentManager: any JanusSDK.ConsentManagerProtocol = ConsentManager())
-  public var currentExperience: JanusSDK.PrivacyExperienceItem? {
-    get
-  }
-  public var hasExperience: Swift.Bool {
-    get
-  }
-  public var shouldShowExperience: Swift.Bool {
-    get
-  }
-  public var consent: [Swift.String : Any] {
-    get
-  }
-  public var internalConsent: [Swift.String : Swift.Bool] {
-    get
-  }
-  public var consentMetadata: JanusSDK.ConsentMetadata {
-    get
-  }
-  public var fides_string: Swift.String {
-    get
-  }
-  public var region: Swift.String {
-    get
-  }
-  public func initialize(config: JanusSDK.JanusConfiguration, completion: @escaping (Swift.Bool, (any Swift.Error)?) -> Swift.Void)
-  @available(iOS 13.0, *)
-  public func showExperience(from viewController: UIKit.UIViewController)
-  public func addConsentEventListener(listener: @escaping (JanusSDK.JanusEvent) -> Swift.Void) -> Swift.String
-  public func removeConsentEventListener(listenerId: Swift.String)
-  public func createConsentWebView(autoSyncOnStart: Swift.Bool = true) -> WebKit.WKWebView
-  public func releaseConsentWebView(_ webView: WebKit.WKWebView)
-  public func clearConsent(clearMetadata: Swift.Bool = false)
-  public func getLocationByIPAddress(completion: @escaping (Swift.Bool, JanusSDK.IPLocationResponse?, (any Swift.Error)?) -> Swift.Void)
-  public func notifyEventListeners(event: JanusSDK.JanusEvent)
   @objc deinit
 }
 @available(iOS 13.0, *)

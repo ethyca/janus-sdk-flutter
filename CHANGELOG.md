@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.19 (2025-10-30)
+
+Surface isTCFExperience property as public across Janus SDK (#2702)
+
+
 ## 0.1.18 (2025-09-29)
 
 - fix for notice only privacy rows default value when nonApplicableFieldMode=include

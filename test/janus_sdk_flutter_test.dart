@@ -45,6 +45,18 @@ class MockJanusSdkFlutterPlatform
   Future<bool> get shouldShowExperience => Future.value(true);
 
   @override
+  Future<Map<String, dynamic>?> get currentExperience => Future.value({
+    'id': 'test-exp-id',
+    'createdAt': '2023-01-01T00:00:00Z',
+    'updatedAt': '2023-01-01T00:00:00Z',
+    'region': 'US-CA',
+    'isTCFExperience': true,
+  });
+
+  @override
+  Future<bool> get isTCFExperience => Future.value(true);
+
+  @override
   Future<void> clearConsent({bool clearMetadata = false}) => Future.value();
 
   @override
@@ -204,5 +216,27 @@ void main() {
     final internalConsent = await janusSdkPlugin.internalConsent;
     expect(internalConsent, isA<Map<String, bool>>());
     expect(internalConsent['analytics'], true);
+  });
+
+  test('currentExperience getter returns experience data', () async {
+    Janus janusSdkPlugin = Janus();
+    MockJanusSdkFlutterPlatform fakePlatform = MockJanusSdkFlutterPlatform();
+    JanusSdkFlutterPlatform.instance = fakePlatform;
+
+    final experience = await janusSdkPlugin.currentExperience;
+    expect(experience, isA<Map<String, dynamic>?>());
+    expect(experience!['id'], 'test-exp-id');
+    expect(experience['region'], 'US-CA');
+    expect(experience['isTCFExperience'], true);
+  });
+
+  test('isTCFExperience getter returns boolean value', () async {
+    Janus janusSdkPlugin = Janus();
+    MockJanusSdkFlutterPlatform fakePlatform = MockJanusSdkFlutterPlatform();
+    JanusSdkFlutterPlatform.instance = fakePlatform;
+
+    final isTCF = await janusSdkPlugin.isTCFExperience;
+    expect(isTCF, isA<bool>());
+    expect(isTCF, true);
   });
 }

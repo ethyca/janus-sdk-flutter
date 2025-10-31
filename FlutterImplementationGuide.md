@@ -600,3 +600,20 @@ if (success) {
   }
 }
 ```
+
+### TCF Experience Detection
+
+The Janus SDK provides a property to check if the current privacy experience is a TCF (Transparency and Consent Framework) experience:
+
+```dart
+// Check if the current experience is a TCF experience
+final isTCF = await _janusSdk.isTCFExperience;
+
+if (isTCF) {
+  // Handle TCF-specific logic
+  print('This is a TCF experience');
+} else {
+  // Handle non-TCF experience
+  print('This is a standard privacy experience');
+}
+```

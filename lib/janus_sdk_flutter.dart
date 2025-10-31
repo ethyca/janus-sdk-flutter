@@ -168,6 +168,16 @@ class Janus {
     return JanusSdkFlutterPlatform.instance.shouldShowExperience;
   }
 
+  /// Get the current privacy experience item, if available.
+  Future<Map<String, dynamic>?> get currentExperience {
+    return JanusSdkFlutterPlatform.instance.currentExperience;
+  }
+
+  /// Whether the current privacy experience is a TCF experience.
+  Future<bool> get isTCFExperience {
+    return JanusSdkFlutterPlatform.instance.isTCFExperience;
+  }
+
   /// Clear all consent data.
   ///
   /// [clearMetadata] - Whether to also clear consent metadata (defaults to false).

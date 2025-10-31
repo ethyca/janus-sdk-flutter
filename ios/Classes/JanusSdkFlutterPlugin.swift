@@ -259,6 +259,25 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
     case "shouldShowExperience":
       result(Janus.shouldShowExperience)
 
+    case "getCurrentExperience":
+      if let experience = Janus.currentExperience {
+        // Convert PrivacyExperienceItem to dictionary
+        let experienceDict: [String: Any] = [
+          "id": experience.id ?? "",
+          "createdAt": experience.createdAt?.ISO8601String() ?? "",
+          "updatedAt": experience.updatedAt?.ISO8601String() ?? "",
+          "region": experience.region ?? "",
+          "isTCFExperience": experience.isTCFExperience,
+          // Add other relevant fields as needed
+        ]
+        result(experienceDict)
+      } else {
+        result(nil)
+      }
+
+    case "getIsTCFExperience":
+      result(Janus.isTCFExperience)
+
     case "clearConsent":
       let args = call.arguments as? [String: Any]
       let clearMetadata = args?["clearMetadata"] as? Bool ?? false

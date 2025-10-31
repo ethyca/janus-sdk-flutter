@@ -215,6 +215,31 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
           result.success(Janus.shouldShowExperience)
         }
 
+        "getCurrentExperience" -> {
+          try {
+            val experience = Janus.currentExperience
+            if (experience != null) {
+              val experienceMap = HashMap<String, Any?>()
+              experienceMap["id"] = experience.id
+              experienceMap["createdAt"] = experience.createdAt?.time
+              experienceMap["updatedAt"] = experience.updatedAt?.time
+              experienceMap["region"] = experience.region
+              experienceMap["isTCFExperience"] = experience.isTCFExperience
+              // Add other relevant fields as needed
+              result.success(experienceMap)
+            } else {
+              result.success(null)
+            }
+          } catch (e: Exception) {
+            pluginLogger.log("Failed to get current experience", LogLevel.ERROR, null, e)
+            result.error("EXPERIENCE_ERROR", e.message ?: "Unknown error", null)
+          }
+        }
+
+        "getIsTCFExperience" -> {
+          result.success(Janus.isTCFExperience)
+        }
+
         "clearConsent" -> {
           activity?.let {
             val args = call.arguments as? Map<String, Any>

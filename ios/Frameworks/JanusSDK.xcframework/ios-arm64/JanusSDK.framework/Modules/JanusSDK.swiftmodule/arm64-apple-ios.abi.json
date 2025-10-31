@@ -9,6 +9,983 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ComponentType",
+        "printedName": "ComponentType",
+        "declKind": "Enum",
+        "usr": "s:8JanusSDK13ComponentTypeO",
+        "mangledName": "$s8JanusSDK13ComponentTypeO",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JanusImplementation",
+        "printedName": "JanusImplementation",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fidesEvents",
+            "printedName": "fidesEvents",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A14ImplementationC11fidesEventsSbvp",
+            "mangledName": "$s8JanusSDK0A14ImplementationC11fidesEventsSbvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A14ImplementationC11fidesEventsSbvg",
+                "mangledName": "$s8JanusSDK0A14ImplementationC11fidesEventsSbvg",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A14ImplementationC11fidesEventsSbvs",
+                "mangledName": "$s8JanusSDK0A14ImplementationC11fidesEventsSbvs",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A14ImplementationC11fidesEventsSbvM",
+                "mangledName": "$s8JanusSDK0A14ImplementationC11fidesEventsSbvM",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(privacyExperienceAPI:ipLocationAPI:consentManager:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "JanusImplementation",
+                "printedName": "JanusSDK.JanusImplementation",
+                "usr": "s:8JanusSDK0A14ImplementationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PrivacyExperienceAPIProtocol",
+                "printedName": "any JanusSDK.PrivacyExperienceAPIProtocol",
+                "hasDefaultArg": true,
+                "usr": "s:8JanusSDK28PrivacyExperienceAPIProtocolP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IPLocationAPIProtocol",
+                "printedName": "any JanusSDK.IPLocationAPIProtocol",
+                "hasDefaultArg": true,
+                "usr": "s:8JanusSDK21IPLocationAPIProtocolP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ConsentManagerProtocol",
+                "printedName": "any JanusSDK.ConsentManagerProtocol",
+                "hasDefaultArg": true,
+                "usr": "s:8JanusSDK22ConsentManagerProtocolP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8JanusSDK0A14ImplementationC20privacyExperienceAPI010ipLocationF014consentManagerAcA07PrivacyE11APIProtocol_p_AA010IPLocationL0_pAA07ConsentJ8Protocol_ptcfc",
+            "mangledName": "$s8JanusSDK0A14ImplementationC20privacyExperienceAPI010ipLocationF014consentManagerAcA07PrivacyE11APIProtocol_p_AA010IPLocationL0_pAA07ConsentJ8Protocol_ptcfc",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "currentExperience",
+            "printedName": "currentExperience",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "JanusSDK.PrivacyExperienceItem?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PrivacyExperienceItem",
+                    "printedName": "JanusSDK.PrivacyExperienceItem",
+                    "usr": "s:8JanusSDK21PrivacyExperienceItemV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A14ImplementationC17currentExperienceAA07PrivacyE4ItemVSgvp",
+            "mangledName": "$s8JanusSDK0A14ImplementationC17currentExperienceAA07PrivacyE4ItemVSgvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "JanusSDK.PrivacyExperienceItem?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrivacyExperienceItem",
+                        "printedName": "JanusSDK.PrivacyExperienceItem",
+                        "usr": "s:8JanusSDK21PrivacyExperienceItemV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A14ImplementationC17currentExperienceAA07PrivacyE4ItemVSgvg",
+                "mangledName": "$s8JanusSDK0A14ImplementationC17currentExperienceAA07PrivacyE4ItemVSgvg",
+                "moduleName": "JanusSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasExperience",
+            "printedName": "hasExperience",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A14ImplementationC13hasExperienceSbvp",
+            "mangledName": "$s8JanusSDK0A14ImplementationC13hasExperienceSbvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A14ImplementationC13hasExperienceSbvg",
+                "mangledName": "$s8JanusSDK0A14ImplementationC13hasExperienceSbvg",
+                "moduleName": "JanusSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shouldShowExperience",
+            "printedName": "shouldShowExperience",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A14ImplementationC20shouldShowExperienceSbvp",
+            "mangledName": "$s8JanusSDK0A14ImplementationC20shouldShowExperienceSbvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A14ImplementationC20shouldShowExperienceSbvg",
+                "mangledName": "$s8JanusSDK0A14ImplementationC20shouldShowExperienceSbvg",
+                "moduleName": "JanusSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "consent",
+            "printedName": "consent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A14ImplementationC7consentSDySSypGvp",
+            "mangledName": "$s8JanusSDK0A14ImplementationC7consentSDySSypGvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A14ImplementationC7consentSDySSypGvg",
+                "mangledName": "$s8JanusSDK0A14ImplementationC7consentSDySSypGvg",
+                "moduleName": "JanusSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "internalConsent",
+            "printedName": "internalConsent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.Bool]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A14ImplementationC15internalConsentSDySSSbGvp",
+            "mangledName": "$s8JanusSDK0A14ImplementationC15internalConsentSDySSSbGvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.Bool]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A14ImplementationC15internalConsentSDySSSbGvg",
+                "mangledName": "$s8JanusSDK0A14ImplementationC15internalConsentSDySSSbGvg",
+                "moduleName": "JanusSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "consentMetadata",
+            "printedName": "consentMetadata",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConsentMetadata",
+                "printedName": "JanusSDK.ConsentMetadata",
+                "usr": "s:8JanusSDK15ConsentMetadataV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A14ImplementationC15consentMetadataAA07ConsentE0Vvp",
+            "mangledName": "$s8JanusSDK0A14ImplementationC15consentMetadataAA07ConsentE0Vvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConsentMetadata",
+                    "printedName": "JanusSDK.ConsentMetadata",
+                    "usr": "s:8JanusSDK15ConsentMetadataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A14ImplementationC15consentMetadataAA07ConsentE0Vvg",
+                "mangledName": "$s8JanusSDK0A14ImplementationC15consentMetadataAA07ConsentE0Vvg",
+                "moduleName": "JanusSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fides_string",
+            "printedName": "fides_string",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A14ImplementationC12fides_stringSSvp",
+            "mangledName": "$s8JanusSDK0A14ImplementationC12fides_stringSSvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A14ImplementationC12fides_stringSSvg",
+                "mangledName": "$s8JanusSDK0A14ImplementationC12fides_stringSSvg",
+                "moduleName": "JanusSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "region",
+            "printedName": "region",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A14ImplementationC6regionSSvp",
+            "mangledName": "$s8JanusSDK0A14ImplementationC6regionSSvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A14ImplementationC6regionSSvg",
+                "mangledName": "$s8JanusSDK0A14ImplementationC6regionSSvg",
+                "moduleName": "JanusSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize(config:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JanusConfiguration",
+                "printedName": "JanusSDK.JanusConfiguration",
+                "usr": "s:8JanusSDK0A13ConfigurationV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, (any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, (any Swift.Error)?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any Swift.Error)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A14ImplementationC10initialize6config10completionyAA0A13ConfigurationV_ySb_s5Error_pSgtctF",
+            "mangledName": "$s8JanusSDK0A14ImplementationC10initialize6config10completionyAA0A13ConfigurationV_ySb_s5Error_pSgtctF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showExperience",
+            "printedName": "showExperience(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A14ImplementationC14showExperience4fromySo16UIViewControllerC_tF",
+            "mangledName": "$s8JanusSDK0A14ImplementationC14showExperience4fromySo16UIViewControllerC_tF",
+            "moduleName": "JanusSDK",
+            "intro_iOS": "13.0",
+            "declAttributes": [
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addConsentEventListener",
+            "printedName": "addConsentEventListener(listener:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.JanusEvent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "JanusEvent",
+                    "printedName": "JanusSDK.JanusEvent",
+                    "usr": "s:8JanusSDK0A5EventC"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A14ImplementationC23addConsentEventListener8listenerSSyAA0aF0Cc_tF",
+            "mangledName": "$s8JanusSDK0A14ImplementationC23addConsentEventListener8listenerSSyAA0aF0Cc_tF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeConsentEventListener",
+            "printedName": "removeConsentEventListener(listenerId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A14ImplementationC26removeConsentEventListener10listenerIdySS_tF",
+            "mangledName": "$s8JanusSDK0A14ImplementationC26removeConsentEventListener10listenerIdySS_tF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createConsentWebView",
+            "printedName": "createConsentWebView(autoSyncOnStart:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A14ImplementationC20createConsentWebView15autoSyncOnStartSo05WKWebG0CSb_tF",
+            "mangledName": "$s8JanusSDK0A14ImplementationC20createConsentWebView15autoSyncOnStartSo05WKWebG0CSb_tF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "releaseConsentWebView",
+            "printedName": "releaseConsentWebView(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A14ImplementationC21releaseConsentWebViewyySo05WKWebG0CF",
+            "mangledName": "$s8JanusSDK0A14ImplementationC21releaseConsentWebViewyySo05WKWebG0CF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearConsent",
+            "printedName": "clearConsent(clearMetadata:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A14ImplementationC12clearConsent0D8MetadataySb_tF",
+            "mangledName": "$s8JanusSDK0A14ImplementationC12clearConsent0D8MetadataySb_tF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getLocationByIPAddress",
+            "printedName": "getLocationByIPAddress(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, JanusSDK.IPLocationResponse?, (any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, JanusSDK.IPLocationResponse?, (any Swift.Error)?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "JanusSDK.IPLocationResponse?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IPLocationResponse",
+                            "printedName": "JanusSDK.IPLocationResponse",
+                            "usr": "s:8JanusSDK18IPLocationResponseV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any Swift.Error)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A14ImplementationC22getLocationByIPAddress10completionyySb_AA18IPLocationResponseVSgs5Error_pSgtc_tF",
+            "mangledName": "$s8JanusSDK0A14ImplementationC22getLocationByIPAddress10completionyySb_AA18IPLocationResponseVSgs5Error_pSgtc_tF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "notifyEventListeners",
+            "printedName": "notifyEventListeners(event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JanusEvent",
+                "printedName": "JanusSDK.JanusEvent",
+                "usr": "s:8JanusSDK0A5EventC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A14ImplementationC20notifyEventListeners5eventyAA0aE0C_tF",
+            "mangledName": "$s8JanusSDK0A14ImplementationC20notifyEventListeners5eventyAA0aE0C_tF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8JanusSDK0A14ImplementationC",
+        "mangledName": "$s8JanusSDK0A14ImplementationC",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "JanusProtocol",
+            "printedName": "JanusProtocol",
+            "usr": "s:8JanusSDK0A8ProtocolP",
+            "mangledName": "$s8JanusSDK0A8ProtocolP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "JanusSDK",
         "declAttributes": [
           "RawDocComment"
@@ -94,6 +1071,53 @@
                 "declKind": "Accessor",
                 "usr": "s:8JanusSDK0A0C17currentExperienceAA07PrivacyD4ItemVSgvgZ",
                 "mangledName": "$s8JanusSDK0A0C17currentExperienceAA07PrivacyD4ItemVSgvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isTCFExperience",
+            "printedName": "isTCFExperience",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A0C15isTCFExperienceSbvpZ",
+            "mangledName": "$s8JanusSDK0A0C15isTCFExperienceSbvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A0C15isTCFExperienceSbvgZ",
+                "mangledName": "$s8JanusSDK0A0C15isTCFExperienceSbvgZ",
                 "moduleName": "JanusSDK",
                 "static": true,
                 "declAttributes": [
@@ -2719,6 +3743,20 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -2892,331 +3930,6 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "WebKit",
-        "printedName": "WebKit",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "WebViewSynchronizer",
-        "printedName": "WebViewSynchronizer",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "WebViewSynchronizer",
-                "printedName": "JanusSDK.WebViewSynchronizer",
-                "usr": "s:8JanusSDK19WebViewSynchronizerC"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:8JanusSDK19WebViewSynchronizerCACycfc",
-            "mangledName": "$s8JanusSDK19WebViewSynchronizerCACycfc",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "enable",
-            "printedName": "enable(webView:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK19WebViewSynchronizerC6enable03webD0ySo05WKWebD0C_tF",
-            "mangledName": "$s8JanusSDK19WebViewSynchronizerC6enable03webD0ySo05WKWebD0C_tF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "checkFides",
-            "printedName": "checkFides(webView:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "([Swift.String : Swift.Bool]) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Swift.Bool]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK19WebViewSynchronizerC10checkFides03webD010completionySo05WKWebD0C_ySDySSSbGctF",
-            "mangledName": "$s8JanusSDK19WebViewSynchronizerC10checkFides03webD010completionySo05WKWebD0C_ySDySSSbGctF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getConsentMetadataFromJS",
-            "printedName": "getConsentMetadataFromJS(webView:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Foundation.Date?, Foundation.Date?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(Foundation.Date?, Foundation.Date?)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Foundation.Date?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Date",
-                            "printedName": "Foundation.Date",
-                            "usr": "s:10Foundation4DateV"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Foundation.Date?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Date",
-                            "printedName": "Foundation.Date",
-                            "usr": "s:10Foundation4DateV"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK19WebViewSynchronizerC24getConsentMetadataFromJS03webD010completionySo05WKWebD0C_y10Foundation4DateVSg_ALtctF",
-            "mangledName": "$s8JanusSDK19WebViewSynchronizerC24getConsentMetadataFromJS03webD010completionySo05WKWebD0C_y10Foundation4DateVSg_ALtctF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "checkDocumentReadyState",
-            "printedName": "checkDocumentReadyState(webView:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.String?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK19WebViewSynchronizerC23checkDocumentReadyState03webD010completionySo05WKWebD0C_ySSSgctF",
-            "mangledName": "$s8JanusSDK19WebViewSynchronizerC23checkDocumentReadyState03webD010completionySo05WKWebD0C_ySSSgctF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "waitForJavaScriptInit",
-            "printedName": "waitForJavaScriptInit(webView:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK19WebViewSynchronizerC21waitForJavaScriptInit03webD010completionySo05WKWebD0C_yyctF",
-            "mangledName": "$s8JanusSDK19WebViewSynchronizerC21waitForJavaScriptInit03webD010completionySo05WKWebD0C_yyctF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:8JanusSDK19WebViewSynchronizerC",
-        "mangledName": "$s8JanusSDK19WebViewSynchronizerC",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -6716,192 +7429,6 @@
         "moduleName": "JanusSDK"
       },
       {
-        "kind": "TypeDecl",
-        "name": "JSResourceLoader",
-        "printedName": "JSResourceLoader",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "getJavaScriptContent",
-            "printedName": "getJavaScriptContent(filename:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK16JSResourceLoaderC20getJavaScriptContent8filenameSSSgSS_tFZ",
-            "mangledName": "$s8JanusSDK16JSResourceLoaderC20getJavaScriptContent8filenameSSSgSS_tFZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "injectAllScripts",
-            "printedName": "injectAllScripts(into:injectionTime:forMainFrameOnly:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKUserScriptInjectionTime",
-                "printedName": "WebKit.WKUserScriptInjectionTime",
-                "hasDefaultArg": true,
-                "usr": "c:@E@WKUserScriptInjectionTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK16JSResourceLoaderC16injectAllScripts4into13injectionTime16forMainFrameOnlyySo9WKWebViewC_So021WKUserScriptInjectionJ0VSbtFZ",
-            "mangledName": "$s8JanusSDK16JSResourceLoaderC16injectAllScripts4into13injectionTime16forMainFrameOnlyySo9WKWebViewC_So021WKUserScriptInjectionJ0VSbtFZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "injectScript",
-            "printedName": "injectScript(filename:into:injectionTime:forMainFrameOnly:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKUserScriptInjectionTime",
-                "printedName": "WebKit.WKUserScriptInjectionTime",
-                "hasDefaultArg": true,
-                "usr": "c:@E@WKUserScriptInjectionTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK16JSResourceLoaderC12injectScript8filename4into13injectionTime16forMainFrameOnlyySS_So9WKWebViewCSo06WKUserf9InjectionJ0VSbtFZ",
-            "mangledName": "$s8JanusSDK16JSResourceLoaderC12injectScript8filename4into13injectionTime16forMainFrameOnlyySS_So9WKWebViewCSo06WKUserf9InjectionJ0VSbtFZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getAllJavaScriptContent",
-            "printedName": "getAllJavaScriptContent()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK16JSResourceLoaderC23getAllJavaScriptContentSSyFZ",
-            "mangledName": "$s8JanusSDK16JSResourceLoaderC23getAllJavaScriptContentSSyFZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:8JanusSDK16JSResourceLoaderC",
-        "mangledName": "$s8JanusSDK16JSResourceLoaderC",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -9514,6 +10041,331 @@
         "printedName": "WebKit",
         "declKind": "Import",
         "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WebViewSynchronizer",
+        "printedName": "WebViewSynchronizer",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WebViewSynchronizer",
+                "printedName": "JanusSDK.WebViewSynchronizer",
+                "usr": "s:8JanusSDK19WebViewSynchronizerC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8JanusSDK19WebViewSynchronizerCACycfc",
+            "mangledName": "$s8JanusSDK19WebViewSynchronizerCACycfc",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "enable",
+            "printedName": "enable(webView:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK19WebViewSynchronizerC6enable03webD0ySo05WKWebD0C_tF",
+            "mangledName": "$s8JanusSDK19WebViewSynchronizerC6enable03webD0ySo05WKWebD0C_tF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkFides",
+            "printedName": "checkFides(webView:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([Swift.String : Swift.Bool]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.Bool]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK19WebViewSynchronizerC10checkFides03webD010completionySo05WKWebD0C_ySDySSSbGctF",
+            "mangledName": "$s8JanusSDK19WebViewSynchronizerC10checkFides03webD010completionySo05WKWebD0C_ySDySSSbGctF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getConsentMetadataFromJS",
+            "printedName": "getConsentMetadataFromJS(webView:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Date?, Foundation.Date?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.Date?, Foundation.Date?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Date?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Date",
+                            "printedName": "Foundation.Date",
+                            "usr": "s:10Foundation4DateV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Date?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Date",
+                            "printedName": "Foundation.Date",
+                            "usr": "s:10Foundation4DateV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK19WebViewSynchronizerC24getConsentMetadataFromJS03webD010completionySo05WKWebD0C_y10Foundation4DateVSg_ALtctF",
+            "mangledName": "$s8JanusSDK19WebViewSynchronizerC24getConsentMetadataFromJS03webD010completionySo05WKWebD0C_y10Foundation4DateVSg_ALtctF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkDocumentReadyState",
+            "printedName": "checkDocumentReadyState(webView:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK19WebViewSynchronizerC23checkDocumentReadyState03webD010completionySo05WKWebD0C_ySSSgctF",
+            "mangledName": "$s8JanusSDK19WebViewSynchronizerC23checkDocumentReadyState03webD010completionySo05WKWebD0C_ySSSgctF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "waitForJavaScriptInit",
+            "printedName": "waitForJavaScriptInit(webView:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK19WebViewSynchronizerC21waitForJavaScriptInit03webD010completionySo05WKWebD0C_yyctF",
+            "mangledName": "$s8JanusSDK19WebViewSynchronizerC21waitForJavaScriptInit03webD010completionySo05WKWebD0C_yyctF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8JanusSDK19WebViewSynchronizerC",
+        "mangledName": "$s8JanusSDK19WebViewSynchronizerC",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -13690,6 +14542,48 @@
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "isTCFExperience",
+            "printedName": "isTCFExperience",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK21PrivacyExperienceItemV15isTCFExperienceSbvp",
+            "mangledName": "$s8JanusSDK21PrivacyExperienceItemV15isTCFExperienceSbvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK21PrivacyExperienceItemV15isTCFExperienceSbvg",
+                "mangledName": "$s8JanusSDK21PrivacyExperienceItemV15isTCFExperienceSbvg",
+                "moduleName": "JanusSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Struct",
@@ -26535,6 +27429,206 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JSResourceLoader",
+        "printedName": "JSResourceLoader",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getJavaScriptContent",
+            "printedName": "getJavaScriptContent(filename:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK16JSResourceLoaderC20getJavaScriptContent8filenameSSSgSS_tFZ",
+            "mangledName": "$s8JanusSDK16JSResourceLoaderC20getJavaScriptContent8filenameSSSgSS_tFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "injectAllScripts",
+            "printedName": "injectAllScripts(into:injectionTime:forMainFrameOnly:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKUserScriptInjectionTime",
+                "printedName": "WebKit.WKUserScriptInjectionTime",
+                "hasDefaultArg": true,
+                "usr": "c:@E@WKUserScriptInjectionTime"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK16JSResourceLoaderC16injectAllScripts4into13injectionTime16forMainFrameOnlyySo9WKWebViewC_So021WKUserScriptInjectionJ0VSbtFZ",
+            "mangledName": "$s8JanusSDK16JSResourceLoaderC16injectAllScripts4into13injectionTime16forMainFrameOnlyySo9WKWebViewC_So021WKUserScriptInjectionJ0VSbtFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "injectScript",
+            "printedName": "injectScript(filename:into:injectionTime:forMainFrameOnly:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKUserScriptInjectionTime",
+                "printedName": "WebKit.WKUserScriptInjectionTime",
+                "hasDefaultArg": true,
+                "usr": "c:@E@WKUserScriptInjectionTime"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK16JSResourceLoaderC12injectScript8filename4into13injectionTime16forMainFrameOnlyySS_So9WKWebViewCSo06WKUserf9InjectionJ0VSbtFZ",
+            "mangledName": "$s8JanusSDK16JSResourceLoaderC12injectScript8filename4into13injectionTime16forMainFrameOnlyySS_So9WKWebViewCSo06WKUserf9InjectionJ0VSbtFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAllJavaScriptContent",
+            "printedName": "getAllJavaScriptContent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK16JSResourceLoaderC23getAllJavaScriptContentSSyFZ",
+            "mangledName": "$s8JanusSDK16JSResourceLoaderC23getAllJavaScriptContentSSyFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8JanusSDK16JSResourceLoaderC",
+        "mangledName": "$s8JanusSDK16JSResourceLoaderC",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -26795,243 +27889,6 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "WebKit",
-        "printedName": "WebKit",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "WebViewManager",
-        "printedName": "WebViewManager",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "createConsentWebView",
-            "printedName": "createConsentWebView(autoSyncOnStart:tcfWebView:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK14WebViewManagerC013createConsentcD015autoSyncOnStart03tcfcD0So05WKWebD0CSb_SbtFZ",
-            "mangledName": "$s8JanusSDK14WebViewManagerC013createConsentcD015autoSyncOnStart03tcfcD0So05WKWebD0CSb_SbtFZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "propagateConsentToWebViews",
-            "printedName": "propagateConsentToWebViews(consentValues:consentMethod:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Swift.Bool]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "usr": "s:SD"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK14WebViewManagerC018propagateConsentToC5Views13consentValues0J6MethodySDySSSbG_SSSgtFZ",
-            "mangledName": "$s8JanusSDK14WebViewManagerC018propagateConsentToC5Views13consentValues0J6MethodySDySSSbG_SSSgtFZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "objc_name": "propagateConsentToWebViewsWithConsentValues:consentMethod:",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "propagateConsentToOtherWebViews",
-            "printedName": "propagateConsentToOtherWebViews(consentValues:sourceWebView:consentMethod:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Swift.Bool]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "usr": "s:SD"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK14WebViewManagerC023propagateConsentToOtherC5Views13consentValues06sourcecD00K6MethodySDySSSbG_So05WKWebD0CSSSgtFZ",
-            "mangledName": "$s8JanusSDK14WebViewManagerC023propagateConsentToOtherC5Views13consentValues06sourcecD00K6MethodySDySSSbG_So05WKWebD0CSSSgtFZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "releaseConsentWebView",
-            "printedName": "releaseConsentWebView(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK14WebViewManagerC014releaseConsentcD0yySo05WKWebD0CFZ",
-            "mangledName": "$s8JanusSDK14WebViewManagerC014releaseConsentcD0yySo05WKWebD0CFZ",
-            "moduleName": "JanusSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:8JanusSDK14WebViewManagerC",
-        "mangledName": "$s8JanusSDK14WebViewManagerC",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -28770,27 +29627,6 @@
             "mangledName": "$s7Combine16ObservableObjectP"
           }
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "WebKit",
-        "printedName": "WebKit",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
       },
       {
         "kind": "Import",
@@ -30750,27 +31586,6 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "WebKit",
-        "printedName": "WebKit",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "SafariServices",
-        "printedName": "SafariServices",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -31810,6 +32625,243 @@
         "declKind": "Class",
         "usr": "s:8JanusSDK13HTMLSanitizerC",
         "mangledName": "$s8JanusSDK13HTMLSanitizerC",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WebViewManager",
+        "printedName": "WebViewManager",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "createConsentWebView",
+            "printedName": "createConsentWebView(autoSyncOnStart:tcfWebView:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14WebViewManagerC013createConsentcD015autoSyncOnStart03tcfcD0So05WKWebD0CSb_SbtFZ",
+            "mangledName": "$s8JanusSDK14WebViewManagerC013createConsentcD015autoSyncOnStart03tcfcD0So05WKWebD0CSb_SbtFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "propagateConsentToWebViews",
+            "printedName": "propagateConsentToWebViews(consentValues:consentMethod:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.Bool]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14WebViewManagerC018propagateConsentToC5Views13consentValues0J6MethodySDySSSbG_SSSgtFZ",
+            "mangledName": "$s8JanusSDK14WebViewManagerC018propagateConsentToC5Views13consentValues0J6MethodySDySSSbG_SSSgtFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "objc_name": "propagateConsentToWebViewsWithConsentValues:consentMethod:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "propagateConsentToOtherWebViews",
+            "printedName": "propagateConsentToOtherWebViews(consentValues:sourceWebView:consentMethod:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.Bool]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14WebViewManagerC023propagateConsentToOtherC5Views13consentValues06sourcecD00K6MethodySDySSSbG_So05WKWebD0CSSSgtFZ",
+            "mangledName": "$s8JanusSDK14WebViewManagerC023propagateConsentToOtherC5Views13consentValues06sourcecD00K6MethodySDySSSbG_So05WKWebD0CSSSgtFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "releaseConsentWebView",
+            "printedName": "releaseConsentWebView(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14WebViewManagerC014releaseConsentcD0yySo05WKWebD0CFZ",
+            "mangledName": "$s8JanusSDK14WebViewManagerC014releaseConsentcD0yySo05WKWebD0CFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8JanusSDK14WebViewManagerC",
+        "mangledName": "$s8JanusSDK14WebViewManagerC",
         "moduleName": "JanusSDK",
         "declAttributes": [
           "AccessControl",
@@ -33308,8 +34360,15 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
         "declKind": "Import",
         "moduleName": "JanusSDK"
       },
@@ -33322,15 +34381,15 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "JanusSDK"
       },
       {
         "kind": "Import",
-        "name": "WebKit",
-        "printedName": "WebKit",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "JanusSDK"
       },
@@ -35964,8 +37023,8 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "JanusSDK"
       },
@@ -35973,6 +37032,13 @@
         "kind": "Import",
         "name": "WebKit",
         "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SafariServices",
+        "printedName": "SafariServices",
         "declKind": "Import",
         "moduleName": "JanusSDK"
       },
@@ -36303,983 +37369,6 @@
       },
       {
         "kind": "Import",
-        "name": "WebKit",
-        "printedName": "WebKit",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ComponentType",
-        "printedName": "ComponentType",
-        "declKind": "Enum",
-        "usr": "s:8JanusSDK13ComponentTypeO",
-        "mangledName": "$s8JanusSDK13ComponentTypeO",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "JanusImplementation",
-        "printedName": "JanusImplementation",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "fidesEvents",
-            "printedName": "fidesEvents",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK0A14ImplementationC11fidesEventsSbvp",
-            "mangledName": "$s8JanusSDK0A14ImplementationC11fidesEventsSbvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A14ImplementationC11fidesEventsSbvg",
-                "mangledName": "$s8JanusSDK0A14ImplementationC11fidesEventsSbvg",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A14ImplementationC11fidesEventsSbvs",
-                "mangledName": "$s8JanusSDK0A14ImplementationC11fidesEventsSbvs",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A14ImplementationC11fidesEventsSbvM",
-                "mangledName": "$s8JanusSDK0A14ImplementationC11fidesEventsSbvM",
-                "moduleName": "JanusSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(privacyExperienceAPI:ipLocationAPI:consentManager:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "JanusImplementation",
-                "printedName": "JanusSDK.JanusImplementation",
-                "usr": "s:8JanusSDK0A14ImplementationC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "PrivacyExperienceAPIProtocol",
-                "printedName": "any JanusSDK.PrivacyExperienceAPIProtocol",
-                "hasDefaultArg": true,
-                "usr": "s:8JanusSDK28PrivacyExperienceAPIProtocolP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "IPLocationAPIProtocol",
-                "printedName": "any JanusSDK.IPLocationAPIProtocol",
-                "hasDefaultArg": true,
-                "usr": "s:8JanusSDK21IPLocationAPIProtocolP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ConsentManagerProtocol",
-                "printedName": "any JanusSDK.ConsentManagerProtocol",
-                "hasDefaultArg": true,
-                "usr": "s:8JanusSDK22ConsentManagerProtocolP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:8JanusSDK0A14ImplementationC20privacyExperienceAPI010ipLocationF014consentManagerAcA07PrivacyE11APIProtocol_p_AA010IPLocationL0_pAA07ConsentJ8Protocol_ptcfc",
-            "mangledName": "$s8JanusSDK0A14ImplementationC20privacyExperienceAPI010ipLocationF014consentManagerAcA07PrivacyE11APIProtocol_p_AA010IPLocationL0_pAA07ConsentJ8Protocol_ptcfc",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "currentExperience",
-            "printedName": "currentExperience",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "JanusSDK.PrivacyExperienceItem?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PrivacyExperienceItem",
-                    "printedName": "JanusSDK.PrivacyExperienceItem",
-                    "usr": "s:8JanusSDK21PrivacyExperienceItemV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK0A14ImplementationC17currentExperienceAA07PrivacyE4ItemVSgvp",
-            "mangledName": "$s8JanusSDK0A14ImplementationC17currentExperienceAA07PrivacyE4ItemVSgvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "JanusSDK.PrivacyExperienceItem?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PrivacyExperienceItem",
-                        "printedName": "JanusSDK.PrivacyExperienceItem",
-                        "usr": "s:8JanusSDK21PrivacyExperienceItemV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A14ImplementationC17currentExperienceAA07PrivacyE4ItemVSgvg",
-                "mangledName": "$s8JanusSDK0A14ImplementationC17currentExperienceAA07PrivacyE4ItemVSgvg",
-                "moduleName": "JanusSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "hasExperience",
-            "printedName": "hasExperience",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK0A14ImplementationC13hasExperienceSbvp",
-            "mangledName": "$s8JanusSDK0A14ImplementationC13hasExperienceSbvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A14ImplementationC13hasExperienceSbvg",
-                "mangledName": "$s8JanusSDK0A14ImplementationC13hasExperienceSbvg",
-                "moduleName": "JanusSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "shouldShowExperience",
-            "printedName": "shouldShowExperience",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK0A14ImplementationC20shouldShowExperienceSbvp",
-            "mangledName": "$s8JanusSDK0A14ImplementationC20shouldShowExperienceSbvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A14ImplementationC20shouldShowExperienceSbvg",
-                "mangledName": "$s8JanusSDK0A14ImplementationC20shouldShowExperienceSbvg",
-                "moduleName": "JanusSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "consent",
-            "printedName": "consent",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK0A14ImplementationC7consentSDySSypGvp",
-            "mangledName": "$s8JanusSDK0A14ImplementationC7consentSDySSypGvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A14ImplementationC7consentSDySSypGvg",
-                "mangledName": "$s8JanusSDK0A14ImplementationC7consentSDySSypGvg",
-                "moduleName": "JanusSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "internalConsent",
-            "printedName": "internalConsent",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Swift.Bool]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK0A14ImplementationC15internalConsentSDySSSbGvp",
-            "mangledName": "$s8JanusSDK0A14ImplementationC15internalConsentSDySSSbGvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Swift.Bool]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A14ImplementationC15internalConsentSDySSSbGvg",
-                "mangledName": "$s8JanusSDK0A14ImplementationC15internalConsentSDySSSbGvg",
-                "moduleName": "JanusSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "consentMetadata",
-            "printedName": "consentMetadata",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ConsentMetadata",
-                "printedName": "JanusSDK.ConsentMetadata",
-                "usr": "s:8JanusSDK15ConsentMetadataV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK0A14ImplementationC15consentMetadataAA07ConsentE0Vvp",
-            "mangledName": "$s8JanusSDK0A14ImplementationC15consentMetadataAA07ConsentE0Vvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ConsentMetadata",
-                    "printedName": "JanusSDK.ConsentMetadata",
-                    "usr": "s:8JanusSDK15ConsentMetadataV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A14ImplementationC15consentMetadataAA07ConsentE0Vvg",
-                "mangledName": "$s8JanusSDK0A14ImplementationC15consentMetadataAA07ConsentE0Vvg",
-                "moduleName": "JanusSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "fides_string",
-            "printedName": "fides_string",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK0A14ImplementationC12fides_stringSSvp",
-            "mangledName": "$s8JanusSDK0A14ImplementationC12fides_stringSSvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A14ImplementationC12fides_stringSSvg",
-                "mangledName": "$s8JanusSDK0A14ImplementationC12fides_stringSSvg",
-                "moduleName": "JanusSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "region",
-            "printedName": "region",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8JanusSDK0A14ImplementationC6regionSSvp",
-            "mangledName": "$s8JanusSDK0A14ImplementationC6regionSSvp",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A14ImplementationC6regionSSvg",
-                "mangledName": "$s8JanusSDK0A14ImplementationC6regionSSvg",
-                "moduleName": "JanusSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "initialize",
-            "printedName": "initialize(config:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "JanusConfiguration",
-                "printedName": "JanusSDK.JanusConfiguration",
-                "usr": "s:8JanusSDK0A13ConfigurationV"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Bool, (any Swift.Error)?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(Swift.Bool, (any Swift.Error)?)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "(any Swift.Error)?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "any Swift.Error",
-                            "usr": "s:s5ErrorP"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK0A14ImplementationC10initialize6config10completionyAA0A13ConfigurationV_ySb_s5Error_pSgtctF",
-            "mangledName": "$s8JanusSDK0A14ImplementationC10initialize6config10completionyAA0A13ConfigurationV_ySb_s5Error_pSgtctF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "showExperience",
-            "printedName": "showExperience(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UIViewController",
-                "printedName": "UIKit.UIViewController",
-                "usr": "c:objc(cs)UIViewController"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK0A14ImplementationC14showExperience4fromySo16UIViewControllerC_tF",
-            "mangledName": "$s8JanusSDK0A14ImplementationC14showExperience4fromySo16UIViewControllerC_tF",
-            "moduleName": "JanusSDK",
-            "intro_iOS": "13.0",
-            "declAttributes": [
-              "AccessControl",
-              "Available",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "addConsentEventListener",
-            "printedName": "addConsentEventListener(listener:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(JanusSDK.JanusEvent) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "JanusEvent",
-                    "printedName": "JanusSDK.JanusEvent",
-                    "usr": "s:8JanusSDK0A5EventC"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK0A14ImplementationC23addConsentEventListener8listenerSSyAA0aF0Cc_tF",
-            "mangledName": "$s8JanusSDK0A14ImplementationC23addConsentEventListener8listenerSSyAA0aF0Cc_tF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "removeConsentEventListener",
-            "printedName": "removeConsentEventListener(listenerId:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK0A14ImplementationC26removeConsentEventListener10listenerIdySS_tF",
-            "mangledName": "$s8JanusSDK0A14ImplementationC26removeConsentEventListener10listenerIdySS_tF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "createConsentWebView",
-            "printedName": "createConsentWebView(autoSyncOnStart:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK0A14ImplementationC20createConsentWebView15autoSyncOnStartSo05WKWebG0CSb_tF",
-            "mangledName": "$s8JanusSDK0A14ImplementationC20createConsentWebView15autoSyncOnStartSo05WKWebG0CSb_tF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "releaseConsentWebView",
-            "printedName": "releaseConsentWebView(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK0A14ImplementationC21releaseConsentWebViewyySo05WKWebG0CF",
-            "mangledName": "$s8JanusSDK0A14ImplementationC21releaseConsentWebViewyySo05WKWebG0CF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "clearConsent",
-            "printedName": "clearConsent(clearMetadata:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK0A14ImplementationC12clearConsent0D8MetadataySb_tF",
-            "mangledName": "$s8JanusSDK0A14ImplementationC12clearConsent0D8MetadataySb_tF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getLocationByIPAddress",
-            "printedName": "getLocationByIPAddress(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Bool, JanusSDK.IPLocationResponse?, (any Swift.Error)?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(Swift.Bool, JanusSDK.IPLocationResponse?, (any Swift.Error)?)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "JanusSDK.IPLocationResponse?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "IPLocationResponse",
-                            "printedName": "JanusSDK.IPLocationResponse",
-                            "usr": "s:8JanusSDK18IPLocationResponseV"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "(any Swift.Error)?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "any Swift.Error",
-                            "usr": "s:s5ErrorP"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK0A14ImplementationC22getLocationByIPAddress10completionyySb_AA18IPLocationResponseVSgs5Error_pSgtc_tF",
-            "mangledName": "$s8JanusSDK0A14ImplementationC22getLocationByIPAddress10completionyySb_AA18IPLocationResponseVSgs5Error_pSgtc_tF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "notifyEventListeners",
-            "printedName": "notifyEventListeners(event:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "JanusEvent",
-                "printedName": "JanusSDK.JanusEvent",
-                "usr": "s:8JanusSDK0A5EventC"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8JanusSDK0A14ImplementationC20notifyEventListeners5eventyAA0aE0C_tF",
-            "mangledName": "$s8JanusSDK0A14ImplementationC20notifyEventListeners5eventyAA0aE0C_tF",
-            "moduleName": "JanusSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:8JanusSDK0A14ImplementationC",
-        "mangledName": "$s8JanusSDK0A14ImplementationC",
-        "moduleName": "JanusSDK",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "JanusProtocol",
-            "printedName": "JanusProtocol",
-            "usr": "s:8JanusSDK0A8ProtocolP",
-            "mangledName": "$s8JanusSDK0A8ProtocolP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -37583,6 +37672,125 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "StringLiteral",
+      "offset": 173,
+      "length": 9,
+      "value": "\"overlay\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "StringLiteral",
+      "offset": 209,
+      "length": 10,
+      "value": "\"headless\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "StringLiteral",
+      "offset": 251,
+      "length": 16,
+      "value": "\"privacy_center\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "StringLiteral",
+      "offset": 296,
+      "length": 13,
+      "value": "\"tcf_overlay\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "StringLiteral",
+      "offset": 342,
+      "length": 18,
+      "value": "\"banner_and_modal\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "StringLiteral",
+      "offset": 384,
+      "length": 7,
+      "value": "\"modal\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1081,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "StringLiteral",
+      "offset": 1332,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "StringLiteral",
+      "offset": 1561,
+      "length": 31,
+      "value": "\"com.janus.isLoadingExperience\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1664,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "StringLiteral",
+      "offset": 2398,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 15233,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 15755,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 16272,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 19322,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSONDecoder.swift",
+      "kind": "StringLiteral",
+      "offset": 1018,
+      "length": 41,
+      "value": "\"Cannot decode date string \""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSONDecoder.swift",
+      "kind": "StringLiteral",
+      "offset": 1058,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
       "kind": "StringLiteral",
       "offset": 647,
@@ -37592,21 +37800,21 @@
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
       "kind": "BooleanLiteral",
-      "offset": 3867,
+      "offset": 4050,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
       "kind": "BooleanLiteral",
-      "offset": 4360,
+      "offset": 4543,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
       "kind": "BooleanLiteral",
-      "offset": 4889,
+      "offset": 5072,
       "length": 5,
       "value": "false"
     },
@@ -37966,34 +38174,6 @@
       "offset": 1275,
       "length": 14,
       "value": "\"FidesUpdated\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
-      "kind": "Array",
-      "offset": 272,
-      "length": 114,
-      "value": "[\"native.js\", \"utils.js\", \"bridge.js\", \"messaging.js\", \"consent.js\"]"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
-      "kind": "Dictionary",
-      "offset": 521,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2283,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3103,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/API\/PrivacyExperienceAPI.swift",
@@ -38640,25 +38820,32 @@
       "value": "\"reject_all_fides_mobile_data\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
+      "kind": "Array",
+      "offset": 272,
+      "length": 114,
+      "value": "[\"native.js\", \"utils.js\", \"bridge.js\", \"messaging.js\", \"consent.js\"]"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
+      "kind": "Dictionary",
+      "offset": 521,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
       "kind": "BooleanLiteral",
-      "offset": 5928,
+      "offset": 2283,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
       "kind": "BooleanLiteral",
-      "offset": 5953,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6464,
-      "length": 5,
-      "value": "false"
+      "offset": 3103,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
@@ -38815,55 +39002,6 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 579,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 941,
-      "length": 24,
-      "value": "\"\/embedded-consent.html\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 1015,
-      "length": 13,
-      "value": "\"geolocation\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 1078,
-      "length": 13,
-      "value": "\"property_id\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 1136,
-      "length": 14,
-      "value": "\"fides_locale\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 1203,
-      "length": 22,
-      "value": "\"fides_disable_banner\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3860,
-      "length": 4,
-      "value": "true"
-    },
-    {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "StringLiteral",
       "offset": 3557,
@@ -38974,6 +39112,27 @@
       "offset": 6169,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5928,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5953,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6464,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
@@ -39200,130 +39359,60 @@
       "value": "\"include\""
     },
     {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 579,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 941,
+      "length": 24,
+      "value": "\"\/embedded-consent.html\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1015,
+      "length": 13,
+      "value": "\"geolocation\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1078,
+      "length": 13,
+      "value": "\"property_id\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1136,
+      "length": 14,
+      "value": "\"fides_locale\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1203,
+      "length": 22,
+      "value": "\"fides_disable_banner\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3860,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/API\/IPLocationAPI.swift",
       "kind": "StringLiteral",
       "offset": 721,
       "length": 37,
       "value": "\"https:\/\/cdn-api.ethyca.com\/location\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "StringLiteral",
-      "offset": 173,
-      "length": 9,
-      "value": "\"overlay\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "StringLiteral",
-      "offset": 209,
-      "length": 10,
-      "value": "\"headless\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "StringLiteral",
-      "offset": 251,
-      "length": 16,
-      "value": "\"privacy_center\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "StringLiteral",
-      "offset": 296,
-      "length": 13,
-      "value": "\"tcf_overlay\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "StringLiteral",
-      "offset": 342,
-      "length": 18,
-      "value": "\"banner_and_modal\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "StringLiteral",
-      "offset": 384,
-      "length": 7,
-      "value": "\"modal\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1081,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "StringLiteral",
-      "offset": 1332,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "StringLiteral",
-      "offset": 1561,
-      "length": 31,
-      "value": "\"com.janus.isLoadingExperience\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1664,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "StringLiteral",
-      "offset": 2398,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "BooleanLiteral",
-      "offset": 15233,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "BooleanLiteral",
-      "offset": 15755,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "BooleanLiteral",
-      "offset": 16272,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
-      "kind": "BooleanLiteral",
-      "offset": 19322,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSONDecoder.swift",
-      "kind": "StringLiteral",
-      "offset": 1018,
-      "length": 41,
-      "value": "\"Cannot decode date string \""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSONDecoder.swift",
-      "kind": "StringLiteral",
-      "offset": 1058,
-      "length": 2,
-      "value": "\"\""
     },
     {
       "filePath": "\/Users\/thabo\/Library\/Developer\/Xcode\/DerivedData\/JanusSDK-ennlatuovwuenxghnxkhcjzqchtz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JanusSDK\/IntermediateBuildFilesPath\/JanusSDK.build\/Release-iphoneos\/JanusSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",

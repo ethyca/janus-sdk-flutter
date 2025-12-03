@@ -66,7 +66,7 @@ android {
     }
 
     dependencies {
-        implementation("com.ethyca.janussdk:android:1.0.22")
+        implementation("com.ethyca.janussdk:android:1.0.23")
 
         implementation("androidx.appcompat:appcompat:1.6.1")
         implementation("androidx.core:core-ktx:1.12.0")

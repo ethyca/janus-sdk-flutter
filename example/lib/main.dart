@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'janus_manager.dart';
 import 'screens/home_screen.dart';
+import 'appsflyer_service.dart';
 
-void main() {
+void main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  AppsflyerService().initialize();
   runApp(const MyApp());
 }
 

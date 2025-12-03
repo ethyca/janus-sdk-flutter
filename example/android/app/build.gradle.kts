@@ -42,6 +42,9 @@ android {
 dependencies {
     // Add Material Components dependency
     implementation("com.google.android.material:material:1.10.0")
+    // Add SAppsflyer SDK
+    implementation("com.appsflyer:af-android-sdk:6.14.0") 
+
 }
 
 flutter {

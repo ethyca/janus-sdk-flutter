@@ -277,8 +277,9 @@ final updatedAt = metadata['updatedAt']; // ISO 8601 formatted date string
 final consentMethod = metadata['consentMethod']; // How consent was provided (e.g., "explicit", "implied")
 final versionHash = metadata['versionHash']; // Version hash of the privacy experience used to set consent
 
-// Get the Fides string
-// (List of IAB strings like CPzHq4APzHq4AAMABBENAUEAALAAAEOAAAAAAEAEACACAAAA,1~61.70)
+// Get the Fides string in format TC_STRING,AC_STRING,GPP_STRING,NC_STRING
+// TC_STRING: IAB TCF string, AC_STRING: Google Additional Consent, 
+// GPP_STRING: IAB GPP string, NC_STRING: Base64 Notice Consent preferences
 final fidesString = await _janusSdk.fidesString;
 ```
 

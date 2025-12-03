@@ -54,44 +54,10 @@ window.Janus.injectTCFStyles = function() {
 window.Janus.onFidesModalReady = function() {
   // Inject custom styles when modal is ready
   window.Janus.injectTCFStyles();
-  window.Janus.setupTCFCompletionListeners();
   
   // Send ready event to native side
   window.JanusSDK.event("TCFWebViewReady");
   window.Janus.log('Fides modal fully loaded and ready');
-};
-
-// Create a global callback function for TCF flow completion
-window.Janus.onFidesModalCompleted = function() {
-  // Send hide event to native side
-  window.JanusSDK.event("TCFWebViewClose");
-  window.Janus.log('TCF flow completed - WebView hidden');
-};
-
-// Setup event listeners for TCF flow completion
-window.Janus.setupTCFCompletionListeners = function() {
-  window.Janus.log('Setting up TCF completion listeners');
-  
-  // Add a global document click handler for all button interactions
-  if (!document.body._janusGlobalListenerAdded) {
-    document.body._janusGlobalListenerAdded = true;
-    document.body.addEventListener('click', function(e) {
-      // Target only specific button classes
-      if (e.target && 
-          (e.target.classList.contains('fides-close-button') || 
-           e.target.classList.contains('fides-save-button') ||
-           e.target.classList.contains('fides-reject-all-button') ||
-           e.target.classList.contains('fides-accept-all-button'))) {
-        
-        window.Janus.log('Button click detected via global handler: ' + e.target.outerHTML);
-        window.Janus.onFidesModalCompleted();
-      }
-    }, true); // true for useCapture
-    
-    window.Janus.log('Attached global document click listener with capture');
-  }
-  
-  window.Janus.log('TCF completion listeners set up with capture phase');
 };
 
 // Self-executing function to fire modal ready when document is loaded

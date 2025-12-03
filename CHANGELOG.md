@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.20 (2025-12-02)
+
+Updates from iOS and Android dependencies to support TCF experience improvements
+
+
 ## 0.1.19 (2025-10-30)
 
 Surface isTCFExperience property as public across Janus SDK (#2702)

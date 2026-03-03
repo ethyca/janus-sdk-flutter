@@ -15,9 +15,6 @@ window.Janus.injectTCFStyles = function() {
   
   // TCF content styling for full-screen display
   var css = `
-    div#fides-embed-container {
-      padding-top: 10%;
-    }
     
     .fides-close-button {
       color: #007AFF !important; /* iOS blue */
@@ -25,14 +22,88 @@ window.Janus.injectTCFStyles = function() {
       padding-right: 24px !important;
       font-size: 17px !important; /* Increase font size to match iOS standard */
     }
-    
+
     .fides-close-button::before {
       content: "Close" !important;
       display: inline !important;
     }
-    
+
     .fides-close-button svg, .fides-close-button img {
       display: none !important; /* Hide any existing icon */
+    }
+
+    /* ============================================
+     * TEMPORARY: UNTIL 2.81 is released and deployed
+     * TCF Overlay fixes for embedded mobile SDK
+     * ============================================ */
+
+    body {
+      margin: 0 !important;
+    }
+
+    .fides-banner.fides-embedded {
+      height: 100vh !important;
+      display: flex !important;
+    }
+
+    .fides-banner.fides-embedded #fides-banner .fides-close-button {
+      display: none !important;
+    }
+
+    #fides-banner {
+      --fides-overlay-padding: 24px !important;
+      flex-direction: column !important;
+    }
+
+    #fides-banner-inner {
+      flex: 1 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      min-height: 0 !important;
+    }
+
+    #fides-banner-inner-container {
+      flex: 1 !important;
+      overflow-y: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+    }
+
+    #fides-button-group {
+      flex-shrink: 0 !important;
+    }
+
+    @media (min-width: 768px) {
+      #fides-banner {
+        padding: 48px !important;
+      }
+
+      .fides-banner.fides-embedded .fides-banner__content {
+        max-height: none !important;
+      }
+    }
+
+    #fides-overlay-wrapper {
+      height: 100vh !important;
+      overflow: hidden !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+
+    @media (min-width: 768px) {
+      #fides-overlay-wrapper {
+        --fides-overlay-padding: 48px !important;
+      }
+    }
+
+    /* ============================================
+     * TEMPORARY: UNTIL client no longer uses breaking custom CSS
+     * ============================================ */
+
+    #fides-banner {
+      border-radius: 0 !important;
+      margin: 0 !important;
     }
   `;
   

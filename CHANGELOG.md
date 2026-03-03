@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.21 (2026-03-03)
+
+Fix Flutter lint warnings in example app
+
+
 ## 0.1.20 (2025-12-02)
 
 Updates from iOS and Android dependencies to support TCF experience improvements

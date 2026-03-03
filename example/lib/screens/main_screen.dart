@@ -7,6 +7,7 @@ import 'consent_screen.dart';
 import 'events_screen.dart';
 import 'webview_screen.dart';
 import 'settings_screen.dart';
+import 'appsflyer_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -23,6 +24,7 @@ class _MainScreenState extends State<MainScreen> {
     const ConsentScreen(),
     const EventsScreen(),
     const WebViewScreen(),
+    const AppsFlyerScreen(),
     const SettingsScreen(),
   ];
   
@@ -66,6 +68,10 @@ class _MainScreenState extends State<MainScreen> {
           NavigationDestination(
             icon: Icon(Icons.web),
             label: 'WebViews',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.analytics),
+            label: 'AppsFlyer',
           ),
           NavigationDestination(
             icon: Icon(Icons.settings),

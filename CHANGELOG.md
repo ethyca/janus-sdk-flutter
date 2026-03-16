@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.22 (2026-03-16)
+
+- Address CSS issue in layer 2 TCF dialog
+- Address issue causing fideString to be cleared on startup by consentNonApplicableFlagMode = include
+- Address issue with IAB TCF v2.2 Mobile Storage
+
+
 ## 0.1.21 (2026-03-03)
 
 Fix Flutter lint warnings in example app

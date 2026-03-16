@@ -2888,6 +2888,1288 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "IABTCFStorage",
+        "printedName": "IABTCFStorage",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "IABTCF_CMP_SDK_ID",
+            "printedName": "IABTCF_CMP_SDK_ID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC011IABTCF_CMP_B3_IDSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC011IABTCF_CMP_B3_IDSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC011IABTCF_CMP_B3_IDSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC011IABTCF_CMP_B3_IDSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_CMP_SDK_VERSION",
+            "printedName": "IABTCF_CMP_SDK_VERSION",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC011IABTCF_CMP_B8_VERSIONSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC011IABTCF_CMP_B8_VERSIONSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC011IABTCF_CMP_B8_VERSIONSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC011IABTCF_CMP_B8_VERSIONSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_POLICY_VERSION",
+            "printedName": "IABTCF_POLICY_VERSION",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC21IABTCF_POLICY_VERSIONSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC21IABTCF_POLICY_VERSIONSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC21IABTCF_POLICY_VERSIONSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC21IABTCF_POLICY_VERSIONSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_GDPR_APPLIES",
+            "printedName": "IABTCF_GDPR_APPLIES",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC19IABTCF_GDPR_APPLIESSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC19IABTCF_GDPR_APPLIESSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC19IABTCF_GDPR_APPLIESSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC19IABTCF_GDPR_APPLIESSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_PUBLISHER_CC",
+            "printedName": "IABTCF_PUBLISHER_CC",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC19IABTCF_PUBLISHER_CCSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC19IABTCF_PUBLISHER_CCSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC19IABTCF_PUBLISHER_CCSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC19IABTCF_PUBLISHER_CCSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_PURPOSE_ONE_TREATMENT",
+            "printedName": "IABTCF_PURPOSE_ONE_TREATMENT",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC28IABTCF_PURPOSE_ONE_TREATMENTSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC28IABTCF_PURPOSE_ONE_TREATMENTSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC28IABTCF_PURPOSE_ONE_TREATMENTSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC28IABTCF_PURPOSE_ONE_TREATMENTSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_USE_NON_STANDARD_TEXTS",
+            "printedName": "IABTCF_USE_NON_STANDARD_TEXTS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC29IABTCF_USE_NON_STANDARD_TEXTSSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC29IABTCF_USE_NON_STANDARD_TEXTSSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC29IABTCF_USE_NON_STANDARD_TEXTSSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC29IABTCF_USE_NON_STANDARD_TEXTSSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_TC_STRING",
+            "printedName": "IABTCF_TC_STRING",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC16IABTCF_TC_STRINGSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC16IABTCF_TC_STRINGSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC16IABTCF_TC_STRINGSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC16IABTCF_TC_STRINGSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_VENDOR_CONSENTS",
+            "printedName": "IABTCF_VENDOR_CONSENTS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC22IABTCF_VENDOR_CONSENTSSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC22IABTCF_VENDOR_CONSENTSSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC22IABTCF_VENDOR_CONSENTSSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC22IABTCF_VENDOR_CONSENTSSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_VENDOR_LEGITIMATE_INTERESTS",
+            "printedName": "IABTCF_VENDOR_LEGITIMATE_INTERESTS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC34IABTCF_VENDOR_LEGITIMATE_INTERESTSSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC34IABTCF_VENDOR_LEGITIMATE_INTERESTSSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC34IABTCF_VENDOR_LEGITIMATE_INTERESTSSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC34IABTCF_VENDOR_LEGITIMATE_INTERESTSSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_PURPOSE_CONSENTS",
+            "printedName": "IABTCF_PURPOSE_CONSENTS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC23IABTCF_PURPOSE_CONSENTSSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC23IABTCF_PURPOSE_CONSENTSSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC23IABTCF_PURPOSE_CONSENTSSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC23IABTCF_PURPOSE_CONSENTSSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_PURPOSE_LEGITIMATE_INTERESTS",
+            "printedName": "IABTCF_PURPOSE_LEGITIMATE_INTERESTS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC35IABTCF_PURPOSE_LEGITIMATE_INTERESTSSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC35IABTCF_PURPOSE_LEGITIMATE_INTERESTSSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC35IABTCF_PURPOSE_LEGITIMATE_INTERESTSSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC35IABTCF_PURPOSE_LEGITIMATE_INTERESTSSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_SPECIAL_FEATURES_OPT_INS",
+            "printedName": "IABTCF_SPECIAL_FEATURES_OPT_INS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC31IABTCF_SPECIAL_FEATURES_OPT_INSSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC31IABTCF_SPECIAL_FEATURES_OPT_INSSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC31IABTCF_SPECIAL_FEATURES_OPT_INSSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC31IABTCF_SPECIAL_FEATURES_OPT_INSSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_DISCLOSED_VENDORS",
+            "printedName": "IABTCF_DISCLOSED_VENDORS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC24IABTCF_DISCLOSED_VENDORSSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC24IABTCF_DISCLOSED_VENDORSSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC24IABTCF_DISCLOSED_VENDORSSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC24IABTCF_DISCLOSED_VENDORSSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_PUBLISHER_CONSENT",
+            "printedName": "IABTCF_PUBLISHER_CONSENT",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC24IABTCF_PUBLISHER_CONSENTSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC24IABTCF_PUBLISHER_CONSENTSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC24IABTCF_PUBLISHER_CONSENTSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC24IABTCF_PUBLISHER_CONSENTSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_PUBLISHER_LEGITIMATE_INTERESTS",
+            "printedName": "IABTCF_PUBLISHER_LEGITIMATE_INTERESTS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC37IABTCF_PUBLISHER_LEGITIMATE_INTERESTSSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC37IABTCF_PUBLISHER_LEGITIMATE_INTERESTSSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC37IABTCF_PUBLISHER_LEGITIMATE_INTERESTSSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC37IABTCF_PUBLISHER_LEGITIMATE_INTERESTSSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_PUBLISHER_CUSTOM_PURPOSES_CONSENTS",
+            "printedName": "IABTCF_PUBLISHER_CUSTOM_PURPOSES_CONSENTS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC41IABTCF_PUBLISHER_CUSTOM_PURPOSES_CONSENTSSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC41IABTCF_PUBLISHER_CUSTOM_PURPOSES_CONSENTSSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC41IABTCF_PUBLISHER_CUSTOM_PURPOSES_CONSENTSSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC41IABTCF_PUBLISHER_CUSTOM_PURPOSES_CONSENTSSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_PUBLISHER_CUSTOM_PURPOSES_LEGITIMATE_INTERESTS",
+            "printedName": "IABTCF_PUBLISHER_CUSTOM_PURPOSES_LEGITIMATE_INTERESTS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC53IABTCF_PUBLISHER_CUSTOM_PURPOSES_LEGITIMATE_INTERESTSSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC53IABTCF_PUBLISHER_CUSTOM_PURPOSES_LEGITIMATE_INTERESTSSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC53IABTCF_PUBLISHER_CUSTOM_PURPOSES_LEGITIMATE_INTERESTSSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC53IABTCF_PUBLISHER_CUSTOM_PURPOSES_LEGITIMATE_INTERESTSSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IABTCF_ADDTL_CONSENT",
+            "printedName": "IABTCF_ADDTL_CONSENT",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC20IABTCF_ADDTL_CONSENTSSvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC20IABTCF_ADDTL_CONSENTSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC20IABTCF_ADDTL_CONSENTSSvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC20IABTCF_ADDTL_CONSENTSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ETHYCA_CMP_ID",
+            "printedName": "ETHYCA_CMP_ID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC13ETHYCA_CMP_IDSivpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC13ETHYCA_CMP_IDSivpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC13ETHYCA_CMP_IDSivgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC13ETHYCA_CMP_IDSivgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "CMP_VERSION",
+            "printedName": "CMP_VERSION",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC11CMP_VERSIONSivpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC11CMP_VERSIONSivpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC11CMP_VERSIONSivgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC11CMP_VERSIONSivgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ALL_IABTCF_KEYS",
+            "printedName": "ALL_IABTCF_KEYS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13IABTCFStorageC15ALL_IABTCF_KEYSSaySSGvpZ",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC15ALL_IABTCF_KEYSSaySSGvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13IABTCFStorageC15ALL_IABTCF_KEYSSaySSGvgZ",
+                "mangledName": "$s8JanusSDK13IABTCFStorageC15ALL_IABTCF_KEYSSaySSGvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(userDefaults:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IABTCFStorage",
+                "printedName": "JanusSDK.IABTCFStorage",
+                "usr": "s:8JanusSDK13IABTCFStorageC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaults",
+                "printedName": "Foundation.UserDefaults",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSUserDefaults"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8JanusSDK13IABTCFStorageC12userDefaultsACSo06NSUserE0C_tcfc",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC12userDefaultsACSo06NSUserE0C_tcfc",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "updateIABTCFValues",
+            "printedName": "updateIABTCFValues(fidesString:experience:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "JanusSDK.PrivacyExperienceItem?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PrivacyExperienceItem",
+                    "printedName": "JanusSDK.PrivacyExperienceItem",
+                    "usr": "s:8JanusSDK21PrivacyExperienceItemV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK13IABTCFStorageC18updateIABTCFValues11fidesString10experienceySSSg_AA21PrivacyExperienceItemVSgtF",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC18updateIABTCFValues11fidesString10experienceySSSg_AA21PrivacyExperienceItemVSgtF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearIABTCFValues",
+            "printedName": "clearIABTCFValues()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK13IABTCFStorageC17clearIABTCFValuesyyF",
+            "mangledName": "$s8JanusSDK13IABTCFStorageC17clearIABTCFValuesyyF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8JanusSDK13IABTCFStorageC",
+        "mangledName": "$s8JanusSDK13IABTCFStorageC",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "WebKit",
         "printedName": "WebKit",
@@ -37780,44 +39062,205 @@
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "Dictionary",
-      "offset": 1964,
+      "offset": 2070,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
-      "offset": 2167,
+      "offset": 2273,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
-      "offset": 2300,
+      "offset": 2406,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 6346,
+      "offset": 6523,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
-      "offset": 8031,
+      "offset": 8315,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
-      "offset": 8729,
+      "offset": 9218,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 1848,
+      "length": 17,
+      "value": "\"IABTCF_CmpSdkID\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 1913,
+      "length": 22,
+      "value": "\"IABTCF_CmpSdkVersion\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 1982,
+      "length": 22,
+      "value": "\"IABTCF_PolicyVersion\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2049,
+      "length": 20,
+      "value": "\"IABTCF_gdprApplies\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2114,
+      "length": 20,
+      "value": "\"IABTCF_PublisherCC\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2188,
+      "length": 28,
+      "value": "\"IABTCF_PurposeOneTreatment\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2271,
+      "length": 28,
+      "value": "\"IABTCF_UseNonStandardTexts\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2341,
+      "length": 17,
+      "value": "\"IABTCF_TCString\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2406,
+      "length": 23,
+      "value": "\"IABTCF_VendorConsents\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2489,
+      "length": 34,
+      "value": "\"IABTCF_VendorLegitimateInterests\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2572,
+      "length": 24,
+      "value": "\"IABTCF_PurposeConsents\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2657,
+      "length": 35,
+      "value": "\"IABTCF_PurposeLegitimateInterests\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2749,
+      "length": 30,
+      "value": "\"IABTCF_SpecialFeaturesOptIns\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2829,
+      "length": 25,
+      "value": "\"IABTCF_DisclosedVendors\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2904,
+      "length": 25,
+      "value": "\"IABTCF_PublisherConsent\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 2992,
+      "length": 37,
+      "value": "\"IABTCF_PublisherLegitimateInterests\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 3096,
+      "length": 40,
+      "value": "\"IABTCF_PublisherCustomPurposesConsents\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 3215,
+      "length": 51,
+      "value": "\"IABTCF_PublisherCustomPurposesLegitimateInterests\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 3312,
+      "length": 21,
+      "value": "\"IABTCF_AddtlConsent\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3417,
+      "length": 3,
+      "value": "407"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3478,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3565,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22653,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",

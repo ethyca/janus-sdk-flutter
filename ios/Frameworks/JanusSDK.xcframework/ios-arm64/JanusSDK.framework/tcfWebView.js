@@ -38,39 +38,39 @@ window.Janus.injectTCFStyles = function() {
      * ============================================ */
 
     body {
-      margin: 0 !important;
+      margin: 0;
     }
 
     .fides-banner.fides-embedded {
-      height: 100vh !important;
-      display: flex !important;
+      height: 100vh;
+      display: flex;
     }
 
     .fides-banner.fides-embedded #fides-banner .fides-close-button {
-      display: none !important;
+      display: none;
     }
 
     #fides-banner {
-      --fides-overlay-padding: 24px !important;
+      --fides-overlay-padding: 24px;
       flex-direction: column !important;
     }
 
     #fides-banner-inner {
-      flex: 1 !important;
-      display: flex !important;
-      flex-direction: column !important;
-      min-height: 0 !important;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
     }
 
     #fides-banner-inner-container {
-      flex: 1 !important;
-      overflow-y: auto !important;
-      min-height: 0 !important;
+      flex: 1;
+      overflow-y: auto;
+      min-height: 0;
       max-height: none !important;
     }
 
     #fides-button-group {
-      flex-shrink: 0 !important;
+      flex-shrink: 0;
     }
 
     @media (min-width: 768px) {
@@ -78,22 +78,26 @@ window.Janus.injectTCFStyles = function() {
         padding: 48px !important;
       }
 
+      #fides-banner-inner-container {
+        flex: 1;
+      }
+
       .fides-banner.fides-embedded .fides-banner__content {
-        max-height: none !important;
+        max-height: none;
       }
     }
 
     #fides-overlay-wrapper {
-      height: 100vh !important;
-      overflow: hidden !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: space-between !important;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     @media (min-width: 768px) {
       #fides-overlay-wrapper {
-        --fides-overlay-padding: 48px !important;
+        --fides-overlay-padding: 48px;
       }
     }
 

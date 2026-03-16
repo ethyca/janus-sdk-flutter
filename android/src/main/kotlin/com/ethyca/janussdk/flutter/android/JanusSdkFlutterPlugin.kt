@@ -22,6 +22,7 @@ import com.ethyca.janussdk.android.models.ConsentNonApplicableFlagMode
 import java.util.Date
 import com.ethyca.janussdk.android.events.*
 import com.ethyca.janussdk.android.models.PrivacyExperienceItem
+import com.ethyca.janussdk.android.consent.IABTCFStorage
 
 /**
  * Proxy logger that forwards Android log calls back to Flutter
@@ -238,6 +239,34 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
 
         "getIsTCFExperience" -> {
           result.success(Janus.isTCFExperience)
+        }
+
+        "getIABTCFValues" -> {
+          try {
+            // Read IAB TCF values from the default SharedPreferences
+            // (Flutter's shared_preferences uses a different file)
+            val prefs = context.getSharedPreferences(
+              "${context.packageName}_preferences",
+              Context.MODE_PRIVATE
+            )
+
+            // Use the shared key list from IABTCFStorage
+            val iabTCFKeys = IABTCFStorage.ALL_IABTCF_KEYS
+
+            // Get all prefs once, then filter to only IAB TCF keys
+            val allPrefs = prefs.all
+            val values = HashMap<String, Any?>()
+            for (key in iabTCFKeys) {
+              allPrefs[key]?.let { value ->
+                values[key] = value
+              }
+            }
+
+            result.success(values)
+          } catch (e: Exception) {
+            pluginLogger.log("Failed to get IAB TCF values", LogLevel.ERROR, null, e)
+            result.error("IAB_TCF_ERROR", e.message ?: "Unknown error", null)
+          }
         }
 
         "clearConsent" -> {

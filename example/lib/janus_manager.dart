@@ -3,6 +3,7 @@ import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:janus_sdk_flutter/janus_sdk_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 import 'http_logger.dart';
 
 // Configuration class for Janus
@@ -453,6 +454,10 @@ class JanusManager extends ChangeNotifier {
   }
 
   Future<void> clearLocalStorage() async {
+    // Clear WebView cookies (like iOS HTTPCookieStorage and Android CookieManager)
+    final cookieManager = WebViewCookieManager();
+    await cookieManager.clearCookies();
+
     // Clear Janus SDK storage
     await Janus().clearConsent(clearMetadata: true);
 

@@ -96,6 +96,15 @@ abstract class JanusSdkFlutterPlatform extends PlatformInterface {
     throw UnimplementedError('isTCFExperience has not been implemented.');
   }
 
+  /// Get IAB TCF values from native SharedPreferences/UserDefaults.
+  ///
+  /// Returns a map of IAB TCF key-value pairs (e.g., IABTCF_CmpSdkID, IABTCF_TCString).
+  /// This reads from the native platform's default preferences storage,
+  /// not Flutter's shared_preferences which uses a different file.
+  Future<Map<String, dynamic>> getIABTCFValues() {
+    throw UnimplementedError('getIABTCFValues() has not been implemented.');
+  }
+
   /// Create a WebView with consent functionality.
   ///
   /// Returns a unique identifier for the WebView that can be used to reference

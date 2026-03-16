@@ -108,6 +108,36 @@ public protocol ConsentManagerProtocol {
   #endif
   func clearConsent(clearMetadata: Swift.Bool)
 }
+public class IABTCFStorage {
+  public static let IABTCF_CMP_SDK_ID: Swift.String
+  public static let IABTCF_CMP_SDK_VERSION: Swift.String
+  public static let IABTCF_POLICY_VERSION: Swift.String
+  public static let IABTCF_GDPR_APPLIES: Swift.String
+  public static let IABTCF_PUBLISHER_CC: Swift.String
+  public static let IABTCF_PURPOSE_ONE_TREATMENT: Swift.String
+  public static let IABTCF_USE_NON_STANDARD_TEXTS: Swift.String
+  public static let IABTCF_TC_STRING: Swift.String
+  public static let IABTCF_VENDOR_CONSENTS: Swift.String
+  public static let IABTCF_VENDOR_LEGITIMATE_INTERESTS: Swift.String
+  public static let IABTCF_PURPOSE_CONSENTS: Swift.String
+  public static let IABTCF_PURPOSE_LEGITIMATE_INTERESTS: Swift.String
+  public static let IABTCF_SPECIAL_FEATURES_OPT_INS: Swift.String
+  public static let IABTCF_DISCLOSED_VENDORS: Swift.String
+  public static let IABTCF_PUBLISHER_CONSENT: Swift.String
+  public static let IABTCF_PUBLISHER_LEGITIMATE_INTERESTS: Swift.String
+  public static let IABTCF_PUBLISHER_CUSTOM_PURPOSES_CONSENTS: Swift.String
+  public static let IABTCF_PUBLISHER_CUSTOM_PURPOSES_LEGITIMATE_INTERESTS: Swift.String
+  public static let IABTCF_ADDTL_CONSENT: Swift.String
+  public static let ETHYCA_CMP_ID: Swift.Int
+  public static let CMP_VERSION: Swift.Int
+  public static let ALL_IABTCF_KEYS: [Swift.String]
+  public init(userDefaults: Foundation.UserDefaults = .standard)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func updateIABTCFValues(fidesString: Swift.String?, experience: JanusSDK.PrivacyExperienceItem?)
+  #endif
+  public func clearIABTCFValues()
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class Janus {
   #if compiler(>=5.3) && $NonescapableTypes
   public static var currentExperience: JanusSDK.PrivacyExperienceItem? {

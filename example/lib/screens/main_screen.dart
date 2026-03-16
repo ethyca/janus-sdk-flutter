@@ -8,6 +8,7 @@ import 'events_screen.dart';
 import 'webview_screen.dart';
 import 'settings_screen.dart';
 import 'appsflyer_screen.dart';
+import 'iabtcf_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -16,18 +17,41 @@ class MainScreen extends StatefulWidget {
   State<MainScreen> createState() => _MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
-  
+class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
   final List<Widget> _screens = [
     const StatusScreen(),
     const ConsentScreen(),
     const EventsScreen(),
     const WebViewScreen(),
-    const AppsFlyerScreen(),
     const SettingsScreen(),
+    const IABTCFScreen(),
+    const AppsFlyerScreen(),
   ];
-  
+
+  static const List<Tab> _tabs = [
+    Tab(icon: Icon(Icons.dashboard), text: 'Status'),
+    Tab(icon: Icon(Icons.check_circle), text: 'Consent'),
+    Tab(icon: Icon(Icons.event), text: 'Events'),
+    Tab(icon: Icon(Icons.web), text: 'WebViews'),
+    Tab(icon: Icon(Icons.settings), text: 'Settings'),
+    Tab(icon: Icon(Icons.policy), text: 'IAB TCF'),
+    Tab(icon: Icon(Icons.analytics), text: 'AppsFlyer'),
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: _screens.length, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,40 +68,21 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ],
       ),
-      body: _screens[_selectedIndex],
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _selectedIndex,
-        onDestinationSelected: (index) {
-          setState(() {
-            _selectedIndex = index;
-          });
-        },
-        destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.dashboard),
-            label: 'Status',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.check_circle),
-            label: 'Consent',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.event),
-            label: 'Events',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.web),
-            label: 'WebViews',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.analytics),
-            label: 'AppsFlyer',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-        ],
+      body: TabBarView(
+        controller: _tabController,
+        children: _screens,
+      ),
+      bottomNavigationBar: Material(
+        color: Theme.of(context).colorScheme.surface,
+        child: TabBar(
+          controller: _tabController,
+          isScrollable: true,
+          tabAlignment: TabAlignment.start,
+          labelColor: Theme.of(context).colorScheme.primary,
+          unselectedLabelColor: Theme.of(context).colorScheme.onSurfaceVariant,
+          indicatorColor: Theme.of(context).colorScheme.primary,
+          tabs: _tabs,
+        ),
       ),
     );
   }

@@ -278,6 +278,21 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
     case "getIsTCFExperience":
       result(Janus.isTCFExperience)
 
+    case "getIABTCFValues":
+      // Read IAB TCF values from standard UserDefaults (per IAB TCF v2.2 Mobile Specification)
+      let defaults = UserDefaults.standard
+      // Use the shared key list from IABTCFStorage
+      let iabTCFKeys = IABTCFStorage.ALL_IABTCF_KEYS
+
+      var values: [String: Any] = [:]
+      for key in iabTCFKeys {
+        if let value = defaults.object(forKey: key) {
+          values[key] = value
+        }
+      }
+
+      result(values)
+
     case "clearConsent":
       let args = call.arguments as? [String: Any]
       let clearMetadata = args?["clearMetadata"] as? Bool ?? false

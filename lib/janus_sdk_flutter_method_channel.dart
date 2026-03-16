@@ -253,6 +253,23 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
   }
 
   @override
+  Future<Map<String, dynamic>> getIABTCFValues() async {
+    try {
+      final result = await methodChannel.invokeMapMethod<String, dynamic>(
+        'getIABTCFValues',
+      );
+      return result ?? {};
+    } on PlatformException catch (e) {
+      Janus.log(
+        'Failed to get IAB TCF values',
+        level: LogLevel.error,
+        error: e,
+      );
+      return {};
+    }
+  }
+
+  @override
   Future<void> clearConsent({bool clearMetadata = false}) async {
     try {
       await methodChannel.invokeMethod<void>('clearConsent', {

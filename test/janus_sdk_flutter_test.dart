@@ -79,6 +79,13 @@ class MockJanusSdkFlutterPlatform
 
   @override
   Future<void> setLogger({required bool useProxy}) => Future.value();
+
+  @override
+  Future<Map<String, dynamic>> getIABTCFValues() => Future.value({
+    'IABTCF_CmpSdkID': 123,
+    'IABTCF_gdprApplies': 1,
+    'IABTCF_TCString': 'mock-tc-string',
+  });
 }
 
 void main() {

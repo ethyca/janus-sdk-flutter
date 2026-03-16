@@ -80,6 +80,9 @@ class MockJanusSdkFlutterPlatform
 
   @override
   Future<void> setLogger({required bool useProxy}) => Future.value();
+
+  @override
+  Future<Map<String, dynamic>> getIABTCFValues() => Future.value({});
 }
 
 /// Mock logger that captures log calls

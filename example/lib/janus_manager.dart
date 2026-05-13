@@ -16,6 +16,7 @@ class JanusConfig {
   final bool autoShowExperience;
   final ConsentFlagType consentFlagType;
   final ConsentNonApplicableFlagMode consentNonApplicableFlagMode;
+  final bool enableAtt;
 
   JanusConfig({
     required this.apiHost,
@@ -26,6 +27,7 @@ class JanusConfig {
     this.autoShowExperience = true,
     this.consentFlagType = ConsentFlagType.boolean,
     this.consentNonApplicableFlagMode = ConsentNonApplicableFlagMode.omit,
+    this.enableAtt = false,
   });
 
   // Convert config to a map for storage
@@ -277,6 +279,7 @@ class JanusManager extends ChangeNotifier {
       autoShowExperience: config!.autoShowExperience,
       consentFlagType: config!.consentFlagType,
       consentNonApplicableFlagMode: config!.consentNonApplicableFlagMode,
+      enableAtt: config!.enableAtt,
     );
 
     try {

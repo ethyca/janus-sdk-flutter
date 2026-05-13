@@ -406,17 +406,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
             "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -731,6 +731,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "IPLocationAPIProtocol",
+            "printedName": "IPLocationAPIProtocol",
+            "usr": "s:8JanusSDK21IPLocationAPIProtocolP",
+            "mangledName": "$s8JanusSDK21IPLocationAPIProtocolP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -742,13 +749,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "IPLocationAPIProtocol",
-            "printedName": "IPLocationAPIProtocol",
-            "usr": "s:8JanusSDK21IPLocationAPIProtocolP",
-            "mangledName": "$s8JanusSDK21IPLocationAPIProtocolP"
           }
         ]
       },
@@ -1011,6 +1011,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "NoticesServedAPIProtocol",
+            "printedName": "NoticesServedAPIProtocol",
+            "usr": "s:8JanusSDK24NoticesServedAPIProtocolP",
+            "mangledName": "$s8JanusSDK24NoticesServedAPIProtocolP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -1022,13 +1029,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "NoticesServedAPIProtocol",
-            "printedName": "NoticesServedAPIProtocol",
-            "usr": "s:8JanusSDK24NoticesServedAPIProtocolP",
-            "mangledName": "$s8JanusSDK24NoticesServedAPIProtocolP"
           }
         ]
       },
@@ -1356,6 +1356,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "PrivacyExperienceAPIProtocol",
+            "printedName": "PrivacyExperienceAPIProtocol",
+            "usr": "s:8JanusSDK28PrivacyExperienceAPIProtocolP",
+            "mangledName": "$s8JanusSDK28PrivacyExperienceAPIProtocolP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -1367,13 +1374,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "PrivacyExperienceAPIProtocol",
-            "printedName": "PrivacyExperienceAPIProtocol",
-            "usr": "s:8JanusSDK28PrivacyExperienceAPIProtocolP",
-            "mangledName": "$s8JanusSDK28PrivacyExperienceAPIProtocolP"
           }
         ]
       },
@@ -1734,6 +1734,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "PrivacyPreferencesAPIProtocol",
+            "printedName": "PrivacyPreferencesAPIProtocol",
+            "usr": "s:8JanusSDK29PrivacyPreferencesAPIProtocolP",
+            "mangledName": "$s8JanusSDK29PrivacyPreferencesAPIProtocolP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -1745,13 +1752,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "PrivacyPreferencesAPIProtocol",
-            "printedName": "PrivacyPreferencesAPIProtocol",
-            "usr": "s:8JanusSDK29PrivacyPreferencesAPIProtocolP",
-            "mangledName": "$s8JanusSDK29PrivacyPreferencesAPIProtocolP"
           }
         ]
       },
@@ -2300,13 +2300,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -2318,6 +2311,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -2596,6 +2596,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "ConsentManagerProtocol",
+            "printedName": "ConsentManagerProtocol",
+            "usr": "s:8JanusSDK22ConsentManagerProtocolP",
+            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -2607,13 +2614,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ConsentManagerProtocol",
-            "printedName": "ConsentManagerProtocol",
-            "usr": "s:8JanusSDK22ConsentManagerProtocolP",
-            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP"
           }
         ]
       },
@@ -5532,6 +5532,51 @@
           },
           {
             "kind": "Var",
+            "name": "enableATT",
+            "printedName": "enableATT",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A13ConfigurationV9enableATTSbvp",
+            "mangledName": "$s8JanusSDK0A13ConfigurationV9enableATTSbvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A13ConfigurationV9enableATTSbvg",
+                "mangledName": "$s8JanusSDK0A13ConfigurationV9enableATTSbvg",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "theme",
             "printedName": "theme",
             "children": [
@@ -5576,7 +5621,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(apiHost:privacyCenterHost:propertyId:ipLocation:region:fidesEvents:autoShowExperience:saveUserPreferencesToFides:saveNoticesServedToFides:consentFlagType:consentNonApplicableFlagMode:theme:)",
+            "printedName": "init(apiHost:privacyCenterHost:propertyId:ipLocation:region:fidesEvents:autoShowExperience:saveUserPreferencesToFides:saveNoticesServedToFides:consentFlagType:consentNonApplicableFlagMode:enableATT:theme:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5662,14 +5707,21 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "JanusTheme",
                 "printedName": "JanusSDK.JanusTheme",
                 "usr": "s:8JanusSDK0A5ThemeV"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4Mode5themeACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOAA0A5ThemeVtcfc",
-            "mangledName": "$s8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4Mode5themeACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOAA0A5ThemeVtcfc",
+            "usr": "s:8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4Mode9enableATT5themeACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOSbAA0A5ThemeVtcfc",
+            "mangledName": "$s8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4Mode9enableATT5themeACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOSbAA0A5ThemeVtcfc",
             "moduleName": "JanusSDK",
             "intro_iOS": "13.0",
             "declAttributes": [
@@ -5682,7 +5734,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(apiHost:privacyCenterHost:propertyId:ipLocation:region:fidesEvents:autoShowExperience:saveUserPreferencesToFides:saveNoticesServedToFides:consentFlagType:consentNonApplicableFlagMode:)",
+            "printedName": "init(apiHost:privacyCenterHost:propertyId:ipLocation:region:fidesEvents:autoShowExperience:saveUserPreferencesToFides:saveNoticesServedToFides:consentFlagType:consentNonApplicableFlagMode:enableATT:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5765,11 +5817,18 @@
                 "printedName": "JanusSDK.ConsentNonApplicableFlagMode",
                 "hasDefaultArg": true,
                 "usr": "s:8JanusSDK28ConsentNonApplicableFlagModeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4ModeACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOtcfc",
-            "mangledName": "$s8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4ModeACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOtcfc",
+            "usr": "s:8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4Mode9enableATTACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOSbtcfc",
+            "mangledName": "$s8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4Mode9enableATTACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOSbtcfc",
             "moduleName": "JanusSDK",
             "declAttributes": [
               "AccessControl",
@@ -6386,17 +6445,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
             "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -6439,6 +6498,13 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JanusSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AppTrackingTransparency",
+        "printedName": "AppTrackingTransparency",
         "declKind": "Import",
         "moduleName": "JanusSDK"
       },
@@ -7363,6 +7429,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "JanusProtocol",
+            "printedName": "JanusProtocol",
+            "usr": "s:8JanusSDK0A8ProtocolP",
+            "mangledName": "$s8JanusSDK0A8ProtocolP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -7374,13 +7447,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "JanusProtocol",
-            "printedName": "JanusProtocol",
-            "usr": "s:8JanusSDK0A8ProtocolP",
-            "mangledName": "$s8JanusSDK0A8ProtocolP"
           }
         ]
       },
@@ -7696,17 +7762,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -7921,6 +7987,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "JanusLogger",
+            "printedName": "JanusLogger",
+            "usr": "s:8JanusSDK0A6LoggerP",
+            "mangledName": "$s8JanusSDK0A6LoggerP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -7932,13 +8005,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "JanusLogger",
-            "printedName": "JanusLogger",
-            "usr": "s:8JanusSDK0A6LoggerP",
-            "mangledName": "$s8JanusSDK0A6LoggerP"
           }
         ]
       },
@@ -9698,17 +9764,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -10096,17 +10162,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -11532,17 +11598,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -12910,6 +12976,46 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "attDenied",
+            "printedName": "attDenied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.ConsentMethod.Type) -> JanusSDK.ConsentMethod",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConsentMethod",
+                    "printedName": "JanusSDK.ConsentMethod",
+                    "usr": "s:8JanusSDK13ConsentMethodO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.ConsentMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConsentMethod",
+                        "printedName": "JanusSDK.ConsentMethod",
+                        "usr": "s:8JanusSDK13ConsentMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK13ConsentMethodO9attDeniedyA2CmF",
+            "mangledName": "$s8JanusSDK13ConsentMethodO9attDeniedyA2CmF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
             "kind": "Function",
             "name": "from",
             "printedName": "from(_:)",
@@ -13098,17 +13204,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -13408,13 +13514,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -13492,6 +13591,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -13812,13 +13918,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -13896,6 +13995,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -14176,13 +14282,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -14260,6 +14359,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -14500,13 +14606,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -14584,6 +14683,417 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FidesAttStatus",
+        "printedName": "FidesAttStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "notDetermined",
+            "printedName": "notDetermined",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.FidesAttStatus.Type) -> JanusSDK.FidesAttStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FidesAttStatus",
+                    "printedName": "JanusSDK.FidesAttStatus",
+                    "usr": "s:8JanusSDK14FidesAttStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.FidesAttStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FidesAttStatus",
+                        "printedName": "JanusSDK.FidesAttStatus",
+                        "usr": "s:8JanusSDK14FidesAttStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK14FidesAttStatusO13notDeterminedyA2CmF",
+            "mangledName": "$s8JanusSDK14FidesAttStatusO13notDeterminedyA2CmF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "restricted",
+            "printedName": "restricted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.FidesAttStatus.Type) -> JanusSDK.FidesAttStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FidesAttStatus",
+                    "printedName": "JanusSDK.FidesAttStatus",
+                    "usr": "s:8JanusSDK14FidesAttStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.FidesAttStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FidesAttStatus",
+                        "printedName": "JanusSDK.FidesAttStatus",
+                        "usr": "s:8JanusSDK14FidesAttStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK14FidesAttStatusO10restrictedyA2CmF",
+            "mangledName": "$s8JanusSDK14FidesAttStatusO10restrictedyA2CmF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "denied",
+            "printedName": "denied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.FidesAttStatus.Type) -> JanusSDK.FidesAttStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FidesAttStatus",
+                    "printedName": "JanusSDK.FidesAttStatus",
+                    "usr": "s:8JanusSDK14FidesAttStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.FidesAttStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FidesAttStatus",
+                        "printedName": "JanusSDK.FidesAttStatus",
+                        "usr": "s:8JanusSDK14FidesAttStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK14FidesAttStatusO6deniedyA2CmF",
+            "mangledName": "$s8JanusSDK14FidesAttStatusO6deniedyA2CmF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "authorized",
+            "printedName": "authorized",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JanusSDK.FidesAttStatus.Type) -> JanusSDK.FidesAttStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FidesAttStatus",
+                    "printedName": "JanusSDK.FidesAttStatus",
+                    "usr": "s:8JanusSDK14FidesAttStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JanusSDK.FidesAttStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FidesAttStatus",
+                        "printedName": "JanusSDK.FidesAttStatus",
+                        "usr": "s:8JanusSDK14FidesAttStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8JanusSDK14FidesAttStatusO10authorizedyA2CmF",
+            "mangledName": "$s8JanusSDK14FidesAttStatusO10authorizedyA2CmF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "JanusSDK.FidesAttStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FidesAttStatus",
+                    "printedName": "JanusSDK.FidesAttStatus",
+                    "usr": "s:8JanusSDK14FidesAttStatusO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8JanusSDK14FidesAttStatusO8rawValueACSgSS_tcfc",
+            "mangledName": "$s8JanusSDK14FidesAttStatusO8rawValueACSgSS_tcfc",
+            "moduleName": "JanusSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK14FidesAttStatusO8rawValueSSvp",
+            "mangledName": "$s8JanusSDK14FidesAttStatusO8rawValueSSvp",
+            "moduleName": "JanusSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK14FidesAttStatusO8rawValueSSvg",
+                "mangledName": "$s8JanusSDK14FidesAttStatusO8rawValueSSvg",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[JanusSDK.FidesAttStatus]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FidesAttStatus",
+                    "printedName": "JanusSDK.FidesAttStatus",
+                    "usr": "s:8JanusSDK14FidesAttStatusO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK14FidesAttStatusO8allCasesSayACGvpZ",
+            "mangledName": "$s8JanusSDK14FidesAttStatusO8allCasesSayACGvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[JanusSDK.FidesAttStatus]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FidesAttStatus",
+                        "printedName": "JanusSDK.FidesAttStatus",
+                        "usr": "s:8JanusSDK14FidesAttStatusO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK14FidesAttStatusO8allCasesSayACGvgZ",
+                "mangledName": "$s8JanusSDK14FidesAttStatusO8allCasesSayACGvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8JanusSDK14FidesAttStatusO",
+        "mangledName": "$s8JanusSDK14FidesAttStatusO",
+        "moduleName": "JanusSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[JanusSDK.FidesAttStatus]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FidesAttStatus",
+                        "printedName": "JanusSDK.FidesAttStatus",
+                        "usr": "s:8JanusSDK14FidesAttStatusO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -14669,13 +15179,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -14687,6 +15190,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -15101,13 +15611,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -15119,6 +15622,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -15480,13 +15990,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -15564,6 +16067,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -16070,13 +16580,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -16088,6 +16591,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -16314,13 +16824,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -16332,6 +16835,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -16837,13 +17347,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -16855,6 +17358,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -20258,13 +20768,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -20276,6 +20779,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -20824,13 +21334,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -20849,6 +21352,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -21304,13 +21814,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -21329,6 +21832,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -22156,13 +22666,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -22181,6 +22684,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -22861,13 +23371,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -22886,6 +23389,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -23242,13 +23752,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -23267,6 +23770,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -23896,13 +24406,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -23921,6 +24424,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -24202,13 +24712,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -24227,6 +24730,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -24359,13 +24869,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -24384,6 +24887,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -24933,13 +25443,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -24951,6 +25454,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -25412,13 +25922,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -25437,6 +25940,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -25868,13 +26378,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -25893,6 +26396,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -27123,6 +27633,67 @@
           },
           {
             "kind": "Var",
+            "name": "attExempt",
+            "printedName": "attExempt",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK13PrivacyNoticeV9attExemptSbSgvp",
+            "mangledName": "$s8JanusSDK13PrivacyNoticeV9attExemptSbSgvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK13PrivacyNoticeV9attExemptSbSgvg",
+                "mangledName": "$s8JanusSDK13PrivacyNoticeV9attExemptSbSgvg",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "allNotices",
             "printedName": "allNotices",
             "children": [
@@ -27181,7 +27752,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(name:noticeKey:internalDescription:consentMechanism:dataUses:enforcementLevel:disabled:hasGpcFlag:framework:defaultPreference:id:origin:createdAt:updatedAt:cookies:systemsApplicable:translations:children:gppFieldMapping:)",
+            "printedName": "init(name:noticeKey:internalDescription:consentMechanism:dataUses:enforcementLevel:disabled:hasGpcFlag:framework:defaultPreference:id:origin:createdAt:updatedAt:cookies:systemsApplicable:translations:children:gppFieldMapping:attExempt:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -27513,11 +28084,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8JanusSDK13PrivacyNoticeV4name9noticeKey19internalDescription16consentMechanism8dataUses16enforcementLevel8disabled10hasGpcFlag9framework17defaultPreference2id6origin9createdAt07updatedZ07cookies17systemsApplicable12translations8children15gppFieldMappingACSSSg_A3WSaySSGSgAWSbSgAz4W10Foundation4DateVSgA2_SayAA6CookieVGSgAZSayAA0cD11TranslationVGSgSayACGSgSayAA15GPPFieldMappingVGSgtcfc",
-            "mangledName": "$s8JanusSDK13PrivacyNoticeV4name9noticeKey19internalDescription16consentMechanism8dataUses16enforcementLevel8disabled10hasGpcFlag9framework17defaultPreference2id6origin9createdAt07updatedZ07cookies17systemsApplicable12translations8children15gppFieldMappingACSSSg_A3WSaySSGSgAWSbSgAz4W10Foundation4DateVSgA2_SayAA6CookieVGSgAZSayAA0cD11TranslationVGSgSayACGSgSayAA15GPPFieldMappingVGSgtcfc",
+            "usr": "s:8JanusSDK13PrivacyNoticeV4name9noticeKey19internalDescription16consentMechanism8dataUses16enforcementLevel8disabled10hasGpcFlag9framework17defaultPreference2id6origin9createdAt07updatedZ07cookies17systemsApplicable12translations8children15gppFieldMapping9attExemptACSSSg_A3XSaySSGSgAXSbSgA_A4X10Foundation4DateVSgA3_SayAA6CookieVGSgA_SayAA0cD11TranslationVGSgSayACGSgSayAA15GPPFieldMappingVGSgA_tcfc",
+            "mangledName": "$s8JanusSDK13PrivacyNoticeV4name9noticeKey19internalDescription16consentMechanism8dataUses16enforcementLevel8disabled10hasGpcFlag9framework17defaultPreference2id6origin9createdAt07updatedZ07cookies17systemsApplicable12translations8children15gppFieldMapping9attExemptACSSSg_A3XSaySSGSgAXSbSgA_A4X10Foundation4DateVSgA3_SayAA6CookieVGSgA_SayAA0cD11TranslationVGSgSayACGSgSayAA15GPPFieldMappingVGSgA_tcfc",
             "moduleName": "JanusSDK",
             "declAttributes": [
               "AccessControl"
@@ -27626,13 +28212,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -27651,6 +28230,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -28007,13 +28593,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -28032,6 +28611,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -28456,17 +29042,17 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "TranslationProtocol",
+            "printedName": "TranslationProtocol",
+            "usr": "s:8JanusSDK19TranslationProtocolP",
+            "mangledName": "$s8JanusSDK19TranslationProtocolP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -28491,10 +29077,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "TranslationProtocol",
-            "printedName": "TranslationProtocol",
-            "usr": "s:8JanusSDK19TranslationProtocolP",
-            "mangledName": "$s8JanusSDK19TranslationProtocolP"
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -29791,13 +30377,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -29809,6 +30388,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -31101,17 +31687,24 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "TranslationWithDefaultProtocol",
+            "printedName": "TranslationWithDefaultProtocol",
+            "usr": "s:8JanusSDK30TranslationWithDefaultProtocolP",
+            "mangledName": "$s8JanusSDK30TranslationWithDefaultProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TranslationProtocol",
+            "printedName": "TranslationProtocol",
+            "usr": "s:8JanusSDK19TranslationProtocolP",
+            "mangledName": "$s8JanusSDK19TranslationProtocolP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -31129,17 +31722,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "TranslationWithDefaultProtocol",
-            "printedName": "TranslationWithDefaultProtocol",
-            "usr": "s:8JanusSDK30TranslationWithDefaultProtocolP",
-            "mangledName": "$s8JanusSDK30TranslationWithDefaultProtocolP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "TranslationProtocol",
-            "printedName": "TranslationProtocol",
-            "usr": "s:8JanusSDK19TranslationProtocolP",
-            "mangledName": "$s8JanusSDK19TranslationProtocolP"
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -31614,13 +32200,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -31632,6 +32211,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -31798,13 +32384,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -31816,6 +32395,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -32065,13 +32651,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -32083,6 +32662,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -32365,13 +32951,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -32390,6 +32969,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -32672,13 +33258,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -32697,6 +33276,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -33053,13 +33639,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -33078,6 +33657,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -33747,13 +34333,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -33765,6 +34344,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -33916,13 +34502,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -33934,6 +34513,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -34136,13 +34722,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -34154,6 +34733,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -37059,9 +37645,216 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "attDenied",
+            "printedName": "attDenied",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK26PrivacyExperienceViewModelC9attDeniedSbvp",
+            "mangledName": "$s8JanusSDK26PrivacyExperienceViewModelC9attDeniedSbvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "ProjectedValueProperty",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK26PrivacyExperienceViewModelC9attDeniedSbvg",
+                "mangledName": "$s8JanusSDK26PrivacyExperienceViewModelC9attDeniedSbvg",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK26PrivacyExperienceViewModelC9attDeniedSbvs",
+                "mangledName": "$s8JanusSDK26PrivacyExperienceViewModelC9attDeniedSbvs",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK26PrivacyExperienceViewModelC9attDeniedSbvM",
+                "mangledName": "$s8JanusSDK26PrivacyExperienceViewModelC9attDeniedSbvM",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$attDenied",
+            "printedName": "$attDenied",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<Swift.Bool>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK26PrivacyExperienceViewModelC10$attDenied7Combine9PublishedV9PublisherVySb_Gvp",
+            "mangledName": "$s8JanusSDK26PrivacyExperienceViewModelC10$attDenied7Combine9PublishedV9PublisherVySb_Gvp",
+            "moduleName": "JanusSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Bool>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK26PrivacyExperienceViewModelC10$attDenied7Combine9PublishedV9PublisherVySb_Gvg",
+                "mangledName": "$s8JanusSDK26PrivacyExperienceViewModelC10$attDenied7Combine9PublishedV9PublisherVySb_Gvg",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Bool>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK26PrivacyExperienceViewModelC10$attDenied7Combine9PublishedV9PublisherVySb_Gvs",
+                "mangledName": "$s8JanusSDK26PrivacyExperienceViewModelC10$attDenied7Combine9PublishedV9PublisherVySb_Gvs",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK26PrivacyExperienceViewModelC10$attDenied7Combine9PublishedV9PublisherVySb_GvM",
+                "mangledName": "$s8JanusSDK26PrivacyExperienceViewModelC10$attDenied7Combine9PublishedV9PublisherVySb_GvM",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(api:consentManager:initialExperience:)",
+            "printedName": "init(api:consentManager:initialExperience:attDenied:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -37094,11 +37887,18 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8JanusSDK26PrivacyExperienceViewModelC3api14consentManager07initialD0AcA0cD11APIProtocol_p_AA07ConsentI0CAA0cD4ItemVSgtcfc",
-            "mangledName": "$s8JanusSDK26PrivacyExperienceViewModelC3api14consentManager07initialD0AcA0cD11APIProtocol_p_AA07ConsentI0CAA0cD4ItemVSgtcfc",
+            "usr": "s:8JanusSDK26PrivacyExperienceViewModelC3api14consentManager07initialD09attDeniedAcA0cD11APIProtocol_p_AA07ConsentI0CAA0cD4ItemVSgSbtcfc",
+            "mangledName": "$s8JanusSDK26PrivacyExperienceViewModelC3api14consentManager07initialD09attDeniedAcA0cD11APIProtocol_p_AA07ConsentI0CAA0cD4ItemVSgSbtcfc",
             "moduleName": "JanusSDK",
             "declAttributes": [
               "AccessControl",
@@ -37331,20 +38131,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "ObservableObject",
             "printedName": "ObservableObject",
             "children": [
@@ -37364,6 +38150,20 @@
             ],
             "usr": "s:7Combine16ObservableObjectP",
             "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -38807,17 +39607,17 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -39293,217 +40093,245 @@
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3557,
+      "offset": 4003,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3590,
+      "offset": 4036,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 3621,
+      "offset": 4067,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3652,
+      "offset": 4098,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 3684,
+      "offset": 4130,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 3725,
+      "offset": 4171,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 3774,
+      "offset": 4220,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 3821,
+      "offset": 4267,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4428,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 6532,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 6565,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6596,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5905,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 5938,
+      "offset": 6627,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 5969,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 6000,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6032,
+      "offset": 6659,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 6073,
+      "offset": 6700,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 6122,
+      "offset": 6749,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 6169,
+      "offset": 6796,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6957,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
-      "offset": 173,
+      "offset": 250,
       "length": 9,
       "value": "\"overlay\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
-      "offset": 209,
+      "offset": 286,
       "length": 10,
       "value": "\"headless\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
-      "offset": 251,
+      "offset": 328,
       "length": 16,
       "value": "\"privacy_center\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
-      "offset": 296,
+      "offset": 373,
       "length": 13,
       "value": "\"tcf_overlay\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
-      "offset": 342,
+      "offset": 419,
       "length": 18,
       "value": "\"banner_and_modal\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
-      "offset": 384,
+      "offset": 461,
       "length": 7,
       "value": "\"modal\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
-      "offset": 1081,
+      "offset": 1158,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
-      "offset": 1332,
+      "offset": 1409,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1623,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
-      "offset": 1561,
+      "offset": 1923,
       "length": 31,
       "value": "\"com.janus.isLoadingExperience\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
-      "offset": 1664,
+      "offset": 2026,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
-      "offset": 2398,
+      "offset": 2760,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
-      "offset": 15233,
+      "offset": 19216,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
-      "offset": 15755,
+      "offset": 19738,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
-      "offset": 16272,
+      "offset": 20255,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
-      "offset": 19322,
+      "offset": 23305,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 30198,
       "length": 5,
       "value": "false"
     },
@@ -39720,121 +40548,156 @@
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 389,
+      "offset": 385,
       "length": 8,
       "value": "\"accept\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 464,
+      "offset": 456,
       "length": 8,
       "value": "\"reject\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 574,
+      "offset": 562,
       "length": 13,
       "value": "\"acknowledge\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 690,
+      "offset": 674,
       "length": 9,
       "value": "\"dismiss\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 797,
+      "offset": 777,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 893,
+      "offset": 869,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 1571,
+      "offset": 984,
+      "length": 12,
+      "value": "\"att_denied\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "kind": "StringLiteral",
+      "offset": 1663,
       "length": 9,
       "value": "\"boolean\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 1726,
+      "offset": 1814,
       "length": 19,
       "value": "\"consent_mechanism\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 1988,
+      "offset": 2076,
       "length": 8,
       "value": "\"opt_in\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 2069,
+      "offset": 2153,
       "length": 9,
       "value": "\"opt_out\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 2195,
+      "offset": 2275,
       "length": 13,
       "value": "\"acknowledge\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 2297,
+      "offset": 2373,
       "length": 16,
       "value": "\"not_applicable\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 2561,
+      "offset": 2637,
       "length": 8,
       "value": "\"opt_in\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 2628,
+      "offset": 2700,
       "length": 9,
       "value": "\"opt_out\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 2716,
+      "offset": 2784,
       "length": 13,
       "value": "\"notice_only\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 3042,
+      "offset": 3110,
       "length": 6,
       "value": "\"omit\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
-      "offset": 3163,
+      "offset": 3227,
       "length": 9,
       "value": "\"include\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "kind": "StringLiteral",
+      "offset": 3486,
+      "length": 16,
+      "value": "\"not_determined\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "kind": "StringLiteral",
+      "offset": 3587,
+      "length": 12,
+      "value": "\"restricted\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "kind": "StringLiteral",
+      "offset": 3674,
+      "length": 8,
+      "value": "\"denied\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "kind": "StringLiteral",
+      "offset": 3751,
+      "length": 12,
+      "value": "\"authorized\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
@@ -40266,259 +41129,266 @@
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19096,
+      "offset": 19310,
       "length": 12,
       "value": "\"notice_key\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19144,
+      "offset": 19358,
       "length": 22,
       "value": "\"internal_description\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19199,
+      "offset": 19413,
       "length": 19,
       "value": "\"consent_mechanism\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19243,
+      "offset": 19457,
       "length": 11,
       "value": "\"data_uses\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19287,
+      "offset": 19501,
       "length": 19,
       "value": "\"enforcement_level\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19355,
+      "offset": 19569,
       "length": 14,
       "value": "\"has_gpc_flag\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19426,
+      "offset": 19640,
       "length": 20,
       "value": "\"default_preference\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19508,
+      "offset": 19722,
       "length": 12,
       "value": "\"created_at\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19546,
+      "offset": 19760,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19613,
+      "offset": 19827,
       "length": 20,
       "value": "\"systems_applicable\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19713,
+      "offset": 19927,
       "length": 19,
       "value": "\"gpp_field_mapping\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 20931,
+      "offset": 19972,
+      "length": 12,
+      "value": "\"att_exempt\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "kind": "StringLiteral",
+      "offset": 21183,
       "length": 27,
       "value": "\"privacy_notice_history_id\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23002,
+      "offset": 23254,
       "length": 21,
       "value": "\"show_layer1_notices\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23059,
+      "offset": 23311,
       "length": 23,
       "value": "\"layer1_button_options\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23121,
+      "offset": 23373,
       "length": 26,
       "value": "\"allow_language_selection\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23182,
+      "offset": 23434,
       "length": 22,
       "value": "\"auto_detect_language\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23248,
+      "offset": 23500,
       "length": 32,
       "value": "\"auto_subdomain_cookie_deletion\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23343,
+      "offset": 23595,
       "length": 12,
       "value": "\"created_at\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23381,
+      "offset": 23633,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 25815,
+      "offset": 26067,
       "length": 21,
       "value": "\"accept_button_label\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 25875,
+      "offset": 26127,
       "length": 26,
       "value": "\"acknowledge_button_label\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 25929,
+      "offset": 26181,
       "length": 14,
       "value": "\"banner_title\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 25969,
+      "offset": 26221,
       "length": 12,
       "value": "\"is_default\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26012,
+      "offset": 26264,
       "length": 18,
       "value": "\"modal_link_label\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26069,
+      "offset": 26321,
       "length": 27,
       "value": "\"privacy_policy_link_label\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26129,
+      "offset": 26381,
       "length": 20,
       "value": "\"privacy_policy_url\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26193,
+      "offset": 26445,
       "length": 32,
       "value": "\"privacy_preferences_link_label\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26255,
+      "offset": 26507,
       "length": 16,
       "value": "\"purpose_header\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26305,
+      "offset": 26557,
       "length": 21,
       "value": "\"reject_button_label\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26358,
+      "offset": 26610,
       "length": 19,
       "value": "\"save_button_label\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26430,
+      "offset": 26682,
       "length": 20,
       "value": "\"banner_description\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26524,
+      "offset": 26776,
       "length": 38,
       "value": "\"privacy_experience_config_history_id\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 27525,
+      "offset": 27777,
       "length": 14,
       "value": "\"version_hash\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 27576,
+      "offset": 27828,
       "length": 25,
       "value": "\"accept_all_fides_string\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 27642,
+      "offset": 27894,
       "length": 30,
       "value": "\"accept_all_fides_mobile_data\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 27709,
+      "offset": 27961,
       "length": 25,
       "value": "\"reject_all_fides_string\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 27775,
+      "offset": 28027,
       "length": 30,
       "value": "\"reject_all_fides_mobile_data\""
     },
@@ -40740,6 +41610,20 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1414,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1957,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "StringLiteral",
       "offset": 444,
@@ -40749,91 +41633,98 @@
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "IntegerLiteral",
-      "offset": 15402,
+      "offset": 15425,
       "length": 2,
       "value": "48"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "IntegerLiteral",
-      "offset": 15424,
+      "offset": 15447,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "BooleanLiteral",
-      "offset": 16752,
+      "offset": 16775,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "BooleanLiteral",
-      "offset": 16800,
+      "offset": 16823,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "BooleanLiteral",
-      "offset": 16852,
+      "offset": 16875,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 579,
+      "offset": 571,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "Array",
-      "offset": 1206,
+      "offset": 1198,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1370,
+      "offset": 1362,
       "length": 4,
       "value": "30.0"
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1427,
+      "offset": 1419,
       "length": 24,
       "value": "\"\/embedded-consent.html\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1501,
+      "offset": 1493,
       "length": 13,
       "value": "\"geolocation\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1564,
+      "offset": 1556,
       "length": 13,
       "value": "\"property_id\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1622,
+      "offset": 1614,
       "length": 14,
       "value": "\"fides_locale\""
     },
     {
       "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1677,
+      "length": 18,
+      "value": "\"fides_att_status\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4125,
+      "offset": 4525,
       "length": 4,
       "value": "true"
     },

@@ -306,6 +306,12 @@ class JanusConfiguration {
   /// Defaults to omit.
   final ConsentNonApplicableFlagMode consentNonApplicableFlagMode;
 
+  /// Whether to request Apple ATT permission before showing the experience, and lock
+  /// non-exempt notices when denied. Defaults to false — existing behaviour is unchanged
+  /// unless explicitly enabled. iOS only; no-op on Android.
+  /// Requires `NSUserTrackingUsageDescription` in the host app's Info.plist.
+  final bool enableAtt;
+
   JanusConfiguration({
     required this.apiHost,
     this.privacyCenterHost = "",
@@ -318,6 +324,7 @@ class JanusConfiguration {
     this.saveNoticesServedToFides = true,
     this.consentFlagType = ConsentFlagType.boolean,
     this.consentNonApplicableFlagMode = ConsentNonApplicableFlagMode.omit,
+    this.enableAtt = false,
   });
 
   /// Convert to a map for serialization.
@@ -334,6 +341,7 @@ class JanusConfiguration {
       'saveNoticesServedToFides': saveNoticesServedToFides,
       'consentFlagType': consentFlagType.value,
       'consentNonApplicableFlagMode': consentNonApplicableFlagMode.value,
+      'enableAtt': enableAtt,
     };
   }
 }

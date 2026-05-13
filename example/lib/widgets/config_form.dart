@@ -15,9 +15,11 @@ class ConfigForm extends StatefulWidget {
   final Function(ConsentFlagType)? onConsentFlagTypeChanged;
   final Function(ConsentNonApplicableFlagMode)?
   onConsentNonApplicableFlagModeChanged;
+  final Function(bool)? onEnableAttChanged;
   final bool initialAutoShowExperience;
   final ConsentFlagType initialConsentFlagType;
   final ConsentNonApplicableFlagMode initialConsentNonApplicableFlagMode;
+  final bool initialEnableAtt;
 
   const ConfigForm({
     super.key,
@@ -30,10 +32,12 @@ class ConfigForm extends StatefulWidget {
     this.onAutoShowExperienceChanged,
     this.onConsentFlagTypeChanged,
     this.onConsentNonApplicableFlagModeChanged,
+    this.onEnableAttChanged,
     this.initialAutoShowExperience = true,
     this.initialConsentFlagType = ConsentFlagType.boolean,
     this.initialConsentNonApplicableFlagMode =
         ConsentNonApplicableFlagMode.omit,
+    this.initialEnableAtt = false,
   });
 
   @override
@@ -44,6 +48,7 @@ class _ConfigFormState extends State<ConfigForm> {
   String _selectedConfigSet = 'Custom';
   bool _isInitialized = false;
   bool _autoShowExperience = true;
+  bool _enableAtt = false;
   ConsentFlagType _consentFlagType = ConsentFlagType.boolean;
   ConsentNonApplicableFlagMode _consentNonApplicableFlagMode =
       ConsentNonApplicableFlagMode.omit;
@@ -53,6 +58,7 @@ class _ConfigFormState extends State<ConfigForm> {
     super.initState();
     // Initialize with the prop values
     _autoShowExperience = widget.initialAutoShowExperience;
+    _enableAtt = widget.initialEnableAtt;
     _consentFlagType = widget.initialConsentFlagType;
     _consentNonApplicableFlagMode = widget.initialConsentNonApplicableFlagMode;
     // Load custom config on initialization
@@ -98,13 +104,15 @@ class _ConfigFormState extends State<ConfigForm> {
     widget.websiteController.text =
         configSet.config.website ?? 'https://ethyca.com';
 
-    // Update the autoShowExperience, consentFlagType, and consentNonApplicableFlagMode values
+    // Update the autoShowExperience, enableAtt, consentFlagType, and consentNonApplicableFlagMode values
     setState(() {
       _autoShowExperience = configSet.config.autoShowExperience;
+      _enableAtt = configSet.config.enableAtt;
       _consentFlagType = configSet.config.consentFlagType;
       _consentNonApplicableFlagMode =
           configSet.config.consentNonApplicableFlagMode;
     });
+    widget.onEnableAttChanged?.call(_enableAtt);
 
     // Save the selected config name
     _saveLastSelectedConfig(configSetName);

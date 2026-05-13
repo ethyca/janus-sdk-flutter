@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target arm64-apple-ios13 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name JanusSDK
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios13 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name JanusSDK
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import AppTrackingTransparency
 import Combine
 import DeveloperToolsSupport
 import Foundation
@@ -26,52 +27,36 @@ public enum APIError : Swift.Error {
   case badResponse(statusCode: Swift.Int)
 }
 public protocol IPLocationAPIProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
   func fetchLocation(completion: @escaping (Swift.Result<JanusSDK.IPLocationResponse, JanusSDK.APIError>) -> Swift.Void)
-  #endif
 }
 public class IPLocationAPI : JanusSDK.IPLocationAPIProtocol {
   public static var shared: any JanusSDK.IPLocationAPIProtocol
   public init(session: Foundation.URLSession = .shared)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func fetchLocation(completion: @escaping (Swift.Result<JanusSDK.IPLocationResponse, JanusSDK.APIError>) -> Swift.Void)
-  #endif
   @objc deinit
 }
 public protocol NoticesServedAPIProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
   func recordNoticesServed(privacyExperience: JanusSDK.PrivacyExperienceItem, translatedNotices: [JanusSDK.TranslatedPrivacyNotice], privacyExperienceConfigHistoryId: Swift.String, completion: ((JanusSDK.NoticesServedResponse?) -> Swift.Void)?)
-  #endif
 }
 public class NoticesServedAPI : JanusSDK.NoticesServedAPIProtocol {
   public init(apiHost: Swift.String, urlSession: Foundation.URLSession = .shared)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func recordNoticesServed(privacyExperience: JanusSDK.PrivacyExperienceItem, translatedNotices: [JanusSDK.TranslatedPrivacyNotice], privacyExperienceConfigHistoryId: Swift.String, completion: ((JanusSDK.NoticesServedResponse?) -> Swift.Void)? = nil)
-  #endif
   @objc deinit
 }
 public protocol PrivacyExperienceAPIProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
   func fetchPrivacyExperiences(region: Swift.String, propertyId: Swift.String?, page: Swift.Int?, size: Swift.Int?, minimalTcf: Swift.Bool?, completion: @escaping (Swift.Result<JanusSDK.PrivacyExperienceResponse, JanusSDK.APIError>) -> Swift.Void)
-  #endif
 }
 public class PrivacyExperienceAPI : JanusSDK.PrivacyExperienceAPIProtocol {
   public init(apiHost: Swift.String, urlSession: Foundation.URLSession = .shared)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func fetchPrivacyExperiences(region: Swift.String, propertyId: Swift.String?, page: Swift.Int?, size: Swift.Int?, minimalTcf: Swift.Bool? = false, completion: @escaping (Swift.Result<JanusSDK.PrivacyExperienceResponse, JanusSDK.APIError>) -> Swift.Void)
-  #endif
   @objc deinit
 }
 public protocol PrivacyPreferencesAPIProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
   func savePrivacyPreferences(consentChanges: [Swift.String : Swift.Bool], consentMethod: JanusSDK.ConsentMethod, fidesString: Swift.String?, notices: [JanusSDK.TranslatedPrivacyNotice], privacyExperienceConfigHistoryId: Swift.String?, servedNoticeHistoryId: Swift.String?, completion: ((Swift.Bool) -> Swift.Void)?)
-  #endif
 }
 public class PrivacyPreferencesAPI : JanusSDK.PrivacyPreferencesAPIProtocol {
   public init(apiHost: Swift.String, urlSession: Foundation.URLSession = .shared)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func savePrivacyPreferences(consentChanges: [Swift.String : Swift.Bool], consentMethod: JanusSDK.ConsentMethod, fidesString: Swift.String? = nil, notices: [JanusSDK.TranslatedPrivacyNotice], privacyExperienceConfigHistoryId: Swift.String?, servedNoticeHistoryId: Swift.String? = nil, completion: ((Swift.Bool) -> Swift.Void)? = nil)
-  #endif
   @objc deinit
 }
 public struct ConsentMetadata : Swift.Codable {
@@ -79,9 +64,7 @@ public struct ConsentMetadata : Swift.Codable {
   public var updatedAt: Foundation.Date?
   public var consentMethod: Swift.String
   public var versionHash: Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(createdAt: Foundation.Date? = nil, updatedAt: Foundation.Date? = nil, consentMethod: Swift.String = "unknown", versionHash: Swift.String = "")
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -92,9 +75,7 @@ public class ConsentManager : JanusSDK.ConsentManagerProtocol {
   public func getMetadata() -> JanusSDK.ConsentMetadata
   public func getConsentMethod() -> Swift.String
   public func getFidesUserDeviceId() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setConsent(values: [Swift.String : Swift.Bool], versionHash: Swift.String, fidesString: Swift.String? = nil, consentMethod: Swift.String? = nil)
-  #endif
   public func clearConsent(clearMetadata: Swift.Bool = false)
   @objc deinit
 }
@@ -103,9 +84,7 @@ public protocol ConsentManagerProtocol {
   func getMetadata() -> JanusSDK.ConsentMetadata
   func getFidesString() -> Swift.String
   func getConsentMethod() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   func setConsent(values: [Swift.String : Swift.Bool], versionHash: Swift.String, fidesString: Swift.String?, consentMethod: Swift.String?)
-  #endif
   func clearConsent(clearMetadata: Swift.Bool)
 }
 public class IABTCFStorage {
@@ -132,18 +111,14 @@ public class IABTCFStorage {
   public static let CMP_VERSION: Swift.Int
   public static let ALL_IABTCF_KEYS: [Swift.String]
   public init(userDefaults: Foundation.UserDefaults = .standard)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func updateIABTCFValues(fidesString: Swift.String?, experience: JanusSDK.PrivacyExperienceItem?)
-  #endif
   public func clearIABTCFValues()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Janus {
-  #if compiler(>=5.3) && $NonescapableTypes
   public static var currentExperience: JanusSDK.PrivacyExperienceItem? {
     get
   }
-  #endif
   public static var isTCFExperience: Swift.Bool {
     get
   }
@@ -165,9 +140,7 @@ public class IABTCFStorage {
   public static var region: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func initialize(config: JanusSDK.JanusConfiguration, completion: @escaping (Swift.Bool, (any Swift.Error)?) -> Swift.Void)
-  #endif
   @available(iOS 13.0, *)
   public static func showExperience(from viewController: UIKit.UIViewController)
   public static func addConsentEventListener(listener: @escaping (JanusSDK.JanusEvent) -> Swift.Void) -> Swift.String
@@ -175,12 +148,8 @@ public class IABTCFStorage {
   public static func createConsentWebView(autoSyncOnStart: Swift.Bool = true) -> WebKit.WKWebView
   public static func releaseConsentWebView(_ webView: WebKit.WKWebView)
   public static func clearConsent(clearMetadata: Swift.Bool = false)
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func getLocationByIPAddress(completion: @escaping (Swift.Bool, JanusSDK.IPLocationResponse?, (any Swift.Error)?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func setLogger(_ logger: (any JanusSDK.JanusLogger)?)
-  #endif
   @objc deinit
 }
 public struct JanusConfiguration {
@@ -195,13 +164,14 @@ public struct JanusConfiguration {
   public let saveNoticesServedToFides: Swift.Bool
   public let consentFlagType: JanusSDK.ConsentFlagType
   public let consentNonApplicableFlagMode: JanusSDK.ConsentNonApplicableFlagMode
+  public let enableATT: Swift.Bool
   @available(iOS 13.0, *)
   public var theme: JanusSDK.JanusTheme {
     get
   }
   @available(iOS 13.0, *)
-  public init(apiHost: Swift.String, privacyCenterHost: Swift.String = "", propertyId: Swift.String = "", ipLocation: Swift.Bool = true, region: Swift.String = "", fidesEvents: Swift.Bool = true, autoShowExperience: Swift.Bool = true, saveUserPreferencesToFides: Swift.Bool = true, saveNoticesServedToFides: Swift.Bool = true, consentFlagType: JanusSDK.ConsentFlagType = .boolean, consentNonApplicableFlagMode: JanusSDK.ConsentNonApplicableFlagMode = .omit, theme: JanusSDK.JanusTheme)
-  public init(apiHost: Swift.String, privacyCenterHost: Swift.String = "", propertyId: Swift.String = "", ipLocation: Swift.Bool = true, region: Swift.String = "", fidesEvents: Swift.Bool = true, autoShowExperience: Swift.Bool = true, saveUserPreferencesToFides: Swift.Bool = true, saveNoticesServedToFides: Swift.Bool = true, consentFlagType: JanusSDK.ConsentFlagType = .boolean, consentNonApplicableFlagMode: JanusSDK.ConsentNonApplicableFlagMode = .omit)
+  public init(apiHost: Swift.String, privacyCenterHost: Swift.String = "", propertyId: Swift.String = "", ipLocation: Swift.Bool = true, region: Swift.String = "", fidesEvents: Swift.Bool = true, autoShowExperience: Swift.Bool = true, saveUserPreferencesToFides: Swift.Bool = true, saveNoticesServedToFides: Swift.Bool = true, consentFlagType: JanusSDK.ConsentFlagType = .boolean, consentNonApplicableFlagMode: JanusSDK.ConsentNonApplicableFlagMode = .omit, enableATT: Swift.Bool = false, theme: JanusSDK.JanusTheme)
+  public init(apiHost: Swift.String, privacyCenterHost: Swift.String = "", propertyId: Swift.String = "", ipLocation: Swift.Bool = true, region: Swift.String = "", fidesEvents: Swift.Bool = true, autoShowExperience: Swift.Bool = true, saveUserPreferencesToFides: Swift.Bool = true, saveNoticesServedToFides: Swift.Bool = true, consentFlagType: JanusSDK.ConsentFlagType = .boolean, consentNonApplicableFlagMode: JanusSDK.ConsentNonApplicableFlagMode = .omit, enableATT: Swift.Bool = false)
 }
 public enum JanusError : Swift.Error {
   case invalidConfiguration
@@ -224,11 +194,9 @@ public enum ComponentType {
 public class JanusImplementation : JanusSDK.JanusProtocol {
   public var fidesEvents: Swift.Bool
   public init(privacyExperienceAPI: any JanusSDK.PrivacyExperienceAPIProtocol = PrivacyExperienceAPI(apiHost: ""), ipLocationAPI: any JanusSDK.IPLocationAPIProtocol = IPLocationAPI(), consentManager: any JanusSDK.ConsentManagerProtocol = ConsentManager())
-  #if compiler(>=5.3) && $NonescapableTypes
   public var currentExperience: JanusSDK.PrivacyExperienceItem? {
     get
   }
-  #endif
   public var hasExperience: Swift.Bool {
     get
   }
@@ -250,9 +218,7 @@ public class JanusImplementation : JanusSDK.JanusProtocol {
   public var region: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public func initialize(config: JanusSDK.JanusConfiguration, completion: @escaping (Swift.Bool, (any Swift.Error)?) -> Swift.Void)
-  #endif
   @available(iOS 13.0, *)
   public func showExperience(from viewController: UIKit.UIViewController)
   public func addConsentEventListener(listener: @escaping (JanusSDK.JanusEvent) -> Swift.Void) -> Swift.String
@@ -260,9 +226,7 @@ public class JanusImplementation : JanusSDK.JanusProtocol {
   public func createConsentWebView(autoSyncOnStart: Swift.Bool = true) -> WebKit.WKWebView
   public func releaseConsentWebView(_ webView: WebKit.WKWebView)
   public func clearConsent(clearMetadata: Swift.Bool = false)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getLocationByIPAddress(completion: @escaping (Swift.Bool, JanusSDK.IPLocationResponse?, (any Swift.Error)?) -> Swift.Void)
-  #endif
   public func notifyEventListeners(event: JanusSDK.JanusEvent)
   @objc deinit
 }
@@ -275,20 +239,14 @@ public enum LogLevel {
   }
 }
 public protocol JanusLogger {
-  #if compiler(>=5.3) && $NonescapableTypes
   func log(_ message: Swift.String, level: JanusSDK.LogLevel, metadata: [Swift.String : Swift.String]?, error: (any Swift.Error)?)
-  #endif
 }
 @_hasMissingDesignatedInitializers public class DefaultJanusLogger : JanusSDK.JanusLogger {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func log(_ message: Swift.String, level: JanusSDK.LogLevel = .info, metadata: [Swift.String : Swift.String]? = nil, error: (any Swift.Error)? = nil)
-  #endif
   @objc deinit
 }
 public protocol JanusProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
   func initialize(config: JanusSDK.JanusConfiguration, completion: @escaping (Swift.Bool, (any Swift.Error)?) -> Swift.Void)
-  #endif
   @available(iOS 13.0, *)
   func showExperience(from viewController: UIKit.UIViewController)
   func addConsentEventListener(listener: @escaping (JanusSDK.JanusEvent) -> Swift.Void) -> Swift.String
@@ -301,16 +259,12 @@ public protocol JanusProtocol {
   var internalConsent: [Swift.String : Swift.Bool] { get }
   var consentMetadata: JanusSDK.ConsentMetadata { get }
   var fides_string: Swift.String { get }
-  #if compiler(>=5.3) && $NonescapableTypes
   var currentExperience: JanusSDK.PrivacyExperienceItem? { get }
-  #endif
   var hasExperience: Swift.Bool { get }
   var shouldShowExperience: Swift.Bool { get }
   var fidesEvents: Swift.Bool { get }
   var region: Swift.String { get }
-  #if compiler(>=5.3) && $NonescapableTypes
   func getLocationByIPAddress(completion: @escaping (Swift.Bool, JanusSDK.IPLocationResponse?, (any Swift.Error)?) -> Swift.Void)
-  #endif
 }
 @_hasMissingDesignatedInitializers public class JanusProvider {
   public static var configuration: JanusSDK.JanusConfiguration?
@@ -335,9 +289,7 @@ public enum JanusEventType : Swift.String {
   case WEBVIEW_FIDES_UPDATING
   case WEBVIEW_FIDES_UPDATED
   case CONSENT_UPDATED_FROM_WEBVIEW
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -351,9 +303,7 @@ public enum FidesEventType : Swift.String {
   case FIDES_MODAL_CLOSED
   case FIDES_UPDATING
   case FIDES_UPDATED
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -426,17 +376,13 @@ public enum FidesEventType : Swift.String {
 @_hasMissingDesignatedInitializers public class ConsentUpdatedFromWebViewEvent : JanusSDK.JanusEvent {
   public func getConsentValues() -> [Swift.String : Any]
   public func getFidesString() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getSourceWebView() -> WebKit.WKWebView?
-  #endif
   @objc deinit
 }
 public enum ApiRoutes : Swift.String, Swift.CaseIterable {
   case noticesServed
   case privacyExperience
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [JanusSDK.ApiRoutes]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [JanusSDK.ApiRoutes] {
@@ -447,29 +393,17 @@ public enum ApiRoutes : Swift.String, Swift.CaseIterable {
   }
 }
 public struct ConsentTransformationUtils {
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func transformConsentToUserPreference(consented: Swift.Bool, consentMechanism: JanusSDK.ConsentMechanism? = nil) -> JanusSDK.UserConsentPreference
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func transformUserPreferenceToBoolean(preference: JanusSDK.UserConsentPreference?) -> Swift.Bool
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func applyOverridesToConsent(booleanConsent: [Swift.String : Swift.Bool], flagType: JanusSDK.ConsentFlagType, privacyNotices: [JanusSDK.PrivacyNotice]? = nil) -> [Swift.String : Any]
-  #endif
   public static func handleNonApplicableNotices(consent: [Swift.String : Any], nonApplicableNotices: [Swift.String], flagType: JanusSDK.ConsentFlagType, mode: JanusSDK.ConsentNonApplicableFlagMode = .omit) -> [Swift.String : Any]
   public static func validateConsentConsistency(internalConsent: [Swift.String : Swift.Bool], externalConsent: [Swift.String : Any], flagType: JanusSDK.ConsentFlagType) -> Swift.Bool
 }
 @_hasMissingDesignatedInitializers public class HTMLSanitizer {
   public static func sanitize(from content: Swift.String) -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func attributedString(from content: Swift.String, textColor: UIKit.UIColor? = nil, linkColor: UIKit.UIColor? = nil) -> Foundation.NSAttributedString?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func apply(to label: UIKit.UILabel, htmlContent: Swift.String, textColor: UIKit.UIColor? = nil, linkColor: UIKit.UIColor? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func apply(to textView: UIKit.UITextView, htmlContent: Swift.String, textColor: UIKit.UIColor? = nil, linkColor: UIKit.UIColor? = nil)
-  #endif
   @objc deinit
 }
 extension JanusSDK.PrivacyExperienceItem {
@@ -478,26 +412,18 @@ extension JanusSDK.PrivacyExperienceItem {
   }
 }
 public protocol TranslationProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
   var language: Swift.String? { get }
-  #endif
 }
 public protocol TranslationWithDefaultProtocol : JanusSDK.TranslationProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
   var isDefault: Swift.Bool? { get }
-  #endif
 }
 extension JanusSDK.PrivacyNoticeTranslation : JanusSDK.TranslationProtocol {
 }
 extension JanusSDK.ExperienceConfigTranslation : JanusSDK.TranslationWithDefaultProtocol {
 }
 @_hasMissingDesignatedInitializers public class TranslationMatcher {
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func preferredLocale(_ availableLocales: [Swift.String]?) -> Swift.String
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func find<T>(_ translations: [T]?) -> T? where T : JanusSDK.TranslationProtocol
-  #endif
   @objc deinit
 }
 public enum ConsentMethod : Swift.String, Swift.CaseIterable {
@@ -508,12 +434,9 @@ public enum ConsentMethod : Swift.String, Swift.CaseIterable {
   case dismiss
   case unknown
   case error
-  #if compiler(>=5.3) && $NonescapableTypes
+  case attDenied
   public static func from(_ value: Swift.String?) -> JanusSDK.ConsentMethod
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [JanusSDK.ConsentMethod]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [JanusSDK.ConsentMethod] {
@@ -526,9 +449,7 @@ public enum ConsentMethod : Swift.String, Swift.CaseIterable {
 public enum ConsentFlagType : Swift.String, Swift.CaseIterable, Swift.Codable {
   case boolean
   case consentMechanism
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [JanusSDK.ConsentFlagType]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [JanusSDK.ConsentFlagType] {
@@ -543,9 +464,7 @@ public enum UserConsentPreference : Swift.String, Swift.CaseIterable, Swift.Coda
   case optOut
   case acknowledge
   case notApplicable
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [JanusSDK.UserConsentPreference]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [JanusSDK.UserConsentPreference] {
@@ -559,9 +478,7 @@ public enum ConsentMechanism : Swift.String, Swift.CaseIterable, Swift.Codable {
   case optIn
   case optOut
   case noticeOnly
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [JanusSDK.ConsentMechanism]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [JanusSDK.ConsentMechanism] {
@@ -574,12 +491,25 @@ public enum ConsentMechanism : Swift.String, Swift.CaseIterable, Swift.Codable {
 public enum ConsentNonApplicableFlagMode : Swift.String, Swift.CaseIterable, Swift.Codable {
   case omit
   case include
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [JanusSDK.ConsentNonApplicableFlagMode]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [JanusSDK.ConsentNonApplicableFlagMode] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum FidesAttStatus : Swift.String, Swift.CaseIterable, Swift.Codable {
+  case notDetermined
+  case restricted
+  case denied
+  case authorized
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JanusSDK.FidesAttStatus]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [JanusSDK.FidesAttStatus] {
     get
   }
   public var rawValue: Swift.String {
@@ -595,9 +525,7 @@ public struct IPLocationResponse : Swift.Codable {
   public let ip: Swift.String?
   public let location: Swift.String?
   public let region: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(country: Swift.String? = nil, ip: Swift.String? = nil, location: Swift.String? = nil, region: Swift.String? = nil)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -607,9 +535,7 @@ public enum ServingComponent : Swift.String, Swift.CaseIterable, Swift.Codable {
   case privacyCenter
   case tcfOverlay
   case tcfBanner
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [JanusSDK.ServingComponent]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [JanusSDK.ServingComponent] {
@@ -627,9 +553,7 @@ public struct NoticesServedRequest : Swift.Codable {
   public let userGeography: Swift.String
   public let servingComponent: JanusSDK.ServingComponent
   public let propertyId: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(privacyNoticeHistoryIds: [Swift.String], browserIdentity: JanusSDK.BrowserIdentity, privacyExperienceId: Swift.String, privacyExperienceConfigHistoryId: Swift.String, userGeography: Swift.String, servingComponent: JanusSDK.ServingComponent = .modal, propertyId: Swift.String?)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -646,9 +570,7 @@ public struct PrivacyExperienceResponse : Swift.Codable {
   public let page: Swift.Int?
   public let size: Swift.Int?
   public let pages: Swift.Int?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(items: [JanusSDK.PrivacyExperienceItem]? = nil, total: Swift.Int? = nil, page: Swift.Int? = nil, size: Swift.Int? = nil, pages: Swift.Int? = nil)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -688,9 +610,7 @@ public struct PrivacyExperienceItem : Swift.Codable {
   public let tcfSystemLegitimateInterestIds: [Swift.String]?
   public let tcfPurposeNames: [Swift.String]?
   public let tcfSpecialFeatureNames: [Swift.String]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.String? = nil, createdAt: Foundation.Date? = nil, updatedAt: Foundation.Date? = nil, region: Swift.String? = nil, gppSettings: JanusSDK.GPPSettings? = nil, privacyNotices: [JanusSDK.PrivacyNotice]? = nil, nonApplicablePrivacyNotices: [Swift.String]? = nil, experienceConfig: JanusSDK.ExperienceConfig? = nil, availableLocales: [Swift.String]? = nil, meta: JanusSDK.PrivacyMeta? = nil, tcfSystemLegitimateInterests: [JanusSDK.TCFSystem]? = nil, tcfSpecialFeatures: [JanusSDK.TCFSpecialFeature]? = nil, tcfVendorLegitimateInterests: [JanusSDK.TCFVendorLegitimateInterest]? = nil, tcfVendorRelationships: [JanusSDK.TCFVendorRelationship]? = nil, gvlTranslations: [Swift.String : JanusSDK.GVLTranslation]? = nil, tcfPurposeConsents: [JanusSDK.TCFPurposeItem]? = nil, tcfVendorConsents: [JanusSDK.TCFVendor]? = nil, tcfPurposeLegitimateInterests: [JanusSDK.TCFPurposeItem]? = nil, tcfSystemRelationships: [JanusSDK.TCFSystemRelationship]? = nil, tcfSpecialPurposes: [JanusSDK.TCFSpecialPurpose]? = nil, gvl: [Swift.String : Swift.String]? = nil, tcfPublisherCountryCode: Swift.String? = nil, minimalTcf: Swift.Bool? = nil, vendorCount: Swift.Int? = nil, tcfVendorConsentIds: [Swift.String]? = nil, tcfVendorLegitimateInterestIds: [Swift.String]? = nil, tcfPurposeConsentIds: [Swift.Int]? = nil, tcfPurposeLegitimateInterestIds: [Swift.Int]? = nil, tcfSpecialFeatureIds: [Swift.Int]? = nil, tcfSpecialPurposeIds: [Swift.Int]? = nil, tcfFeatureIds: [Swift.Int]? = nil, tcfSystemConsentIds: [Swift.String]? = nil, tcfSystemLegitimateInterestIds: [Swift.String]? = nil, tcfPurposeNames: [Swift.String]? = nil, tcfSpecialFeatureNames: [Swift.String]? = nil)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -700,9 +620,7 @@ public struct GVLTranslation : Swift.Codable, Swift.Equatable {
   public let tcfPolicyVersion: Swift.Int?
   public let lastUpdated: Swift.String?
   public let purposes: [Swift.String : JanusSDK.GVLPurpose]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(gvlSpecificationVersion: Swift.Int? = nil, vendorListVersion: Swift.Int? = nil, tcfPolicyVersion: Swift.Int? = nil, lastUpdated: Swift.String? = nil, purposes: [Swift.String : JanusSDK.GVLPurpose]? = nil)
-  #endif
   public static func == (a: JanusSDK.GVLTranslation, b: JanusSDK.GVLTranslation) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -712,9 +630,7 @@ public struct GVLPurpose : Swift.Codable, Swift.Equatable {
   public let name: Swift.String?
   public let description: Swift.String?
   public let illustrations: [Swift.String]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.Int? = nil, name: Swift.String? = nil, description: Swift.String? = nil, illustrations: [Swift.String]? = nil)
-  #endif
   public static func == (a: JanusSDK.GVLPurpose, b: JanusSDK.GVLPurpose) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -728,9 +644,7 @@ public struct TCFPurposeItem : Swift.Codable, Swift.Equatable {
   public let defaultPreference: Swift.String?
   public let vendors: [JanusSDK.TCFVendor]?
   public let systems: [JanusSDK.TCFSystem]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.Int? = nil, name: Swift.String? = nil, description: Swift.String? = nil, illustrations: [Swift.String]? = nil, dataUses: [Swift.String]? = nil, defaultPreference: Swift.String? = nil, vendors: [JanusSDK.TCFVendor]? = nil, systems: [JanusSDK.TCFSystem]? = nil)
-  #endif
   public static func == (a: JanusSDK.TCFPurposeItem, b: JanusSDK.TCFPurposeItem) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -743,9 +657,7 @@ public struct TCFVendorLegitimateInterest : Swift.Codable, Swift.Equatable {
   public let vendorDeletedDate: Swift.String?
   public let defaultPreference: Swift.String?
   public let purposeLegitimateInterests: [JanusSDK.PurposeLegitimateInterest]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.String? = nil, hasVendorId: Swift.Bool? = nil, name: Swift.String? = nil, description: Swift.String? = nil, vendorDeletedDate: Swift.String? = nil, defaultPreference: Swift.String? = nil, purposeLegitimateInterests: [JanusSDK.PurposeLegitimateInterest]? = nil)
-  #endif
   public static func == (a: JanusSDK.TCFVendorLegitimateInterest, b: JanusSDK.TCFVendorLegitimateInterest) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -754,9 +666,7 @@ public struct PurposeLegitimateInterest : Swift.Codable, Swift.Equatable {
   public let id: Swift.Int?
   public let name: Swift.String?
   public let retentionPeriod: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.Int? = nil, name: Swift.String? = nil, retentionPeriod: Swift.String? = nil)
-  #endif
   public static func == (a: JanusSDK.PurposeLegitimateInterest, b: JanusSDK.PurposeLegitimateInterest) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -768,9 +678,7 @@ public struct TCFSpecialFeature : Swift.Codable, Swift.Equatable {
   public let defaultPreference: Swift.String?
   public let vendors: [JanusSDK.TCFVendor]?
   public let systems: [JanusSDK.TCFSystem]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.Int? = nil, name: Swift.String? = nil, description: Swift.String? = nil, defaultPreference: Swift.String? = nil, vendors: [JanusSDK.TCFVendor]? = nil, systems: [JanusSDK.TCFSystem]? = nil)
-  #endif
   public static func == (a: JanusSDK.TCFSpecialFeature, b: JanusSDK.TCFSpecialFeature) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -778,9 +686,7 @@ public struct TCFSpecialFeature : Swift.Codable, Swift.Equatable {
 public struct TCFVendor : Swift.Codable, Swift.Equatable {
   public let id: Swift.String?
   public let name: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.String? = nil, name: Swift.String? = nil)
-  #endif
   public static func == (a: JanusSDK.TCFVendor, b: JanusSDK.TCFVendor) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -798,9 +704,7 @@ public struct GPPSettings : Swift.Codable {
   public let mspaCoveredTransactions: Swift.Bool?
   public let enableTcfeuString: Swift.Bool?
   public let enabled: Swift.Bool?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(usApproach: Swift.String? = nil, mspaServiceProviderMode: Swift.Bool? = nil, mspaOptOutOptionMode: Swift.Bool? = nil, mspaCoveredTransactions: Swift.Bool? = nil, enableTcfeuString: Swift.Bool? = nil, enabled: Swift.Bool? = nil)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -808,9 +712,7 @@ public struct GPPFieldMapping : Swift.Codable, Swift.Equatable {
   public let region: Swift.String?
   public let mechanism: [JanusSDK.GPPMechanism]?
   public let notice: [Swift.String]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(region: Swift.String? = nil, mechanism: [JanusSDK.GPPMechanism]? = nil, notice: [Swift.String]? = nil)
-  #endif
   public var allMechanisms: [JanusSDK.GPPMechanism] {
     get
   }
@@ -823,9 +725,7 @@ public struct GPPMechanism : Swift.Codable, Swift.Equatable {
   public let notAvailable: Swift.String?
   public let notOptOut: Swift.String?
   public let field: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(optOut: Swift.String? = nil, notAvailable: Swift.String? = nil, notOptOut: Swift.String? = nil, field: Swift.String? = nil)
-  #endif
   public static func == (a: JanusSDK.GPPMechanism, b: JanusSDK.GPPMechanism) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -850,12 +750,11 @@ public struct PrivacyNotice : Swift.Codable, Swift.Equatable {
   public let translations: [JanusSDK.PrivacyNoticeTranslation]?
   public let children: [JanusSDK.PrivacyNotice]?
   public let gppFieldMapping: [JanusSDK.GPPFieldMapping]?
+  public let attExempt: Swift.Bool?
   public var allNotices: [JanusSDK.PrivacyNotice] {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(name: Swift.String? = nil, noticeKey: Swift.String? = nil, internalDescription: Swift.String? = nil, consentMechanism: Swift.String? = nil, dataUses: [Swift.String]? = nil, enforcementLevel: Swift.String? = nil, disabled: Swift.Bool? = nil, hasGpcFlag: Swift.Bool? = nil, framework: Swift.String? = nil, defaultPreference: Swift.String? = nil, id: Swift.String? = nil, origin: Swift.String? = nil, createdAt: Foundation.Date? = nil, updatedAt: Foundation.Date? = nil, cookies: [JanusSDK.Cookie]? = nil, systemsApplicable: Swift.Bool? = nil, translations: [JanusSDK.PrivacyNoticeTranslation]? = nil, children: [JanusSDK.PrivacyNotice]? = nil, gppFieldMapping: [JanusSDK.GPPFieldMapping]? = nil)
-  #endif
+  public init(name: Swift.String? = nil, noticeKey: Swift.String? = nil, internalDescription: Swift.String? = nil, consentMechanism: Swift.String? = nil, dataUses: [Swift.String]? = nil, enforcementLevel: Swift.String? = nil, disabled: Swift.Bool? = nil, hasGpcFlag: Swift.Bool? = nil, framework: Swift.String? = nil, defaultPreference: Swift.String? = nil, id: Swift.String? = nil, origin: Swift.String? = nil, createdAt: Foundation.Date? = nil, updatedAt: Foundation.Date? = nil, cookies: [JanusSDK.Cookie]? = nil, systemsApplicable: Swift.Bool? = nil, translations: [JanusSDK.PrivacyNoticeTranslation]? = nil, children: [JanusSDK.PrivacyNotice]? = nil, gppFieldMapping: [JanusSDK.GPPFieldMapping]? = nil, attExempt: Swift.Bool? = nil)
   public static func == (a: JanusSDK.PrivacyNotice, b: JanusSDK.PrivacyNotice) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -864,9 +763,7 @@ public struct Cookie : Swift.Codable, Swift.Equatable {
   public let name: Swift.String?
   public let path: Swift.String?
   public let domain: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(name: Swift.String? = nil, path: Swift.String? = nil, domain: Swift.String? = nil)
-  #endif
   public static func == (a: JanusSDK.Cookie, b: JanusSDK.Cookie) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -876,9 +773,7 @@ public struct PrivacyNoticeTranslation : Swift.Codable, Swift.Equatable {
   public let title: Swift.String?
   public let description: Swift.String?
   public let privacyNoticeHistoryId: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(language: Swift.String? = nil, title: Swift.String? = nil, description: Swift.String? = nil, privacyNoticeHistoryId: Swift.String? = nil)
-  #endif
   public static func == (a: JanusSDK.PrivacyNoticeTranslation, b: JanusSDK.PrivacyNoticeTranslation) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -899,9 +794,7 @@ public struct ExperienceConfig : Swift.Codable {
   public let component: Swift.String?
   public let translations: [JanusSDK.ExperienceConfigTranslation]?
   public let properties: [JanusSDK.PropertyInfo]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(name: Swift.String? = nil, disabled: Swift.Bool? = nil, dismissable: Swift.Bool? = nil, showLayer1Notices: Swift.Bool? = nil, layer1ButtonOptions: Swift.String? = nil, allowLanguageSelection: Swift.Bool? = nil, autoDetectLanguage: Swift.Bool? = nil, autoSubdomainCookieDeletion: Swift.Bool? = nil, regions: [Swift.String]? = nil, id: Swift.String? = nil, createdAt: Foundation.Date? = nil, updatedAt: Foundation.Date? = nil, component: Swift.String? = nil, translations: [JanusSDK.ExperienceConfigTranslation]? = nil, properties: [JanusSDK.PropertyInfo]? = nil)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -922,9 +815,7 @@ public struct ExperienceConfigTranslation : Swift.Codable {
   public let bannerDescription: Swift.String?
   public let description: Swift.String?
   public let privacyExperienceConfigHistoryId: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(language: Swift.String? = nil, acceptButtonLabel: Swift.String? = nil, acknowledgeButtonLabel: Swift.String? = nil, bannerTitle: Swift.String? = nil, isDefault: Swift.Bool? = nil, modalLinkLabel: Swift.String? = nil, privacyPolicyLinkLabel: Swift.String? = nil, privacyPolicyUrl: Swift.String? = nil, privacyPreferencesLinkLabel: Swift.String? = nil, purposeHeader: Swift.String? = nil, rejectButtonLabel: Swift.String? = nil, saveButtonLabel: Swift.String? = nil, title: Swift.String? = nil, bannerDescription: Swift.String? = nil, description: Swift.String? = nil, privacyExperienceConfigHistoryId: Swift.String? = nil)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -934,9 +825,7 @@ public struct PrivacyMeta : Swift.Codable {
   public let acceptAllFidesMobileData: JanusSDK.FidesMobileData?
   public let rejectAllFidesString: Swift.String?
   public let rejectAllFidesMobileData: JanusSDK.FidesMobileData?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(versionHash: Swift.String? = nil, acceptAllFidesString: Swift.String? = nil, acceptAllFidesMobileData: JanusSDK.FidesMobileData? = nil, rejectAllFidesString: Swift.String? = nil, rejectAllFidesMobileData: JanusSDK.FidesMobileData? = nil)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -948,18 +837,14 @@ public struct FidesMobileData : Swift.Codable {
 public struct PropertyInfo : Swift.Codable {
   public let id: Swift.String?
   public let name: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.String? = nil, name: Swift.String? = nil)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TCFVendorRelationship : Swift.Codable, Swift.Equatable {
   public let id: Swift.String?
   public let name: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.String? = nil, name: Swift.String? = nil)
-  #endif
   public static func == (a: JanusSDK.TCFVendorRelationship, b: JanusSDK.TCFVendorRelationship) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -967,9 +852,7 @@ public struct TCFVendorRelationship : Swift.Codable, Swift.Equatable {
 public struct TCFSystemRelationship : Swift.Codable, Swift.Equatable {
   public let id: Swift.String?
   public let name: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.String? = nil, name: Swift.String? = nil)
-  #endif
   public static func == (a: JanusSDK.TCFSystemRelationship, b: JanusSDK.TCFSystemRelationship) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -978,9 +861,7 @@ public struct TCFSpecialPurpose : Swift.Codable, Swift.Equatable {
   public let id: Swift.Int?
   public let name: Swift.String?
   public let description: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.Int? = nil, name: Swift.String? = nil, description: Swift.String? = nil)
-  #endif
   public static func == (a: JanusSDK.TCFSpecialPurpose, b: JanusSDK.TCFSpecialPurpose) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -995,9 +876,7 @@ public struct PrivacyPreferencesRequest : Swift.Codable {
   public let privacyExperienceConfigHistoryId: Swift.String?
   public let servedNoticeHistoryId: Swift.String?
   public let method: Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(propertyId: Swift.String, source: Swift.String = "Janus SDK", browserIdentity: JanusSDK.BrowserIdentity, preferences: [JanusSDK.UserPreference], userGeography: Swift.String, fidesString: Swift.String? = nil, privacyExperienceConfigHistoryId: Swift.String? = nil, servedNoticeHistoryId: Swift.String? = nil, method: Swift.String)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1017,33 +896,25 @@ public struct UserPreference : Swift.Codable {
 public struct TranslatedPrivacyNotice {
   public let originalNotice: JanusSDK.PrivacyNotice
   public let resolvedTranslation: JanusSDK.PrivacyNoticeTranslation?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(originalNotice: JanusSDK.PrivacyNotice, resolvedTranslation: JanusSDK.PrivacyNoticeTranslation?)
-  #endif
   public var title: Swift.String {
     get
   }
   public var description: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var privacyNoticeHistoryId: Swift.String? {
     get
   }
-  #endif
   public var noticeKey: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var consentMechanism: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var defaultPreference: Swift.String? {
     get
   }
-  #endif
 }
 public struct JanusTheme {
   public var primaryColor: SwiftUICore.Color
@@ -1075,39 +946,31 @@ extension SwiftUICore.View {
   
 }
 public class PrivacyExperienceViewModel : Foundation.ObservableObject {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @Combine.Published @_projectedValueProperty($privacyExperience) public var privacyExperience: JanusSDK.PrivacyExperienceItem? {
+  @Combine.Published<JanusSDK.PrivacyExperienceItem?> @_projectedValueProperty($privacyExperience) public var privacyExperience: JanusSDK.PrivacyExperienceItem? {
     get
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     set
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     _modify
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var $privacyExperience: Combine.Published<JanusSDK.PrivacyExperienceItem?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @Combine.Published @_projectedValueProperty($error) public var error: (any Swift.Error)? {
+  @Combine.Published<(any Swift.Error)?> @_projectedValueProperty($error) public var error: (any Swift.Error)? {
     get
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     set
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     _modify
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var $error: Combine.Published<(any Swift.Error)?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  #endif
-  @Combine.Published @_projectedValueProperty($isLoading) public var isLoading: Swift.Bool {
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isLoading) public var isLoading: Swift.Bool {
     get
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     set
@@ -1119,7 +982,7 @@ public class PrivacyExperienceViewModel : Foundation.ObservableObject {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  @Combine.Published @_projectedValueProperty($translatedNotices) public var translatedNotices: [JanusSDK.TranslatedPrivacyNotice] {
+  @Combine.Published<[JanusSDK.TranslatedPrivacyNotice]> @_projectedValueProperty($translatedNotices) public var translatedNotices: [JanusSDK.TranslatedPrivacyNotice] {
     get
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     set
@@ -1135,7 +998,7 @@ public class PrivacyExperienceViewModel : Foundation.ObservableObject {
     get
   }
   public var eventFiredOnDismiss: Swift.Bool
-  @Combine.Published @_projectedValueProperty($viewConsentValues) public var viewConsentValues: [Swift.String : Swift.Bool] {
+  @Combine.Published<[Swift.String : Swift.Bool]> @_projectedValueProperty($viewConsentValues) public var viewConsentValues: [Swift.String : Swift.Bool] {
     get
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     set
@@ -1147,9 +1010,19 @@ public class PrivacyExperienceViewModel : Foundation.ObservableObject {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(api: any JanusSDK.PrivacyExperienceAPIProtocol, consentManager: JanusSDK.ConsentManager, initialExperience: JanusSDK.PrivacyExperienceItem?)
-  #endif
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($attDenied) public var attDenied: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $attDenied: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public init(api: any JanusSDK.PrivacyExperienceAPIProtocol, consentManager: JanusSDK.ConsentManager, initialExperience: JanusSDK.PrivacyExperienceItem?, attDenied: Swift.Bool = false)
   public func updateConsent(value: Swift.Bool, forKey key: Swift.String)
   public func acceptAll()
   public func denyAll()
@@ -1183,9 +1056,7 @@ public class PrivacyExperienceViewModel : Foundation.ObservableObject {
   public typealias Body = @_opaqueReturnTypeOf("$s8JanusSDK21PrivacyExperienceViewV4bodyQrvp", 0) __
 }
 @_hasMissingDesignatedInitializers public class JSResourceLoader {
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func getJavaScriptContent(filename: Swift.String) -> Swift.String?
-  #endif
   public static func injectAllScripts(into webView: WebKit.WKWebView, injectionTime: WebKit.WKUserScriptInjectionTime = .atDocumentEnd, forMainFrameOnly: Swift.Bool = true)
   public static func injectScript(filename: Swift.String, into webView: WebKit.WKWebView, injectionTime: WebKit.WKUserScriptInjectionTime = .atDocumentEnd, forMainFrameOnly: Swift.Bool = true)
   public static func getAllJavaScriptContent() -> Swift.String
@@ -1194,24 +1065,16 @@ public class PrivacyExperienceViewModel : Foundation.ObservableObject {
 @_hasMissingDesignatedInitializers public class WebViewManager {
   @objc deinit
   public static func createConsentWebView(autoSyncOnStart: Swift.Bool = true, tcfWebView: Swift.Bool = false) -> WebKit.WKWebView
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func propagateConsentToWebViews(consentValues: [Swift.String : Swift.Bool], consentMethod: Swift.String? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func propagateConsentToOtherWebViews(consentValues: [Swift.String : Swift.Bool], sourceWebView: WebKit.WKWebView, consentMethod: Swift.String? = nil)
-  #endif
   public static func releaseConsentWebView(_ webView: WebKit.WKWebView)
 }
 @_hasMissingDesignatedInitializers public class WebViewSynchronizer {
   public init()
   public func enable(webView: WebKit.WKWebView)
   public func checkFides(webView: WebKit.WKWebView, completion: @escaping ([Swift.String : Swift.Bool]) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getConsentMetadataFromJS(webView: WebKit.WKWebView, completion: @escaping (Foundation.Date?, Foundation.Date?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func checkDocumentReadyState(webView: WebKit.WKWebView, completion: @escaping (Swift.String?) -> Swift.Void)
-  #endif
   public func waitForJavaScriptInit(webView: WebKit.WKWebView, completion: @escaping () -> Swift.Void)
   @objc deinit
 }
@@ -1241,6 +1104,9 @@ extension JanusSDK.ConsentMechanism : Swift.RawRepresentable {}
 extension JanusSDK.ConsentNonApplicableFlagMode : Swift.Equatable {}
 extension JanusSDK.ConsentNonApplicableFlagMode : Swift.Hashable {}
 extension JanusSDK.ConsentNonApplicableFlagMode : Swift.RawRepresentable {}
+extension JanusSDK.FidesAttStatus : Swift.Equatable {}
+extension JanusSDK.FidesAttStatus : Swift.Hashable {}
+extension JanusSDK.FidesAttStatus : Swift.RawRepresentable {}
 extension JanusSDK.ServingComponent : Swift.Equatable {}
 extension JanusSDK.ServingComponent : Swift.Hashable {}
 extension JanusSDK.ServingComponent : Swift.RawRepresentable {}

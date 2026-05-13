@@ -25,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final _websiteController = TextEditingController(text: 'https://ethyca.com');
   bool _isLoading = true;
   bool _autoShowExperience = true;
+  bool _enableAtt = false;
   ConsentFlagType _consentFlagType = ConsentFlagType.boolean;
   ConsentNonApplicableFlagMode _consentNonApplicableFlagMode =
       ConsentNonApplicableFlagMode.omit;
@@ -98,6 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ? null
                 : _websiteController.text.trim(),
         autoShowExperience: _autoShowExperience,
+        enableAtt: _enableAtt,
         consentFlagType: _consentFlagType,
         consentNonApplicableFlagMode: _consentNonApplicableFlagMode,
       );
@@ -166,6 +168,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           initialConsentFlagType: _consentFlagType,
                           initialConsentNonApplicableFlagMode:
                               _consentNonApplicableFlagMode,
+                          initialEnableAtt: _enableAtt,
+                          onEnableAttChanged: (value) {
+                            setState(() {
+                              _enableAtt = value;
+                            });
+                          },
                           onAutoShowExperienceChanged: (value) {
                             setState(() {
                               _autoShowExperience = value;

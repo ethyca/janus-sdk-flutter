@@ -52,6 +52,21 @@ class ConfigSets {
         consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
       ),
     ),
+    // Local Proxy (tunnel — use for real device testing with ATT)
+    ConfigSet(
+      name: 'Local Proxy',
+      config: JanusConfig(
+        apiHost: 'https://ethyca.braverobot.net',
+        privacyCenterHost: 'https://privacy.braverobot.net',
+        propertyId: 'FDS-C33DQM',
+        region: 'DE',
+        website: 'https://privacy.braverobot.net',
+        autoShowExperience: true,
+        consentFlagType: ConsentFlagType.boolean,
+        consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit,
+        enableAtt: true,
+      ),
+    ),
     // Local Slim
     ConfigSet(
       name: 'Local Slim',

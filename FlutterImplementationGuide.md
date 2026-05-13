@@ -205,7 +205,8 @@ final config = JanusConfiguration(
   saveUserPreferencesToFides: true,                         // 💾 Save user preferences to Fides via privacy-preferences API (default true)
   saveNoticesServedToFides: true,                           // 💾 Save notices served to Fides via notices-served API (default true)
   consentFlagType: ConsentFlagType.boolean,                 // 🎯 Format for consent values (default boolean)
-  consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit  // 🔄 Handle non-applicable notices (default omit)
+  consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit, // 🔄 Handle non-applicable notices (default omit)
+  enableAtt: true,                                          // 📲 Request Apple ATT permission before showing the privacy experience (iOS only, default false)
 );
 
 // Initialize the SDK
@@ -618,3 +619,36 @@ if (isTCF) {
   print('This is a standard privacy experience');
 }
 ```
+
+### Apple App Tracking Transparency (ATT) — iOS only
+
+On iOS 14+, Apple requires apps to request permission before tracking users across apps and websites. Set `enableAtt: true` in `JanusConfiguration` to have Janus present the system ATT dialog before showing the privacy experience.
+
+```dart
+final config = JanusConfiguration(
+  apiHost: 'https://privacy-plus.yourhost.com',
+  propertyId: 'FDS-A0B1C2',
+  enableAtt: true,
+);
+```
+
+When the user denies or restricts tracking, all non-exempt privacy notices are pre-populated to opt-out and their toggles are locked. On Android, `enableAtt` is accepted but has no effect — Android has no ATT equivalent.
+
+#### Required Info.plist Key (iOS)
+
+The system ATT dialog requires `NSUserTrackingUsageDescription` in your **iOS app's** `Info.plist`. Add it under `ios/Runner/Info.plist`:
+
+```xml
+<key>NSUserTrackingUsageDescription</key>
+<string>We use this to deliver personalized content and measure ad performance.</string>
+```
+
+Without this key, the ATT dialog will crash at runtime on iOS.
+
+> **Note:** This key must be added directly to `ios/Runner/Info.plist`. Flutter iOS projects use `INFOPLIST_FILE` to reference this file directly, so the key belongs in the file — not in Xcode build settings. After adding it, do a full rebuild (`flutter clean && flutter run`) to ensure the key is included in the app bundle.
+
+#### ATT-Exempt Notices
+
+By default, nearly all notices apply to ATT, meaning the notices are automatically opted-out when ATT is denied. The exception here would be notices meant for informative purposes only, e.g. an "Essential" notice, which cannot be opted out of.
+
+Aside from essential notices, a standard notice can be configured with `att_exempt` so that the notice is unaffected when ATT is denied, and the toggles remain interactive. This is configured within the Admin-UI.

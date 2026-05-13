@@ -176,7 +176,8 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
       let saveNoticesServedToFides = args["saveNoticesServedToFides"] as? Bool ?? true
       let consentFlagTypeString = args["consentFlagType"] as? String ?? "boolean"
       let consentNonApplicableFlagModeString = args["consentNonApplicableFlagMode"] as? String ?? "omit"
-      
+      let enableATT = (args["enableAtt"] as? NSNumber)?.boolValue ?? false
+
       // Convert string to ConsentFlagType enum
       let consentFlagType: ConsentFlagType
       switch consentFlagTypeString.lowercased() {
@@ -210,7 +211,8 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
         saveUserPreferencesToFides: saveUserPreferencesToFides,
         saveNoticesServedToFides: saveNoticesServedToFides,
         consentFlagType: consentFlagType,
-        consentNonApplicableFlagMode: consentNonApplicableFlagMode
+        consentNonApplicableFlagMode: consentNonApplicableFlagMode,
+        enableATT: enableATT
       )
 
       Janus.initialize(config: config) { success, error in

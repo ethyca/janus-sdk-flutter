@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.23 (2026-05-13)
+
+ - Native ATT support in iOS and Flutter Janus SDKs
+
+
 ## 0.1.22 (2026-03-16)
 
 - Address CSS issue in layer 2 TCF dialog

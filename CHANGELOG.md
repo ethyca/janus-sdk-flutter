@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.24 (2026-05-18)
+
+- Add UTM attribution to Janus SDK "Powered by" link (#3579)
+
+
 ## 0.1.23 (2026-05-13)
 
  - Native ATT support in iOS and Flutter Janus SDKs

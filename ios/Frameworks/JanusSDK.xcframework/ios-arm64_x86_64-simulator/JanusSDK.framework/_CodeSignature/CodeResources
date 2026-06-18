@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		rTTXpp2l+LHoWaf1ji3vEZFF1e0=
+		scrTZ3Ph8/gBXXKRlzXhghmCTeY=
 		</data>
 		<key>Headers/JanusSDK.h</key>
 		<data>
@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VUJ3UbLvgrmnoa2MSDIfrs4Cesg=
+		8WgYA3W+vMnbolPle60iGwyfkps=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		4T3wK9SbEsb0M/13c2LUZ6fGDGU=
+		sBKf+HzfplvsdwILYDhgGJMwXHo=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		84zhfeaoeJGfMy3n/Q5SyEdbJL8=
+		CDY/OIjzHLkkeUMA7Jop/bJJwqI=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		vi+fPyHA/lvIkrvL0wZuJqv6Quc=
+		ah+ASUsFYl85m4hBAN3+Fwe0/2M=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		84zhfeaoeJGfMy3n/Q5SyEdbJL8=
+		CDY/OIjzHLkkeUMA7Jop/bJJwqI=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZKjdlpvKIkaE4QNK3G5AUOjUh40=
+		arCng9/JtbuvszS461rgpLXVnbY=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		4T3wK9SbEsb0M/13c2LUZ6fGDGU=
+		sBKf+HzfplvsdwILYDhgGJMwXHo=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		BO+rLuZUBwBw5Vupk1Pwj/HWOCI=
+		fUiXoVVc6dp/4xw0BYIRc4+ea/g=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		kN7doI0uuCZX82l7fj1MlV+BNf4=
+		zPS9ftwulKxupz+yADJi11zE3/g=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		BO+rLuZUBwBw5Vupk1Pwj/HWOCI=
+		fUiXoVVc6dp/4xw0BYIRc4+ea/g=
 		</data>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		9g/i2NSupgllSoS+MHT6lm2jlS4=
+		QQ2W5vaenh12DfBwUA8u6NfUsdQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -100,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AS1fFA0YL0niQOP98kdy97xKw4Yyf24vWH/kl+clxSY=
+			4PoEMMA0BODXykfwoxp7wIE/C/OGAvyP4emb8Q2pbes=
 			</data>
 		</dict>
 		<key>Headers/JanusSDK.h</key>
@@ -114,70 +114,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BhbcGgerqfuPbAjOe9nvytPW02vPDkMtMOwoGWkAKC4=
+			dJgYcNxaxKP5qO3ByZ/Q0NOxpJ28/F8zxoTJ18lNEtQ=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eMBVzWRlziKP9xoZV3kJpQYhfHBfRLKBnkvl0Ofb28E=
+			RnkDH62b5vYPJe/bt36eA4jrLlJM1oLUiHurlokLOpQ=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7fXgbhnd6/yr+284bx+K8R0L6IE9NLSkHQvPLcgSmNU=
+			y22nkb0YnmKPcfyW9Rt+He1F6ZG9PUlxOcMHoa+WINs=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eMBVzWRlziKP9xoZV3kJpQYhfHBfRLKBnkvl0Ofb28E=
+			RnkDH62b5vYPJe/bt36eA4jrLlJM1oLUiHurlokLOpQ=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VZrkYPG5DhLGX32ZBuhlhmvr4xrUu4HOdDHhERd7waE=
+			DdDyJ7B1aO4G+b9JnX57Gdm1QuH6UiNONt8d4xjivQA=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BhbcGgerqfuPbAjOe9nvytPW02vPDkMtMOwoGWkAKC4=
+			dJgYcNxaxKP5qO3ByZ/Q0NOxpJ28/F8zxoTJ18lNEtQ=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+xy4Uonpvh6npOWUEIlK6VaW09qjh6mWgVxuU7gI0os=
+			AyQxjYZ4Z1v91d5Sy5BQu9Ad3PQiFYPKStKCHunCl04=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNcx6dbFXOqXCd5u/O5CyuUSrw2rucztmTGQ/7q+J24=
+			focqKOhYzLKkCt6HDoES5M0scnpZMjzqTENRVoAdPko=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+xy4Uonpvh6npOWUEIlK6VaW09qjh6mWgVxuU7gI0os=
+			AyQxjYZ4Z1v91d5Sy5BQu9Ad3PQiFYPKStKCHunCl04=
 			</data>
 		</dict>
 		<key>Modules/JanusSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cQFvqUB678Ww+H/U/vgbEMA2BaO8DPNCNFH74bDqr6Y=
+			vZCH7PhuUPXMkN0j5xxt2I3wbXcBi3oOM8GTs2FZApU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

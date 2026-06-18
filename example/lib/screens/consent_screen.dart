@@ -4,8 +4,15 @@ import 'package:provider/provider.dart';
 import 'package:janus_sdk_flutter/janus_sdk_flutter.dart';
 import '../janus_manager.dart';
 
-class ConsentScreen extends StatelessWidget {
+class ConsentScreen extends StatefulWidget {
   const ConsentScreen({super.key});
+
+  @override
+  State<ConsentScreen> createState() => _ConsentScreenState();
+}
+
+class _ConsentScreenState extends State<ConsentScreen> {
+  bool _analyticsConsent = false;
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +70,89 @@ class ConsentScreen extends StatelessWidget {
                         janusManager.consentMethod.isEmpty
                             ? 'No consent method available'
                             : janusManager.consentMethod,
+                  ),
+                  const SizedBox(height: 16),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'setConsent Test',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Row(
+                            children: [
+                              const Text('analytics'),
+                              const Spacer(),
+                              Switch(
+                                value: _analyticsConsent,
+                                onChanged:
+                                    (v) =>
+                                        setState(() => _analyticsConsent = v),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: ElevatedButton(
+                                  onPressed:
+                                      janusManager.isInitialized
+                                          ? () => janusManager.setConsent(
+                                            values: {
+                                              'analytics': _analyticsConsent,
+                                            },
+                                          )
+                                          : null,
+                                  child: const Text('setConsent()'),
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: ElevatedButton(
+                                  onPressed:
+                                      janusManager.isInitialized
+                                          ? () => janusManager.setConsent(
+                                            values: {
+                                              'analytics': _analyticsConsent,
+                                            },
+                                            saveToFides: true,
+                                          )
+                                          : null,
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.blue.shade100,
+                                    foregroundColor: Colors.blue.shade900,
+                                  ),
+                                  child: const Text('+ saveToFides'),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            'Echo events since last call: ${janusManager.setConsentEchoCount}',
+                            style: TextStyle(
+                              color:
+                                  janusManager.setConsentEchoCount > 1
+                                      ? Colors.red
+                                      : null,
+                              fontWeight:
+                                  janusManager.setConsentEchoCount > 1
+                                      ? FontWeight.bold
+                                      : null,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 24),
                   Row(

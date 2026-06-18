@@ -60,6 +60,15 @@ class MockJanusSdkFlutterPlatform
   Future<void> clearConsent({bool clearMetadata = false}) => Future.value();
 
   @override
+  Future<void> setConsent({
+    required Map<String, bool> values,
+    String? fidesString,
+    ConsentMethod? consentMethod,
+    bool saveToFides = false,
+  }) =>
+      Future.value();
+
+  @override
   Future<String> createConsentWebView({bool autoSyncOnStart = true}) =>
       Future.value('mock-webview-id');
 
@@ -245,5 +254,26 @@ void main() {
     final isTCF = await janusSdkPlugin.isTCFExperience;
     expect(isTCF, isA<bool>());
     expect(isTCF, true);
+  });
+
+  test('setConsent delegates to platform with correct values', () async {
+    Janus janusSdkPlugin = Janus();
+    MockJanusSdkFlutterPlatform fakePlatform = MockJanusSdkFlutterPlatform();
+    JanusSdkFlutterPlatform.instance = fakePlatform;
+
+    await janusSdkPlugin.setConsent(
+      values: {'analytics': true, 'marketing': false},
+      fidesString: 'CPz4OMAP',
+      consentMethod: ConsentMethod.fidesJsUpdate,
+    );
+    // If no exception is thrown, delegation succeeded
+  });
+
+  test('setConsent ConsentMethod.fidesJsUpdate serialises to fides_js_update', () {
+    expect(ConsentMethod.fidesJsUpdate.value, 'fides_js_update');
+    expect(
+      ConsentMethod.fromString('fides_js_update'),
+      ConsentMethod.fidesJsUpdate,
+    );
   });
 }

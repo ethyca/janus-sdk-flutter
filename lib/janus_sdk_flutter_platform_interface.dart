@@ -150,6 +150,16 @@ abstract class JanusSdkFlutterPlatform extends PlatformInterface {
     throw UnimplementedError('clearConsent() has not been implemented.');
   }
 
+  /// Programmatically set consent values from outside the native privacy experience
+  Future<void> setConsent({
+    required Map<String, bool> values,
+    String? fidesString,
+    ConsentMethod? consentMethod,
+    bool saveToFides = false,
+  }) {
+    throw UnimplementedError('setConsent() has not been implemented.');
+  }
+
   /// Set logger configuration for native platforms
   ///
   /// [useProxy] - Whether native platforms should use proxy loggers that call back to Flutter

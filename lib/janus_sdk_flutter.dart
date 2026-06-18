@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:webview_flutter/webview_flutter.dart';
 
+import 'consent_method.dart';
 import 'janus_sdk_flutter_platform_interface.dart';
 import 'janus_sdk_flutter_method_channel.dart';
 import 'janus_web_view_controller.dart';
@@ -11,6 +12,7 @@ import 'consent_flag_type.dart';
 import 'consent_non_applicable_flag_mode.dart';
 
 // Export public types
+export 'consent_method.dart';
 export 'janus_event_type.dart';
 export 'janus_logger.dart';
 export 'consent_flag_type.dart';
@@ -193,6 +195,40 @@ class Janus {
   Future<void> clearConsent({bool clearMetadata = false}) {
     return JanusSdkFlutterPlatform.instance.clearConsent(
       clearMetadata: clearMetadata,
+    );
+  }
+
+  /// Programmatically set consent values from outside the native privacy experience.
+  ///
+  /// Use cases include bidirectional sync with custom WebViews running FidesJS and
+  /// pre-populating consent from legacy storage during app migration.
+  ///
+  /// [values] — map of notice keys to boolean consent values.
+  /// [fidesString] — optional fides string (TCF use cases).
+  /// [consentMethod] — how consent was collected. Defaults to null (stored as unknown).
+  /// [saveToFides] — if true, persists to Fides backend via privacy-preferences API.
+  ///   Silently no-ops if no privacy experience is currently loaded (e.g. during
+  ///   migration pre-population before initialize() completes).
+  ///
+  /// Example:
+  /// ```dart
+  /// await janus.setConsent(
+  ///   values: Map<String, bool>.from(detail['consent']),
+  ///   fidesString: detail['fides_string'],
+  ///   consentMethod: ConsentMethod.fromString(detail['fides_meta']?['consentMethod']),
+  /// );
+  /// ```
+  Future<void> setConsent({
+    required Map<String, bool> values,
+    String? fidesString,
+    ConsentMethod? consentMethod,
+    bool saveToFides = false,
+  }) {
+    return JanusSdkFlutterPlatform.instance.setConsent(
+      values: values,
+      fidesString: fidesString,
+      consentMethod: consentMethod,
+      saveToFides: saveToFides,
     );
   }
 

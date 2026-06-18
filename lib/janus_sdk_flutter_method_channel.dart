@@ -282,6 +282,26 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
   }
 
   @override
+  Future<void> setConsent({
+    required Map<String, bool> values,
+    String? fidesString,
+    ConsentMethod? consentMethod,
+    bool saveToFides = false,
+  }) async {
+    try {
+      await methodChannel.invokeMethod<void>('setConsent', {
+        'values': values,
+        'fidesString': fidesString,
+        'consentMethod': consentMethod?.value,
+        'saveToFides': saveToFides,
+      });
+    } on PlatformException catch (e) {
+      Janus.log('Failed to set consent', level: LogLevel.error, error: e);
+      rethrow;
+    }
+  }
+
+  @override
   Future<String> createConsentWebView({bool autoSyncOnStart = true}) async {
     try {
       final result = await methodChannel.invokeMethod<String>(

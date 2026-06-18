@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
 // swift-module-flags: -target arm64-apple-ios13 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name JanusSDK
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
 import AppTrackingTransparency
 import Combine
 import DeveloperToolsSupport
@@ -57,6 +57,7 @@ public protocol PrivacyPreferencesAPIProtocol {
 public class PrivacyPreferencesAPI : JanusSDK.PrivacyPreferencesAPIProtocol {
   public init(apiHost: Swift.String, urlSession: Foundation.URLSession = .shared)
   public func savePrivacyPreferences(consentChanges: [Swift.String : Swift.Bool], consentMethod: JanusSDK.ConsentMethod, fidesString: Swift.String? = nil, notices: [JanusSDK.TranslatedPrivacyNotice], privacyExperienceConfigHistoryId: Swift.String?, servedNoticeHistoryId: Swift.String? = nil, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  public func savePrivacyPreferencesRaw(consentChanges: [Swift.String : Swift.Bool], consentMethod: JanusSDK.ConsentMethod, fidesString: Swift.String? = nil, preferences: [JanusSDK.UserPreference], privacyExperienceConfigHistoryId: Swift.String?, servedNoticeHistoryId: Swift.String? = nil, completion: ((Swift.Bool) -> Swift.Void)? = nil)
   @objc deinit
 }
 public struct ConsentMetadata : Swift.Codable {
@@ -148,6 +149,7 @@ public class IABTCFStorage {
   public static func createConsentWebView(autoSyncOnStart: Swift.Bool = true) -> WebKit.WKWebView
   public static func releaseConsentWebView(_ webView: WebKit.WKWebView)
   public static func clearConsent(clearMetadata: Swift.Bool = false)
+  public static func setConsent(values: [Swift.String : Swift.Bool], fidesString: Swift.String? = nil, consentMethod: JanusSDK.ConsentMethod? = nil, saveToFides: Swift.Bool = false)
   public static func getLocationByIPAddress(completion: @escaping (Swift.Bool, JanusSDK.IPLocationResponse?, (any Swift.Error)?) -> Swift.Void)
   public static func setLogger(_ logger: (any JanusSDK.JanusLogger)?)
   @objc deinit
@@ -226,6 +228,7 @@ public class JanusImplementation : JanusSDK.JanusProtocol {
   public func createConsentWebView(autoSyncOnStart: Swift.Bool = true) -> WebKit.WKWebView
   public func releaseConsentWebView(_ webView: WebKit.WKWebView)
   public func clearConsent(clearMetadata: Swift.Bool = false)
+  public func setConsent(values: [Swift.String : Swift.Bool], fidesString: Swift.String?, consentMethod: JanusSDK.ConsentMethod?, saveToFides: Swift.Bool)
   public func getLocationByIPAddress(completion: @escaping (Swift.Bool, JanusSDK.IPLocationResponse?, (any Swift.Error)?) -> Swift.Void)
   public func notifyEventListeners(event: JanusSDK.JanusEvent)
   @objc deinit
@@ -254,6 +257,7 @@ public protocol JanusProtocol {
   func createConsentWebView(autoSyncOnStart: Swift.Bool) -> WebKit.WKWebView
   func releaseConsentWebView(_ webView: WebKit.WKWebView)
   func clearConsent(clearMetadata: Swift.Bool)
+  func setConsent(values: [Swift.String : Swift.Bool], fidesString: Swift.String?, consentMethod: JanusSDK.ConsentMethod?, saveToFides: Swift.Bool)
   func notifyEventListeners(event: JanusSDK.JanusEvent)
   var consent: [Swift.String : Any] { get }
   var internalConsent: [Swift.String : Swift.Bool] { get }
@@ -435,6 +439,7 @@ public enum ConsentMethod : Swift.String, Swift.CaseIterable {
   case unknown
   case error
   case attDenied
+  case fidesJsUpdate
   public static func from(_ value: Swift.String?) -> JanusSDK.ConsentMethod
   public init?(rawValue: Swift.String)
   public typealias AllCases = [JanusSDK.ConsentMethod]
@@ -875,8 +880,9 @@ public struct PrivacyPreferencesRequest : Swift.Codable {
   public let fidesString: Swift.String?
   public let privacyExperienceConfigHistoryId: Swift.String?
   public let servedNoticeHistoryId: Swift.String?
-  public let method: Swift.String
-  public init(propertyId: Swift.String, source: Swift.String = "Janus SDK", browserIdentity: JanusSDK.BrowserIdentity, preferences: [JanusSDK.UserPreference], userGeography: Swift.String, fidesString: Swift.String? = nil, privacyExperienceConfigHistoryId: Swift.String? = nil, servedNoticeHistoryId: Swift.String? = nil, method: Swift.String)
+  public let method: Swift.String?
+  public let requestOrigin: Swift.String?
+  public init(propertyId: Swift.String, source: Swift.String = "Janus SDK", browserIdentity: JanusSDK.BrowserIdentity, preferences: [JanusSDK.UserPreference], userGeography: Swift.String, fidesString: Swift.String? = nil, privacyExperienceConfigHistoryId: Swift.String? = nil, servedNoticeHistoryId: Swift.String? = nil, method: Swift.String? = nil, requestOrigin: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1066,7 +1072,7 @@ public class PrivacyExperienceViewModel : Foundation.ObservableObject {
   @objc deinit
   public static func createConsentWebView(autoSyncOnStart: Swift.Bool = true, tcfWebView: Swift.Bool = false) -> WebKit.WKWebView
   @objc public static func propagateConsentToWebViews(consentValues: [Swift.String : Swift.Bool], consentMethod: Swift.String? = nil)
-  public static func propagateConsentToOtherWebViews(consentValues: [Swift.String : Swift.Bool], sourceWebView: WebKit.WKWebView, consentMethod: Swift.String? = nil)
+  public static func propagateConsentToOtherWebViews(consentValues: [Swift.String : Swift.Bool], sourceWebView: WebKit.WKWebView?, consentMethod: Swift.String? = nil)
   public static func releaseConsentWebView(_ webView: WebKit.WKWebView)
 }
 @_hasMissingDesignatedInitializers public class WebViewSynchronizer {

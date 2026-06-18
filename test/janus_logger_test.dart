@@ -49,6 +49,15 @@ class MockJanusSdkFlutterPlatform
   Future<void> clearConsent({bool clearMetadata = false}) => Future.value();
 
   @override
+  Future<void> setConsent({
+    required Map<String, bool> values,
+    String? fidesString,
+    ConsentMethod? consentMethod,
+    bool saveToFides = false,
+  }) =>
+      Future.value();
+
+  @override
   Future<String> createConsentWebView({bool autoSyncOnStart = true}) =>
       Future.value('mock-webview-id');
 

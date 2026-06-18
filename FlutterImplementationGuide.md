@@ -284,6 +284,44 @@ final versionHash = metadata['versionHash']; // Version hash of the privacy expe
 final fidesString = await _janusSdk.fidesString;
 ```
 
+### Programmatic Consent Updates
+
+Use `setConsent()` to write consent values directly to the SDK from Dart code — without showing the privacy experience UI. This is intended for two scenarios:
+
+1. **Bidirectional WebView sync** — your app hosts a FidesJS page in a custom `WebView` and needs to push web-originated consent into native storage via a JS bridge.
+2. **Legacy consent migration** — users already consented through an older flow; pre-populate the SDK before the experience initializes so they aren't re-prompted.
+
+```dart
+// Minimal call — local persist only, no server sync
+await _janusSdk.setConsent(
+  values: {'analytics': true, 'marketing': false},
+);
+
+// With a fides string (e.g. from a FidesJS FidesUpdated event)
+await _janusSdk.setConsent(
+  values: {'analytics': true},
+  fidesString: 'CPz4OMAP...',
+  consentMethod: ConsentMethod.fidesJsUpdate,
+);
+
+// With server sync — requires an experience to be loaded
+// Silently no-ops the network call if no experience is available
+await _janusSdk.setConsent(
+  values: {'analytics': true},
+  consentMethod: ConsentMethod.save,
+  saveToFides: true,
+);
+```
+
+A `JanusEvent` (`EXPERIENCE_SELECTION_UPDATED`) is fired to all registered listeners after consent is written, identical to the event fired when a user submits the privacy experience UI.
+
+`clearConsent()` resets all stored consent values and optionally clears metadata timestamps:
+
+```dart
+await _janusSdk.clearConsent();                    // clear values, keep timestamps
+await _janusSdk.clearConsent(clearMetadata: true); // clear everything
+```
+
 ### Region and Geolocation
 
 ```dart
@@ -394,6 +432,20 @@ flutterController.addJavaScriptChannel(
 ```
 
 ⚠️ **Important:** Always call `releaseConsentWebView()` when you're done with a WebView to prevent memory leaks. WebView JavaScript interfaces require explicit cleanup, and failing to release the WebView properly can lead to resource issues.
+
+#### Bidirectional Consent Sync & Loop Prevention
+
+Janus WebViews are **bidirectional**: consent changes flow both ways between native storage and any FidesJS-powered page.
+
+- **Native → Web**: When consent changes in native code (via the privacy experience, `clearConsent()`, or `setConsent()`), Janus injects an `UpdateConsent` message into all managed WebViews so FidesJS reflects the new state.
+- **Web → Native**: When a user interacts with a FidesJS UI inside a managed WebView, the JS bridge forwards consent values back to native storage and fires a `JanusEvent` to all registered listeners.
+
+**How loops are prevented:**
+
+1. **Source exclusion** — When a consent update originates *from* a WebView, Janus propagates the change to all *other* managed WebViews but skips the source WebView. Programmatic calls (e.g. `setConsent()`) have no source WebView and propagate to all.
+2. **FidesJS idempotency** — FidesJS does not re-dispatch a `FidesUpdated` event when the incoming consent values are identical to the current state. This prevents an echo from triggering a second round-trip back to native.
+
+These two layers work together so that a WebView-initiated consent change does not bounce indefinitely between FidesJS and native code.
 
 ### Complete Example
 

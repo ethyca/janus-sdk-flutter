@@ -301,6 +301,15 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
       Janus.clearConsent(clearMetadata: clearMetadata)
       result(nil)
 
+    case "setConsent":
+      let args = call.arguments as? [String: Any]
+      let values = args?["values"] as? [String: Bool] ?? [:]
+      let fidesString = args?["fidesString"] as? String
+      let consentMethod = (args?["consentMethod"] as? String).flatMap(ConsentMethod.init(rawValue:))
+      let saveToFides = args?["saveToFides"] as? Bool ?? false
+      Janus.setConsent(values: values, fidesString: fidesString, consentMethod: consentMethod, saveToFides: saveToFides)
+      result(nil)
+
     case "addConsentEventListener":
       // Create a unique ID for this listener
       let listenerId = UUID().uuidString

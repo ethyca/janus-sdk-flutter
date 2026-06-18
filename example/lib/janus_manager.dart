@@ -219,6 +219,10 @@ class JanusManager extends ChangeNotifier {
   String currentRegion = '';
   Map<String, String> ipLocationDetails = {};
 
+  // setConsent echo tracking
+  int setConsentEchoCount = 0;
+  DateTime? _setConsentTimestamp;
+
   // Configuration
   JanusConfig? config;
 
@@ -419,6 +423,12 @@ class JanusManager extends ChangeNotifier {
       if (event.eventType == JanusEventType.consentUpdatedFromWebView ||
           event.eventType == JanusEventType.experienceSelectionUpdated) {
         refreshConsentValues();
+      }
+
+      // Count echo events that arrive after a setConsent call
+      if (event.eventType == JanusEventType.consentUpdatedFromWebView &&
+          _setConsentTimestamp != null) {
+        setConsentEchoCount++;
       }
 
       notifyListeners();
@@ -676,6 +686,17 @@ class JanusManager extends ChangeNotifier {
 
     // Reinitialize Janus with the new region
     await setupJanus();
+  }
+
+  Future<void> setConsent({
+    required Map<String, bool> values,
+    bool saveToFides = false,
+  }) async {
+    setConsentEchoCount = 0;
+    _setConsentTimestamp = DateTime.now();
+    notifyListeners();
+    await Janus().setConsent(values: values, saveToFides: saveToFides);
+    await refreshConsentValues();
   }
 
   @override

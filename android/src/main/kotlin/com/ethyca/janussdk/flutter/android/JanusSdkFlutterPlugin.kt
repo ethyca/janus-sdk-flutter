@@ -18,6 +18,7 @@ import com.ethyca.janussdk.android.JanusLogger
 import com.ethyca.janussdk.android.LogLevel
 import com.ethyca.janussdk.android.events.JanusEvent
 import com.ethyca.janussdk.android.models.ConsentFlagType
+import com.ethyca.janussdk.android.models.ConsentMethod
 import com.ethyca.janussdk.android.models.ConsentNonApplicableFlagMode
 import java.util.Date
 import com.ethyca.janussdk.android.events.*
@@ -279,6 +280,17 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
             pluginLogger.log("No activity available for clearConsent", LogLevel.ERROR, null, null)
             result.error("NO_ACTIVITY", "Activity is not available", null)
           }
+        }
+
+        "setConsent" -> {
+          @Suppress("UNCHECKED_CAST")
+          val args = call.arguments as? Map<String, Any>
+          val values = (args?.get("values") as? Map<String, Boolean>) ?: emptyMap()
+          val fidesString = args?.get("fidesString") as? String
+          val consentMethod = (args?.get("consentMethod") as? String)?.let { ConsentMethod.fromString(it) }
+          val saveToFides = args?.get("saveToFides") as? Boolean ?: false
+          Janus.setConsent(values, fidesString, consentMethod, saveToFides)
+          result.success(null)
         }
 
         "createConsentWebView" -> {

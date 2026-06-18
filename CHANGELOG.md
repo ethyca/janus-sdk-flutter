@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.25 (2026-06-17)
+
+Support for public setConsent() method
+
+
 ## 0.1.24 (2026-05-18)
 
 - Add UTM attribution to Janus SDK "Powered by" link (#3579)

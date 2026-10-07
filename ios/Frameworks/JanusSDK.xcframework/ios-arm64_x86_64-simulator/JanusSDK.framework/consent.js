@@ -60,6 +60,8 @@ window.Janus.getFidesConsentMetadata = function() {
  * @param {string} options.consentMethod - Method of consent ("save", "dismiss", default: "janus_sync")
  * @param {boolean} options.dispatchEvents - Whether to dispatch events (default: true)
  * @param {boolean} options.base64Cookie - Whether to base64 encode the cookie (default: false)
+ * @param {string} options.fidesString - Fides string (TC string with optional AC/GPP sections) to seed the cookie with
+ * @param {string} options.tcfVersionHash - TCF experience version hash matching the fides string
  */
 window.Janus.updateConsent = function(newConsentValues, options = {}) {
     if (!window.Fides) {
@@ -71,7 +73,9 @@ window.Janus.updateConsent = function(newConsentValues, options = {}) {
     const {
         consentMethod = "janus_sync",
         dispatchEvents = true,
-        base64Cookie = false
+        base64Cookie = false,
+        fidesString = undefined,
+        tcfVersionHash = undefined
     } = options;
     
     // Get current cookie or create a new one if it doesn't exist
@@ -101,6 +105,28 @@ window.Janus.updateConsent = function(newConsentValues, options = {}) {
         };
     }
     
+    // Seed the fides string (TC string) into the cookie before dispatching events
+    if (typeof fidesString === "string" && fidesString.length > 0) {
+        // Only break the hash pairing when the TC string is actually changing. Native
+        // echoes back the stored string whenever its stored version hash is empty
+        // (e.g. a fresh install or a migrated one before any experience is loaded);
+        // deleting the hash in that case would re-prompt a user who already consented.
+        if (cookie.fides_string !== fidesString) {
+            cookie.fides_string = fidesString;
+            if (typeof tcfVersionHash === "string" && tcfVersionHash.length > 0) {
+                cookie.tcf_version_hash = tcfVersionHash;
+            } else {
+                // Never pair a new TC string with a hash from a previous experience version;
+                // a stale hash would make tcfCookieIsProperlySet pass while comparing the
+                // experience against the wrong version. Clear it so the mismatch is honest.
+                delete cookie.tcf_version_hash;
+            }
+        } else if (typeof tcfVersionHash === "string" && tcfVersionHash.length > 0) {
+            // Same TC string: keep the pairing, but accept a refreshed hash when one is sent
+            cookie.tcf_version_hash = tcfVersionHash;
+        }
+    }
+    
     // Dispatch a "FidesUpdating" event with the new preferences
     if (dispatchEvents) {
         // Add source attribute to prevent event loops
@@ -115,6 +141,9 @@ window.Janus.updateConsent = function(newConsentValues, options = {}) {
     window.Fides.consent = cookie.consent;
     window.Fides.fides_meta = cookie.fides_meta;
     window.Fides.identity = cookie.identity;
+    if (cookie.fides_string) {
+        window.Fides.fides_string = cookie.fides_string;
+    }
     
     // Save preferences to the cookie in the browser
     window.Janus.log("Saving preferences to cookie");

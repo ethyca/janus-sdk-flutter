@@ -219,7 +219,8 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
         if success {
           result(true)
         } else if let error = error {
-          result(FlutterError(code: "INIT_ERROR", message: error.localizedDescription, details: nil))
+          // details carries the JanusError case name; Dart's initialize logs it and returns false
+          result(FlutterError(code: "INIT_ERROR", message: error.localizedDescription, details: (error as? JanusError)?.caseName))
         } else {
           result(FlutterError(code: "INIT_ERROR", message: "Unknown error", details: nil))
         }
@@ -387,7 +388,13 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
 
     case "getRegion":
       result(Janus.region ?? "")
-      
+
+    case "setExternalId":
+      let args = call.arguments as? [String: Any]
+      let externalId = args?["externalId"] as? String
+      Janus.setExternalId(externalId)
+      result(nil)
+
     case "setLogger":
       guard let args = call.arguments as? [String: Any],
             let useProxy = args["useProxy"] as? Bool else {

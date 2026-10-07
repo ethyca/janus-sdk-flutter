@@ -84,7 +84,10 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
       Janus.log(
         'Failed to initialize Janus SDK: ${e.message}',
         level: LogLevel.error,
-        metadata: {'code': e.code},
+        metadata: {
+          'code': e.code,
+          if (e.details != null) 'details': e.details.toString(),
+        },
       );
       return false;
     }
@@ -361,6 +364,18 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
     } on PlatformException catch (e) {
       Janus.log('Failed to get region', level: LogLevel.error, error: e);
       return '';
+    }
+  }
+
+  @override
+  Future<void> setExternalId(String? externalId) async {
+    try {
+      await methodChannel.invokeMethod<void>('setExternalId', {
+        'externalId': externalId,
+      });
+    } on PlatformException catch (e) {
+      Janus.log('Failed to set external ID', level: LogLevel.warning, error: e);
+      rethrow;
     }
   }
 

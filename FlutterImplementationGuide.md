@@ -97,6 +97,8 @@ The SDK provides specific error handling through the Future API. It's important 
 - For network errors, provide a retry option
 - With invalid configuration, check your configuration values for correctness
 
+When initialization fails the SDK logs `Failed to initialize Janus SDK: <message>` with metadata `code: INIT_ERROR` and `details: <native error case>` (for example `authenticationFailed` on iOS, `AuthenticationFailed` on Android — the privacy-experience endpoint returned 401/403, usually `apiHost` pointing at an authenticated API host rather than the Privacy Center). Set your `JanusLogger` before `initialize()` to receive it.
+
 Here's a complete example of initialization with proper error handling:
 
 ```dart
@@ -320,6 +322,20 @@ A `JanusEvent` (`EXPERIENCE_SELECTION_UPDATED`) is fired to all registered liste
 ```dart
 await _janusSdk.clearConsent();                    // clear values, keep timestamps
 await _janusSdk.clearConsent(clearMetadata: true); // clear everything
+```
+
+### External User ID
+
+Use `setExternalId()` to attach your application's own user identifier (e.g. an Auth0 `sub` or database UUID) to every consent and notices-served request the SDK sends to Fides. Fides stores this on the `BrowserIdentity` of each request, letting it link consent records to a known user — which enables DSR (data subject request) correlation and consent merging across a user's devices.
+
+Call it after the user logs in. Pass `null` to clear the identifier on logout. The value is held in memory for the lifetime of the SDK and applied to all *subsequent* API calls; it does not retroactively update records already sent.
+
+```dart
+// After login — associate consent with your app's user ID
+await _janusSdk.setExternalId('auth0|abc123');
+
+// On logout — stop associating consent with the user
+await _janusSdk.setExternalId(null);
 ```
 
 ### Region and Geolocation

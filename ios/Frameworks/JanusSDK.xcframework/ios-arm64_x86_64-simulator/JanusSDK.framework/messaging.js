@@ -40,7 +40,9 @@ window.Janus.receiveMessageFromNative = function(jsonString) {
             // Handle multi-value consent updates
             window.Janus.updateConsent(message.data.consent, {
                 consentMethod: consentMethod,
-                dispatchEvents: true
+                dispatchEvents: true,
+                fidesString: message.data.fidesString,
+                tcfVersionHash: message.data.tcfVersionHash
             });
             return;
         }

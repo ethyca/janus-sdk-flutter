@@ -160,6 +160,12 @@ abstract class JanusSdkFlutterPlatform extends PlatformInterface {
     throw UnimplementedError('setConsent() has not been implemented.');
   }
 
+  /// Set the external user identifier included in all consent API calls.
+  /// Pass null to clear it on logout.
+  Future<void> setExternalId(String? externalId) {
+    throw UnimplementedError('setExternalId() has not been implemented.');
+  }
+
   /// Set logger configuration for native platforms
   ///
   /// [useProxy] - Whether native platforms should use proxy loggers that call back to Flutter

@@ -2715,6 +2715,60 @@
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adoptFidesString",
+            "printedName": "adoptFidesString(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14ConsentManagerC16adoptFidesStringyySSF",
+            "mangledName": "$s8JanusSDK14ConsentManagerC16adoptFidesStringyySSF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adoptVersionHash",
+            "printedName": "adoptVersionHash(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14ConsentManagerC16adoptVersionHashyySSF",
+            "mangledName": "$s8JanusSDK14ConsentManagerC16adoptVersionHashyySSF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -2943,6 +2997,66 @@
             "declKind": "Func",
             "usr": "s:8JanusSDK22ConsentManagerProtocolP03setC06values11versionHash11fidesString13consentMethodySDySSSbG_S2SSgAJtF",
             "mangledName": "$s8JanusSDK22ConsentManagerProtocolP03setC06values11versionHash11fidesString13consentMethodySDySSSbG_S2SSgAJtF",
+            "moduleName": "JanusSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
+            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adoptFidesString",
+            "printedName": "adoptFidesString(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK22ConsentManagerProtocolP16adoptFidesStringyySSF",
+            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP16adoptFidesStringyySSF",
+            "moduleName": "JanusSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
+            "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adoptVersionHash",
+            "printedName": "adoptVersionHash(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK22ConsentManagerProtocolP16adoptVersionHashyySSF",
+            "mangledName": "$s8JanusSDK22ConsentManagerProtocolP16adoptVersionHashyySSF",
             "moduleName": "JanusSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.ConsentManagerProtocol>",
             "sugared_genericSig": "<Self where Self : JanusSDK.ConsentManagerProtocol>",
@@ -4835,11 +4949,9 @@
             "mangledName": "$s8JanusSDK0A0C14showExperience4fromySo16UIViewControllerC_tFZ",
             "moduleName": "JanusSDK",
             "static": true,
-            "intro_iOS": "13.0",
             "declAttributes": [
               "Final",
               "AccessControl",
-              "Available",
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
@@ -4996,6 +5108,43 @@
             "declKind": "Func",
             "usr": "s:8JanusSDK0A0C12clearConsent0C8MetadataySb_tFZ",
             "mangledName": "$s8JanusSDK0A0C12clearConsent0C8MetadataySb_tFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setExternalId",
+            "printedName": "setExternalId(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A0C13setExternalIdyySSSgFZ",
+            "mangledName": "$s8JanusSDK0A0C13setExternalIdyySSSgFZ",
             "moduleName": "JanusSDK",
             "static": true,
             "declAttributes": [
@@ -5803,12 +5952,13 @@
             "usr": "s:8JanusSDK0A13ConfigurationV5themeAA0A5ThemeVvp",
             "mangledName": "$s8JanusSDK0A13ConfigurationV5themeAA0A5ThemeVvp",
             "moduleName": "JanusSDK",
-            "intro_iOS": "13.0",
             "declAttributes": [
+              "HasStorage",
               "AccessControl",
-              "Available",
               "RawDocComment"
             ],
+            "isLet": true,
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -5826,6 +5976,7 @@
                 "usr": "s:8JanusSDK0A13ConfigurationV5themeAA0A5ThemeVvg",
                 "mangledName": "$s8JanusSDK0A13ConfigurationV5themeAA0A5ThemeVvg",
                 "moduleName": "JanusSDK",
+                "implicit": true,
                 "accessorKind": "get"
               }
             ]
@@ -5928,119 +6079,13 @@
                 "kind": "TypeNominal",
                 "name": "JanusTheme",
                 "printedName": "JanusSDK.JanusTheme",
+                "hasDefaultArg": true,
                 "usr": "s:8JanusSDK0A5ThemeV"
               }
             ],
             "declKind": "Constructor",
             "usr": "s:8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4Mode9enableATT5themeACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOSbAA0A5ThemeVtcfc",
             "mangledName": "$s8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4Mode9enableATT5themeACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOSbAA0A5ThemeVtcfc",
-            "moduleName": "JanusSDK",
-            "intro_iOS": "13.0",
-            "declAttributes": [
-              "AccessControl",
-              "Available",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(apiHost:privacyCenterHost:propertyId:ipLocation:region:fidesEvents:autoShowExperience:saveUserPreferencesToFides:saveNoticesServedToFides:consentFlagType:consentNonApplicableFlagMode:enableATT:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "JanusConfiguration",
-                "printedName": "JanusSDK.JanusConfiguration",
-                "usr": "s:8JanusSDK0A13ConfigurationV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ConsentFlagType",
-                "printedName": "JanusSDK.ConsentFlagType",
-                "hasDefaultArg": true,
-                "usr": "s:8JanusSDK15ConsentFlagTypeO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ConsentNonApplicableFlagMode",
-                "printedName": "JanusSDK.ConsentNonApplicableFlagMode",
-                "hasDefaultArg": true,
-                "usr": "s:8JanusSDK28ConsentNonApplicableFlagModeO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4Mode9enableATTACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOSbtcfc",
-            "mangledName": "$s8JanusSDK0A13ConfigurationV7apiHost013privacyCenterE010propertyId10ipLocation6region11fidesEvents18autoShowExperience26saveUserPreferencesToFides0r13NoticesServeduV015consentFlagType0y13NonApplicableZ4Mode9enableATTACSS_S2SSbSSS4bAA07ConsentZ4TypeOAA020ConsentNonApplicableZ4ModeOSbtcfc",
             "moduleName": "JanusSDK",
             "declAttributes": [
               "AccessControl",
@@ -6599,8 +6644,8 @@
           },
           {
             "kind": "Var",
-            "name": "localizedDescription",
-            "printedName": "localizedDescription",
+            "name": "caseName",
+            "printedName": "caseName",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6610,8 +6655,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:8JanusSDK0A5ErrorO20localizedDescriptionSSvp",
-            "mangledName": "$s8JanusSDK0A5ErrorO20localizedDescriptionSSvp",
+            "usr": "s:8JanusSDK0A5ErrorO8caseNameSSvp",
+            "mangledName": "$s8JanusSDK0A5ErrorO8caseNameSSvp",
             "moduleName": "JanusSDK",
             "declAttributes": [
               "AccessControl",
@@ -6631,9 +6676,154 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8JanusSDK0A5ErrorO20localizedDescriptionSSvg",
-                "mangledName": "$s8JanusSDK0A5ErrorO20localizedDescriptionSSvg",
+                "usr": "s:8JanusSDK0A5ErrorO8caseNameSSvg",
+                "mangledName": "$s8JanusSDK0A5ErrorO8caseNameSSvg",
                 "moduleName": "JanusSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A5ErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s8JanusSDK0A5ErrorO16errorDescriptionSSSgvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A5ErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s8JanusSDK0A5ErrorO16errorDescriptionSSSgvg",
+                "moduleName": "JanusSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorDomain",
+            "printedName": "errorDomain",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A5ErrorO11errorDomainSSvpZ",
+            "mangledName": "$s8JanusSDK0A5ErrorO11errorDomainSSvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A5ErrorO11errorDomainSSvgZ",
+                "mangledName": "$s8JanusSDK0A5ErrorO11errorDomainSSvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorCode",
+            "printedName": "errorCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A5ErrorO9errorCodeSivp",
+            "mangledName": "$s8JanusSDK0A5ErrorO9errorCodeSivp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A5ErrorO9errorCodeSivg",
+                "mangledName": "$s8JanusSDK0A5ErrorO9errorCodeSivg",
+                "moduleName": "JanusSDK",
+                "isFromExtension": true,
                 "accessorKind": "get"
               }
             ]
@@ -6648,6 +6838,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CustomNSError",
+            "printedName": "CustomNSError",
+            "usr": "s:10Foundation13CustomNSErrorP",
+            "mangledName": "$s10Foundation13CustomNSErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
           {
             "kind": "Conformance",
             "name": "Copyable",
@@ -7369,10 +7573,8 @@
             "usr": "s:8JanusSDK0A14ImplementationC14showExperience4fromySo16UIViewControllerC_tF",
             "mangledName": "$s8JanusSDK0A14ImplementationC14showExperience4fromySo16UIViewControllerC_tF",
             "moduleName": "JanusSDK",
-            "intro_iOS": "13.0",
             "declAttributes": [
               "AccessControl",
-              "Available",
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
@@ -7525,6 +7727,40 @@
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setExternalId",
+            "printedName": "setExternalId(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A14ImplementationC13setExternalIdyySSSgF",
+            "mangledName": "$s8JanusSDK0A14ImplementationC13setExternalIdyySSSgF",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -8413,9 +8649,7 @@
             "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.JanusProtocol>",
             "sugared_genericSig": "<Self where Self : JanusSDK.JanusProtocol>",
             "protocolReq": true,
-            "intro_iOS": "13.0",
             "declAttributes": [
-              "Available",
               "RawDocComment"
             ],
             "reqNewWitnessTableEntry": true,
@@ -8653,6 +8887,44 @@
             "declKind": "Func",
             "usr": "s:8JanusSDK0A8ProtocolP10setConsent6values11fidesString13consentMethod11saveToFidesySDySSSbG_SSSgAA0eJ0OSgSbtF",
             "mangledName": "$s8JanusSDK0A8ProtocolP10setConsent6values11fidesString13consentMethod11saveToFidesySDySSSbG_SSSgAA0eJ0OSgSbtF",
+            "moduleName": "JanusSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.JanusProtocol>",
+            "sugared_genericSig": "<Self where Self : JanusSDK.JanusProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setExternalId",
+            "printedName": "setExternalId(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK0A8ProtocolP13setExternalIdyySSSgF",
+            "mangledName": "$s8JanusSDK0A8ProtocolP13setExternalIdyySSSgF",
             "moduleName": "JanusSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : JanusSDK.JanusProtocol>",
             "sugared_genericSig": "<Self where Self : JanusSDK.JanusProtocol>",
@@ -9398,6 +9670,131 @@
                 "declKind": "Accessor",
                 "usr": "s:8JanusSDK0A8ProviderC13configurationAA0A13ConfigurationVSgvMZ",
                 "mangledName": "$s8JanusSDK0A8ProviderC13configurationAA0A13ConfigurationVSgvMZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "externalId",
+            "printedName": "externalId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK0A8ProviderC10externalIdSSSgvpZ",
+            "mangledName": "$s8JanusSDK0A8ProviderC10externalIdSSSgvpZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A8ProviderC10externalIdSSSgvgZ",
+                "mangledName": "$s8JanusSDK0A8ProviderC10externalIdSSSgvgZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A8ProviderC10externalIdSSSgvsZ",
+                "mangledName": "$s8JanusSDK0A8ProviderC10externalIdSSSgvsZ",
+                "moduleName": "JanusSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK0A8ProviderC10externalIdSSSgvMZ",
+                "mangledName": "$s8JanusSDK0A8ProviderC10externalIdSSSgvMZ",
                 "moduleName": "JanusSDK",
                 "static": true,
                 "implicit": true,
@@ -34910,9 +35307,70 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "externalId",
+            "printedName": "externalId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JanusSDK15BrowserIdentityV10externalIdSSSgvp",
+            "mangledName": "$s8JanusSDK15BrowserIdentityV10externalIdSSSgvp",
+            "moduleName": "JanusSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JanusSDK15BrowserIdentityV10externalIdSSSgvg",
+                "mangledName": "$s8JanusSDK15BrowserIdentityV10externalIdSSSgvg",
+                "moduleName": "JanusSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(fidesUserDeviceId:)",
+            "printedName": "init(fidesUserDeviceId:externalId:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -34925,11 +35383,26 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8JanusSDK15BrowserIdentityV17fidesUserDeviceIdACSS_tcfc",
-            "mangledName": "$s8JanusSDK15BrowserIdentityV17fidesUserDeviceIdACSS_tcfc",
+            "usr": "s:8JanusSDK15BrowserIdentityV17fidesUserDeviceId08externalH0ACSS_SSSgtcfc",
+            "mangledName": "$s8JanusSDK15BrowserIdentityV17fidesUserDeviceId08externalH0ACSS_SSSgtcfc",
             "moduleName": "JanusSDK",
             "declAttributes": [
               "AccessControl",
@@ -38687,20 +39160,6 @@
         "moduleName": "JanusSDK"
       },
       {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
         "kind": "TypeDecl",
         "name": "AttributedTextSwift",
         "printedName": "AttributedTextSwift",
@@ -38890,12 +39349,10 @@
         "usr": "s:8JanusSDK19AttributedTextSwiftV",
         "mangledName": "$s8JanusSDK19AttributedTextSwiftV",
         "moduleName": "JanusSDK",
-        "intro_iOS": "15.0",
         "declAttributes": [
           "Preconcurrency",
           "Custom",
           "AccessControl",
-          "Available",
           "RawDocComment"
         ],
         "conformances": [
@@ -38962,13 +39419,6 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "JanusSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
         "declKind": "Import",
         "moduleName": "JanusSDK"
       },
@@ -39068,12 +39518,10 @@
         "usr": "s:8JanusSDK21PrivacyExperienceViewV",
         "mangledName": "$s8JanusSDK21PrivacyExperienceViewV",
         "moduleName": "JanusSDK",
-        "intro_iOS": "13.0",
         "declAttributes": [
           "Preconcurrency",
           "Custom",
           "AccessControl",
-          "Available",
           "RawDocComment"
         ],
         "conformances": [
@@ -39518,8 +39966,93 @@
           },
           {
             "kind": "Function",
+            "name": "propagateConsentToWebViews",
+            "printedName": "propagateConsentToWebViews(consentValues:consentMethod:fidesString:tcfVersionHash:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.Bool]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JanusSDK14WebViewManagerC018propagateConsentToC5Views13consentValues0J6Method11fidesString14tcfVersionHashySDySSSbG_SSSgA2JtFZ",
+            "mangledName": "$s8JanusSDK14WebViewManagerC018propagateConsentToC5Views13consentValues0J6Method11fidesString14tcfVersionHashySDySSSbG_SSSgA2JtFZ",
+            "moduleName": "JanusSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "propagateConsentToOtherWebViews",
-            "printedName": "propagateConsentToOtherWebViews(consentValues:sourceWebView:consentMethod:)",
+            "printedName": "propagateConsentToOtherWebViews(consentValues:sourceWebView:consentMethod:fidesString:tcfVersionHash:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -39574,11 +40107,41 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8JanusSDK14WebViewManagerC023propagateConsentToOtherC5Views13consentValues06sourcecD00K6MethodySDySSSbG_So05WKWebD0CSgSSSgtFZ",
-            "mangledName": "$s8JanusSDK14WebViewManagerC023propagateConsentToOtherC5Views13consentValues06sourcecD00K6MethodySDySSSbG_So05WKWebD0CSgSSSgtFZ",
+            "usr": "s:8JanusSDK14WebViewManagerC023propagateConsentToOtherC5Views13consentValues06sourcecD00K6Method11fidesString14tcfVersionHashySDySSSbG_So05WKWebD0CSgSSSgA2NtFZ",
+            "mangledName": "$s8JanusSDK14WebViewManagerC023propagateConsentToOtherC5Views13consentValues06sourcecD00K6Method11fidesString14tcfVersionHashySDySSSbG_So05WKWebD0CSgSSSgA2NtFZ",
             "moduleName": "JanusSDK",
             "static": true,
             "declAttributes": [
@@ -40138,20 +40701,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -40289,2030 +40838,1988 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/API\/IPLocationAPI.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/API\/IPLocationAPI.swift",
       "kind": "StringLiteral",
       "offset": 721,
       "length": 37,
       "value": "\"https:\/\/cdn-api.ethyca.com\/location\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/API\/PrivacyExperienceAPI.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/API\/PrivacyExperienceAPI.swift",
       "kind": "BooleanLiteral",
       "offset": 2024,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 759,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 792,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 1161,
       "length": 26,
       "value": "\"com.ethyca.janus.consent\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 1225,
       "length": 35,
       "value": "\"com.ethyca.janus.consent.metadata\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 1294,
       "length": 31,
       "value": "\"com.ethyca.janus.fides_string\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 1361,
       "length": 33,
       "value": "\"com.ethyca.janus.consent_method\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 1434,
       "length": 39,
       "value": "\"com.ethyca.janus.fides_user_device_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 1522,
       "length": 49,
       "value": "\"com.ethyca.janus.fides_user_device_id_timestamp\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 1660,
       "length": 29,
       "value": "\"com.fidesplus.janus.consent\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 1733,
       "length": 38,
       "value": "\"com.fidesplus.janus.consent.metadata\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "Dictionary",
       "offset": 2070,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 2273,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 2406,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "BooleanLiteral",
       "offset": 6579,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 8371,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/ConsentManager.swift",
       "kind": "StringLiteral",
       "offset": 9274,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 1848,
       "length": 17,
       "value": "\"IABTCF_CmpSdkID\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 1913,
       "length": 22,
       "value": "\"IABTCF_CmpSdkVersion\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 1982,
       "length": 22,
       "value": "\"IABTCF_PolicyVersion\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2049,
       "length": 20,
       "value": "\"IABTCF_gdprApplies\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2114,
       "length": 20,
       "value": "\"IABTCF_PublisherCC\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2188,
       "length": 28,
       "value": "\"IABTCF_PurposeOneTreatment\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2271,
       "length": 28,
       "value": "\"IABTCF_UseNonStandardTexts\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2341,
       "length": 17,
       "value": "\"IABTCF_TCString\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2406,
       "length": 23,
       "value": "\"IABTCF_VendorConsents\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2489,
       "length": 34,
       "value": "\"IABTCF_VendorLegitimateInterests\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2572,
       "length": 24,
       "value": "\"IABTCF_PurposeConsents\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2657,
       "length": 35,
       "value": "\"IABTCF_PurposeLegitimateInterests\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2749,
       "length": 30,
       "value": "\"IABTCF_SpecialFeaturesOptIns\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2829,
       "length": 25,
       "value": "\"IABTCF_DisclosedVendors\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2904,
       "length": 25,
       "value": "\"IABTCF_PublisherConsent\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 2992,
       "length": 37,
       "value": "\"IABTCF_PublisherLegitimateInterests\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 3096,
       "length": 40,
       "value": "\"IABTCF_PublisherCustomPurposesConsents\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 3215,
       "length": 51,
       "value": "\"IABTCF_PublisherCustomPurposesLegitimateInterests\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "StringLiteral",
       "offset": 3312,
       "length": 21,
       "value": "\"IABTCF_AddtlConsent\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "IntegerLiteral",
       "offset": 3417,
       "length": 3,
       "value": "407"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "IntegerLiteral",
       "offset": 3478,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "IntegerLiteral",
       "offset": 3565,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Consent\/IABTCFStorage.swift",
       "kind": "IntegerLiteral",
       "offset": 22653,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
       "kind": "StringLiteral",
       "offset": 647,
       "length": 28,
       "value": "\"com.ethyca.janussdk.logger\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
       "kind": "BooleanLiteral",
-      "offset": 4050,
+      "offset": 4022,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
       "kind": "BooleanLiteral",
-      "offset": 4543,
+      "offset": 4515,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
       "kind": "BooleanLiteral",
-      "offset": 5072,
+      "offset": 5044,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/Janus.swift",
       "kind": "BooleanLiteral",
-      "offset": 6005,
+      "offset": 6555,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4003,
+      "offset": 3627,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4036,
+      "offset": 3660,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 4067,
+      "offset": 3691,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4098,
+      "offset": 3722,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 4130,
+      "offset": 3754,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 4171,
+      "offset": 3795,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 4220,
+      "offset": 3844,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 4267,
+      "offset": 3891,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 4428,
+      "offset": 4052,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 6532,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 6565,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6596,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 6627,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6659,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6700,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6749,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6796,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusConfiguration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6957,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
       "offset": 250,
       "length": 9,
       "value": "\"overlay\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
       "offset": 286,
       "length": 10,
       "value": "\"headless\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
       "offset": 328,
       "length": 16,
       "value": "\"privacy_center\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
       "offset": 373,
       "length": 13,
       "value": "\"tcf_overlay\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
       "offset": 419,
       "length": 18,
       "value": "\"banner_and_modal\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
       "offset": 461,
       "length": 7,
       "value": "\"modal\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
       "offset": 1158,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
       "offset": 1409,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
       "offset": 1623,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
       "offset": 1923,
       "length": 31,
       "value": "\"com.janus.isLoadingExperience\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
       "offset": 2026,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "StringLiteral",
       "offset": 2760,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
-      "offset": 19216,
+      "offset": 19377,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
-      "offset": 19738,
+      "offset": 19899,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
-      "offset": 20255,
+      "offset": 20416,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 25104,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
-      "offset": 26172,
+      "offset": 27221,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Core\/JanusImplementation.swift",
       "kind": "BooleanLiteral",
-      "offset": 33065,
+      "offset": 34340,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 183,
       "length": 17,
       "value": "\"experienceShown\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 235,
       "length": 23,
       "value": "\"experienceInteraction\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 288,
       "length": 18,
       "value": "\"experienceClosed\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 348,
       "length": 29,
       "value": "\"experienceSelectionUpdating\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 418,
       "length": 28,
       "value": "\"experienceSelectionUpdated\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 485,
       "length": 26,
       "value": "\"webviewFidesInitializing\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 549,
       "length": 25,
       "value": "\"webviewFidesInitialized\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 609,
       "length": 21,
       "value": "\"webviewFidesUIShown\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 667,
       "length": 23,
       "value": "\"webviewFidesUIChanged\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 729,
       "length": 25,
       "value": "\"webviewFidesModalClosed\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 789,
       "length": 22,
       "value": "\"webviewFidesUpdating\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 845,
       "length": 21,
       "value": "\"webviewFidesUpdated\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 907,
       "length": 27,
       "value": "\"consentUpdatedFromWebView\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 1005,
       "length": 19,
       "value": "\"FidesInitializing\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 1054,
       "length": 18,
       "value": "\"FidesInitialized\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 1099,
       "length": 14,
       "value": "\"FidesUIShown\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 1142,
       "length": 16,
       "value": "\"FidesUIChanged\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 1189,
       "length": 18,
       "value": "\"FidesModalClosed\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 1234,
       "length": 15,
       "value": "\"FidesUpdating\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Events\/JanusEvent.swift",
       "kind": "StringLiteral",
       "offset": 1275,
       "length": 14,
       "value": "\"FidesUpdated\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/ApiRoutes.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/ApiRoutes.swift",
       "kind": "StringLiteral",
       "offset": 236,
       "length": 24,
       "value": "\"\/api\/v1\/notices-served\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/ApiRoutes.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/ApiRoutes.swift",
       "kind": "StringLiteral",
       "offset": 290,
       "length": 28,
       "value": "\"\/api\/v1\/privacy-experience\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSLogger.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSLogger.swift",
       "kind": "StringLiteral",
       "offset": 379,
       "length": 7,
       "value": "\"debug\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSLogger.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSLogger.swift",
       "kind": "StringLiteral",
       "offset": 413,
       "length": 12,
       "value": "\"FidesEvent\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSLogger.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSLogger.swift",
       "kind": "StringLiteral",
       "offset": 447,
       "length": 7,
       "value": "\"error\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSLogger.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSLogger.swift",
       "kind": "StringLiteral",
       "offset": 475,
       "length": 6,
       "value": "\"info\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSLogger.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSLogger.swift",
       "kind": "StringLiteral",
       "offset": 505,
       "length": 9,
       "value": "\"warning\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSONDecoder.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSONDecoder.swift",
       "kind": "StringLiteral",
       "offset": 1018,
       "length": 41,
       "value": "\"Cannot decode date string \""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSONDecoder.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Helpers\/JSONDecoder.swift",
       "kind": "StringLiteral",
       "offset": 1058,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 317,
       "length": 6,
       "value": "\"save\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 385,
       "length": 8,
       "value": "\"accept\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 456,
       "length": 8,
       "value": "\"reject\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 562,
       "length": 13,
       "value": "\"acknowledge\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 674,
       "length": 9,
       "value": "\"dismiss\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 777,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 869,
       "length": 7,
       "value": "\"error\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 984,
       "length": 12,
       "value": "\"att_denied\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 1112,
       "length": 17,
       "value": "\"fides_js_update\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 1796,
       "length": 9,
       "value": "\"boolean\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 1947,
       "length": 19,
       "value": "\"consent_mechanism\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 2209,
       "length": 8,
       "value": "\"opt_in\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 2286,
       "length": 9,
       "value": "\"opt_out\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 2408,
       "length": 13,
       "value": "\"acknowledge\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 2506,
       "length": 16,
       "value": "\"not_applicable\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 2770,
       "length": 8,
       "value": "\"opt_in\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 2833,
       "length": 9,
       "value": "\"opt_out\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 2917,
       "length": 13,
       "value": "\"notice_only\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 3243,
       "length": 6,
       "value": "\"omit\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 3360,
       "length": 9,
       "value": "\"include\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 3619,
       "length": 16,
       "value": "\"not_determined\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 3720,
       "length": 12,
       "value": "\"restricted\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 3807,
       "length": 8,
       "value": "\"denied\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/ConsentMethod.swift",
       "kind": "StringLiteral",
       "offset": 3884,
       "length": 12,
       "value": "\"authorized\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 343,
       "length": 8,
       "value": "\"banner\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 369,
       "length": 7,
       "value": "\"modal\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 16,
       "value": "\"privacy_center\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 441,
       "length": 13,
       "value": "\"tcf_overlay\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 505,
       "length": 12,
       "value": "\"tcf_banner\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 2735,
       "length": 28,
       "value": "\"privacy_notice_history_ids\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 2795,
       "length": 18,
       "value": "\"browser_identity\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 2849,
       "length": 23,
       "value": "\"privacy_experience_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 2921,
       "length": 38,
       "value": "\"privacy_experience_config_history_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 2989,
       "length": 16,
       "value": "\"user_geography\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 3038,
       "length": 19,
       "value": "\"serving_component\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 3084,
       "length": 13,
       "value": "\"property_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 3995,
       "length": 28,
       "value": "\"privacy_notice_history_ids\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/NoticesServedModels.swift",
       "kind": "StringLiteral",
       "offset": 4061,
       "length": 26,
       "value": "\"served_notice_history_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 5991,
       "length": 12,
       "value": "\"created_at\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6029,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6089,
       "length": 14,
       "value": "\"gpp_settings\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6134,
       "length": 17,
       "value": "\"privacy_notices\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6195,
       "length": 32,
       "value": "\"non_applicable_privacy_notices\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6260,
       "length": 19,
       "value": "\"experience_config\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6312,
       "length": 19,
       "value": "\"available_locales\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6394,
       "length": 33,
       "value": "\"tcf_system_legitimate_interests\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6462,
       "length": 22,
       "value": "\"tcf_special_features\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6529,
       "length": 33,
       "value": "\"tcf_vendor_legitimate_interests\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6601,
       "length": 26,
       "value": "\"tcf_vendor_relationships\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6659,
       "length": 18,
       "value": "\"gvl_translations\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6712,
       "length": 22,
       "value": "\"tcf_purpose_consents\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6768,
       "length": 21,
       "value": "\"tcf_vendor_consents\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6835,
       "length": 34,
       "value": "\"tcf_purpose_legitimate_interests\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6908,
       "length": 26,
       "value": "\"tcf_system_relationships\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 6969,
       "length": 22,
       "value": "\"tcf_special_purposes\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7048,
       "length": 28,
       "value": "\"tcf_publisher_country_code\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7103,
       "length": 13,
       "value": "\"minimal_tcf\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7144,
       "length": 14,
       "value": "\"vendor_count\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7194,
       "length": 24,
       "value": "\"tcf_vendor_consent_ids\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7265,
       "length": 36,
       "value": "\"tcf_vendor_legitimate_interest_ids\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7338,
       "length": 25,
       "value": "\"tcf_purpose_consent_ids\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7411,
       "length": 37,
       "value": "\"tcf_purpose_legitimate_interest_ids\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7485,
       "length": 25,
       "value": "\"tcf_special_feature_ids\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7547,
       "length": 25,
       "value": "\"tcf_special_purpose_ids\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7602,
       "length": 17,
       "value": "\"tcf_feature_ids\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7655,
       "length": 24,
       "value": "\"tcf_system_consent_ids\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7726,
       "length": 36,
       "value": "\"tcf_system_legitimate_interest_ids\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7794,
       "length": 19,
       "value": "\"tcf_purpose_names\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 7852,
       "length": 27,
       "value": "\"tcf_special_feature_names\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 10391,
       "length": 11,
       "value": "\"data_uses\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 10436,
       "length": 20,
       "value": "\"default_preference\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 11611,
       "length": 15,
       "value": "\"has_vendor_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 11703,
       "length": 21,
       "value": "\"vendor_deleted_date\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 11758,
       "length": 20,
       "value": "\"default_preference\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 11821,
       "length": 30,
       "value": "\"purpose_legitimate_interests\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 12412,
       "length": 18,
       "value": "\"retention_period\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 13329,
       "length": 20,
       "value": "\"default_preference\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 14824,
       "length": 13,
       "value": "\"us_approach\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 14877,
       "length": 28,
       "value": "\"mspa_service_provider_mode\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 14942,
       "length": 26,
       "value": "\"mspa_opt_out_option_mode\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 15008,
       "length": 27,
       "value": "\"mspa_covered_transactions\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 15069,
       "length": 21,
       "value": "\"enable_tcfeu_string\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 16364,
       "length": 9,
       "value": "\"opt_out\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 16402,
       "length": 15,
       "value": "\"not_available\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
       "offset": 16443,
       "length": 13,
       "value": "\"not_opt_out\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19310,
+      "offset": 19680,
       "length": 12,
       "value": "\"notice_key\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19358,
+      "offset": 19728,
       "length": 22,
       "value": "\"internal_description\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19413,
+      "offset": 19783,
       "length": 19,
       "value": "\"consent_mechanism\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19457,
+      "offset": 19827,
       "length": 11,
       "value": "\"data_uses\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19501,
+      "offset": 19871,
       "length": 19,
       "value": "\"enforcement_level\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19569,
+      "offset": 19939,
       "length": 14,
       "value": "\"has_gpc_flag\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19640,
+      "offset": 20010,
       "length": 20,
       "value": "\"default_preference\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19722,
+      "offset": 20092,
       "length": 12,
       "value": "\"created_at\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19760,
+      "offset": 20130,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19827,
+      "offset": 20197,
       "length": 20,
       "value": "\"systems_applicable\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19927,
+      "offset": 20297,
       "length": 19,
       "value": "\"gpp_field_mapping\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 19972,
+      "offset": 20342,
       "length": 12,
       "value": "\"att_exempt\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 21183,
+      "offset": 21553,
       "length": 27,
       "value": "\"privacy_notice_history_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23254,
+      "offset": 23624,
       "length": 21,
       "value": "\"show_layer1_notices\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23311,
+      "offset": 23681,
       "length": 23,
       "value": "\"layer1_button_options\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23373,
+      "offset": 23743,
       "length": 26,
       "value": "\"allow_language_selection\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23434,
+      "offset": 23804,
       "length": 22,
       "value": "\"auto_detect_language\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23500,
+      "offset": 23870,
       "length": 32,
       "value": "\"auto_subdomain_cookie_deletion\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23595,
+      "offset": 23965,
       "length": 12,
       "value": "\"created_at\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 23633,
+      "offset": 24003,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26067,
+      "offset": 26437,
       "length": 21,
       "value": "\"accept_button_label\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26127,
+      "offset": 26497,
       "length": 26,
       "value": "\"acknowledge_button_label\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26181,
+      "offset": 26551,
       "length": 14,
       "value": "\"banner_title\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26221,
+      "offset": 26591,
       "length": 12,
       "value": "\"is_default\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26264,
+      "offset": 26634,
       "length": 18,
       "value": "\"modal_link_label\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26321,
+      "offset": 26691,
       "length": 27,
       "value": "\"privacy_policy_link_label\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26381,
+      "offset": 26751,
       "length": 20,
       "value": "\"privacy_policy_url\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26445,
+      "offset": 26815,
       "length": 32,
       "value": "\"privacy_preferences_link_label\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26507,
+      "offset": 26877,
       "length": 16,
       "value": "\"purpose_header\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26557,
+      "offset": 26927,
       "length": 21,
       "value": "\"reject_button_label\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26610,
+      "offset": 26980,
       "length": 19,
       "value": "\"save_button_label\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26682,
+      "offset": 27052,
       "length": 20,
       "value": "\"banner_description\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 26776,
+      "offset": 27146,
       "length": 38,
       "value": "\"privacy_experience_config_history_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 27777,
+      "offset": 28147,
       "length": 14,
       "value": "\"version_hash\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 27828,
+      "offset": 28198,
       "length": 25,
       "value": "\"accept_all_fides_string\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 27894,
+      "offset": 28264,
       "length": 30,
       "value": "\"accept_all_fides_mobile_data\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 27961,
+      "offset": 28331,
       "length": 25,
       "value": "\"reject_all_fides_string\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyExperienceModels.swift",
       "kind": "StringLiteral",
-      "offset": 28027,
+      "offset": 28397,
       "length": 30,
       "value": "\"reject_all_fides_mobile_data\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
       "kind": "StringLiteral",
       "offset": 2053,
       "length": 11,
       "value": "\"Janus SDK\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
       "kind": "StringLiteral",
       "offset": 2966,
       "length": 13,
       "value": "\"property_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
       "kind": "StringLiteral",
       "offset": 3031,
       "length": 18,
       "value": "\"browser_identity\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
       "kind": "StringLiteral",
       "offset": 3104,
       "length": 16,
       "value": "\"user_geography\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
       "kind": "StringLiteral",
       "offset": 3148,
       "length": 14,
       "value": "\"fides_string\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
       "kind": "StringLiteral",
       "offset": 3211,
       "length": 38,
       "value": "\"privacy_experience_config_history_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
       "kind": "StringLiteral",
       "offset": 3287,
       "length": 26,
       "value": "\"served_notice_history_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
       "kind": "StringLiteral",
       "offset": 3363,
       "length": 16,
       "value": "\"request_origin\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
       "kind": "StringLiteral",
-      "offset": 3907,
+      "offset": 4323,
       "length": 22,
       "value": "\"fides_user_device_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
       "kind": "StringLiteral",
-      "offset": 4709,
+      "offset": 4372,
+      "length": 13,
+      "value": "\"external_id\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/Models\/PrivacyPreferencesModels.swift",
+      "kind": "StringLiteral",
+      "offset": 5165,
       "length": 27,
       "value": "\"privacy_notice_history_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1148,
       "length": 2,
       "value": "43"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1151,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1163,
       "length": 2,
       "value": "46"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1166,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1177,
       "length": 2,
       "value": "53"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1180,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "FloatLiteral",
       "offset": 1503,
       "length": 3,
       "value": "0.6"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1534,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1560,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "FloatLiteral",
       "offset": 1586,
       "length": 3,
       "value": "8.0"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1850,
       "length": 2,
       "value": "43"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1853,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1865,
       "length": 2,
       "value": "46"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1868,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1879,
       "length": 2,
       "value": "53"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 1882,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "FloatLiteral",
       "offset": 2247,
       "length": 3,
       "value": "0.6"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/Common\/Theme\/JanusTheme.swift",
       "kind": "BooleanLiteral",
       "offset": 4473,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 425,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
       "kind": "Array",
       "offset": 593,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 1163,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
       "kind": "Dictionary",
       "offset": 1288,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 1414,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/ViewModels\/PrivacyExperienceViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 1957,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "StringLiteral",
-      "offset": 449,
+      "offset": 410,
       "length": 121,
       "value": "\"https:\/\/www.ethyca.com\/janus?utm_source=fides_consent_sdk&utm_medium=referral&utm_campaign=cmp_backlinks&utm_term=janus\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "IntegerLiteral",
-      "offset": 15536,
+      "offset": 15021,
       "length": 2,
       "value": "48"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "IntegerLiteral",
-      "offset": 15558,
+      "offset": 15043,
       "length": 2,
       "value": "24"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "BooleanLiteral",
-      "offset": 16886,
+      "offset": 16347,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "BooleanLiteral",
-      "offset": 16934,
+      "offset": 16395,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/PrivacyExperience\/Views\/PrivacyExperienceView.swift",
       "kind": "BooleanLiteral",
-      "offset": 16986,
+      "offset": 16447,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 571,
+      "offset": 650,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "Array",
-      "offset": 1198,
+      "offset": 1613,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1362,
+      "offset": 1773,
       "length": 4,
       "value": "30.0"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1419,
+      "offset": 1830,
       "length": 24,
       "value": "\"\/embedded-consent.html\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1493,
+      "offset": 1904,
       "length": 13,
       "value": "\"geolocation\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1556,
+      "offset": 1967,
       "length": 13,
       "value": "\"property_id\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1614,
+      "offset": 2025,
       "length": 14,
       "value": "\"fides_locale\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1677,
+      "offset": 2088,
       "length": 18,
       "value": "\"fides_att_status\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4525,
-      "length": 4,
-      "value": "true"
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2157,
+      "length": 14,
+      "value": "\"fides_string\""
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/UI\/TCFWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2221,
+      "length": 24,
+      "value": "\"fides_tcf_version_hash\""
+    },
+    {
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
       "kind": "Array",
       "offset": 272,
       "length": 114,
       "value": "[\"native.js\", \"utils.js\", \"bridge.js\", \"messaging.js\", \"consent.js\"]"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
       "kind": "Dictionary",
       "offset": 521,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
       "kind": "BooleanLiteral",
       "offset": 2283,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/JSResourceLoader.swift",
       "kind": "BooleanLiteral",
       "offset": 3103,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
       "kind": "BooleanLiteral",
       "offset": 5928,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
       "kind": "BooleanLiteral",
       "offset": 5953,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Repos\/fidesplus\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
+      "filePath": "\/Users\/thabo\/Repos\/fidesplus-janus-publish\/clients\/janus-sdk\/iOS\/JanusSDK\/WebView\/WebViewManager.swift",
       "kind": "BooleanLiteral",
       "offset": 6464,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/thabo\/Library\/Developer\/Xcode\/DerivedData\/JanusSDK-ennlatuovwuenxghnxkhcjzqchtz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JanusSDK\/IntermediateBuildFilesPath\/JanusSDK.build\/Release-iphoneos\/JanusSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/thabo\/Library\/Developer\/Xcode\/DerivedData\/JanusSDK-exraexjbvhtbksbvanpasfbedygg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JanusSDK\/IntermediateBuildFilesPath\/JanusSDK.build\/Release-iphoneos\/JanusSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 731,
       "length": 11,

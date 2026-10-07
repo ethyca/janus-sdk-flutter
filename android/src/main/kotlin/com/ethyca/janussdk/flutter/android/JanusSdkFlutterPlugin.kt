@@ -149,7 +149,8 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
                   result.success(true)
                 } else {
                   pluginLogger.log("Janus SDK initialization failed", LogLevel.ERROR, null, error)
-                  result.error("INIT_ERROR", error?.message ?: "Unknown error", null)
+                  // details carries the JanusError case name (lowerCamel, matching iOS); Dart's initialize logs it and returns false
+                  result.error("INIT_ERROR", error?.message ?: "Unknown error", error?.javaClass?.simpleName?.replaceFirstChar { it.lowercase() })
                 }
               }
             } ?: run {
@@ -364,6 +365,13 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
 
         "getRegion" -> {
           result.success(Janus.region)
+        }
+
+        "setExternalId" -> {
+          val args = call.arguments as? Map<String, Any>
+          val externalId = args?.get("externalId") as? String
+          Janus.setExternalId(externalId)
+          result.success(null)
         }
 
         "setLogger" -> {

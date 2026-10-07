@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0 (2026-10-07)
+
+- Requires iOS 15.0 or later; iOS 13 and 14 are no longer supported
+- iOS `JanusConfiguration` has a single initializer with `theme` defaulting to `.default`
+- `initialize` failures report the `JanusError` case name in `details` instead of "error N"; API errors include the HTTP status
+- Accept All keeps ATT-locked notices off when App Tracking Transparency is denied on iOS
+- `setConsent` applies a TCF fides string to the CMP WebView and seeds the TCF version hash
+- notice_only notices are saved with `acknowledge` on iOS and Android
+
+
 ## 0.1.25 (2026-06-17)
 
 Support for public setConsent() method

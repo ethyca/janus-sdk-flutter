@@ -232,6 +232,19 @@ class Janus {
     );
   }
 
+  /// Set the external user identifier that will be included in all consent API calls.
+  ///
+  /// Call this after a user logs in, passing your app's own user ID (e.g. Auth0 sub,
+  /// database UUID). Fides will link all subsequent consent records to this ID, enabling
+  /// DSR correlation and multi-device consent merging.
+  ///
+  /// Pass `null` to clear the identifier on logout.
+  ///
+  /// [externalId] — the external user identifier, or null to clear.
+  Future<void> setExternalId(String? externalId) {
+    return JanusSdkFlutterPlatform.instance.setExternalId(externalId);
+  }
+
   /// Creates a WebView controller for consent management.
   ///
   /// This method creates a WebView that is configured for consent management

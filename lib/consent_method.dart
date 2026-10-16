@@ -19,6 +19,9 @@ enum ConsentMethod {
   /// Consent was set programmatically by FidesJS (e.g. from a FidesUpdated web event)
   fidesJsUpdate('fides_js_update'),
 
+  /// Consent was carried over from before Janus, such as an earlier consent tool or the app's own setting
+  externalProvider('external_provider'),
+
   /// Default/fallback value when method is not specified or not known
   unknown('unknown'),
 

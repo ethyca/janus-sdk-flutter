@@ -1,68 +1,108 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-/// Controller for a WebView that integrates with the Janus SDK for consent management.
-///
-/// This class wraps a Flutter WebViewController and provides additional functionality
-/// for consent management. It maintains a connection to the native Janus SDK's
-/// WebView implementation.
+import 'janus_sdk_flutter_platform_interface.dart';
+
+/// Controls a Janus-managed native WebView used by a page running FidesJS.
 class JanusWebViewController {
-  /// The underlying Flutter WebViewController
-  final WebViewController _controller;
-  
-  /// The unique identifier for this WebView in the native layer
+  static const String viewType = 'janus_sdk_flutter/consent_webview';
+
   final String _id;
-  
-  /// Creates a new JanusWebViewController.
-  ///
-  /// This constructor is typically not called directly. Instead, use
-  /// [Janus.createConsentWebView] to create a new controller.
-  JanusWebViewController(this._controller, this._id);
-  
-  /// The unique identifier for this WebView in the native layer.
-  ///
-  /// This is used internally to track the WebView and should not
-  /// normally be needed by application code.
+  bool _released = false;
+
+  /// Kept for source compatibility; use [Janus.createConsentWebView].
+  @Deprecated('Use Janus.createConsentWebView to create managed WebViews.')
+  JanusWebViewController(WebViewController controller, this._id);
+
+  /// Creates a handle to an existing Janus-managed native WebView.
+  JanusWebViewController.fromId(this._id);
+
+  /// The native WebView identifier.
   String get id => _id;
-  
-  /// The underlying Flutter WebViewController.
-  ///
-  /// This can be used to perform operations on the WebView that are not
-  /// directly related to consent management, such as loading URLs or
-  /// executing JavaScript.
-  WebViewController get controller => _controller;
-  
-  /// Creates a Flutter widget that displays this WebView.
-  ///
-  /// This is a convenience method for creating a WebViewWidget with this
-  /// controller. The returned widget can be placed anywhere in your Flutter
-  /// widget tree.
-  ///
-  /// Example:
-  /// ```dart
-  /// final webViewController = await janus.createConsentWebView();
-  /// return Scaffold(
-  ///   appBar: AppBar(title: Text('Consent WebView')),
-  ///   body: webViewController.buildWidget(),
-  /// );
-  /// ```
+
+  /// This controller is not connected to the Janus-managed native WebView.
+  /// Use [loadUrl], [evaluateJavaScript] and [buildWidget] instead.
+  @Deprecated(
+    'This controller is not Janus-managed. Use loadUrl, evaluateJavaScript and buildWidget.',
+  )
+  WebViewController get controller => throw UnsupportedError(
+    'JanusWebViewController.controller is not connected to the native WebView. '
+    'Use loadUrl, evaluateJavaScript and buildWidget instead.',
+  );
+
+  void _ensureActive() {
+    if (_released) {
+      throw StateError('Janus consent WebView $_id has been released');
+    }
+  }
+
+  /// Embeds the Janus-managed native WebView. The app must call [loadUrl]
+  /// with a FidesJS-enabled page; this widget does not show a consent UI and
+  /// stays blank until a page is loaded. Unmount it before releasing the view.
   Widget buildWidget() {
-    return WebViewWidget(controller: _controller);
+    if (_released) return const Text('Janus consent WebView has been released');
+    final creationParams = {'webViewId': _id};
+    switch (defaultTargetPlatform) {
+      case TargetPlatform.iOS:
+        return UiKitView(
+          viewType: viewType,
+          creationParams: creationParams,
+          creationParamsCodec: const StandardMessageCodec(),
+        );
+      case TargetPlatform.android:
+        return PlatformViewLink(
+          viewType: viewType,
+          surfaceFactory: (context, controller) => AndroidViewSurface(
+            controller: controller as AndroidViewController,
+            hitTestBehavior: PlatformViewHitTestBehavior.opaque,
+            gestureRecognizers: const <Factory<OneSequenceGestureRecognizer>>{},
+          ),
+          onCreatePlatformView: (params) => PlatformViewsService.initExpensiveAndroidView(
+            id: params.id,
+            viewType: viewType,
+            layoutDirection: TextDirection.ltr,
+            creationParams: creationParams,
+            creationParamsCodec: const StandardMessageCodec(),
+          )..addOnPlatformViewCreatedListener(params.onPlatformViewCreated)
+           ..create(),
+        );
+      default:
+        throw UnsupportedError('Janus consent WebViews require iOS or Android');
+    }
   }
-  
-  /// Loads the given URL in the WebView.
-  ///
-  /// This is a convenience method that delegates to the underlying
-  /// WebViewController.
+
+  /// Loads an app-supplied FidesJS-enabled page into the managed WebView.
   Future<void> loadUrl(String url) {
-    return _controller.loadRequest(Uri.parse(url));
+    _ensureActive();
+    return JanusSdkFlutterPlatform.instance.webViewLoadUrl(_id, url);
   }
-  
-  /// Executes the given JavaScript in the WebView.
-  ///
-  /// This is a convenience method that delegates to the underlying
-  /// WebViewController.
-  Future<void> evaluateJavaScript(String javaScript) async {
-    await _controller.runJavaScript(javaScript);
+
+  /// Evaluates JavaScript on the managed WebView and returns its result.
+  Future<String?> evaluateJavaScript(String javaScript) {
+    _ensureActive();
+    return JanusSdkFlutterPlatform.instance.webViewEvaluateJavaScript(
+      _id,
+      javaScript,
+    );
+  }
+
+  /// Releases the native WebView and its Janus bridge. Repeated releases are safe.
+  Future<void> release() async {
+    if (_released) return;
+    _released = true;
+    try {
+      await JanusSdkFlutterPlatform.instance.releaseConsentWebView(_id);
+    } on PlatformException catch (error) {
+      if (error.code == 'INVALID_WEBVIEW_ID') return;
+      _released = false;
+      rethrow;
+    } catch (_) {
+      _released = false;
+      rethrow;
+    }
   }
 }

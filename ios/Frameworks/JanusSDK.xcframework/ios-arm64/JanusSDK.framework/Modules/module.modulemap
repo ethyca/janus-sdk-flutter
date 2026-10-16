@@ -1,6 +1,0 @@
-framework module JanusSDK {
-  umbrella header "JanusSDK.h"
-  export *
-
-  module * { export * }
-}

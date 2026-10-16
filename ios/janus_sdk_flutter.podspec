@@ -20,7 +20,8 @@ by wrapping the native iOS JanusSDK.
     :tag => s.version.to_s
   }
   
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'janus_sdk_flutter/Sources/janus_sdk_flutter/Classes/**/*'
+  s.resource_bundles = {'janus_sdk_flutter_privacy' => ['janus_sdk_flutter/Sources/janus_sdk_flutter/Resources/PrivacyInfo.xcprivacy']}
   s.dependency 'Flutter'
   
   # Bundle the JanusSDK directly
@@ -44,9 +45,4 @@ by wrapping the native iOS JanusSDK.
     fi
   CMD
 
-  # If your plugin requires a privacy manifest, for example if it uses any
-  # required reason APIs, update the PrivacyInfo.xcprivacy file to describe your
-  # plugin's privacy impact, and then uncomment this line. For more information,
-  # see https://developer.apple.com/documentation/bundleresources/privacy_manifest_files
-  # s.resource_bundles = {'janus_sdk_flutter_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
 end

@@ -10,6 +10,7 @@ void main() {
       expect(ConsentMethod.acknowledge.value, 'acknowledge');
       expect(ConsentMethod.dismiss.value, 'dismiss');
       expect(ConsentMethod.fidesJsUpdate.value, 'fides_js_update');
+      expect(ConsentMethod.externalProvider.value, 'external_provider');
       expect(ConsentMethod.unknown.value, 'unknown');
       expect(ConsentMethod.error.value, 'error');
       expect(ConsentMethod.attDenied.value, 'att_denied');
@@ -28,6 +29,7 @@ void main() {
       expect(ConsentMethod.fromString('acknowledge'), ConsentMethod.acknowledge);
       expect(ConsentMethod.fromString('dismiss'), ConsentMethod.dismiss);
       expect(ConsentMethod.fromString('fides_js_update'), ConsentMethod.fidesJsUpdate);
+      expect(ConsentMethod.fromString('external_provider'), ConsentMethod.externalProvider);
       expect(ConsentMethod.fromString('unknown'), ConsentMethod.unknown);
       expect(ConsentMethod.fromString('error'), ConsentMethod.error);
       expect(ConsentMethod.fromString('att_denied'), ConsentMethod.attDenied);

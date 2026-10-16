@@ -1,6 +1,10 @@
 # Janus SDK
 ## Flutter Implementation Guide
 
+### Requirements
+
+- iOS 15 or later, built with Xcode 26.0 or later. The plugin ships the native iOS SDK, which we build with Xcode 26.0.1, the oldest Xcode 26 available to our build machines. It uses the same Swift 6.2 compiler as Xcode 26.0, so any Xcode from 26.0 on can read it.
+
 ### Installation
 
 Add the Janus SDK Flutter package to your `pubspec.yaml` file:
@@ -11,6 +15,16 @@ dependencies:
     git:
       url: https://github.com/ethyca/janus-sdk-flutter.git
 ```
+
+### iOS dependency management
+
+The plugin supports both Swift Package Manager (SPM) and CocoaPods on iOS 15 or later. Flutter uses the plugin's SPM package when SPM is enabled:
+
+1. **Flutter 3.44 and later** enable SPM by default; no setup is needed.
+2. **Flutter 3.41 to 3.43** need `flutter config --enable-swift-package-manager`.
+3. **Flutter older than 3.41** can't use the SPM package, because it depends on the `FlutterFramework` package that 3.41 introduced. Keep SPM off and use CocoaPods.
+
+The SPM package downloads a checksum-verified JanusSDK binary; it does not require the plugin's CocoaPods-vendored XCFramework. Flutter still falls back to CocoaPods if **any other** iOS plugin lacks SPM support. Before removing CocoaPods from an existing project, follow [Flutter's migration guide](https://docs.flutter.dev/packages-and-plugins/swift-package-manager/for-app-developers#how-to-remove-cocoapods-integration). CocoaPods projects can continue using their current Podfile unchanged.
 
 ### Android Configuration
 
@@ -291,7 +305,7 @@ final fidesString = await _janusSdk.fidesString;
 Use `setConsent()` to write consent values directly to the SDK from Dart code — without showing the privacy experience UI. This is intended for two scenarios:
 
 1. **Bidirectional WebView sync** — your app hosts a FidesJS page in a custom `WebView` and needs to push web-originated consent into native storage via a JS bridge.
-2. **Legacy consent migration** — users already consented through an older flow; pre-populate the SDK before the experience initializes so they aren't re-prompted.
+2. **Legacy consent migration** — users already consented through an older flow; carry their choice into the SDK so they aren't re-prompted. Call `setConsent()` after `initialize` completes and before the experience shows, with `autoShowExperience` turned off. `setConsent()` only saves to Fides when an experience is loaded, so a call made before then stores consent on the device and never sends it to Fides. Pass the external provider consent method so Fides records the consent as carried over.
 
 ```dart
 // Minimal call — local persist only, no server sync
@@ -313,9 +327,19 @@ await _janusSdk.setConsent(
   consentMethod: ConsentMethod.save,
   saveToFides: true,
 );
+
+// Migrating consent recorded before Janus. Call after initialize completes: the Fides save needs a loaded experience
+// The method lets Fides tell it apart from a choice made in the experience
+await _janusSdk.setConsent(
+  values: {'data_sales_and_sharing': false},
+  consentMethod: ConsentMethod.externalProvider,
+  saveToFides: true,
+);
 ```
 
 A `JanusEvent` (`EXPERIENCE_SELECTION_UPDATED`) is fired to all registered listeners after consent is written, identical to the event fired when a user submits the privacy experience UI.
+
+**On iOS, with `enableAtt` on and tracking denied or restricted,** `setConsent()` stores `false` for every non-exempt notice, even if you pass `true`, and saves that to Fides when `saveToFides` is set. ATT-exempt and notice-only notices keep the values you pass.
 
 `clearConsent()` resets all stored consent values and optionally clears metadata timestamps:
 
@@ -374,7 +398,7 @@ FutureBuilder<Map<String, dynamic>>(
 
 ### WebView Integration
 
-The Janus SDK provides a WebView controller that integrates with consent management. This allows you to create WebViews that automatically sync consent preferences with websites.
+The Janus SDK provides a managed native WebView that synchronizes consent with pages running FidesJS. `createConsentWebView()` does not display a consent UI: the view stays blank until your app calls `loadUrl` with an HTTP(S) FidesJS-enabled page. The Janus bridge remains available after navigation and redirects, so only load URLs that resolve to origins trusted by your app. You may load the page before or after mounting the widget.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -396,14 +420,13 @@ class _ConsentWebViewPageState extends State<ConsentWebViewPage> {
   }
 
   Future<void> _initWebView() async {
-    // Create a WebView controller with consent integration
     final controller = await _janusSdk.createConsentWebView(autoSyncOnStart: true);
-    setState(() {
-      _webViewController = controller;
-    });
-
-    // Load a URL in the WebView
-    await controller.loadUrl('https://example.com');
+    if (!mounted) {
+      await _janusSdk.releaseConsentWebView(controller);
+      return;
+    }
+    setState(() => _webViewController = controller);
+    await controller.loadUrl('https://demo.example/fidesjs-page');
   }
 
   @override
@@ -418,36 +441,29 @@ class _ConsentWebViewPageState extends State<ConsentWebViewPage> {
 
   @override
   void dispose() {
-    // IMPORTANT: Release the WebView when you're done with it
-    if (_webViewController != null) {
-      _janusSdk.releaseConsentWebView(_webViewController!);
+    final controller = _webViewController;
+    if (controller != null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _janusSdk.releaseConsentWebView(controller);
+      });
     }
     super.dispose();
   }
 }
 ```
 
-#### Advanced WebView Usage
+#### Reading page consent
 
-The `JanusWebViewController` provides access to the underlying Flutter `WebViewController` for more advanced operations:
+`evaluateJavaScript()` runs against the native Janus-managed WebView and returns JSON-encoded JavaScript results. JavaScript `null`/`undefined` values become Dart `null` on both platforms. iOS reports evaluation errors as `PlatformException`; Android's WebView callback does not expose error details:
 
 ```dart
-// Access the underlying WebViewController for advanced operations
-final flutterController = _webViewController!.controller;
-
-// Execute JavaScript
-await flutterController.runJavaScript('document.getElementById("consent").click()');
-
-// Add JavaScript channels for communication between JavaScript and Dart
-flutterController.addJavaScriptChannel(
-  'ConsentChannel',
-  onMessageReceived: (JavaScriptMessage message) {
-    print('Message from JavaScript: ${message.message}');
-  },
+final pageConsentJson = await _webViewController!.evaluateJavaScript(
+  'window.Fides ? window.Fides.consent : null',
 );
+final appConsent = await _janusSdk.consent;
 ```
 
-⚠️ **Important:** Always call `releaseConsentWebView()` when you're done with a WebView to prevent memory leaks. WebView JavaScript interfaces require explicit cleanup, and failing to release the WebView properly can lead to resource issues.
+The deprecated `controller` getter throws `UnsupportedError` when accessed; it cannot control the native WebView. Use `loadUrl()`, `evaluateJavaScript()` and `buildWidget()` instead. Call `releaseConsentWebView()` after unmounting the widget to remove Janus message handlers and native resources.
 
 #### Bidirectional Consent Sync & Loop Prevention
 
@@ -603,6 +619,7 @@ class _HomePageState extends State<HomePage> {
   // Example of creating a WebView
   Future<void> _openWebView() async {
     final webViewController = await _janusSdk.createConsentWebView();
+    await webViewController.loadUrl('https://demo.example/fidesjs-page');
 
     // Navigate to a new screen with the WebView
     Navigator.of(context).push(
@@ -701,6 +718,11 @@ final config = JanusConfiguration(
 ```
 
 When the user denies or restricts tracking, all non-exempt privacy notices are pre-populated to opt-out and their toggles are locked. On Android, `enableAtt` is accepted but has no effect — Android has no ATT equivalent.
+
+Janus also re-checks the current ATT status on its own, so a user who changes tracking in the iOS Settings app (iOS only) doesn't have to wait for the next prompt:
+
+1. **When Janus initializes and when the app returns to the foreground,** it reads the live status. If tracking is now denied or restricted, it switches non-exempt notices off in stored consent and in any open consent screen.
+2. **When tracking is later allowed,** the toggles unlock, but Janus doesn't switch anything back on. The user opts in again themselves.
 
 #### Required Info.plist Key (iOS)
 

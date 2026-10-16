@@ -3,6 +3,7 @@ package com.ethyca.janussdk.flutter.android
 import android.app.Activity
 import android.content.Context
 import android.util.Log
+import android.view.ViewGroup
 import androidx.annotation.NonNull
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -20,6 +21,7 @@ import com.ethyca.janussdk.android.events.JanusEvent
 import com.ethyca.janussdk.android.models.ConsentFlagType
 import com.ethyca.janussdk.android.models.ConsentMethod
 import com.ethyca.janussdk.android.models.ConsentNonApplicableFlagMode
+import java.net.URI
 import java.util.Date
 import com.ethyca.janussdk.android.events.*
 import com.ethyca.janussdk.android.models.PrivacyExperienceItem
@@ -61,6 +63,13 @@ class FlutterProxyLogger(private val methodChannel: MethodChannel) : JanusLogger
     }
 }
 
+internal fun isSupportedWebViewUrl(url: String): Boolean = try {
+  val uri = URI(url)
+  uri.scheme?.lowercase() in setOf("http", "https") && !uri.host.isNullOrEmpty()
+} catch (_: Exception) {
+  false
+}
+
 /** JanusSdkFlutterPlugin */
 class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, EventChannel.StreamHandler {
   /// The MethodChannel that will handle communication between Flutter and native Android
@@ -79,7 +88,14 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
   private val webViews = HashMap<String, android.webkit.WebView>()
   
   // Private logger for plugin-specific logging that flows through unified system
-  private lateinit var pluginLogger: JanusLogger
+  private var pluginLogger: JanusLogger = object : JanusLogger {
+    override fun log(
+      message: String,
+      level: LogLevel,
+      metadata: Map<String, String>?,
+      error: Throwable?
+    ) {}
+  }
 
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "janus_sdk_flutter")
@@ -89,6 +105,10 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
     eventChannel.setStreamHandler(this)
 
     context = flutterPluginBinding.applicationContext
+    flutterPluginBinding.platformViewRegistry.registerViewFactory(
+      "janus_sdk_flutter/consent_webview",
+      ConsentWebViewFactory(webViews)
+    )
     
     // Initialize plugin logger to use proxy so errors flow through unified logging
     pluginLogger = FlutterProxyLogger(channel)
@@ -330,20 +350,61 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
               // Get the WebView from our map
               val webView = webViews[webViewId]
 
-              // Release it through the SDK
-              webView?.let { Janus.releaseConsentWebView(it) }
-
-              // Remove it from our map
+              // Android's SDK destroys the WebView on release; detach it first.
+              webView?.let {
+                (it.parent as? ViewGroup)?.removeView(it)
+                Janus.releaseConsentWebView(it)
+              }
               webViews.remove(webViewId)
 
               result.success(null)
             } else {
-              pluginLogger.log("Invalid WebView ID provided for release", LogLevel.ERROR, mapOf("webViewId" to (webViewId ?: "null")), null)
+              pluginLogger.log(
+                "Invalid WebView ID provided for release",
+                LogLevel.ERROR,
+                mapOf("webViewId" to (webViewId ?: "null")),
+                null
+              )
               result.error("INVALID_WEBVIEW_ID", "WebView ID not found", null)
             }
           } catch (e: Exception) {
             pluginLogger.log("Failed to release consent WebView", LogLevel.ERROR, null, e)
             result.error("WEBVIEW_ERROR", e.message ?: "Unknown error", null)
+          }
+        }
+
+        "webViewLoadUrl" -> {
+          val args = call.arguments as? Map<*, *>
+          val webViewId = args?.get("webViewId") as? String
+          val url = args?.get("url") as? String
+          if (webViewId == null || url == null || !isSupportedWebViewUrl(url)) {
+            result.error("INVALID_ARGS", "A valid http(s) URL and webViewId are required", null)
+          } else {
+            val webView = webViews[webViewId]
+            if (webView == null) {
+              result.error("INVALID_WEBVIEW_ID", "WebView ID not found", null)
+            } else {
+              webView.loadUrl(url)
+              result.success(null)
+            }
+          }
+        }
+
+        "webViewEvaluateJavaScript" -> {
+          val args = call.arguments as? Map<*, *>
+          val webViewId = args?.get("webViewId") as? String
+          val script = args?.get("script") as? String
+          if (webViewId == null || script == null) {
+            result.error("INVALID_ARGS", "webViewId and script are required", null)
+          } else {
+            val webView = webViews[webViewId]
+            if (webView == null) {
+              result.error("INVALID_WEBVIEW_ID", "WebView ID not found", null)
+            } else {
+              webView.evaluateJavascript(script) { value ->
+                result.success(value?.takeUnless { it == "null" })
+              }
+            }
           }
         }
 
@@ -408,12 +469,16 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
     // Clean up any remaining WebViews
     for (webView in webViews.values) {
       try {
+        (webView.parent as? ViewGroup)?.removeView(webView)
         Janus.releaseConsentWebView(webView)
       } catch (e: Exception) {
         // Ignore errors during cleanup
       }
     }
     webViews.clear()
+    eventListenerId?.let { Janus.removeConsentEventListener(it) }
+    eventListenerId = null
+    eventSink = null
 
     channel.setMethodCallHandler(null)
     eventChannel.setStreamHandler(null)

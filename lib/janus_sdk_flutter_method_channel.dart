@@ -340,6 +340,22 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
   }
 
   @override
+  Future<void> webViewLoadUrl(String webViewId, String url) {
+    return methodChannel.invokeMethod<void>('webViewLoadUrl', {
+      'webViewId': webViewId,
+      'url': url,
+    });
+  }
+
+  @override
+  Future<String?> webViewEvaluateJavaScript(String webViewId, String script) {
+    return methodChannel.invokeMethod<String>('webViewEvaluateJavaScript', {
+      'webViewId': webViewId,
+      'script': script,
+    });
+  }
+
+  @override
   Future<Map<String, dynamic>> getLocationByIPAddress() async {
     try {
       final result = await methodChannel.invokeMapMethod<String, dynamic>(

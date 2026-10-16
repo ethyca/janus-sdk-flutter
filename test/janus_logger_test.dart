@@ -68,6 +68,13 @@ class MockJanusSdkFlutterPlatform
   Future<void> releaseConsentWebView(String webViewId) => Future.value();
 
   @override
+  Future<void> webViewLoadUrl(String webViewId, String url) => Future.value();
+
+  @override
+  Future<String?> webViewEvaluateJavaScript(String webViewId, String script) =>
+      Future.value(null);
+
+  @override
   Future<Map<String, dynamic>> getLocationByIPAddress() => Future.value({
     'region': 'NY',
     'country': 'US',

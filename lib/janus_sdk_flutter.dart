@@ -1,7 +1,5 @@
 import 'dart:async';
 
-import 'package:webview_flutter/webview_flutter.dart';
-
 import 'consent_method.dart';
 import 'janus_sdk_flutter_platform_interface.dart';
 import 'janus_sdk_flutter_method_channel.dart';
@@ -14,6 +12,7 @@ import 'consent_non_applicable_flag_mode.dart';
 // Export public types
 export 'consent_method.dart';
 export 'janus_event_type.dart';
+export 'janus_web_view_controller.dart';
 export 'janus_logger.dart';
 export 'consent_flag_type.dart';
 export 'consent_non_applicable_flag_mode.dart';
@@ -155,7 +154,8 @@ class Janus {
     return JanusSdkFlutterPlatform.instance.consentMetadata;
   }
 
-  /// Get the Fides string representation of consent.
+  /// FidesJS-compatible consent string: TC,AC,GPP[,NC]. Missing sections are
+  /// empty; a TC string alone is returned as `TC,,`. Empty means no Fides string.
   Future<String> get fidesString {
     return JanusSdkFlutterPlatform.instance.fidesString;
   }
@@ -245,54 +245,26 @@ class Janus {
     return JanusSdkFlutterPlatform.instance.setExternalId(externalId);
   }
 
-  /// Creates a WebView controller for consent management.
+  /// Creates a Janus-managed native WebView for a page running FidesJS.
   ///
-  /// This method creates a WebView that is configured for consent management
-  /// and returns a controller that can be used to interact with it.
-  ///
-  /// [autoSyncOnStart] determines whether to enable initial synchronization
-  /// when the webview loads.
-  ///
-  /// Example:
-  /// ```dart
-  /// final webViewController = await janus.createConsentWebView();
-  /// return Scaffold(
-  ///   appBar: AppBar(title: Text('Consent WebView')),
-  ///   body: webViewController.buildWidget(),
-  /// );
-  /// ```
+  /// This does not render a consent UI. The view stays blank until the app
+  /// calls [JanusWebViewController.loadUrl] with its own FidesJS-enabled page.
+  /// [autoSyncOnStart] controls initial consent synchronization on page load.
+  /// Call [releaseConsentWebView] after unmounting the view.
   Future<JanusWebViewController> createConsentWebView({
     bool autoSyncOnStart = true,
   }) async {
     final webViewId = await JanusSdkFlutterPlatform.instance
         .createConsentWebView(autoSyncOnStart: autoSyncOnStart);
-
-    // Create and configure the Flutter WebViewController
-    final controller =
-        WebViewController()
-          ..setJavaScriptMode(JavaScriptMode.unrestricted)
-          ..setNavigationDelegate(
-            NavigationDelegate(
-              onNavigationRequest: (NavigationRequest request) {
-                // Allow all navigation requests
-                return NavigationDecision.navigate;
-              },
-            ),
-          );
-
-    return JanusWebViewController(controller, webViewId);
+    return JanusWebViewController.fromId(webViewId);
   }
 
-  /// Release a WebView from Janus management.
+  /// Releases the native WebView and unregisters its Janus bridge.
   ///
-  /// This method should be called when you're done with a WebView to free
-  /// resources and remove any event listeners.
-  ///
-  /// [webViewController] is the controller returned by [createConsentWebView].
+  /// Unmount [webViewController] before calling this method. A released
+  /// controller cannot be rendered or used again.
   Future<void> releaseConsentWebView(JanusWebViewController webViewController) {
-    return JanusSdkFlutterPlatform.instance.releaseConsentWebView(
-      webViewController.id,
-    );
+    return webViewController.release();
   }
 
   /// Get the user's region by IP address lookup.

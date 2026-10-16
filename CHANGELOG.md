@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.3.0 (2026-10-16)
+
+- Requires Xcode 26.0 or later for iOS builds. The iOS SDK is now built with Xcode 26.0.1, which fixes apps on older Xcode 26 releases failing to compile against iOS SDK 1.1.0
+- Swift Package Manager support on iOS, alongside CocoaPods. Both use the same `JanusSDK` XCFramework
+- **Behavior change:** `fidesString` always uses the `TC,AC,GPP,NC` format, so a TC string on its own reads `TC,,`
+- `createConsentWebView` now embeds the Janus-managed native WebView, so pages loaded with `JanusWebViewController.loadUrl` receive the app's consent and report FidesJS changes back as `webview*` events. Previously the widget was a plain WebView with no Janus bridge
+- **Breaking:** `JanusWebViewController.controller` is deprecated and now throws `UnsupportedError`, because it was never connected to the Janus WebView. Use `buildWidget`, `loadUrl` and `evaluateJavaScript` instead
+- `JanusWebViewController.loadUrl` accepts only `http` and `https` URLs, and `evaluateJavaScript` now returns the script's result
+- Unmount the consent WebView before calling `releaseConsentWebView`. A released view renders a placeholder, and `loadUrl` or `evaluateJavaScript` on it throws `StateError`
+- `ConsentMethod.externalProvider` (`external_provider`) on iOS, Android and Flutter, for consent carried over from before Janus, so Fides can tell it apart from a choice made in the experience
+- Live App Tracking Transparency status is honored on iOS at launch, on returning to the foreground, and in `setConsent`, and ATT-locked notices can no longer be enabled through a Janus-managed WebView
+- On iOS, a TCF banner closes once a host `setConsent` resolves it. On iOS and Android, TCF consent without a TC string no longer counts as given
+- On Android, back press, rotation, and a dark-mode switch no longer close a consent experience (including TCF) that isn't dismissable
+- Failed consent preference saves are retried on iOS and Android instead of being lost
+
+
 ## 0.2.0 (2026-10-07)
 
 - Requires iOS 15.0 or later; iOS 13 and 14 are no longer supported
@@ -8,7 +24,6 @@
 - Accept All keeps ATT-locked notices off when App Tracking Transparency is denied on iOS
 - `setConsent` applies a TCF fides string to the CMP WebView and seeds the TCF version hash
 - notice_only notices are saved with `acknowledge` on iOS and Android
-
 
 ## 0.1.25 (2026-06-17)
 

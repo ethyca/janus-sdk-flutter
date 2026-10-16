@@ -71,7 +71,8 @@ abstract class JanusSdkFlutterPlatform extends PlatformInterface {
     );
   }
 
-  /// Get the Fides string representation of consent.
+  /// FidesJS-compatible consent string: TC,AC,GPP[,NC]. Missing sections are
+  /// empty; a TC string alone is returned as `TC,,`. Empty means no Fides string.
   Future<String> get fidesString {
     throw UnimplementedError('fidesString getter has not been implemented.');
   }
@@ -121,6 +122,18 @@ abstract class JanusSdkFlutterPlatform extends PlatformInterface {
   Future<void> releaseConsentWebView(String webViewId) {
     throw UnimplementedError(
       'releaseConsentWebView() has not been implemented.',
+    );
+  }
+
+  /// Load a URL in the native Janus-managed WebView.
+  Future<void> webViewLoadUrl(String webViewId, String url) {
+    throw UnimplementedError('webViewLoadUrl() has not been implemented.');
+  }
+
+  /// Evaluate a script in the native Janus-managed WebView.
+  Future<String?> webViewEvaluateJavaScript(String webViewId, String script) {
+    throw UnimplementedError(
+      'webViewEvaluateJavaScript() has not been implemented.',
     );
   }
 

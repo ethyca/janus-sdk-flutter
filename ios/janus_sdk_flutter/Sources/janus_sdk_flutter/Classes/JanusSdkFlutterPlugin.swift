@@ -75,7 +75,18 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
     let instance = JanusSdkFlutterPlugin()
     instance.methodChannel = channel // Store reference for proxy logger
     registrar.addMethodCallDelegate(instance, channel: channel)
+    registrar.register(ConsentWebViewFactory(plugin: instance), withId: "janus_sdk_flutter/consent_webview")
     eventChannel.setStreamHandler(instance)
+  }
+
+  fileprivate func platformView(for webViewId: String?) -> UIView {
+    if let webViewId = webViewId, let webView = webViews[webViewId] {
+      return webView
+    }
+    let label = UILabel()
+    label.text = "Janus consent WebView is no longer available"
+    label.textAlignment = .center
+    return label
   }
 
   // MARK: - FlutterStreamHandler
@@ -356,18 +367,59 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
         result(FlutterError(code: "INVALID_ARGS", message: "webViewId is required", details: nil))
         return
       }
-
-      // Get the WebView from our map
-      if let webView = webViews[webViewId] {
-        // Release it through the SDK
+      DispatchQueue.main.async {
+        guard let webView = self.webViews.removeValue(forKey: webViewId) else {
+          result(FlutterError(code: "INVALID_WEBVIEW_ID", message: "WebView ID not found", details: nil))
+          return
+        }
         Janus.releaseConsentWebView(webView)
-
-        // Remove it from our map
-        webViews.removeValue(forKey: webViewId)
-
         result(nil)
-      } else {
-        result(FlutterError(code: "INVALID_WEBVIEW_ID", message: "WebView ID not found", details: nil))
+      }
+
+    case "webViewLoadUrl":
+      guard let args = call.arguments as? [String: Any],
+            let webViewId = args["webViewId"] as? String,
+            let urlString = args["url"] as? String,
+            let url = URL(string: urlString),
+            url.host?.isEmpty == false,
+            ["http", "https"].contains(url.scheme?.lowercased() ?? "") else {
+        result(FlutterError(code: "INVALID_ARGS", message: "A valid http(s) URL and webViewId are required", details: nil))
+        return
+      }
+      DispatchQueue.main.async {
+        guard let webView = self.webViews[webViewId] else {
+          result(FlutterError(code: "INVALID_WEBVIEW_ID", message: "WebView ID not found", details: nil))
+          return
+        }
+        webView.load(URLRequest(url: url))
+        result(nil)
+      }
+
+    case "webViewEvaluateJavaScript":
+      guard let args = call.arguments as? [String: Any],
+            let webViewId = args["webViewId"] as? String,
+            let script = args["script"] as? String else {
+        result(FlutterError(code: "INVALID_ARGS", message: "webViewId and script are required", details: nil))
+        return
+      }
+      DispatchQueue.main.async {
+        guard let webView = self.webViews[webViewId] else {
+          result(FlutterError(code: "INVALID_WEBVIEW_ID", message: "WebView ID not found", details: nil))
+          return
+        }
+        webView.evaluateJavaScript(script) { value, error in
+          if let error = error {
+            result(FlutterError(code: "WEBVIEW_JAVASCRIPT_ERROR", message: error.localizedDescription, details: nil))
+          } else if value is NSNull {
+            result(nil)
+          } else if let value = value,
+                    let data = try? JSONSerialization.data(withJSONObject: value, options: .fragmentsAllowed),
+                    let string = String(data: data, encoding: .utf8) {
+            result(string)
+          } else {
+            result(nil)
+          }
+        }
       }
 
     case "getLocationByIPAddress":
@@ -416,6 +468,37 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
     default:
       result(FlutterMethodNotImplemented)
     }
+  }
+}
+
+private final class ConsentWebViewFactory: NSObject, FlutterPlatformViewFactory {
+  private weak var plugin: JanusSdkFlutterPlugin?
+
+  init(plugin: JanusSdkFlutterPlugin) {
+    self.plugin = plugin
+  }
+
+  func createArgsCodec() -> FlutterMessageCodec & NSObjectProtocol {
+    FlutterStandardMessageCodec.sharedInstance()
+  }
+
+  func create(withFrame frame: CGRect, viewIdentifier viewId: Int64, arguments args: Any?) -> FlutterPlatformView {
+    let webViewId = (args as? [String: Any])?["webViewId"] as? String
+    let view = plugin?.platformView(for: webViewId) ?? UILabel()
+    view.frame = frame
+    return ConsentPlatformView(view: view)
+  }
+}
+
+private final class ConsentPlatformView: NSObject, FlutterPlatformView {
+  private let nativeView: UIView
+
+  init(view: UIView) {
+    nativeView = view
+  }
+
+  func view() -> UIView {
+    nativeView
   }
 }
 

@@ -333,6 +333,10 @@ class JanusConfiguration {
   /// Requires `NSUserTrackingUsageDescription` in the host app's Info.plist.
   final bool enableAtt;
 
+  /// Whether `banner_and_modal` experiences show a compact banner (Reject All,
+  /// Accept All, Manage preferences) before the full modal. Defaults to false.
+  final bool enableBannerMode;
+
   JanusConfiguration({
     required this.apiHost,
     this.privacyCenterHost = "",
@@ -346,6 +350,7 @@ class JanusConfiguration {
     this.consentFlagType = ConsentFlagType.boolean,
     this.consentNonApplicableFlagMode = ConsentNonApplicableFlagMode.omit,
     this.enableAtt = false,
+    this.enableBannerMode = false,
   });
 
   /// Convert to a map for serialization.
@@ -363,6 +368,7 @@ class JanusConfiguration {
       'consentFlagType': consentFlagType.value,
       'consentNonApplicableFlagMode': consentNonApplicableFlagMode.value,
       'enableAtt': enableAtt,
+      'enableBannerMode': enableBannerMode,
     };
   }
 }

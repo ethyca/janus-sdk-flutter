@@ -16,10 +16,12 @@ class ConfigForm extends StatefulWidget {
   final Function(ConsentNonApplicableFlagMode)?
   onConsentNonApplicableFlagModeChanged;
   final Function(bool)? onEnableAttChanged;
+  final Function(bool)? onEnableBannerModeChanged;
   final bool initialAutoShowExperience;
   final ConsentFlagType initialConsentFlagType;
   final ConsentNonApplicableFlagMode initialConsentNonApplicableFlagMode;
   final bool initialEnableAtt;
+  final bool initialEnableBannerMode;
 
   const ConfigForm({
     super.key,
@@ -33,11 +35,13 @@ class ConfigForm extends StatefulWidget {
     this.onConsentFlagTypeChanged,
     this.onConsentNonApplicableFlagModeChanged,
     this.onEnableAttChanged,
+    this.onEnableBannerModeChanged,
     this.initialAutoShowExperience = true,
     this.initialConsentFlagType = ConsentFlagType.boolean,
     this.initialConsentNonApplicableFlagMode =
         ConsentNonApplicableFlagMode.omit,
     this.initialEnableAtt = false,
+    this.initialEnableBannerMode = false,
   });
 
   @override
@@ -49,6 +53,7 @@ class _ConfigFormState extends State<ConfigForm> {
   bool _isInitialized = false;
   bool _autoShowExperience = true;
   bool _enableAtt = false;
+  bool _enableBannerMode = false;
   ConsentFlagType _consentFlagType = ConsentFlagType.boolean;
   ConsentNonApplicableFlagMode _consentNonApplicableFlagMode =
       ConsentNonApplicableFlagMode.omit;
@@ -59,6 +64,7 @@ class _ConfigFormState extends State<ConfigForm> {
     // Initialize with the prop values
     _autoShowExperience = widget.initialAutoShowExperience;
     _enableAtt = widget.initialEnableAtt;
+    _enableBannerMode = widget.initialEnableBannerMode;
     _consentFlagType = widget.initialConsentFlagType;
     _consentNonApplicableFlagMode = widget.initialConsentNonApplicableFlagMode;
     // Load custom config on initialization
@@ -108,11 +114,13 @@ class _ConfigFormState extends State<ConfigForm> {
     setState(() {
       _autoShowExperience = configSet.config.autoShowExperience;
       _enableAtt = configSet.config.enableAtt;
+      _enableBannerMode = configSet.config.enableBannerMode;
       _consentFlagType = configSet.config.consentFlagType;
       _consentNonApplicableFlagMode =
           configSet.config.consentNonApplicableFlagMode;
     });
     widget.onEnableAttChanged?.call(_enableAtt);
+    widget.onEnableBannerModeChanged?.call(_enableBannerMode);
 
     // Save the selected config name
     _saveLastSelectedConfig(configSetName);
@@ -144,6 +152,7 @@ class _ConfigFormState extends State<ConfigForm> {
                 ? 'https://ethyca.com'
                 : widget.websiteController.text,
         autoShowExperience: _autoShowExperience,
+        enableBannerMode: _enableBannerMode,
         consentFlagType: _consentFlagType,
         consentNonApplicableFlagMode: _consentNonApplicableFlagMode,
       );
@@ -279,6 +288,21 @@ class _ConfigFormState extends State<ConfigForm> {
               if (widget.onAutoShowExperienceChanged != null) {
                 widget.onAutoShowExperienceChanged!(value);
               }
+            },
+            contentPadding: EdgeInsets.zero,
+            dense: true,
+          ),
+          SwitchListTile(
+            title: const Text('Banner Mode'),
+            value: _enableBannerMode,
+            onChanged: (value) {
+              setState(() {
+                _enableBannerMode = value;
+              });
+              if (_selectedConfigSet == 'Custom') {
+                _saveCustomConfig();
+              }
+              widget.onEnableBannerModeChanged?.call(value);
             },
             contentPadding: EdgeInsets.zero,
             dense: true,

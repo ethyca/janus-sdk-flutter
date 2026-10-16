@@ -131,6 +131,7 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
             val saveNoticesServedToFides = args["saveNoticesServedToFides"] as? Boolean ?: true
             val consentFlagTypeString = args["consentFlagType"] as? String ?: "boolean"
             val consentNonApplicableFlagModeString = args["consentNonApplicableFlagMode"] as? String ?: "omit"
+            val enableBannerMode = args["enableBannerMode"] as? Boolean ?: false
             
             // Convert string to ConsentFlagType enum
             val consentFlagType = when (consentFlagTypeString.lowercase()) {
@@ -159,6 +160,7 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
               .saveNoticesServedToFides(saveNoticesServedToFides)
               .consentFlagType(consentFlagType)
               .consentNonApplicableFlagMode(consentNonApplicableFlagMode)
+              .enableBannerMode(enableBannerMode)
 
             val config = configBuilder.build()
 

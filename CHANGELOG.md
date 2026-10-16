@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0 (2026-10-16)
+
+- Add opt-in banner mode (`enableBannerMode`) that shows `banner_and_modal` experiences as a compact banner before the full modal
+
+
 ## 0.3.0 (2026-10-16)
 
 - Requires Xcode 26.0 or later for iOS builds. The iOS SDK is now built with Xcode 26.0.1, which fixes apps on older Xcode 26 releases failing to compile against iOS SDK 1.1.0

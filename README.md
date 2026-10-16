@@ -128,7 +128,7 @@ A protocol/interface for implementing custom logging functionality. Custom logge
 - `consentFlagType`: 🎯 The format for consent values returned by external interfaces - defaults to boolean (options: "boolean", "consentMechanism")
 - `consentNonApplicableFlagMode`: 🔄 Controls how non-applicable privacy notices are handled in consent objects - defaults to omit (options: "omit", "include")
 - `enableATT` (`enableAtt` in Flutter): 📲 Request Apple ATT permission before showing the privacy experience - defaults to false (iOS only)
-- `enableBannerMode`: 🪧 Show `banner_and_modal` experiences as a compact banner before the full modal - defaults to false
+- `enableBannerMode`: 🪧 Show `banner_and_modal` experiences as a compact banner before the full modal - defaults to false (iOS, Android and Flutter; not yet in React Native)
 
 > **Note:** For full TCF support, the JanusSDK requires a minimum version of 2.59.1 for the Fides privacy-center image
 

@@ -26,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isLoading = true;
   bool _autoShowExperience = true;
   bool _enableAtt = false;
+  bool _enableBannerMode = false;
   ConsentFlagType _consentFlagType = ConsentFlagType.boolean;
   ConsentNonApplicableFlagMode _consentNonApplicableFlagMode =
       ConsentNonApplicableFlagMode.omit;
@@ -54,6 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _regionController.text = customConfig.region ?? '';
       _websiteController.text = customConfig.website ?? 'https://ethyca.com';
       _autoShowExperience = customConfig.autoShowExperience;
+      _enableBannerMode = customConfig.enableBannerMode;
       _consentFlagType = customConfig.consentFlagType;
       _consentNonApplicableFlagMode = customConfig.consentNonApplicableFlagMode;
     }
@@ -100,6 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 : _websiteController.text.trim(),
         autoShowExperience: _autoShowExperience,
         enableAtt: _enableAtt,
+        enableBannerMode: _enableBannerMode,
         consentFlagType: _consentFlagType,
         consentNonApplicableFlagMode: _consentNonApplicableFlagMode,
       );
@@ -172,6 +175,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           onEnableAttChanged: (value) {
                             setState(() {
                               _enableAtt = value;
+                            });
+                          },
+                          initialEnableBannerMode: _enableBannerMode,
+                          onEnableBannerModeChanged: (value) {
+                            setState(() {
+                              _enableBannerMode = value;
                             });
                           },
                           onAutoShowExperienceChanged: (value) {

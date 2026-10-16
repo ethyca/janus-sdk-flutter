@@ -223,6 +223,7 @@ final config = JanusConfiguration(
   consentFlagType: ConsentFlagType.boolean,                 // 🎯 Format for consent values (default boolean)
   consentNonApplicableFlagMode: ConsentNonApplicableFlagMode.omit, // 🔄 Handle non-applicable notices (default omit)
   enableAtt: true,                                          // 📲 Request Apple ATT permission before showing the privacy experience (iOS only, default false)
+  enableBannerMode: true,                                   // 🪧 Show banner_and_modal experiences as a compact banner first (default false)
 );
 
 // Initialize the SDK
@@ -704,6 +705,28 @@ if (isTCF) {
   print('This is a standard privacy experience');
 }
 ```
+
+### Banner Mode
+
+By default, Janus shows every non-TCF experience as a full-screen modal. Set `enableBannerMode: true` to show `banner_and_modal` experiences as a compact banner first, matching the layered banner on the web. The banner offers Reject All, Accept All, and a Manage preferences button that opens the full modal.
+
+```dart
+final config = JanusConfiguration(
+  apiHost: 'https://privacy-plus.yourhost.com',
+  propertyId: 'FDS-A0B1C2',
+  enableBannerMode: true,
+);
+```
+
+When banner mode is on:
+
+1. **The banner appears only while consent is still needed**, i.e. when `shouldShowExperience` is true. Once the user has made a choice, `showExperience` opens the full modal directly, so a "Privacy settings" link in your app skips the banner. Dismissing the banner (close button, or the Android back button) saves each notice's default as implied consent (consent method `dismiss`) when the user has no saved consent yet. Implied consent doesn't count as a choice, so the banner resurfaces on the next `showExperience`, as it does on the web.
+2. **Text and labels come from the experience config.** The banner uses `banner_title` and `banner_description`, falling back to `title` and `description`, and the button labels from the same translation.
+3. **`layer1_button_options` picks the buttons.** `acknowledge`, or an experience whose notices are all notice-only, shows a single Acknowledge button. `opt_in_opt_out` and `gpc_conditional` show Reject All and Accept All (apps have no GPC signal).
+4. **Notices served are recorded with `serving_component: banner`**, and the modal opened from the banner records `modal`.
+5. **Close (and the Android back button) dismiss only when the experience is dismissable.** A non-dismissable banner stays until the user makes a choice.
+
+Other component types, including `modal` and TCF experiences, are unaffected by this flag.
 
 ### Apple App Tracking Transparency (ATT) — iOS only
 

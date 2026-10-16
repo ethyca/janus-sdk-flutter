@@ -17,6 +17,7 @@ class JanusConfig {
   final ConsentFlagType consentFlagType;
   final ConsentNonApplicableFlagMode consentNonApplicableFlagMode;
   final bool enableAtt;
+  final bool enableBannerMode;
 
   JanusConfig({
     required this.apiHost,
@@ -28,6 +29,7 @@ class JanusConfig {
     this.consentFlagType = ConsentFlagType.boolean,
     this.consentNonApplicableFlagMode = ConsentNonApplicableFlagMode.omit,
     this.enableAtt = false,
+    this.enableBannerMode = false,
   });
 
   // Convert config to a map for storage
@@ -39,6 +41,7 @@ class JanusConfig {
       'region': region ?? '',
       'website': website ?? '',
       'autoShowExperience': autoShowExperience,
+      'enableBannerMode': enableBannerMode,
       'consentFlagType': consentFlagType.value,
       'consentNonApplicableFlagMode': consentNonApplicableFlagMode.value,
     };
@@ -60,6 +63,7 @@ class JanusConfig {
               ? map['website']
               : 'https://ethyca.com',
       autoShowExperience: map['autoShowExperience'] ?? true,
+      enableBannerMode: map['enableBannerMode'] ?? false,
       consentFlagType: ConsentFlagType.fromString(
         map['consentFlagType'] ?? 'boolean',
       ),
@@ -105,6 +109,7 @@ class JanusConfig {
               ? prefs.getString('custom_website')
               : 'https://ethyca.com',
       autoShowExperience: prefs.getBool('custom_autoShowExperience') ?? true,
+      enableBannerMode: prefs.getBool('custom_enableBannerMode') ?? false,
       consentFlagType: ConsentFlagType.fromString(
         prefs.getString('custom_consentFlagType') ?? 'boolean',
       ),
@@ -284,6 +289,7 @@ class JanusManager extends ChangeNotifier {
       consentFlagType: config!.consentFlagType,
       consentNonApplicableFlagMode: config!.consentNonApplicableFlagMode,
       enableAtt: config!.enableAtt,
+      enableBannerMode: config!.enableBannerMode,
     );
 
     try {

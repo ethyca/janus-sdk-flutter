@@ -167,6 +167,7 @@ void main() {
       saveUserPreferencesToFides: false,
       saveNoticesServedToFides: false,
       consentFlagType: ConsentFlagType.consentMechanism,
+      enableBannerMode: true,
     );
 
     final map = config.toMap();
@@ -181,6 +182,7 @@ void main() {
     expect(map['saveUserPreferencesToFides'], false);
     expect(map['saveNoticesServedToFides'], false);
     expect(map['consentFlagType'], 'consentMechanism');
+    expect(map['enableBannerMode'], true);
   });
 
   test('JanusConfiguration defaults', () {
@@ -198,6 +200,7 @@ void main() {
     expect(map['saveUserPreferencesToFides'], true);
     expect(map['saveNoticesServedToFides'], true);
     expect(map['consentFlagType'], 'boolean');
+    expect(map['enableBannerMode'], false);
   });
 
   test('ConsentFlagType enum values', () {

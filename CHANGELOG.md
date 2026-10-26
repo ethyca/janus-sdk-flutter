@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1 (2026-10-26)
+
+- On iOS, the banner (`enableBannerMode`) now covers and blocks the whole app while it's showing. In some apps, the app stayed usable above the banner
+
+
 ## 0.4.0 (2026-10-16)
 
 - Add opt-in banner mode (`enableBannerMode`) that shows `banner_and_modal` experiences as a compact banner before the full modal

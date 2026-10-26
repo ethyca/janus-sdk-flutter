@@ -40,3 +40,6 @@ build/
 
 # Coverage reports
 coverage/
+
+# Temporary archive used by publish_flutter_sdk.sh verification.
+/ios/janus_sdk_flutter/.janus-verification/

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.0 (2026-11-04)
+
+- A web view whose Janus bridge scripts install after FidesJS has initialised now reports `webviewFidesInitialized` once, marked `extraDetails.replayed`, and the bridge installs once per page. Janus's own TCF screen doesn't report the replayed event
+
+
 ## 0.4.1 (2026-10-26)
 
 - On iOS, the banner (`enableBannerMode`) now covers and blocks the whole app while it's showing. In some apps, the app stayed usable above the banner

@@ -15,8 +15,8 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "JanusSDK",
-      url: "https://raw.githubusercontent.com/ethyca/janus-sdk-ios/1.3.0/JanusSDK.xcframework.zip",
-      checksum: "7d6c1c8cbbfd9ed5a491c88152d6216694045b07e4e917c2fafbcaf65d367bc3"),
+      url: "https://raw.githubusercontent.com/ethyca/janus-sdk-ios/1.4.2/JanusSDK.xcframework.zip",
+      checksum: "c249be2e91d0dd0db4a2b05eaa3ae58e5af8a46c6cd8e7867271d818778abd4c"),
     .target(
       name: "janus_sdk_flutter",
       dependencies: [

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'age_bracket.dart';
 import 'consent_method.dart';
 import 'janus_sdk_flutter_platform_interface.dart';
 import 'janus_sdk_flutter_method_channel.dart';
@@ -10,6 +11,7 @@ import 'consent_flag_type.dart';
 import 'consent_non_applicable_flag_mode.dart';
 
 // Export public types
+export 'age_bracket.dart';
 export 'consent_method.dart';
 export 'janus_event_type.dart';
 export 'janus_web_view_controller.dart';
@@ -245,6 +247,12 @@ class Janus {
     return JanusSdkFlutterPlatform.instance.setExternalId(externalId);
   }
 
+  /// Set the user's age bracket, for apps that already know it. It takes precedence
+  /// over the app store age signal. Call it before showing an experience.
+  Future<void> setAgeSignal(AgeBracket bracket) {
+    return JanusSdkFlutterPlatform.instance.setAgeSignal(bracket);
+  }
+
   /// Creates a Janus-managed native WebView for a page running FidesJS.
   ///
   /// This does not render a consent UI. The view stays blank until the app
@@ -337,6 +345,13 @@ class JanusConfiguration {
   /// Accept All, Manage preferences) before the full modal. Defaults to false.
   final bool enableBannerMode;
 
+  /// Whether Janus reads the user's age bracket from the app store during initialization
+  /// (Apple Declared Age Range, Google Play Age Signals). Defaults to false.
+  final bool enableAgeSignal;
+
+  /// An age bracket the app already knows; it takes precedence over the app store signal.
+  final AgeBracket? ageBracket;
+
   JanusConfiguration({
     required this.apiHost,
     this.privacyCenterHost = "",
@@ -351,6 +366,8 @@ class JanusConfiguration {
     this.consentNonApplicableFlagMode = ConsentNonApplicableFlagMode.omit,
     this.enableAtt = false,
     this.enableBannerMode = false,
+    this.enableAgeSignal = false,
+    this.ageBracket,
   });
 
   /// Convert to a map for serialization.
@@ -369,6 +386,8 @@ class JanusConfiguration {
       'consentNonApplicableFlagMode': consentNonApplicableFlagMode.value,
       'enableAtt': enableAtt,
       'enableBannerMode': enableBannerMode,
+      'enableAgeSignal': enableAgeSignal,
+      'ageBracket': ageBracket?.value,
     };
   }
 }

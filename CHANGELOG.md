@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.0 (2026-11-25)
+
+- Minor age signal: `JanusConfiguration.enableAgeSignal` and `ageBracket`, `Janus.setAgeSignal`, the `AgeBracket` enum, and `ConsentMethod.ageSignal` (`age_signal`) and `ConsentMethod.parentalConsent` (`parental_consent`). These pass through to the native SDKs, which opt GPC-flagged notices out for users under 16. Uses Janus iOS and Android SDK 1.4.2 and needs Fides 3.3.0 or later
+- `JanusEventType.ageSignalUpdated`, fired when the age bracket Janus gives its WebViews changes. It carries no bracket
+- `IABTCF_PolicyVersion` now matches the policy version encoded in the stored TC string (currently 5, for TCF v2.4 / Policies v5.0.b) instead of a fixed 4. It is no longer written when there is no TC string
+
+
 ## 0.5.0 (2026-11-04)
 
 - A web view whose Janus bridge scripts install after FidesJS has initialised now reports `webviewFidesInitialized` once, marked `extraDetails.replayed`, and the bridge installs once per page. Janus's own TCF screen doesn't report the replayed event

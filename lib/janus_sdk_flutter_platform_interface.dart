@@ -179,6 +179,11 @@ abstract class JanusSdkFlutterPlatform extends PlatformInterface {
     throw UnimplementedError('setExternalId() has not been implemented.');
   }
 
+  /// Set the user's age bracket on the native SDK
+  Future<void> setAgeSignal(AgeBracket bracket) {
+    throw UnimplementedError('setAgeSignal() has not been implemented.');
+  }
+
   /// Set logger configuration for native platforms
   ///
   /// [useProxy] - Whether native platforms should use proxy loggers that call back to Flutter

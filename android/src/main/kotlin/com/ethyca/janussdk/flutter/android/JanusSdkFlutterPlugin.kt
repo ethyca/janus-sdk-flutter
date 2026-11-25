@@ -18,6 +18,7 @@ import com.ethyca.janussdk.android.JanusConfiguration
 import com.ethyca.janussdk.android.JanusLogger
 import com.ethyca.janussdk.android.LogLevel
 import com.ethyca.janussdk.android.events.JanusEvent
+import com.ethyca.janussdk.android.models.AgeBracket
 import com.ethyca.janussdk.android.models.ConsentFlagType
 import com.ethyca.janussdk.android.models.ConsentMethod
 import com.ethyca.janussdk.android.models.ConsentNonApplicableFlagMode
@@ -69,6 +70,8 @@ internal fun isSupportedWebViewUrl(url: String): Boolean = try {
 } catch (_: Exception) {
   false
 }
+
+internal fun ageBracketFrom(value: Any?): AgeBracket? = AgeBracket.values().find { it.value == value }
 
 /** JanusSdkFlutterPlugin */
 class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, EventChannel.StreamHandler {
@@ -132,6 +135,8 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
             val consentFlagTypeString = args["consentFlagType"] as? String ?: "boolean"
             val consentNonApplicableFlagModeString = args["consentNonApplicableFlagMode"] as? String ?: "omit"
             val enableBannerMode = args["enableBannerMode"] as? Boolean ?: false
+            val enableAgeSignal = args["enableAgeSignal"] as? Boolean ?: false
+            val ageBracket = ageBracketFrom(args["ageBracket"])
             
             // Convert string to ConsentFlagType enum
             val consentFlagType = when (consentFlagTypeString.lowercase()) {
@@ -161,6 +166,8 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
               .consentFlagType(consentFlagType)
               .consentNonApplicableFlagMode(consentNonApplicableFlagMode)
               .enableBannerMode(enableBannerMode)
+              .enableAgeSignal(enableAgeSignal)
+              .ageBracket(ageBracket)
 
             val config = configBuilder.build()
 
@@ -435,6 +442,18 @@ class JanusSdkFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Ev
           val externalId = args?.get("externalId") as? String
           Janus.setExternalId(externalId)
           result.success(null)
+        }
+
+        "setAgeSignal" -> {
+          val args = call.arguments as? Map<String, Any>
+          val value = args?.get("ageBracket")
+          val bracket = ageBracketFrom(value)
+          if (bracket == null) {
+            result.error("INVALID_ARGS", "Unknown ageBracket \"$value\"", null)
+          } else {
+            Janus.setAgeSignal(bracket)
+            result.success(null)
+          }
         }
 
         "setLogger" -> {

@@ -61,6 +61,9 @@ class MockJanusSdkFlutterPlatform
   Future<void> setExternalId(String? externalId) => Future.value();
 
   @override
+  Future<void> setAgeSignal(AgeBracket bracket) => Future.value();
+
+  @override
   Future<String> createConsentWebView({bool autoSyncOnStart = true}) =>
       Future.value('mock-webview-id');
 

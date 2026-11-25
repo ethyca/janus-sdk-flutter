@@ -86,7 +86,7 @@ If you have implemented your own custom logger implementation, be sure to call s
 ```dart
 // Set custom logger BEFORE initializing Janus
 final myCustomLogger = MyCustomJanusLogger();
-janusSdk.setLogger(myCustomLogger);
+Janus.setLogger(myCustomLogger);
 
 // Now initialize Janus - logs during initialization will use your custom logger
 final config = JanusConfiguration(
@@ -727,6 +727,78 @@ When banner mode is on:
 5. **Close (and the Android back button) dismiss only when the experience is dismissable.** A non-dismissable banner stays until the user makes a choice.
 
 Other component types, including `modal` and TCF experiences, are unaffected by this flag.
+
+### Minor Age Signal
+
+App store age laws, such as California's Digital Age Assurance Act (AB 1043) from 2027, have the app store tell each app the user's age bracket. Once an app has that signal, the CCPA treats it as knowing the user's age, so it may not sell or share the data of a user under 16 for targeted ads without opt-in. The native iOS and Android SDKs apply this for you: when the user is under 16, they opt every GPC-flagged, non-notice-only notice out before showing an experience or reporting consent. The Flutter plugin passes the settings through, so the behavior is the same on both platforms. See the [iOS](https://github.com/ethyca/janus-sdk-ios) and [Android](https://github.com/ethyca/janus-sdk-android) implementation guides for the full rules.
+
+**Requires Fides 3.3.0 or later.** With an older Fides server, Janus still applies the age signal on the device, but Fides saves its opt-outs without the `age_signal` and `parental_consent` reasons, and the FidesJS in your WebViews doesn't apply the bracket itself (Janus still turns back any opt-in those pages try to save).
+
+#### Where the bracket comes from
+
+1. **The app store.** Set `enableAgeSignal: true`, and Janus asks the platform for the user's age range during `initialize`, before its first automatic display: Apple's Declared Age Range API on iOS 26 or later, and Google Play Age Signals on Android. If the platform fails, times out (5 seconds, or, while its age prompt is on screen, up to 1 minute), or the user declines to share, the bracket is `AgeBracket.unknown` and initialization completes normally.
+2. **Your app.** If you already know the user's age range, pass `ageBracket` in the configuration, or call `setAgeSignal` when it arrives later. A bracket from your app wins over the app store's, except `AgeBracket.unknown`, which hands the decision back to the app store when `enableAgeSignal` is on.
+
+```dart
+// Source 1: Janus reads the app store age signal during initialize
+final config = JanusConfiguration(
+  apiHost: 'https://privacy-plus.yourhost.com',
+  propertyId: 'FDS-A0B1C2',
+  enableAgeSignal: true,
+);
+
+// Source 2: your app already has the bracket
+final config = JanusConfiguration(
+  apiHost: 'https://privacy-plus.yourhost.com',
+  propertyId: 'FDS-A0B1C2',
+  ageBracket: AgeBracket.age13To15,
+);
+
+// Or, for a bracket that arrives after initialize
+await janus.setAgeSignal(AgeBracket.age13To15);
+```
+
+The brackets are `AgeBracket.under13`, `age13To15`, `age16To17`, `adult`, and `unknown`. A bracket passed through `setAgeSignal` after `initialize` can arrive after an experience has already shown, so in that case set `autoShowExperience: false` and call `showExperience()` once you have called `setAgeSignal`.
+
+#### Platform setup for `enableAgeSignal`
+
+1. **iOS.** In Xcode, select the Runner target, open **Signing & Capabilities**, and add the Declared Age Range capability. Xcode creates `ios/Runner/Runner.entitlements` if the project doesn't have one yet (new Flutter projects don't), and adds this key:
+
+   ```xml
+   <key>com.apple.developer.declared-age-range</key>
+   <true/>
+   ```
+
+   iOS presents its own sheet from the top-most view controller, so call `initialize` once your first screen is visible.
+2. **Android.** Add the Play Age Signals library to your app; it requires `minSdk` 23. New Flutter projects use `android/app/build.gradle.kts`:
+
+   ```kotlin
+   dependencies {
+       implementation("com.google.android.play:age-signals:0.0.4")
+   }
+   ```
+
+   In an older project with `android/app/build.gradle`:
+
+   ```groovy
+   dependencies {
+       implementation "com.google.android.play:age-signals:0.0.4"
+   }
+   ```
+
+#### Parental consent for a child under 13
+
+An under-13 notice can only be switched on through your app, once your app has verified a parent's consent. Record it with `ConsentMethod.parentalConsent`:
+
+```dart
+await janus.setConsent(
+  values: {'data_sales_and_sharing': true},
+  consentMethod: ConsentMethod.parentalConsent,
+  saveToFides: true,
+);
+```
+
+Opt-outs that Janus applies are saved to Fides with `ConsentMethod.ageSignal` (`age_signal`), and a parent's opt-in with `ConsentMethod.parentalConsent` (`parental_consent`). The bracket itself never leaves the device.
 
 ### Apple App Tracking Transparency (ATT) — iOS only
 

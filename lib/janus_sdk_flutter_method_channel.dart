@@ -396,6 +396,18 @@ class MethodChannelJanusSdkFlutter extends JanusSdkFlutterPlatform {
   }
 
   @override
+  Future<void> setAgeSignal(AgeBracket bracket) async {
+    try {
+      await methodChannel.invokeMethod<void>('setAgeSignal', {
+        'ageBracket': bracket.value,
+      });
+    } on PlatformException catch (e) {
+      Janus.log('Failed to set age signal', level: LogLevel.warning, error: e);
+      rethrow;
+    }
+  }
+
+  @override
   Future<void> setLogger({required bool useProxy}) async {
     try {
       await methodChannel.invokeMethod<void>('setLogger', {

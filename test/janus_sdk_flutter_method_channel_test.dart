@@ -87,4 +87,42 @@ void main() {
     expect(androidView.viewType, JanusWebViewController.viewType);
     await Janus().releaseConsentWebView(controller);
   });
+
+  test('initialize sends the age signal config fields to native', () async {
+    await Janus().initialize(JanusConfiguration(
+      apiHost: 'https://api.example.com',
+      enableAgeSignal: true,
+      ageBracket: AgeBracket.under13,
+    ));
+
+    expect(calls.single.method, 'initialize');
+    expect(calls.single.arguments, containsPair('enableAgeSignal', true));
+    expect(calls.single.arguments, containsPair('ageBracket', 'under13'));
+  });
+
+  test('setAgeSignal sends each bracket string to native', () async {
+    for (final bracket in AgeBracket.values) {
+      await Janus().setAgeSignal(bracket);
+    }
+
+    expect(calls.map((call) => call.method), everyElement('setAgeSignal'));
+    expect(calls.map((call) => call.arguments['ageBracket']), [
+      'under13',
+      'age13To15',
+      'age16To17',
+      'adult',
+      'unknown',
+    ]);
+  });
+
+  test('setConsent sends parental_consent to native', () async {
+    await Janus().setConsent(
+      values: {'data_sales_and_sharing': true},
+      consentMethod: ConsentMethod.parentalConsent,
+      saveToFides: true,
+    );
+
+    expect(calls.single.method, 'setConsent');
+    expect(calls.single.arguments, containsPair('consentMethod', 'parental_consent'));
+  });
 }

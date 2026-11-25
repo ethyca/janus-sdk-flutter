@@ -72,6 +72,9 @@ class MockJanusSdkFlutterPlatform
   Future<void> setExternalId(String? externalId) => Future.value();
 
   @override
+  Future<void> setAgeSignal(AgeBracket bracket) => Future.value();
+
+  @override
   Future<String> createConsentWebView({bool autoSyncOnStart = true}) =>
       Future.value('mock-webview-id');
 
@@ -168,6 +171,8 @@ void main() {
       saveNoticesServedToFides: false,
       consentFlagType: ConsentFlagType.consentMechanism,
       enableBannerMode: true,
+      enableAgeSignal: true,
+      ageBracket: AgeBracket.age13To15,
     );
 
     final map = config.toMap();
@@ -183,6 +188,8 @@ void main() {
     expect(map['saveNoticesServedToFides'], false);
     expect(map['consentFlagType'], 'consentMechanism');
     expect(map['enableBannerMode'], true);
+    expect(map['enableAgeSignal'], true);
+    expect(map['ageBracket'], 'age13To15');
   });
 
   test('JanusConfiguration defaults', () {
@@ -201,6 +208,9 @@ void main() {
     expect(map['saveNoticesServedToFides'], true);
     expect(map['consentFlagType'], 'boolean');
     expect(map['enableBannerMode'], false);
+    expect(map['enableAgeSignal'], false);
+    expect(map.containsKey('ageBracket'), true);
+    expect(map['ageBracket'], isNull);
   });
 
   test('ConsentFlagType enum values', () {

@@ -38,6 +38,9 @@ enum JanusEventType {
   
   /// Consent has been updated from a WebView
   consentUpdatedFromWebView('consentUpdatedFromWebView'),
+
+  /// The age bracket changed. Janus applies it to its own WebViews.
+  ageSignalUpdated('ageSignalUpdated'),
   
   /// Unknown event type
   unknown('unknown');

@@ -14,6 +14,8 @@ void main() {
       expect(ConsentMethod.unknown.value, 'unknown');
       expect(ConsentMethod.error.value, 'error');
       expect(ConsentMethod.attDenied.value, 'att_denied');
+      expect(ConsentMethod.ageSignal.value, 'age_signal');
+      expect(ConsentMethod.parentalConsent.value, 'parental_consent');
     });
 
     test('toString returns the value', () {
@@ -33,6 +35,8 @@ void main() {
       expect(ConsentMethod.fromString('unknown'), ConsentMethod.unknown);
       expect(ConsentMethod.fromString('error'), ConsentMethod.error);
       expect(ConsentMethod.fromString('att_denied'), ConsentMethod.attDenied);
+      expect(ConsentMethod.fromString('age_signal'), ConsentMethod.ageSignal);
+      expect(ConsentMethod.fromString('parental_consent'), ConsentMethod.parentalConsent);
     });
 
     test('fromString defaults to unknown for null or invalid input', () {

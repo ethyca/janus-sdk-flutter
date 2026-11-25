@@ -29,7 +29,13 @@ enum ConsentMethod {
   error('error'),
 
   /// Consent was pre-populated to opt-out because Apple ATT permission was denied
-  attDenied('att_denied');
+  attDenied('att_denied'),
+
+  /// Janus opted the notice out because the user's age bracket is under 16
+  ageSignal('age_signal'),
+
+  /// The host app recorded a parent's opt-in for a child under 13
+  parentalConsent('parental_consent');
 
   const ConsentMethod(this.value);
 

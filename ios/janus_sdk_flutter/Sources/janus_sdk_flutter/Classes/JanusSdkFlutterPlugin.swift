@@ -189,6 +189,8 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
       let consentNonApplicableFlagModeString = args["consentNonApplicableFlagMode"] as? String ?? "omit"
       let enableATT = (args["enableAtt"] as? NSNumber)?.boolValue ?? false
       let enableBannerMode = (args["enableBannerMode"] as? NSNumber)?.boolValue ?? false
+      let enableAgeSignal = (args["enableAgeSignal"] as? NSNumber)?.boolValue ?? false
+      let ageBracket = (args["ageBracket"] as? String).flatMap(AgeBracket.init(rawValue:))
 
       // Convert string to ConsentFlagType enum
       let consentFlagType: ConsentFlagType
@@ -225,6 +227,8 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
         consentFlagType: consentFlagType,
         consentNonApplicableFlagMode: consentNonApplicableFlagMode,
         enableATT: enableATT,
+        enableAgeSignal: enableAgeSignal,
+        ageBracket: ageBracket,
         enableBannerMode: enableBannerMode
       )
 
@@ -447,6 +451,16 @@ public class JanusSdkFlutterPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
       let args = call.arguments as? [String: Any]
       let externalId = args?["externalId"] as? String
       Janus.setExternalId(externalId)
+      result(nil)
+
+    case "setAgeSignal":
+      let args = call.arguments as? [String: Any]
+      let value = args?["ageBracket"]
+      guard let bracket = (value as? String).flatMap(AgeBracket.init(rawValue:)) else {
+        result(FlutterError(code: "INVALID_ARGS", message: "Unknown ageBracket \"\(value.map { "\($0)" } ?? "nil")\"", details: nil))
+        return
+      }
+      Janus.setAgeSignal(bracket)
       result(nil)
 
     case "setLogger":
